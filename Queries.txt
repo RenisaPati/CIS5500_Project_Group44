@@ -24,6 +24,21 @@ FROM (SELECT book_id
 JOIN Book_Series bs ON b.series = bs.series_id
 JOIN Books bk ON b.book_id = bk.book_id;
 
+-- BookPage (i)
+SELECT b.*, a.name, g.genre
+FROM Books b
+	INNER JOIN WrittenBy w ON w.book_id = b.book_id
+	INNER JOIN Authors a ON w.author_id = a.author_id
+	INNER JOIN Book_Genres bg ON bg.book_id = b.book_id
+	INNER JOIN Geners g ON g.genre_id = bg.genre_id
+WHERE book_id = '${selected_book_id}'
+
+
+-- BookPage (ii)
+SELECT b.Title, b.image_url
+FROM Books b
+	INNER JOIN similar_books s ON s.book_id = b.'${selected_book_id}'
+
 
 -- Queries to implement features on Home Page --
 

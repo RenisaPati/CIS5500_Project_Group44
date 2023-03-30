@@ -1,0 +1,25 @@
+-- Queries to implement features on Book Page --
+
+#Fetch information on books and reviews 
+SELECT b.*, r.*
+FROM Books b JOIN REVIEWS r ON b.book_id = r.book_id;
+
+#Plot of the number of reviews the book has gotten in each year
+SELECT AVG(r.rating), COUNT(*)
+FROM Books JOIN REVIEWS r ON r.book_id = ${book_id}
+GROUP BY r.year;
+
+#Reviews for the book will be displayed below the book information. These will be sortable by number of “likes” the review got and the date.
+SELECT g.genre_id, b.*
+FROM Genres g NATURAL JOIN Book_Genres bg ON genre_id
+              JOIN Books b ON b.book_id = bg.book_id
+WHERE genre = ${genre_name}
+ORDER BY ${attribute} DESC LIMIT ${pageSize} OFFSET ${offset};
+
+#If a book is part of a series, then clicking the series title will pop out a model containing the other books in the series, each of which is clickable and navigates to that book’s page.
+SELECT b.book_id, b.title,
+FROM (SELECT book_id
+      FROM Books
+      WHERE book_id = ${book_id}) b
+JOIN Book_Series bs ON b.series = bs.series_id
+JOIN Books bk ON b.book_id = bk.book_id;

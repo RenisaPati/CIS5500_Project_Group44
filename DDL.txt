@@ -1,0 +1,70 @@
+CREATE TABLE Book
+( isbn INT,
+book_id INT,
+text_reviews_count INT,
+series INT,
+language_code VARCHAR(10),
+is_ebook BOOLEAN,
+average_rating FLOAT,
+description VARCHAR,
+format VARCHAR(20),
+publisher VARCHAR,
+num_pages INT,
+publication_year INT,
+image_url VARCHAR,
+ratings_count INT,
+title VARCHAR,
+PRIMARY KEY(book_id)
+FOREIGN KEY series REFERENCES Series(series_id));
+
+CREATE TABLE Similar_Books
+( book_id INT,
+similar_book INT,
+PRIMARY KEY(book_id, similar_book),
+book_id, similar_book FOREIGN KEY REFERENCES Book(book_id));
+
+CREATE TABLE Authors
+( author_id INT,
+average_rating FLOAT,
+text_reviews_count INT,
+name VARCHAR,
+ratings_count INT,
+PRIMARY KEY(author_id));
+
+CREATE TABLE Written_By
+( book_id INT,
+author_id INT,
+role VARCHAR,
+PRIMARY KEY(book_id, author_id),
+book_id FOREIGN KEY REFERENCES Books(book_id),
+author_id FOREIGN KEY REFERENCES Authors(author_id));
+
+CREATE TABLE Book_Series
+( series_id INT,
+title VARCHAR,
+description VARCHAR,
+series_work_count INT,
+primary_work_count INT,
+PRIMARY KEY(series_id));
+
+CREATE TABLE Genres
+( genre_id INT,
+genre_name VARCHAR NOT NULL,
+PRIMARY KEY genre_id );
+
+CREATE TABLE Book_Genres
+( book_id INT,
+genre_id INT,
+PRIMARY KEY(book_id, genre_id),
+book_id FOREIGN KEY REFERENCES Books(book_id),
+genre_id FOREIGN KEY REFERENCES Genres(genre_id));
+
+CREATE TABLE Reviews
+( book_id INT NOT NULL,
+review_id INT,
+rating FLOAT,
+review_text VARCHAR,
+date_added DATE,
+num_votes INT,
+PRIMARY KEY(review_id)
+book_id FOREIGN KEY REFERENCES Books(book_id))''

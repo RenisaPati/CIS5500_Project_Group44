@@ -43,7 +43,6 @@ CREATE TABLE Book_Series
 ( series_id INT,
 title VARCHAR,
 description VARCHAR,
-series_work_count INT,
 primary_work_count INT,
 PRIMARY KEY(series_id));
 
@@ -64,7 +63,9 @@ CREATE TABLE Reviews
 review_id INT,
 rating FLOAT,
 review_text VARCHAR,
-date_added DATE,
+year_added INT,
+month_added INT,
+day_added INT,
 num_votes INT,
 PRIMARY KEY(review_id)
 book_id FOREIGN KEY REFERENCES Books(book_id))''

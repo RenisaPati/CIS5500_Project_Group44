@@ -7,13 +7,13 @@ language_code VARCHAR(10),
 is_ebook INT,
 average_rating FLOAT,
 description LONGTEXT,
-format VARCHAR(20),
-publisher VARCHAR,
+format VARCHAR(40),
+publisher VARCHAR(100),
 num_pages INT,
 publication_year INT,
-image_url VARCHAR,
+image_url VARCHAR(90),
 ratings_count INT,
-title VARCHAR,
+title VARCHAR(250),
 PRIMARY KEY(book_id)
 FOREIGN KEY series REFERENCES Series(series_id));
 

@@ -60,7 +60,7 @@ genre_id FOREIGN KEY REFERENCES Genres(genre_id));
 
 CREATE TABLE Reviews
 ( book_id INT NOT NULL,
-review_id INT,
+review_id VARCHAR(50),
 rating FLOAT,
 review_text VARCHAR,
 year_added INT,

@@ -19,10 +19,10 @@ FOREIGN KEY series REFERENCES Series(series_id));
 
 CREATE TABLE Similar_Books
 ( book_id INT,
-similar_book INT,
+similar_book_id INT,
 PRIMARY KEY(book_id, similar_book),
 FOREIGN KEY (book_id) REFERENCES Books(book_id)
-FOREIGN KEY (similar_book) REFERENCES Books(book_id));
+FOREIGN KEY (similar_book_id) REFERENCES Books(book_id));
 
 CREATE TABLE Authors
 ( author_id INT,

@@ -35,10 +35,10 @@ PRIMARY KEY(author_id));
 CREATE TABLE Written_By
 ( book_id INT,
 author_id INT,
-role VARCHAR,
+role VARCHAR(35),
 PRIMARY KEY(book_id, author_id),
-book_id FOREIGN KEY REFERENCES Books(book_id),
-author_id FOREIGN KEY REFERENCES Authors(author_id));
+FOREIGN KEY (book_id) REFERENCES Books(book_id),
+FOREIGN KEY (author_id) REFERENCES Authors(author_id));
 
 CREATE TABLE Book_Series
 ( series_id INT,

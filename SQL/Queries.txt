@@ -66,7 +66,7 @@ WHERE
 # a randomized algorithm to send the user to a book page. 'Surprise Me' feature. 
 STILL TODO
 
-# Find two random genres and the select the top rated books within those genres and return these as recommended books for the the user. 
+# Find two random genres and the select the top 2 rated books within those genres and return these as recommended books for the the user. 
 SELECT g.genre, b.title,b.image_url
 FROM Genre g
     NATURAL JOIN Book_Genre bg
@@ -110,12 +110,6 @@ ORDER BY '${attribute}';
 
 SELECT * FROM Authors
 WHERE Authors.id = '${author_id}';
-
-
-
-
-
-
 
 -- 4: User's liked books
 

@@ -1,4 +1,4 @@
-CREATE TABLE Book
+CREATE TABLE Books
 ( isbn INT,
 book_id INT,
 text_reviews_count INT,
@@ -21,7 +21,8 @@ CREATE TABLE Similar_Books
 ( book_id INT,
 similar_book INT,
 PRIMARY KEY(book_id, similar_book),
-book_id, similar_book FOREIGN KEY REFERENCES Book(book_id));
+FOREIGN KEY (book_id) REFERENCES Books(book_id)
+FOREIGN KEY (similar_book) REFERENCES Books(book_id));
 
 CREATE TABLE Authors
 ( author_id INT,

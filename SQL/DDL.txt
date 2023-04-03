@@ -28,7 +28,7 @@ CREATE TABLE Authors
 ( author_id INT,
 average_rating FLOAT,
 text_reviews_count INT,
-name VARCHAR,
+name VARCHAR(120),
 ratings_count INT,
 PRIMARY KEY(author_id));
 

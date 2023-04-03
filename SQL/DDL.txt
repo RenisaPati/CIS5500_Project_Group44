@@ -1,5 +1,5 @@
 CREATE TABLE Books
-( isbn INT,
+( isbn VARCHAR(15),
 book_id INT,
 text_reviews_count INT,
 series_id INT,

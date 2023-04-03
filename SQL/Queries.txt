@@ -10,42 +10,47 @@ SELECT r.year, AVG(r.rating), COUNT(*)
 FROM Books JOIN REVIEWS r ON r.book_id = ${book_id}
 GROUP BY r.year;
 
-# When a genre is clicked from a book page, it will direct to that genre's page. We will display a table fo the books in the genre, sortable 
+# When a genre is clicked from a book page, it will direct to that genre's page. We will display a table fo the books in the genre, sortable by a clickable attribute in the table and limited to display some number of records per page (ie 10, 25, 50). 
 SELECT g.genre_id, b.*
 FROM Genres g NATURAL JOIN Book_Genres bg ON genre_id
               JOIN Books b ON b.book_id = bg.book_id
 WHERE genre = ${genre_name}
 ORDER BY ${attribute} DESC LIMIT ${pageSize} OFFSET ${offset};
 
-# If a book is part of a series, then clicking the series title will pop out a model containing the other books in the series, each of which is clickable and navigates to that book’s page.
-SELECT b.book_id, b.title,
+# If a book is part of a series, these will be displayed as part of the book page. clicking the series title will pop out a model containing the other books in the series, each of which is clickable and navigates to that book’s page.
+SELECT b.book_id, b.title, b.image_url, bk.book_id, bk.title, bk.image_url
 FROM (SELECT book_id
       FROM Books
       WHERE book_id = ${book_id}) b
 JOIN Book_Series bs ON b.series = bs.series_id
-JOIN Books bk ON b.book_id = bk.book_id;
+JOIN Books bk ON bs.book_id = bk.book_id;
 
 
-#
-SELECT b.*, a.name, g.genre
+# Retrieval of additional information needed to populate the books page. Specifically, get the author information  
+SELECT a.name, a.role
 FROM Books b
 	INNER JOIN WrittenBy w ON w.book_id = b.book_id
 	INNER JOIN Authors a ON w.author_id = a.author_id
+WHERE b.book_id = '${selected_book_id}'	
+
+# Retrieval of additional information needed to populate the books page. Specifically, get the genres associated with the book
+SELECT g.genre 
+FROM Books b
 	INNER JOIN Book_Genres bg ON bg.book_id = b.book_id
 	INNER JOIN Geners g ON g.genre_id = bg.genre_id
-WHERE book_id = '${selected_book_id}'
+WHERE b.book_id = '${selected_book_id}'
 
 
--- BookPage (ii)
-SELECT b.Title, b.image_url
+# Get the title and image URL of books that are similar to the current book. 
+SELECT b.book_id, b.title, s.similar_book_id, b2.Title, b2.image_url
 FROM Books b
 	INNER JOIN similar_books s ON s.book_id = b.'${selected_book_id}'
+	INNNER JOIN Books b2 ON s.similar_books_id = s.book_id
 
 
 -- Queries to implement features on Home Page --
 
--- 1)	Books of the month
-
+# Calculate the average ratings on books that were reviewed in the current month and return the top 10 Books(titles/URLs). This is our 'Books of the month' feature.
 SELECT b.title, b.image_url, 
 FROM Reviews r 
 	JOIN Book b ON b.book_id = r.book_id 
@@ -58,10 +63,10 @@ WHERE
                     ORDER BY AVG(rating) DESC
                     LIMIT 10 )
 
+# a randomized algorithm to send the user to a book page. 'Surprise Me' feature. 
+STILL TODO
 
---2)	 TBD , maybe use random and some algorithm
-
---3)	Book recs
+# Find two random genres and the select the top rated books within those genres and return these as recommended books for the the user. 
 SELECT g.genre, b.title,b.image_url
 FROM Genre g
     NATURAL JOIN Book_Genre bg

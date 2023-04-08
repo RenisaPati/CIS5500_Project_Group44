@@ -231,7 +231,7 @@ const similar_books = async function(req, res) {
 
   // Return the information of the similar books
   connection.query(`
-    SELECT s.similar_book_id, b2.title, b2.image_url
+    SELECT s.similar_book_id, b2.title AS similar_title, b2.image_url AS similar_url
     FROM Books b
       INNER JOIN Similar_Books s ON s.book_id = b.book_id
       INNER JOIN Books b2 ON s.similar_book_id = b2.book_id

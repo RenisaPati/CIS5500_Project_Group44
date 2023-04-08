@@ -3,7 +3,7 @@
   "rds_port": "3306",
   "rds_user": "group44_db1",
   "rds_password" : "gPeQ*3$1-I4%21vH",
-  "rds_db": "SWIFTIFY",
+  "rds_db": "AMAZINGREADS",
   "server_host": "localhost",
   "server_port":"8080"
 }

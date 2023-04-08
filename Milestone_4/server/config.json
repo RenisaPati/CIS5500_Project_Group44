@@ -1,0 +1,9 @@
+{
+  "rds_host": "database-1.cy6rteiuiuor.us-east-1.rds.amazonaws.com",
+  "rds_port": "3306",
+  "rds_user": "group44_db1",
+  "rds_password" : "gPeQ*3$1-I4%21vH",
+  "rds_db": "SWIFTIFY",
+  "server_host": "localhost",
+  "server_port":"8080"
+}

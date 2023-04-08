@@ -162,7 +162,7 @@ const book_series = async function(req, res) {
   // Return the average rating and rating count for each year
   // in which a book has been rated
   connection.query(`
-  SELECT bk.book_id, bk.title, bk.image_url, bs.*
+  SELECT bk.book_id, bk.title AS book_title, bk.image_url, bs.*
   FROM Books b
     JOIN Book_Series bs ON b.series = bs.series_id
     JOIN Books bk ON bs.book_id = bk.book_id
@@ -185,7 +185,7 @@ const book_author_series = async function(req, res) {
   // Return the author name, role, book series title
   // of the book in question.
   connection.query(`
-  SELECT a.name, a.role, bs.title
+  SELECT a.name, a.role, bs.title AS series_title
   FROM Books b
     INNER JOIN Written_By w ON w.book_id = b.book_id
     INNER JOIN Authors a ON w.author_id = a.author_id

@@ -12,44 +12,34 @@ const connection = mysql.createConnection({
 });
 connection.connect((err) => err && console.log(err));
 
-/******************
- * WARM UP ROUTES *
- ******************/
+/*****************************
+ * ROUTES BY PAGES -- Books *
+ *****************************/
 
-// Route 1: GET /author/:type
-const author = async function(req, res) {
+// Route 1: GET /genre/:genre_name
+const genre = async function(req, res) {
   // TODO (TASK 1): replace the values of name and pennKey with your own
-  const name = 'John Doe';
-  const pennKey = 'jdoe';
+  const genre = req.param.genre_name;
+  const pg = req.query.page ;
+  const pageSize = req.query.page_size ?? 10;
+  const offset = (pg - 1)*pageSize;
+
+  // TODO: change ORDER BY to be a dynamic attribute
+  // const clicked_attr = re.query.attr
+  // How do we persist the genre name to stay on the same page but reorder on a different attribute?
+
 
   // checks the value of type the request parameters
-  // note that parameters are required and are specified in server.js in the endpoint by a colon (e.g. /author/:type)
-  if (req.params.type === 'name') {
-    // res.send returns data back to the requester via an HTTP response
-    res.send(`Created by ${name}`);
-  } else if (null) {
-    // TODO (TASK 2): edit the else if condition to check if the request parameter is 'pennkey' and if so, send back response 'Created by [pennkey]'
-  } else {
-    // we can also send back an HTTP status code to indicate an improper request
-    res.status(400).send(`'${req.params.type}' is not a valid author type. Valid types are 'name' and 'pennkey'.`);
-  }
-}
-
-// Route 2: GET /random
-const random = async function(req, res) {
-  // you can use a ternary operator to check the value of request query values
-  // which can be particularly useful for setting the default value of queries
-  // note if users do not provide a value for the query it will be undefined, which is falsey
-  const explicit = req.query.explicit === 'true' ? 1 : 0;
-
-  // Here is a complete example of how to query the database in JavaScript.
-  // Only a small change (unrelated to querying) is required for TASK 3 in this route.
+  
   connection.query(`
-    SELECT *
-    FROM Songs
-    WHERE explicit <= ${explicit}
-    ORDER BY RAND()
-    LIMIT 1
+    SELECT g.genre_name, b.image_url, b.Title, b.book_id, b.average_rating
+    FROM Genres g
+      INNER JOIN Book_Genres bg on g.genre_id = bg.genre_id
+      INNER JOIN Books b ON bg.book_id = b.book_id
+    WHERE g.genre_name = ${genre}
+    ORDER BY b.average_rating 
+    LIMIT ${pageSize} OFFSET ${offset}
+
   `, (err, data) => {
     if (err || data.length === 0) {
       // if there is an error for some reason, or if the query is empty (this should not be possible)
@@ -61,97 +51,209 @@ const random = async function(req, res) {
       // being song_id and title which you will add. In this case, there is only one song
       // so we just directly access the first element of the query results array (data)
       // TODO (TASK 3): also return the song title in the response
+      res.json(data);
+    }
+  });
+}
+
+/*****************************
+ * ROUTES BY PAGES -- Books *
+ *****************************/
+
+// Route 2: GET /book/:book_id
+const book = async function(req, res) {
+  // Get book information for the book that was clicked
+  const curr_id = req.params.book_id
+
+  // Return the book information for the clicked book
+  connection.query(`
+  SELECT *
+  FROM Books  
+  WHERE book_id = ${curr_id}
+  `, (err, data) => {
+    if (err || data.length === 0) {
+      console.log(err);
+      res.json({});
+    } else {
       res.json({
-        song_id: data[0].song_id,
+        book_title: data[0].title,
+        book_isbn: data[0].isbn,
+        book_language_code: data[0].language_code,
+        is_ebook: data[0].is_ebook,
+        average_rating: data[0].average_rating,
+        description: data[0].description,
+        format: data[0].format,
+        publisher: data[0].publisher,
+        num_pages: data[0].num_pages,
+        publication_year: data[0].publication_year
       });
     }
   });
 }
 
-/********************************
- * BASIC SONG/ALBUM INFO ROUTES *
- ********************************/
 
-// Route 3: GET /song/:song_id
-const song = async function(req, res) {
-  // TODO (TASK 4): implement a route that given a song_id, returns all information about the song
-  // Most of the code is already written for you, you just need to fill in the query
-  connection.query(``, (err, data) => {
+// Route 3: GET /reviews/:book_id
+const reviews = async function(req, res) {
+  // Get book information for the book that was clicked
+  const curr_id = req.params.book_id
+  const pg = req.query.page ;
+  const pageSize = req.query.page_size ?? 10;
+  const offset = (pg - 1)*pageSize;
+
+  // Return the reviews for the clicked book
+
+  if (!pg) {
+    connection.query(`
+    SELECT r.*
+    FROM Reviews r 
+    WHERE r.book_id = ${curr_id}
+    ORDER BY r.n_votes
+    `, (err, data) => {
+      if (err || data.length === 0) {
+        console.log(err);
+        res.json({});
+      } else {
+        res.json(data);
+      }
+    });
+  } else {
+    connection.query(`
+      SELECT r.*
+      FROM Reviews r 
+      WHERE r.book_id = ${curr_id}
+      ORDER BY r.n_votes
+      LIMIT ${pageSize} OFFSET ${offset} 
+      `, (err, data) => {
+        if (err || data.length === 0) {
+          console.log(err);
+          res.json({});
+        } else {
+          res.json(data);
+        }
+    });
+  }
+}
+// Route 4: GET /rating_history/:book_id
+const rating_history = async function(req, res) {
+  // Get book information for the book that was clicked
+  const curr_id = req.params.book_id
+
+  // Return the average rating and rating count for each year
+  // in which a book has been rated
+  connection.query(`
+  SELECT r.year, AVG(r.rating), COUNT(*)
+  FROM Books JOIN Reviews r ON r.book_id = ${curr_id}
+  GROUP BY r.year
+  `, (err, data) => {
     if (err || data.length === 0) {
       console.log(err);
       res.json({});
     } else {
-      res.json(data[0]);
+      res.json(data);
     }
   });
 }
 
-// Route 4: GET /album/:album_id
-const album = async function(req, res) {
-  // TODO (TASK 5): implement a route that given a album_id, returns all information about the album
-  res.json({}); // replace this with your implementation
+// Route 5: GET /book_series/:book_id
+const book_series = async function(req, res) {
+  // Get book information for the book that was clicked
+  const curr_id = req.params.book_id
+
+  // Return the average rating and rating count for each year
+  // in which a book has been rated
+  connection.query(`
+  SELECT bk.book_id, bk.title, bk.image_url, bs.*
+  FROM Books b
+    JOIN Book_Series bs ON b.series = bs.series_id
+    JOIN Books bk ON bs.book_id = bk.book_id
+  WHERE b.book_id = ${curr_id}
+  `, (err, data) => {
+    if (err || data.length === 0) {
+      console.log(err);
+      res.json({});
+    } else {
+      res.json(data);
+    }
+  });
 }
 
-// Route 5: GET /albums
-const albums = async function(req, res) {
-  // TODO (TASK 6): implement a route that returns all albums ordered by release date (descending)
-  // Note that in this case you will need to return multiple albums, so you will need to return an array of objects
-  res.json([]); // replace this with your implementation
+// Route 6: GET /book_author_series/:book_id
+const book_author_series = async function(req, res) {
+  // Gets book information (author name, role, book series title) for the book that was clicked 
+  const curr_id = req.params.book_id
+
+  // Return the author name, role, book series title
+  // of the book in question.
+  connection.query(`
+  SELECT a.name, a.role, bs.title
+  FROM Books b
+    INNER JOIN Written_By w ON w.book_id = b.book_id
+    INNER JOIN Authors a ON w.author_id = a.author_id
+    INNER JOIN Book_Series bs ON b.series_id = bs.series_id
+  WHERE b.book_id = '${curr_id}'
+  `, (err, data) => {
+    if (err || data.length === 0) {
+      console.log(err);
+      res.json({});
+    } else {
+      res.json(data);
+    }
+  });
 }
 
-// Route 6: GET /album_songs/:album_id
-const album_songs = async function(req, res) {
-  // TODO (TASK 7): implement a route that given an album_id, returns all songs on that album ordered by track number (ascending)
-  res.json([]); // replace this with your implementation
+// Route 7: GET /book_genres/:book_id
+const book_genres = async function(req, res) {
+  // Get book information (genre name)for the book that was clicked
+  const curr_id = req.params.book_id
+
+  // Return the genre name
+  // of the book in question.
+  connection.query(`
+  SELECT g.genre_name 
+  FROM Books b
+    INNER JOIN Book_Genres bg ON bg.book_id = b.book_id
+    INNER JOIN Genres g ON g.genre_id = bg.genre_id
+  WHERE b.book_id = '${curr_id}'
+  `, (err, data) => {
+    if (err || data.length === 0) {
+      console.log(err);
+      res.json({});
+    } else {
+      res.json(data);
+    }
+  });
 }
 
-/************************
- * ADVANCED INFO ROUTES *
- ************************/
+// Route 8: Get /similar_books/:book_id
+const similar_books = async function(req, res) {
+  // Get similar book information based on the book in question
+  const curr_id = req.params.book_id
 
-// Route 7: GET /top_songs
-const top_songs = async function(req, res) {
-  const page = req.query.page;
-  // TODO (TASK 8): use the ternary (or nullish) operator to set the pageSize based on the query or default to 10
-  const pageSize = undefined;
-
-  if (!page) {
-    // TODO (TASK 9)): query the database and return all songs ordered by number of plays (descending)
-    // Hint: you will need to use a JOIN to get the album title as well
-    res.json([]); // replace this with your implementation
-  } else {
-    // TODO (TASK 10): reimplement TASK 9 with pagination
-    // Hint: use LIMIT and OFFSET (see https://www.w3schools.com/php/php_mysql_select_limit.asp)
-    res.json([]); // replace this with your implementation
-  }
+  // Return the information of the similar books
+  connection.query(`
+    SELECT s.similar_book_id, b2.title, b2.image_url
+    FROM Books b
+      INNER JOIN Similar_Books s ON s.book_id = b.book_id
+      INNER JOIN Books b2 ON s.similar_book_id = b2.book_id
+    WHERE b.book_id = '${curr_id}'
+  `, (err, data) => {
+    if (err || data.length === 0) {
+      console.log(err);
+      res.json({});
+    } else {
+      res.json(data);
+    }
+  });
 }
 
-// Route 8: GET /top_albums
-const top_albums = async function(req, res) {
-  // TODO (TASK 11): return the top albums ordered by aggregate number of plays of all songs on the album (descending), with optional pagination (as in route 7)
-  // Hint: you will need to use a JOIN and aggregation to get the total plays of songs in an album
-  res.json([]); // replace this with your implementation
-}
-
-// Route 9: GET /search_albums
-const search_songs = async function(req, res) {
-  // TODO (TASK 12): return all songs that match the given search query with parameters defaulted to those specified in API spec ordered by title (ascending)
-  // Some default parameters have been provided for you, but you will need to fill in the rest
-  const title = req.query.title ?? '';
-  const durationLow = req.query.duration_low ?? 60;
-  const durationHigh = req.query.duration_high ?? 660;
-
-  res.json([]); // replace this with your implementation
-}
 
 module.exports = {
-  author,
-  random,
-  song,
-  album,
-  albums,
-  album_songs,
-  top_songs,
-  top_albums,
-  search_songs,
+  genre,
+  book,
+  reviews,
+  rating_history,
+  book_series,
+  book_author_series,
+  book_genres,
+  similar_books
 }

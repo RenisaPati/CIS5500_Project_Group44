@@ -32,7 +32,7 @@ const genre = async function(req, res) {
   // checks the value of type the request parameters
   
   connection.query(`
-    SELECT g.genre_name, b.image_url, b.Title, b.book_id, b.average_rating
+    SELECT g.genre_name, b.image_url, b.title, b.book_id, b.average_rating
     FROM Genres g
       INNER JOIN Book_Genres bg on g.genre_id = bg.genre_id
       INNER JOIN Books b ON bg.book_id = b.book_id

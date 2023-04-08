@@ -21,7 +21,7 @@ const genre = async function(req, res) {
   // TODO (TASK 1): replace the values of name and pennKey with your own
   const genre = req.param.genre_name;
   const pg = req.query.page ;
-  const pageSize = req.query.page_size ?? 10;
+  const pageSize = req.query.page_size ?? 80;
   const offset = (pg - 1)*pageSize;
 
   // TODO: change ORDER BY to be a dynamic attribute
@@ -30,30 +30,54 @@ const genre = async function(req, res) {
 
 
   // checks the value of type the request parameters
-  
-  connection.query(`
-    SELECT g.genre_name, b.image_url, b.title, b.book_id, b.average_rating
-    FROM Genres g
-      INNER JOIN Book_Genres bg on g.genre_id = bg.genre_id
-      INNER JOIN Books b ON bg.book_id = b.book_id
-    WHERE g.genre_name = ${genre}
-    ORDER BY b.average_rating 
-    LIMIT ${pageSize} OFFSET ${offset}
+  if (!pg) {
+      connection.query(`
+      SELECT g.genre_name, b.image_url, b.title, b.book_id, b.average_rating
+      FROM Genres g
+        INNER JOIN Book_Genres bg on g.genre_id = bg.genre_id
+        INNER JOIN Books b ON bg.book_id = b.book_id
+      WHERE g.genre_name = ${genre}
+      ORDER BY b.average_rating 
+    `, (err, data) => {
+      if (err || data.length === 0) {
+        // if there is an error for some reason, or if the query is empty (this should not be possible)
+        // print the error message and return an empty object instead
+        console.log(err);
+        res.json({});
+      } else {
+        // Here, we return results of the query as an object, keeping only relevant data
+        // being song_id and title which you will add. In this case, there is only one song
+        // so we just directly access the first element of the query results array (data)
+        // TODO (TASK 3): also return the song title in the response
+        res.json(data);
+      }
+    });
+  } else {
+      connection.query(`
+      SELECT g.genre_name, b.image_url, b.title, b.book_id, b.average_rating
+      FROM Genres g
+        INNER JOIN Book_Genres bg on g.genre_id = bg.genre_id
+        INNER JOIN Books b ON bg.book_id = b.book_id
+      WHERE g.genre_name = ${genre}
+      ORDER BY b.average_rating 
+      LIMIT ${pageSize} OFFSET ${offset}
 
-  `, (err, data) => {
-    if (err || data.length === 0) {
-      // if there is an error for some reason, or if the query is empty (this should not be possible)
-      // print the error message and return an empty object instead
-      console.log(err);
-      res.json({});
-    } else {
-      // Here, we return results of the query as an object, keeping only relevant data
-      // being song_id and title which you will add. In this case, there is only one song
-      // so we just directly access the first element of the query results array (data)
-      // TODO (TASK 3): also return the song title in the response
-      res.json(data);
-    }
-  });
+    `, (err, data) => {
+      if (err || data.length === 0) {
+        // if there is an error for some reason, or if the query is empty (this should not be possible)
+        // print the error message and return an empty object instead
+        console.log(err);
+        res.json({});
+      } else {
+        // Here, we return results of the query as an object, keeping only relevant data
+        // being song_id and title which you will add. In this case, there is only one song
+        // so we just directly access the first element of the query results array (data)
+        // TODO (TASK 3): also return the song title in the response
+        res.json(data);
+      }
+    });
+  }
+
 }
 
 /*****************************
@@ -97,7 +121,7 @@ const reviews = async function(req, res) {
   // Get book information for the book that was clicked
   const curr_id = req.params.book_id
   const pg = req.query.page ;
-  const pageSize = req.query.page_size ?? 10;
+  const pageSize = req.query.page_size ?? 80;
   const offset = (pg - 1)*pageSize;
 
   // Return the reviews for the clicked book
@@ -133,6 +157,8 @@ const reviews = async function(req, res) {
     });
   }
 }
+
+
 // Route 4: GET /rating_history/:book_id
 const rating_history = async function(req, res) {
   // Get book information for the book that was clicked
@@ -141,7 +167,7 @@ const rating_history = async function(req, res) {
   // Return the average rating and rating count for each year
   // in which a book has been rated
   connection.query(`
-  SELECT r.year, AVG(r.rating), COUNT(*)
+  SELECT r.year, AVG(r.rating) AS average_rating, COUNT(*) AS review_count
   FROM Books JOIN Reviews r ON r.book_id = ${curr_id}
   GROUP BY r.year
   `, (err, data) => {

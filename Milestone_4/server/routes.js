@@ -35,7 +35,7 @@ const genre = async function(req, res) {
       SELECT g.genre_name, b.image_url, b.title, b.book_id, b.average_rating
       FROM Genres g
         INNER JOIN Book_Genres bg on g.genre_id = bg.genre_id
-        INNER JOIN Books b ON bg.book_id = b.book_id
+        INNER JOIN Book b ON bg.book_id = b.book_id
       WHERE g.genre_name = ${genre}
       ORDER BY b.average_rating 
     `, (err, data) => {
@@ -57,7 +57,7 @@ const genre = async function(req, res) {
       SELECT g.genre_name, b.image_url, b.title, b.book_id, b.average_rating
       FROM Genres g
         INNER JOIN Book_Genres bg on g.genre_id = bg.genre_id
-        INNER JOIN Books b ON bg.book_id = b.book_id
+        INNER JOIN Book b ON bg.book_id = b.book_id
       WHERE g.genre_name = ${genre}
       ORDER BY b.average_rating 
       LIMIT ${pageSize} OFFSET ${offset}
@@ -92,7 +92,7 @@ const book = async function(req, res) {
   // Return the book information for the clicked book
   connection.query(`
   SELECT *
-  FROM Books  
+  FROM Book  
   WHERE book_id = ${curr_id}
   `, (err, data) => {
     if (err || data.length === 0) {
@@ -121,7 +121,7 @@ const reviews = async function(req, res) {
   // Get book information for the book that was clicked
   const curr_id = req.params.book_id
   const pg = req.query.page ;
-  const pageSize = req.query.page_size ?? 80;
+  const pageSize = req.query.page_size ?? 25;
   const offset = (pg - 1)*pageSize;
 
   // Return the reviews for the clicked book
@@ -131,7 +131,7 @@ const reviews = async function(req, res) {
     SELECT r.*
     FROM Reviews r 
     WHERE r.book_id = ${curr_id}
-    ORDER BY r.n_votes
+    ORDER BY r.num_votes DESC, r.rating DESC
     `, (err, data) => {
       if (err || data.length === 0) {
         console.log(err);
@@ -145,7 +145,7 @@ const reviews = async function(req, res) {
       SELECT r.*
       FROM Reviews r 
       WHERE r.book_id = ${curr_id}
-      ORDER BY r.n_votes
+      ORDER BY r.num_votes DESC, r.rating DESC
       LIMIT ${pageSize} OFFSET ${offset} 
       `, (err, data) => {
         if (err || data.length === 0) {
@@ -167,9 +167,11 @@ const rating_history = async function(req, res) {
   // Return the average rating and rating count for each year
   // in which a book has been rated
   connection.query(`
-  SELECT r.year, AVG(r.rating) AS average_rating, COUNT(*) AS review_count
-  FROM Books JOIN Reviews r ON r.book_id = ${curr_id}
-  GROUP BY r.year
+  SELECT r.year_added, AVG(r.rating) AS average_rating, COUNT(*) AS review_count
+  FROM Book b JOIN Reviews r ON r.book_id = b.book_id
+  WHERE b.book_id = ${curr_id}
+  GROUP BY r.year_added
+  ORDER BY year_added;  
   `, (err, data) => {
     if (err || data.length === 0) {
       console.log(err);

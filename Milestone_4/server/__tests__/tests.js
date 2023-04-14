@@ -85,8 +85,50 @@ test('GET /rating_history/13133', async () => {
   .expect(200)
   .then((res) => {
     expect(res.body).toStrictEqual(results.rating_history)
-  })
-})
+  });
+});
+
+// Route 5: GET book series of a book
+test('GET /book_series/915', async() => {
+    await supertest(app).get('/book_series/915')
+    .expect(200)
+    .then((res) => {
+        expect(res.body).toStrictEqual(results.book_series)
+    });
+});
+
+// Route 6: GET author name and book series title for book
+test('GET /book_author_series/69259', async() => {
+    await supertest(app).get('/book_author_series/69259')
+    .expect(200)
+    .then((res) => {
+        expect(res.body).toStrictEqual(results.book_info)
+    });
+});
+
+//Route 7: Get genres for the books
+test('GET /book_genres/82842', async() => {
+    await supertest(app).get('/book_genres/82842')
+    .expect(200)
+    .then((res) => {
+        expect(res.body).toStrictEqual(results.book_info_2)
+    });
+});
+
+//Route 8: Get similar books
+test('GET /similar_books/85266', async() => {
+    await supertest(app).get('/similar_books/85266')
+    .expect(200)
+    .then((res) => {
+        expect(res.body).toStrictEqual(results.similar_books)
+    });
+});
+
+
+
+
+
+
 // TSwift tests
 test('GET /author/name', async () => {
   await supertest(app).get('/author/name')

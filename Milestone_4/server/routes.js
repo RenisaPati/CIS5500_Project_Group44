@@ -61,7 +61,6 @@ const genre = async function(req, res) {
       WHERE g.genre_name = ${genre}
       ORDER BY b.average_rating 
       LIMIT ${pageSize} OFFSET ${offset}
-
     `, (err, data) => {
       if (err || data.length === 0) {
         // if there is an error for some reason, or if the query is empty (this should not be possible)
@@ -187,13 +186,13 @@ const book_series = async function(req, res) {
   // Get book information for the book that was clicked
   const curr_id = req.params.book_id
 
-  // Return the average rating and rating count for each year
-  // in which a book has been rated
+  // Return the other books in the book series
+  // of the specified book 
   connection.query(`
   SELECT bk.book_id, bk.title AS book_title, bk.image_url, bs.*
-  FROM Books b
-    JOIN Book_Series bs ON b.series = bs.series_id
-    JOIN Books bk ON bs.book_id = bk.book_id
+  FROM Book b
+    JOIN Book_Series bs ON b.series_id = bs.series_id
+    JOIN Book bk ON bs.series_id = bk.series_id
   WHERE b.book_id = ${curr_id}
   `, (err, data) => {
     if (err || data.length === 0) {
@@ -210,15 +209,15 @@ const book_author_series = async function(req, res) {
   // Gets book information (author name, role, book series title) for the book that was clicked 
   const curr_id = req.params.book_id
 
-  // Return the author name, role, book series title
+  // Return the author name, book series title
   // of the book in question.
   connection.query(`
-  SELECT a.name, a.role, bs.title AS series_title
-  FROM Books b
+  SELECT a.name AS author, bs.title AS series_title
+  FROM Book b
     INNER JOIN Written_By w ON w.book_id = b.book_id
     INNER JOIN Authors a ON w.author_id = a.author_id
     INNER JOIN Book_Series bs ON b.series_id = bs.series_id
-  WHERE b.book_id = '${curr_id}'
+  WHERE b.book_id = ${curr_id}
   `, (err, data) => {
     if (err || data.length === 0) {
       console.log(err);
@@ -237,11 +236,11 @@ const book_genres = async function(req, res) {
   // Return the genre name
   // of the book in question.
   connection.query(`
-  SELECT g.genre_name 
-  FROM Books b
+  SELECT g.genre_name
+  FROM Book b
     INNER JOIN Book_Genres bg ON bg.book_id = b.book_id
     INNER JOIN Genres g ON g.genre_id = bg.genre_id
-  WHERE b.book_id = '${curr_id}'
+  WHERE b.book_id = ${curr_id}
   `, (err, data) => {
     if (err || data.length === 0) {
       console.log(err);
@@ -260,10 +259,10 @@ const similar_books = async function(req, res) {
   // Return the information of the similar books
   connection.query(`
     SELECT s.similar_book_id, b2.title AS similar_title, b2.image_url AS similar_url
-    FROM Books b
+    FROM Book b
       INNER JOIN Similar_Books s ON s.book_id = b.book_id
-      INNER JOIN Books b2 ON s.similar_book_id = b2.book_id
-    WHERE b.book_id = '${curr_id}'
+      INNER JOIN Book b2 ON s.similar_book_id = b2.book_id
+    WHERE b.book_id = ${curr_id}
   `, (err, data) => {
     if (err || data.length === 0) {
       console.log(err);

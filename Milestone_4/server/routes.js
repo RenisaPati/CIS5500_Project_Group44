@@ -273,14 +273,145 @@ const similar_books = async function(req, res) {
   });
 }
 
+/*****************************
+ * ROUTES BY PAGES -- HomePage *
+ *****************************/
 
-module.exports = {
-  genre,
-  book,
-  reviews,
-  rating_history,
-  book_series,
-  book_author_series,
-  book_genres,
-  similar_books
-}
+// Route 9: GET /top_ten_books_month
+const top_ten_books_month = async function(req, res) {
+  // Return the title and URLs of the top 10 books of the month based on average ratings on books reviewed in the current month
+   connection.query(`
+   SELECT b.title, b.image_url, 
+   FROM Reviews r 
+   JOIN Book b ON b.book_id = r.book_id
+   WHERE b.id IN ( SELECT book_id
+                   FROM (SELECT r.book_id, AVG(rating)
+                         FROM Reviews r
+                         WHERE r.month_added = month(getdate())
+                         GROUP BY r.book_id
+                         ORDER BY AVG(rating) DESC
+                         LIMIT 10 )'
+   `, (err, data) => {
+     if (err || data.length === 0) {
+       console.log(err);
+       res.json({});
+     } else {
+       res.json(data);
+     }
+   });
+ }
+ 
+ // Route 10: GET /book_recs_rand_genre/:user_id
+ const book_recs_rand_genre = async function(req, res) {
+   // Find two random genres and the select the top 2 rated books within those genres and return these as recommended books for the the user
+   connection.query(`
+   SELECT g.genre, b.title, b.image_url
+   FROM Genre g
+       NATURAL JOIN Book_Genre bg
+     JOIN
+       (SELECT bg.genre_id AS genre_id
+         FROM User u
+           JOIN book_genres bg ON u.liked_books = bg.book_id
+         WHERE user_id = '${user_id}'
+         ORDER BY RAND()
+         LIMIT 1) g_user ON bg.genre_id = g_user.genre_id
+       JOIN books b ON bg.book_id = b.book_id
+   ORDER BY b.average_rating
+   LIMIT 2
+   UNION 
+   SELECT g.genre, b.title,b.image_url
+   FROM Genre g
+       NATURAL JOIN Book_Genre bg
+     JOIN
+       (SELECT bg.genre_id AS genre_id
+         FROM User u
+           JOIN book_genres bg ON u.liked_books = bg.book_id
+         WHERE user_id = '${user_id}'
+         ORDER BY RAND()
+         LIMIT 1) g_user
+           ON bg.genre_id = g_user.genre_id
+       JOIN books b ON bg.book_id = b.book_id
+   ORDER BY b.average_rating
+   LIMIT 2'
+   `, (err, data) => {
+     if (err || data.length === 0) {
+       console.log(err);
+       res.json({});
+     } else {
+       res.json(data);
+     }
+   });
+ }
+ 
+ /*****************************
+  * ROUTES BY PAGES -- Authors *
+  *****************************/
+ 
+ // Route 11: GET /author_details/:author_id
+ const author_details = async function(req, res) {
+   // Return author details for the selected author
+   connection.query(`
+   SELECT * FROM Authors
+   WHERE Authors.id = '${author_id}'
+   `, (err, data) => {
+     if (err || data.length === 0) {
+       console.log(err);
+       res.json({});
+     } else {
+       res.json(data);
+     }
+   });
+ }
+ 
+ // Route 12: GET /user_liked/:user_id
+ const user_liked = async function(req, res) {
+   // Return author details for the selected author
+   connection.query(`
+   SELECT b.title
+   FROM User u
+     JOIN books b ON u.liked_books = b.book_id
+   WHERE user_id = '${user_id}'
+   `, (err, data) => {
+     if (err || data.length === 0) {
+       console.log(err);
+       res.json({});
+     } else {
+       res.json(data);
+     }
+   });
+ }
+ 
+ // Route 12: GET /author_ordered/:attribute
+ const authors_ordered = async function(req, res) {
+   // Return author details for the selected author
+   connection.query(`
+   SELECT name FROM Authors
+   ORDER BY '${attribute}'
+   `, (err, data) => {
+     if (err || data.length === 0) {
+       console.log(err);
+       res.json({});
+     } else {
+       res.json(data);
+     }
+   });
+ }
+ 
+ 
+ module.exports = {
+   genre,
+   book,
+   reviews,
+   rating_history,
+   book_series,
+   book_author_series,
+   book_genres,
+   similar_books,
+   top_ten_books_month,
+   book_recs_rand_genre,
+   author_details,
+   user_liked,
+   authors_ordered,
+ }
+ 
+ 

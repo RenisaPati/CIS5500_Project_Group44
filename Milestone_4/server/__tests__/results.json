@@ -1,415 +1,447 @@
 {
-  "song": {
-    "song_id": "0kN3oXYWWAk1uC0y2WoyOE",
-    "album_id": "43OpbkiiIxJO8ktIB777Nn",
-    "title": "Love Story",
-    "number": 9,
-    "duration": 235,
-    "plays": 639407309,
-    "danceability": 0.618,
-    "energy": 0.736,
-    "valence": 0.307,
-    "tempo": 119,
-    "key_mode": "D major",
-    "explicit": 0
+  "genre_biography_501" : {
+    "genre_name": "biography",
+    "image_url": "https://images.gr-assets.com/books/1325969154m/9692843.jpg",
+    "title": "Alla ricerca di Sonya Dufrette",
+    "book_id": 9692843,
+    "average_rating": 3
   },
-  "album": {
-    "album_id": "3lS1y25WAhcqJDATJK70Mq",
-    "title": "Midnights (3am Edition)",
-    "release_date": "2022-10-22",
-    "thumbnail_url": "https://i.scdn.co/image/ab67616d00001e02e0b60c608586d88252b8fbc0"
-  },
-  "albums": [
+
+  "genre_biography_page5" : [
     {
-      "album_id": "3lS1y25WAhcqJDATJK70Mq",
-      "title": "Midnights (3am Edition)",
-      "release_date": "2022-10-22",
-      "thumbnail_url": "https://i.scdn.co/image/ab67616d00001e02e0b60c608586d88252b8fbc0"
+      "genre_name": "biography",
+      "image_url": "https://images.gr-assets.com/books/1320558954m/10343272.jpg",
+      "title": "The Thousand",
+      "book_id": 10343272,
+      "average_rating": 2.93
     },
     {
-      "album_id": "6kZ42qRrzov54LcAk4onW9",
-      "title": "Red (Taylor's Version)",
-      "release_date": "2021-11-12",
-      "thumbnail_url": "https://i.scdn.co/image/ab67616d00001e02318443aab3531a0558e79a4d"
+      "genre_name": "biography",
+      "image_url": "https://images.gr-assets.com/books/1328032968m/10355292.jpg",
+      "title": "Rain of Bullets",
+      "book_id": 10355292,
+      "average_rating": 2.93
     },
     {
-      "album_id": "4hDok0OAJd57SGIT8xuWJH",
-      "title": "Fearless (Taylor's Version)",
-      "release_date": "2021-04-09",
-      "thumbnail_url": "https://i.scdn.co/image/ab67616d00001e02a48964b5d9a3d6968ae3e0de"
+      "genre_name": "biography",
+      "image_url": "https://images.gr-assets.com/books/1320547553m/7891628.jpg",
+      "title": "The Thousand",
+      "book_id": 7891628,
+      "average_rating": 2.93
     },
     {
-      "album_id": "6AORtDjduMM3bupSWzbTSG",
-      "title": "evermore (deluxe version)",
-      "release_date": "2021-01-07",
-      "thumbnail_url": "https://i.scdn.co/image/ab67616d00001e0290fd9741e1838115cd90b3b6"
+      "genre_name": "biography",
+      "image_url": "https://images.gr-assets.com/books/1346588788m/8719182.jpg",
+      "title": "Blotto, Twinks and the Ex-King's Daughter (Blotto and Twinks, #1)",
+      "book_id": 8719182,
+      "average_rating": 2.93
     },
     {
-      "album_id": "1pzvBxYgT6OVwJLtHkrdQK",
-      "title": "folklore (deluxe version)",
-      "release_date": "2020-08-18",
-      "thumbnail_url": "https://i.scdn.co/image/ab67616d00001e02c288028c2592f400dd0b9233"
-    },
-    {
-      "album_id": "1NAmidJlEaVgA3MpcPFYGq",
-      "title": "Lover",
-      "release_date": "2019-08-23",
-      "thumbnail_url": "https://i.scdn.co/image/ab67616d00001e02e787cffec20aa2a396a61647"
-    },
-    {
-      "album_id": "6DEjYFkNZh67HP7R9PSZvv",
-      "title": "reputation",
-      "release_date": "2017-11-10",
-      "thumbnail_url": "https://i.scdn.co/image/ab67616d00001e02da5d5aeeabacacc1263c0f4b"
-    },
-    {
-      "album_id": "34OkZVpuzBa9y40DCy0LPR",
-      "title": "1989 (Deluxe Edition)",
-      "release_date": "2014-10-27",
-      "thumbnail_url": "https://i.scdn.co/image/ab67616d00001e02332d85510aba3eb28312cfb2"
-    },
-    {
-      "album_id": "1KlU96Hw9nlvqpBPlSqcTV",
-      "title": "Red (Deluxe Edition)",
-      "release_date": "2012-10-22",
-      "thumbnail_url": "https://i.scdn.co/image/ab67616d00001e02a7613d346501b828b56a0bc3"
-    },
-    {
-      "album_id": "5EpMjweRD573ASl7uNiHym",
-      "title": "Speak Now (Deluxe Edition)",
-      "release_date": "2010-10-25",
-      "thumbnail_url": "https://i.scdn.co/image/ab67616d00001e022e4ec3175d848eca7b76b07f"
-    },
-    {
-      "album_id": "43OpbkiiIxJO8ktIB777Nn",
-      "title": "Fearless Platinum Edition",
-      "release_date": "2008-11-11",
-      "thumbnail_url": "https://i.scdn.co/image/ab67616d00001e0234e5885465afc8a497ac1b7e"
-    },
-    {
-      "album_id": "7mzrIsaAjnXihW3InKjlC3",
-      "title": "Taylor Swift",
-      "release_date": "2006-10-24",
-      "thumbnail_url": "https://i.scdn.co/image/ab67616d00001e022f8c0fd72a80a93f8c53b96c"
+      "genre_name": "biography",
+      "image_url": "https://images.gr-assets.com/books/1384632187m/8390471.jpg",
+      "title": "Les Fables de sang",
+      "book_id": 8390471,
+      "average_rating": 2.93
     }
   ],
-  "album_songs": [
+
+  "genre_biography_page10_pagesize5" : [
     {
-      "song_id": "2gVhfX2Gy1T9kDuS9azrF7",
-      "title": "willow",
-      "number": 1,
-      "duration": 215,
-      "plays": 511071164
+      "genre_name": "biography",
+      "image_url": "https://images.gr-assets.com/books/1334909576m/13056576.jpg",
+      "title": "The Adventures of Augustus Fuller",
+      "book_id": 13056576,
+      "average_rating": 2.5
     },
     {
-      "song_id": "1gcyHQpBQ1lfXGdhZmWrHP",
-      "title": "champagne problems",
-      "number": 2,
-      "duration": 244,
-      "plays": 317422916
+      "genre_name": "biography",
+      "image_url": "https://images.gr-assets.com/books/1455435456m/19123314.jpg",
+      "title": "The Lonely Hearts Vampire: The Bizarre and Horrifying True Account of Serial Killer Bela Kiss",
+      "book_id": 19123314,
+      "average_rating": 2.5
     },
     {
-      "song_id": "3Dby3p1m6IOZn2gIIqECgK",
-      "title": "gold rush",
-      "number": 3,
-      "duration": 185,
-      "plays": 169286592
+      "genre_name": "biography",
+      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+      "title": "The Balmoral Nude",
+      "book_id": 4835481,
+      "average_rating": 2.5
     },
     {
-      "song_id": "6sQckd3Z8NPxVVKUnavY1F",
-      "title": "‘tis the damn season",
-      "number": 4,
-      "duration": 230,
-      "plays": 141027561
+      "genre_name": "biography",
+      "image_url": "https://images.gr-assets.com/books/1432868221m/11001015.jpg",
+      "title": "The Wheelchair Corpse",
+      "book_id": 11001015,
+      "average_rating": 2.5
     },
     {
-      "song_id": "6lCvK2AR2uOKkVFCVlAzzm",
-      "title": "tolerate it",
-      "number": 5,
-      "duration": 245,
-      "plays": 137146059
-    },
-    {
-      "song_id": "6uwfVkaOM1mcMkFmSn35ix",
-      "title": "no body, no crime (feat. HAIM)",
-      "number": 6,
-      "duration": 216,
-      "plays": 164648283
-    },
-    {
-      "song_id": "55Vf4bimc1Rtfg0PAQRAo2",
-      "title": "happiness",
-      "number": 7,
-      "duration": 315,
-      "plays": 111288459
-    },
-    {
-      "song_id": "66tOfHVH3aUrscg8vExRV4",
-      "title": "dorothea",
-      "number": 8,
-      "duration": 226,
-      "plays": 96977480
-    },
-    {
-      "song_id": "2awNGIJHodfLZSClB3PYhz",
-      "title": "coney island (feat. The National)",
-      "number": 9,
-      "duration": 275,
-      "plays": 105257309
-    },
-    {
-      "song_id": "43Ykum9T72UOPhBN31grpN",
-      "title": "ivy",
-      "number": 10,
-      "duration": 260,
-      "plays": 122188780
-    },
-    {
-      "song_id": "52OkpDsU6MmPx1AwGOb6Ap",
-      "title": "cowboy like me",
-      "number": 11,
-      "duration": 275,
-      "plays": 99347019
-    },
-    {
-      "song_id": "5VYWxXUpxuxEmCqMLDqICo",
-      "title": "long story short",
-      "number": 12,
-      "duration": 216,
-      "plays": 113210528
-    },
-    {
-      "song_id": "5uICWmZTLkpEVbK22PBP6e",
-      "title": "marjorie",
-      "number": 13,
-      "duration": 258,
-      "plays": 92161802
-    },
-    {
-      "song_id": "6a8aUhYbaQBUI8PcJ5ZmQ6",
-      "title": "closure",
-      "number": 14,
-      "duration": 181,
-      "plays": 72441344
-    },
-    {
-      "song_id": "6Wlq9rqkxrqj5Kls4Kw14H",
-      "title": "evermore (feat. Bon Iver)",
-      "number": 15,
-      "duration": 304,
-      "plays": 120530796
-    },
-    {
-      "song_id": "3zwMVvkBe2qIKDObWgXw4N",
-      "title": "right where you left me - bonus track",
-      "number": 16,
-      "duration": 245,
-      "plays": 132702024
-    },
-    {
-      "song_id": "1kdWw77ZpYOkhxeuhzU1j6",
-      "title": "it’s time to go - bonus track",
-      "number": 17,
-      "duration": 255,
-      "plays": 54819122
+      "genre_name": "biography",
+      "image_url": "https://images.gr-assets.com/books/1348362899m/16041102.jpg",
+      "title": "Murder on the Old Road (Marsh and Daughter, #7)",
+      "book_id": 16041102,
+      "average_rating": 2.52
     }
   ],
-  "top_songs_all_22": {
-    "song_id": "02Zkkf2zMkwRGQjZ7T4p8f",
-    "title": "Anti-Hero",
-    "album_id": "3lS1y25WAhcqJDATJK70Mq",
-    "album": "Midnights (3am Edition)",
-    "plays": 391829492
-  },
-  "top_songs_page_3": [
+
+  "book_sorted_reviews" : [
     {
-      "song_id": "6nK2pIKFcRc5frrZKHgsiT",
-      "title": "august",
-      "album_id": "1pzvBxYgT6OVwJLtHkrdQK",
-      "album": "folklore (deluxe version)",
-      "plays": 421248742
+      "book_id": 13411546,
+      "review_id": "deacf98f7e339600899b4b3e4088b5f6",
+      "rating": 4,
+      "review_text": "Guess what. This book should be made into a movie. \n Or a TV show. That would be great, too. \n It is impossible not to have fun with this book. Anne is spunky, and courageous, and rebellious. Plus let's not forget that the mystery/murder case she is trying to solve takes place at a boarding school she is newly attending, after having started a fire at her previous school. Oh yeah. \n I should say that it is hilarious how many suspects there are in the case of her roommate's murder. I mean, according to Anne, 1/3 of the school is a suspect. But, you know what? I didn't even blink at that. I just thoroughly enjoyed watching her speculating and trying to solve a puzzle of 100 000 pieces. What can I say; her motivation is one of her charms. \n Also great are all of her fellow classmates, newly made friends... and enemies. Surprisingly, even the teachers have their role to play. The author didn't just cast them aside or used them as props. They honestly are needed and add to the whole case... and to the story's atmosphere. Mostly by being secretive and severe, but o h w e l l that's how I liked them anyway. \n So the love triangle may piss you off, and I'd completely understand, because clearly 1) it doesn't help us in understanding Anne better, 2) one of the two guys we know she will never see at the end of the story and 3) it has a poor conclusion. I am not even sure it came to an end... that she actually made her choice. It's hazy, but maybe we will get further detail in the sequel. \n Before I admit to being disappointed by the revelation, you need to know that the entire process to solving the murder mystery is incredibly entertaining... but the truth will not take your breath away. At least, it certainly did not take mine, because let's just say I've seen, much, much, much, a thousand times better on How to Get Away with Murder and Scandal. \n Nonetheless, go have some fun. READ THIS.",
+      "year_added": 2015,
+      "month_added": 12,
+      "day_added": 17,
+      "num_votes": 140
     },
     {
-      "song_id": "3RauEVgRgj1IuWdJ9fDs70",
-      "title": "The Man",
-      "album_id": "1NAmidJlEaVgA3MpcPFYGq",
-      "album": "Lover",
-      "plays": 406670895
+      "book_id": 13411546,
+      "review_id": "ac546be2f7973287d6f062dc4e629e36",
+      "rating": 5,
+      "review_text": "4.5 stars \n Take your preconceptions on Gossip Girl and Pretty Little Liars and check them at the door. Haters to the left. This book was an absolutely blast to read. I want to give this a solid 5, I seriously do. I have no complaints at all about this book, none. But I am still stupid, and my mind cannot wrap itself around the concept of giving such an exalted number for an YA book of this light nature. \n I'm not perfect by any means. I judge books: more often than not, my expectations are shot down into a bloody pulp as I am drawn in by an interesting blurb and attractive cover. Not this time. I came in as a skeptic, I was wrong, I loved the hell out of this book. \n Let's face it, we've all watched Gossip Girl or heard of it in some form or another, and at first glance, this book sounds like another clone. Bitchy, spoiled, poor-little-rich girls with nothing better to do than spend their daddy's credit cards and wail about the lack of availability of their trust funds as they weep into their fucking Hermes scarves tucked into their Louis Vuitton satchels, right? Wrong. \n When entering the category of YA high school fiction, there are bound to be tropes. There are few of that nature within this book, and the few cliched characters that exist are developed out so well in character that it didn't bother me at all. Besides the main characters, the rest of the large supporting casts are so wonderfully written as well. The characters are complex, their character develop as we get further along in the book, as we learn more about them. There is no black and white; these kids may be rich prep school kids, but they are also smart, ambitious, and so very human. These teens are realistic; they are not complete assholes, they are not perfectly good; they do not fit into the Gossip Girl teen cliches at all. Nobody is perfectly good or bad, not the victims, not the villains; they are such wonderfully written characters. \n I was set up by the premise to be contemptuous towards our main character, Anne. I assumed that she would be empty-headed and stupid based on her background, and because of what she did (arson, come on now)...but Anne is so much more than that. I adored her. Yes, she is a spoiled teenager, but she is smart, she is rational, she has common sense, she is a queen bee, but not in the sense that she will destroy people in the process. No. She has the ability to think for herself. \n Anne is not a Mary Sue. We get the impression that she is good-looking, and she has beautiful hair, but she never refers to her looks throughout the book. She is smart, she is charismatic; that is how Anne became the most popular girl at her previous school, and that's how she immediately gained that status upon arriving at her new school. Anne is not cruel, she may be popular, but she never uses her status to hurt anyone, she is an egalitarian, and that's why her new school bothers her so much. Wheatley is an extremely prestigious college-prep private school; the school body is small and mostly limited to the children of the extremely wealthy or powerful (read: politicians). It's a big difference from Anne's previous school, and despite her popularity, it really bothers her because of the reason why. \n \"At St. Bernadette's, it didn't matter where your money came from, since everyone's parents were attorneys or plastic surgeons or famous rock stars; you had to prove yourself to earn your status. The fact that Remy and Company won't even wait for me to prove myself makes me distrust them.\"Anne was set to hate her new school and her new dorky roommate, but to her surprise, both aren't bad, and she finds herself really liking Isabella, despite her status as a scholarship student, and at the bottom of the popularity ladder. Almost right after they start bonding, Isabella is murdered, and nobody at the school seems to care about it. Anne has a very ingrained sense of justice (her father is a lawyer, after all) and she is infuriated and frustrated by the fact that nobody seems to care. Anne sees the injustice in the matter, she sees the hypocrisy in the case, and she's determined to do something about it. \n \"I should be worried about myself and my future, but I can't stop thinking about Isabella, and how if she were the daughter of a politician or the attorney general, the police would probably have found her killer by now. \n It's not fair. And it's not fair for me to sit around and do nothing about it. Not when I got off with a slap on the wrist for almost burning my school down just because of my father. I'll be such a hypocrite if I don't at least try to get justice for Isabella.\"It's not only that people don't care about a lowly girl, what's worse is that people seem to be hiding clues to conceal the truth about her case. Anne is determined to uncover the truth, despite all the people who seem to stand in her way...and there are no shortages of suspects. There are a number of blocks in the way, there are powerful people in play, and people also question Anne's credibility. Let's be honest, would you trust a girl who's been kicked out of school for arson? Anne has a lot of obstacles to work through, and she handles them all with grace. \n \"I wait until I'm out of the administration building to give in to a few tears. Obviously I can't go to class now, and I don't want to go back to my room. I could go to the police, but what would I say? Hey, I have absolutely no evidence, and they didn't take anything, but someone was in my room. \n I wipe my eyes with my gloves and take a deep breath. Keep it together, Anne. You can't go home. You need to get through this.\"Anne is not TSTL. She investigates the case, but she never intentionally puts herself in so much danger that I find myself face-palming and cringing due to her stupidity; she is intelligent, and it shows through every step of the way. Her investigation progresses in a rational manner, and while some of her observations are a little...questionable (just because someone looks creepy doesn't automatically make them a suspect, my dear), I highly enjoyed reading about her sleuthing as she works the case. \n I can't believe I'm saying this, but I really enjoyed the way romance was handled in this book. There is attraction between Anne and a few characters in the book, but it never overshadows the big picture. Anne has her priorities and her head straight. There is attraction, there is no insta-love, as there should be. Romance is handled in a realistic way within the book; the characters take relationships not too seriously, as rational teenagers should do, and I liked them all the more for it. There is a love triangle, but it is done so well, that again, I have no complaints at all. I found the guys to be cliched, but they are so well-written and likeable that I don't dislike them at all. I actually prefer one over the other and was rooting for him throughout the book! \n The students are a diverse lot, there are a few students who are not white; I do wish there were more, but you can't have everything. I honestly cannot find much to criticize about this book, and you know I love to complain. \n Highly recommended, one of the best YA books I have read this year.",
+      "year_added": 2013,
+      "month_added": 8,
+      "day_added": 16,
+      "num_votes": 100
     },
     {
-      "song_id": "02Zkkf2zMkwRGQjZ7T4p8f",
-      "title": "Anti-Hero",
-      "album_id": "3lS1y25WAhcqJDATJK70Mq",
-      "album": "Midnights (3am Edition)",
-      "plays": 391829492
-    },
-    {
-      "song_id": "14LtANuaslKWyYbktUrHBU",
-      "title": "Enchanted",
-      "album_id": "5EpMjweRD573ASl7uNiHym",
-      "album": "Speak Now (Deluxe Edition)",
-      "plays": 381363239
-    },
-    {
-      "song_id": "0yN4fNzmVnmgC0dsOoi9Wh",
-      "title": "Bad Blood",
-      "album_id": "34OkZVpuzBa9y40DCy0LPR",
-      "album": "1989 (Deluxe Edition)",
-      "plays": 352846554
-    },
-    {
-      "song_id": "1ZY1PqizIl78geGM4xWlEA",
-      "title": "Gorgeous",
-      "album_id": "6DEjYFkNZh67HP7R9PSZvv",
-      "album": "reputation",
-      "plays": 351809119
-    },
-    {
-      "song_id": "2x0WlnmfG39ZuDmstl9xfX",
-      "title": "End Game",
-      "album_id": "6DEjYFkNZh67HP7R9PSZvv",
-      "album": "reputation",
-      "plays": 332469474
-    },
-    {
-      "song_id": "4y5bvROuBDPr5fuwXbIBZR",
-      "title": "Paper Rings",
-      "album_id": "1NAmidJlEaVgA3MpcPFYGq",
-      "album": "Lover",
-      "plays": 320430101
-    },
-    {
-      "song_id": "4pfrrhvplbJZAIsfosGWQP",
-      "title": "the 1",
-      "album_id": "1pzvBxYgT6OVwJLtHkrdQK",
-      "album": "folklore (deluxe version)",
-      "plays": 320286903
-    },
-    {
-      "song_id": "1gcyHQpBQ1lfXGdhZmWrHP",
-      "title": "champagne problems",
-      "album_id": "6AORtDjduMM3bupSWzbTSG",
-      "album": "evermore (deluxe version)",
-      "plays": 317422916
+      "book_id": 13411546,
+      "review_id": "dbe9d288612b26a64579210f74b02470",
+      "rating": 5,
+      "review_text": "5 Words: Mystery, school, plotting, murder, twists. \n I wasn't sure what I was expecting when I picked this up. In fact, four of those five words at the top wouldn't have applied. So this book was a surprise, a really pleasant surprise. \n It was such a fun read. \n The plot was engrossing and I got completely caught up in the investigation, the spying, the twists and turns of the mystery. And the school life. \n Take Gossip Girl, set it in a boarding school, and add lost of extra danger and intrigue and then you're maybe half way there to this book. It was excellent. \n For some reason I'm always surprised when I read a YA crime/mystery/thriller. Every time I read one my mind is blown.",
+      "year_added": 2013,
+      "month_added": 7,
+      "day_added": 21,
+      "num_votes": 18
     }
   ],
-  "top_songs_page_5_page_size_3": [
+
+  "book_sorted_reviews_page2" : [
+      {
+        "book_id": 13411546,
+        "review_id": "53ff84af288d60b132ffa8a2f974bf00",
+        "rating": 5,
+        "review_text": "Prep School Confidential was as fun and outrageous as I expected it to be. While there are dark turns with Isabella's murder and the question of who had the greatest motive to kill her, the story is upbeat for the most part. More than a murder mystery, this is a story about the political workings of a boarding school attended by children whose parents play large roles in the political world. And how the balance is upset with the entrance of a girl with little care for the school's system. \n Much of the humor can be credited to Anne's snarky personality. With a a girl like Anne narrating, you know you're in for a load of drama. After all, she's the girl who can't help but get involved with bad boys and whose story starts with her setting the school auditorium on fire--accidentally, of course. There are times when she lets her emotions get the better of her, and she isn't the type of girl to take something and not give it back (and I'm not talking about actual gift giving here). At times, I wanted to tell her to slow down and think a little; at the same time, her impulsivity and headstrong nature is what makes Anne who she is, and I wouldn't want her to change. There's something about her that's compelling. I can see why other students can't help flocking around her. \n At the same time, Anne is pretty much the only character driving the novel. The whole prep school scene is pretty cliched, and the other characters remain flat for the most part, though not uninteresting. While I still can't feel sympathy for Anne's nemesis at school, the giggly girls from the in crowd are actually distinguishable given time. I also rather like Brent. He's a nice guy, and I wish that Anne could find it in her to treat him better. I don't like Anthony much, and it's not just because he's the reason Anne has conflicted feelings towards Brent. Yeah, the romance is your typical love triangle between the nice guy and the bad boy. It's rare that I ever root for the bad boy, and I'm definitely not on Anthony's side. He reeks of trouble, the kind that got Anne expelled from her last school. Plus, Brent really is a sweet guy. \n Equally important to the story is the mystery, which isn't lacking. As soon as I figured one person was responsible for Isabella's murder, another equally likely suspect emerged. It wasn't until towards the end that I began to lean towards one particular suspect. On top of that, Anne learns that there is more to Isabella than she knew, and I regret that Isabella died before we got to know her better. \n Filled with wit, romance, and good writing Prep School Confidential is a murder mystery that I wouldn't hesitate to recommend for some light summer reading. \n -- \n For more of my reviews, visit my blog Imaginary Reads.",
+        "year_added": 2013,
+        "month_added": 7,
+        "day_added": 12,
+        "num_votes": 1
+      },
+      {
+        "book_id": 13411546,
+        "review_id": "2ddf5f09e598043fa55e48bee8fa1a8e",
+        "rating": 5,
+        "review_text": "I loved the intrigue and sass in this book. However, please note, there is swearing and mentions of hook ups in this book. Maybe more of a high school reading book and not like middle school? \n I honestly thought the entire time that Brent did it. Seriously, he was acting all mysterious. And that is the biggest flaw in the book. I seriously think she did an amazing job at keeping the truth from us and let us keep suspecting everyone else. \n I did think the layers of intrigue she added were very realistic. It is truly only by digging we get to the skeletons in everyone's closet, and there are always more than you think. Especially more so with people in prestigious and high ranking positions. Liked it. On to the next one.",
+        "year_added": 2016,
+        "month_added": 2,
+        "day_added": 15,
+        "num_votes": 1
+      },
+      {
+        "book_id": 13411546,
+        "review_id": "99a533a1953b94d00c8c5ab242657a51",
+        "rating": 5,
+        "review_text": "This is my kind of YA mystery! I loved the narrative voice and characterization. Excellent pacing. Snappy, funny dialogue. Fantastic!!",
+        "year_added": 2014,
+        "month_added": 10,
+        "day_added": 24,
+        "num_votes": 1
+      },
+      {
+        "book_id": 13411546,
+        "review_id": "06a75de691c65d2e35569e6bd5dc28c8",
+        "rating": 5,
+        "review_text": "I loved this book. Great mystery and the level of complications were really surprising. Couldn't even dream that the actual culprit was at all times in front of Anne and kept playing with her blind spots. Loved the awkward feelings that Anne had for Anthony. Brent is like a true dream boy, hard to find.",
+        "year_added": 2014,
+        "month_added": 8,
+        "day_added": 4,
+        "num_votes": 1
+      },
+      {
+        "book_id": 13411546,
+        "review_id": "d97566ef8aa586752e63a4a03a0c3b62",
+        "rating": 5,
+        "review_text": "** spoiler alert ** \n Two-second recap: Kara Taylor's debut novel is a fun, confident throwback to the teenaged mystery novels which dominated the market in the '80s and the '90s. \n This is a book which will intrigue and delight readers, and have them clamoring for the sequel. \n *** \n Full review: \n I first started hearing chatter about Kara Taylor's Prep School Confidential about a year ago, when people started raving to me about a upcoming novel, which was essentially the \"...witty, intelligent version of Gossip Girl\". \n (And yes, those were the exact words that someone used!) \n When I heard that the book also involved a mystery set at a New England prep school, I knew that this was a title I had to check out. \n Prep School Confidential details the aftermath of former Upper East Side queen bee Anne Dowling's life, after she accidentally burns down part of her school. \n Faster than you can say Henri Bendel, Anne is shipped off to the Wheatley School, a prestigious boarding school outside of Boston. She's only there for a week, before her roommate Isabella's body is found in the woods behind the school. \n Even though the rest of the school seems determined to put the incident behind them, Anne isn't willing to rest until she can figure out what happened to Isabella. With the help of Isabella's brother and a cute classmate, she's determined to get to the bottom of things. \n However, someone else seems as equally determined to do whatever it takes to stop Anne, including framing her for Isabella's murder. It's now a race against time, to uncover the truth. \n *** \n Things that worked: \n * Characterizations \n From the very first page, I was completely charmed by Anne Dowling. \n Even though the reader is initially introduced to Anne on an afternoon where she's behaving in a flippant manner and not above wheeling and dealing her way out of trouble, I couldn't help but immediately love her personality. She's bold, smart and relatable. \n Anne becomes even more likable after being (forcibly) shipped to attend the Wheatley School in Boston. Now that she's no longer in her element in Manhattan, Taylor does a beautiful job of showing how Anne calms down, reexamines her priorities and starts acclimating to her environment. \n And once the mystery begins to kick in, Taylor does a fine job of juggling both Anne's pre-Wheatley impulsiveness, with the genuine loyalty and sense of duty to others that she's developed since her arrival at the school. \n All in all, the character ARC for Anne is a beautiful one, and I think readers are going to highly enjoy experiencing her growth along with her. \n As for the secondary characters, they were all unique and memorable in their own ways. I especially liked the details that Taylor included about the secondary characters - e.g. Isabella's love of Les Miserables; Anthony's temper; etc., that all made them well-rounded and fleshed-out on the page. \n * The mystery or the red herrings \n Throughout the course of Prep School Confidential, Taylor presents the readers with a number of red herrings. \n She does a fantastic job of getting Anne (and by proxy, the reader) attached to a character, only to reveal a fact or an obstacle that immediately casts doubt and suspicion on that character. \n It was exhilarating watching Anne struggling with her constant loyalties and doubts about characters, and using her intelligence and wits to figure out who's who. \n On that note, the overall mystery was also well done. It's complicated, comes with a number of seriously crazy twists, but also isn't written in a way that makes it impossible to figure out. \n Taylor crafts the unanswered questions about Isabella in way that makes the entire situation seem perfectly feasible, if that makes any sense. \n * The twist \n Without giving any spoilers away, there's a bit of a twist about halfway through the book, which will have you viewing the ongoing situation (and many of the characters), very differently. \n Taylor does a wonderful job of making the twist seem completely logical (and at certain times, even tragic), while also using it to propel the action and the main mystery forward. \n * \n The ending \n Taylor's ending is a brilliant masterstroke. She drops hints about the ending all throughout the book, but still manages to (finally!) reveal her hand in a way that had me flailing and chortling, \"NO WAY!\" \n I absolutely can't wait to see where she goes with the revelations made in the ending, in the second book. \n (And if the sneak-peek included in my book is any indication, it will be to a very, very awesome place.) \n *** \n Things to consider \n My one (very, very minor) quibble with Prep School Confidential is the love triangle. \n On the one hand, I love how Kara postitioned and wrote the love triangle. She perfectly captures that \"Zomg, I'm solving a mystery and I have cute boys chasing after me!\" vibe that I also used to find in Nancy Drew books. \n (Because hey, if you're off solving incredibly time-consuming mysteries, why not have a cute boy or two help you move the case along, right?) \n On the other hand, I still couldn't help but mentally compare the love triangle with some of the other well-known love triangles in YA lit. Even though I loved the relationships between Anne/Anthony/Brent, I did notice a bit of underdevelopment. \n E.g. Anne seemed to become attached to both of the boys too quickly. \n However, I can't discount the fact that Anne is a teenager, and teenagers will often form attachments, quickly. \n *** \n Final verdict: \n Kara Taylor's Prep School Confidential is a thrilling debut novel from a strong, promising new voice in YA. \n Readers of all ages and backgrounds will find Anne Dowling to be an incredibly relatable, clever and humorous heroine, and will strongly enjoy solving each obstacle right alongside her. \n I recommend this book for all YA readers, but especially for readers who are looking for YA contemporary books with a kick. I also recommend to fans of Maureen Johnson's Shades of London series, and for anyone who grew up with Nancy Drew and Hardy Boys, and wants to read the work of a more-than-worthy successor. \n *** \n Disclaimer: I received a copy of Prep School Confidential from St. Martin's Press, in exchange for an honest review. A big thank-you to Loren and the team!",
+        "year_added": 2013,
+        "month_added": 2,
+        "day_added": 10,
+        "num_votes": 1
+      }
+  ],
+
+  "book_sorted_reviews_page16_pagesize5" : [
     {
-      "song_id": "2gVhfX2Gy1T9kDuS9azrF7",
-      "title": "willow",
-      "album_id": "6AORtDjduMM3bupSWzbTSG",
-      "album": "evermore (deluxe version)",
-      "plays": 511071164
+      "book_id": 13411546,
+      "review_id": "8ef474f686204991c6ed2a13334c30ce",
+      "rating": 5,
+      "review_text": "my sister won it in Goodreads Giveways. It's complete good. impossible to put down and always has a twisting plot!!! you keep guessing about who can be the killer and what would happen. Also it's a good story for teenagers and keep me wondering if it really there are school with so much power. \n Kara Taylor made the character so well and i can imaging being in a true murder case, and she totally bring you back to high school. I can't put this book down. I want already to read the next one :) \n I totally recommend this book.",
+      "year_added": 2013,
+      "month_added": 8,
+      "day_added": 11,
+      "num_votes": 0
     },
     {
-      "song_id": "1fo2ctLqj3zBhRQKOXprol",
-      "title": "Style",
-      "album_id": "34OkZVpuzBa9y40DCy0LPR",
-      "album": "1989 (Deluxe Edition)",
-      "plays": 505306364
+      "book_id": 13411546,
+      "review_id": "954f3d610ff0914fd7a2917da59ddab6",
+      "rating": 5,
+      "review_text": "I came into this not sure what i was going to think and betting that Anne was going to drive me crazy, but I fell in love with her and the entire world. the mystery gripped me tight and didn't let go. I was thrilled I was able to guess who was behind everything but there were still twists and turns that made me gasp. \n I didn't get anything accomplished because I was so absorbed in my book (I nearly missed my train stop several times while reading) and loved every second of it. \n A wonderful, witty, and fun mystery that will keep you guessing until the very end. Highly recommend!",
+      "year_added": 2014,
+      "month_added": 3,
+      "day_added": 12,
+      "num_votes": 0
     },
     {
-      "song_id": "5S4aYQAJOwJMAamANWlICO",
-      "title": "exile (feat. Bon Iver)",
-      "album_id": "1pzvBxYgT6OVwJLtHkrdQK",
-      "album": "folklore (deluxe version)",
-      "plays": 473133107
+      "book_id": 13411546,
+      "review_id": "9e4d50b3f8547b6253cb144826840cab",
+      "rating": 5,
+      "review_text": "This was such a fun read. The heroine is kick ass. Set aside whatever preconceived notions you have this is not a Gossip Girl/Pretty Little Liars hybrid.",
+      "year_added": 2014,
+      "month_added": 7,
+      "day_added": 20,
+      "num_votes": 0
+    },
+    {
+      "book_id": 13411546,
+      "review_id": "9f81c8b734c84043b9ade3087c3fa1d2",
+      "rating": 5,
+      "review_text": "I enjoyed this book. A lot. It had everything: murder, suspense, tension, romance, lies, rich bitches, rebellious teens, hot guys, and a fresh, fast-paced plot. This book was impossible to put down. I'm definitely going to read the next Anne Dowling adventure!",
+      "year_added": 2013,
+      "month_added": 9,
+      "day_added": 5,
+      "num_votes": 0
+    },
+    {
+      "book_id": 13411546,
+      "review_id": "a59289b8ec13067d392da8d511187141",
+      "rating": 5,
+      "review_text": "Hilarious & smart. Terrific pacing. Very fun read.",
+      "year_added": 2013,
+      "month_added": 9,
+      "day_added": 15,
+      "num_votes": 0
     }
   ],
-  "top_albums_all_7": {
-    "album_id": "6kZ42qRrzov54LcAk4onW9",
-    "title": "Red (Taylor's Version)",
-    "plays": 2445088157
-  },
-  "top_albums_page_2": [
+
+
+  "rating_history" : [
     {
-      "album_id": "4hDok0OAJd57SGIT8xuWJH",
-      "title": "Fearless (Taylor's Version)",
-      "plays": 1655617357
+      "year_added": 2014,
+      "average_rating": 3.48,
+      "review_count": 25
     },
     {
-      "album_id": "7mzrIsaAjnXihW3InKjlC3",
-      "title": "Taylor Swift",
-      "plays": 797392518
+      "year_added": 2009,
+      "average_rating": 3.64,
+      "review_count": 25
+    },
+    {
+      "year_added": 2016,
+      "average_rating": 3,
+      "review_count": 13
+    },
+    {
+      "year_added": 2012,
+      "average_rating": 3.066666666666667,
+      "review_count": 30
+    },
+    {
+      "year_added": 2008,
+      "average_rating": 3.5526315789473686,
+      "review_count": 38
+    },
+    {
+      "year_added": 2015,
+      "average_rating": 3.176470588235294,
+      "review_count": 17
+    },
+    {
+      "year_added": 2010,
+      "average_rating": 3.84375,
+      "review_count": 32
+    },
+    {
+      "year_added": 2011,
+      "average_rating": 3.5428571428571427,
+      "review_count": 35
+    },
+    {
+      "year_added": 2013,
+      "average_rating": 3.8333333333333335,
+      "review_count": 24
+    },
+    {
+      "year_added": 2007,
+      "average_rating": 3.739130434782609,
+      "review_count": 23
     }
   ],
-  "top_albums_page_5_page_size_1": [
+
+  "book_series" : [
     {
-      "album_id": "1KlU96Hw9nlvqpBPlSqcTV",
-      "title": "Red (Deluxe Edition)",
-      "plays": 2766448956
+      "book_id": 915,
+      "book_title": "A Lonely Resurrection (John Rain, #2)",
+      "image_url": "https://images.gr-assets.com/books/1360560835m/915.jpg",
+      "description": "John Rain (also Junichi Fujiwara) is a Japanese-American international assassin.",
+      "title": "John Rain",
+      "series_id": 157727,
+      "primary_work_count": 9
+    },
+    {
+      "book_id": 1343863,
+      "book_title": "Hard Rain (John Rain, #2)",
+      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+      "description": "John Rain (also Junichi Fujiwara) is a Japanese-American international assassin.",
+      "title": "John Rain",
+      "series_id": 157727,
+      "primary_work_count": 9
+    },
+    {
+      "book_id": 7015176,
+      "book_title": "Tokyo Blues (John Rain, #2)",
+      "image_url": "https://images.gr-assets.com/books/1337687267m/7015176.jpg",
+      "description": "John Rain (also Junichi Fujiwara) is a Japanese-American international assassin.",
+      "title": "John Rain",
+      "series_id": 157727,
+      "primary_work_count": 9
+    },
+    {
+      "book_id": 7364352,
+      "book_title": "Hard Rain (John Rain, #2)",
+      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+      "description": "John Rain (also Junichi Fujiwara) is a Japanese-American international assassin.",
+      "title": "John Rain",
+      "series_id": 157727,
+      "primary_work_count": 9
+    },
+    {
+      "book_id": 8612161,
+      "book_title": "Hard Rain (John Rain, #2)",
+      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+      "description": "John Rain (also Junichi Fujiwara) is a Japanese-American international assassin.",
+      "title": "John Rain",
+      "series_id": 157727,
+      "primary_work_count": 9
+    },
+    {
+      "book_id": 9805498,
+      "book_title": "Alba nera su Tokyo (John Rain, #2)",
+      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+      "description": "John Rain (also Junichi Fujiwara) is a Japanese-American international assassin.",
+      "title": "John Rain",
+      "series_id": 157727,
+      "primary_work_count": 9
+    },
+    {
+      "book_id": 10085823,
+      "book_title": "Hard Rain (John Rain, #2)",
+      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+      "description": "John Rain (also Junichi Fujiwara) is a Japanese-American international assassin.",
+      "title": "John Rain",
+      "series_id": 157727,
+      "primary_work_count": 9
+    },
+    {
+      "book_id": 10479250,
+      "book_title": "O Quinto Mandamento",
+      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+      "description": "John Rain (also Junichi Fujiwara) is a Japanese-American international assassin.",
+      "title": "John Rain",
+      "series_id": 157727,
+      "primary_work_count": 9
+    },
+    {
+      "book_id": 17381834,
+      "book_title": "Hard Rain",
+      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+      "description": "John Rain (also Junichi Fujiwara) is a Japanese-American international assassin.",
+      "title": "John Rain",
+      "series_id": 157727,
+      "primary_work_count": 9
+    },
+    {
+      "book_id": 18568472,
+      "book_title": "A Lonely Resurrection",
+      "image_url": "https://images.gr-assets.com/books/1407773744m/18568472.jpg",
+      "description": "John Rain (also Junichi Fujiwara) is a Japanese-American international assassin.",
+      "title": "John Rain",
+      "series_id": 157727,
+      "primary_work_count": 9
+    },
+    {
+      "book_id": 23007510,
+      "book_title": "A Lonely Resurrection (John Rain #2)",
+      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+      "description": "John Rain (also Junichi Fujiwara) is a Japanese-American international assassin.",
+      "title": "John Rain",
+      "series_id": 157727,
+      "primary_work_count": 9
+    },
+    {
+      "book_id": 25535477,
+      "book_title": "Живеещия в сенките",
+      "image_url": "https://images.gr-assets.com/books/1433521468m/25535477.jpg",
+      "description": "John Rain (also Junichi Fujiwara) is a Japanese-American international assassin.",
+      "title": "John Rain",
+      "series_id": 157727,
+      "primary_work_count": 9
+    },
+    {
+      "book_id": 32204358,
+      "book_title": "Hard Rain",
+      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+      "description": "John Rain (also Junichi Fujiwara) is a Japanese-American international assassin.",
+      "title": "John Rain",
+      "series_id": 157727,
+      "primary_work_count": 9
     }
   ],
-  "search_songs_filtered": [
+
+
+  "book_info" : {
+      "author": "Henning Mankell",
+      "series_title": "Kurt Wallander"
+    },
+
+
+  "book_info_2" : [
     {
-      "song_id": "1q3RiD1tIWUpGsNFADMlvl",
-      "album_id": "1KlU96Hw9nlvqpBPlSqcTV",
-      "title": "All Too Well",
-      "number": 5,
-      "duration": 328,
-      "plays": 211908053,
-      "danceability": 0.602,
-      "energy": 0.609,
-      "valence": 0.337,
-      "tempo": 93,
-      "key_mode": "C major",
-      "explicit": 0
+      "genre_name": "history"
     },
     {
-      "song_id": "5enxwA8aAbwZbf5qCHORXi",
-      "album_id": "6kZ42qRrzov54LcAk4onW9",
-      "title": "All Too Well (10 Minute Version) (Taylor's Version) (From The Vault)",
-      "number": 30,
-      "duration": 613,
-      "plays": 439368009,
-      "danceability": 0.631,
-      "energy": 0.518,
-      "valence": 0.205,
-      "tempo": 93,
-      "key_mode": "C major",
-      "explicit": 1
+      "genre_name": "historical fiction"
     },
     {
-      "song_id": "0lmMtDQ2ElasKU2qDAE6NN",
-      "album_id": "34OkZVpuzBa9y40DCy0LPR",
-      "title": "All You Had To Do Was Stay",
-      "number": 5,
-      "duration": 193,
-      "plays": 143029001,
-      "danceability": 0.605,
-      "energy": 0.725,
-      "valence": 0.539,
-      "tempo": 97,
-      "key_mode": "F major",
-      "explicit": 0
+      "genre_name": "biography"
     },
     {
-      "song_id": "1GwMQaZz6Au3QLDbjbMdme",
-      "album_id": "6DEjYFkNZh67HP7R9PSZvv",
-      "title": "Call It What You Want",
-      "number": 14,
-      "duration": 204,
-      "plays": 230510654,
-      "danceability": 0.598,
-      "energy": 0.504,
-      "valence": 0.252,
-      "tempo": 164,
-      "key_mode": "A major",
-      "explicit": 0
+      "genre_name": "fiction"
     },
     {
-      "song_id": "2m3ObD945KvpE5y9A1eUWm",
-      "album_id": "4hDok0OAJd57SGIT8xuWJH",
-      "title": "Jump Then Fall (Taylor’s Version)",
-      "number": 14,
-      "duration": 238,
-      "plays": 26829259,
-      "danceability": 0.572,
-      "energy": 0.69,
-      "valence": 0.624,
-      "tempo": 160,
-      "key_mode": "D major",
-      "explicit": 0
+      "genre_name": "mystery"
+    },
+    {
+      "genre_name": "thriller"
+    }
+  ],
+
+
+  "similar_books" : [
+    {
+      "similar_book_id": 278210,
+      "similar_title": "The Expected One (Magdalene Line Trilogy, #1)",
+      "similar_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png"
+    },
+    {
+      "similar_book_id": 573202,
+      "similar_title": "The Matarese Countdown (Matarese #2)",
+      "similar_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png"
+    },
+    {
+      "similar_book_id": 1178039,
+      "similar_title": "The Venetian Betrayal (Cotton Malone, #3)",
+      "similar_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png"
     }
   ]
+
+
 }

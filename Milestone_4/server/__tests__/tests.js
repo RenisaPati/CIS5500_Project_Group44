@@ -124,11 +124,53 @@ test('GET /similar_books/85266', async() => {
     });
 });
 
+//Route 9: Get top ten books of the month
+test('GET /top_ten_books_month', async() => {
+  await supertest(app).get('/top_ten_books_month')
+  .expect(200)
+  .then((res) => {
+      expect(res.body).toStrictEqual(results.top_ten_books_month)
+  });
+});
 
+//Route 10: Get book recommendations from random genre
+test('GET /book_recs_rand_genre', async() => {
+  await supertest(app).get('/book_recs_rand_genre')
+  .expect(200)
+  .then((res) => {
+    expect(res.body.length).toEqual(2)
+  });
+});
 
+//Route 11: Get author details
+test('GET /author_details/192', async() => {
+  await supertest(app).get('/author_details/192')
+  .expect(200)
+  .then((res) => {
+      expect(res.body).toStrictEqual(results.author_details)
+  });
+});
 
+//Route 12: Get user liked books
+test('GET /user_liked/1', async() => {
+  await supertest(app).get('/user_liked/1')
+  .expect(200)
+  .then((res) => {
+      expect(res.body).toStrictEqual(results.author_details)
+  });
+});
 
+//Route 13: Get authors in desired order
+test('GET /author_ordered/average_rating', async() => {
+  await supertest(app).get('/author_ordered/average_rating')
+  .expect(200)
+  .then((res) => {
+      expect(res.body.length).toEqual(500)
+      expect(res.body).toStrictEqual(results.author_ordered)
+  });
+});
 
+// ------------------------------------------------------------------------------------------------------------
 // TSwift tests
 test('GET /author/name', async () => {
   await supertest(app).get('/author/name')

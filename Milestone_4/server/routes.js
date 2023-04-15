@@ -281,21 +281,21 @@ const similar_books = async function(req, res) {
 const top_ten_books_month = async function(req, res) {
   // Return the title and URLs of the top 10 books of the month based on average ratings on books reviewed in the current month
    connection.query(`
-   SELECT b.title, b.image_url, 
-   FROM Reviews r 
+   SELECT b.title, b.image_url
+   FROM Reviews r
    JOIN Book b ON b.book_id = r.book_id
-   WHERE b.id IN ( SELECT book_id
-                   FROM (SELECT r.book_id, AVG(rating)
-                         FROM Reviews r
-                         WHERE r.month_added = month(getdate())
-                         GROUP BY r.book_id
-                         ORDER BY AVG(rating) DESC
-                         LIMIT 10 )'
+   WHERE b.book_id IN ( SELECT book_id
+                        FROM (  SELECT r.book_id, AVG(rating)
+                                FROM Reviews r
+                                WHERE r.month_added = MONTH(CURRENT_TIMESTAMP)
+                                GROUP BY r.book_id
+                                ORDER BY AVG(rating) DESC
+                                LIMIT 10 ) AVGRATING)'
    `, (err, data) => {
      if (err || data.length === 0) {
        console.log(err);
        res.json({});
-     } else {
+     } else { 
        res.json(data);
      }
    });
@@ -311,7 +311,7 @@ const top_ten_books_month = async function(req, res) {
      JOIN
        (SELECT bg.genre_id AS genre_id
          FROM User u
-           JOIN book_genres bg ON u.liked_books = bg.book_id
+         JOIN book_genres bg ON u.liked_books = bg.book_id
          WHERE user_id = '${user_id}'
          ORDER BY RAND()
          LIMIT 1) g_user ON bg.genre_id = g_user.genre_id
@@ -325,7 +325,7 @@ const top_ten_books_month = async function(req, res) {
      JOIN
        (SELECT bg.genre_id AS genre_id
          FROM User u
-           JOIN book_genres bg ON u.liked_books = bg.book_id
+         JOIN book_genres bg ON u.liked_books = bg.book_id
          WHERE user_id = '${user_id}'
          ORDER BY RAND()
          LIMIT 1) g_user
@@ -342,6 +342,8 @@ const top_ten_books_month = async function(req, res) {
      }
    });
  }
+
+ // 
  
  /*****************************
   * ROUTES BY PAGES -- Authors *
@@ -352,7 +354,7 @@ const top_ten_books_month = async function(req, res) {
    // Return author details for the selected author
    connection.query(`
    SELECT * FROM Authors
-   WHERE Authors.id = '${author_id}'
+   WHERE Authors.author_id = '${author_id}'
    `, (err, data) => {
      if (err || data.length === 0) {
        console.log(err);
@@ -365,7 +367,7 @@ const top_ten_books_month = async function(req, res) {
  
  // Route 12: GET /user_liked/:user_id
  const user_liked = async function(req, res) {
-   // Return author details for the selected author
+   // 
    connection.query(`
    SELECT b.title
    FROM User u
@@ -381,7 +383,7 @@ const top_ten_books_month = async function(req, res) {
    });
  }
  
- // Route 12: GET /author_ordered/:attribute
+ // Route 13: GET /author_ordered/:attribute
  const authors_ordered = async function(req, res) {
    // Return author details for the selected author
    connection.query(`

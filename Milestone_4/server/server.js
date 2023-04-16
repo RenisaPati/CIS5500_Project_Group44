@@ -19,10 +19,10 @@ app.get('/book_author_series/:book_id', routes.book_author_series);
 app.get('/book_genres/:book_id', routes.book_genres);
 app.get('/similar_books/:book_id', routes.similar_books);
 app.get('/top_ten_books_month',routes.top_ten_books_month);
-app.get('book_recs_rand_genre/:user_id', book_recs_rand_genre);
-app.get('/author_details/:author_id',author_details);
-app.get('/user_liked/:user_id',user_liked);
-app.get('/author_ordered/:attribute', author_ordered);
+app.get('book_recs_rand_genre/:user_id', routes.book_recs_rand_genre);
+app.get('/author_details/:author_id', routes.author_details);
+app.get('/user_liked/:user_id', routes.user_liked);
+app.get('/authors_ordered/:attribute', routes.authors_ordered);
 
 //login authentication possible server side implementation
 app.post('/api/login', (req, res) => {

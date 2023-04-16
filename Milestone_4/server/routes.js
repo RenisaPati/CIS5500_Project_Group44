@@ -352,7 +352,7 @@ const top_ten_books_month = async function(req, res) {
            ON bg.genre_id = g_user.genre_id
        JOIN books b ON bg.book_id = b.book_id
    ORDER BY b.average_rating
-   LIMIT 2'
+   LIMIT 2
    `, (err, data) => {
      if (err || data.length === 0) {
        console.log(err);
@@ -403,7 +403,7 @@ const top_ten_books_month = async function(req, res) {
    });
  }
  
- // Route 13: GET /author_ordered/:attribute
+ // Route 13: GET /authors_ordered/:attribute
  const authors_ordered = async function(req, res) {
    // Return author details for the selected author
    connection.query(`

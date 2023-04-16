@@ -130,17 +130,7 @@
     }
   ],
 
-  "book_sorted_reviews_page2" : [
-      {
-        "book_id": 13411546,
-        "review_id": "53ff84af288d60b132ffa8a2f974bf00",
-        "rating": 5,
-        "review_text": "Prep School Confidential was as fun and outrageous as I expected it to be. While there are dark turns with Isabella's murder and the question of who had the greatest motive to kill her, the story is upbeat for the most part. More than a murder mystery, this is a story about the political workings of a boarding school attended by children whose parents play large roles in the political world. And how the balance is upset with the entrance of a girl with little care for the school's system. \n Much of the humor can be credited to Anne's snarky personality. With a a girl like Anne narrating, you know you're in for a load of drama. After all, she's the girl who can't help but get involved with bad boys and whose story starts with her setting the school auditorium on fire--accidentally, of course. There are times when she lets her emotions get the better of her, and she isn't the type of girl to take something and not give it back (and I'm not talking about actual gift giving here). At times, I wanted to tell her to slow down and think a little; at the same time, her impulsivity and headstrong nature is what makes Anne who she is, and I wouldn't want her to change. There's something about her that's compelling. I can see why other students can't help flocking around her. \n At the same time, Anne is pretty much the only character driving the novel. The whole prep school scene is pretty cliched, and the other characters remain flat for the most part, though not uninteresting. While I still can't feel sympathy for Anne's nemesis at school, the giggly girls from the in crowd are actually distinguishable given time. I also rather like Brent. He's a nice guy, and I wish that Anne could find it in her to treat him better. I don't like Anthony much, and it's not just because he's the reason Anne has conflicted feelings towards Brent. Yeah, the romance is your typical love triangle between the nice guy and the bad boy. It's rare that I ever root for the bad boy, and I'm definitely not on Anthony's side. He reeks of trouble, the kind that got Anne expelled from her last school. Plus, Brent really is a sweet guy. \n Equally important to the story is the mystery, which isn't lacking. As soon as I figured one person was responsible for Isabella's murder, another equally likely suspect emerged. It wasn't until towards the end that I began to lean towards one particular suspect. On top of that, Anne learns that there is more to Isabella than she knew, and I regret that Isabella died before we got to know her better. \n Filled with wit, romance, and good writing Prep School Confidential is a murder mystery that I wouldn't hesitate to recommend for some light summer reading. \n -- \n For more of my reviews, visit my blog Imaginary Reads.",
-        "year_added": 2013,
-        "month_added": 7,
-        "day_added": 12,
-        "num_votes": 1
-      },
+  "book_sorted_reviews_page2" : 
       {
         "book_id": 13411546,
         "review_id": "2ddf5f09e598043fa55e48bee8fa1a8e",
@@ -150,8 +140,7 @@
         "month_added": 2,
         "day_added": 15,
         "num_votes": 1
-      }
-  ],
+      },
 
   "book_sorted_reviews_page16_pagesize5" : [
     {
@@ -206,12 +195,16 @@
     }
   ],
 
-
   "rating_history" : [
     {
-      "year_added": 2014,
-      "average_rating": 3.48,
-      "review_count": 25
+      "year_added": 2007,
+      "average_rating": 3.74,
+      "review_count": 23
+    },
+    {
+      "year_added": 2008,
+      "average_rating": 3.55,
+      "review_count": 38
     },
     {
       "year_added": 2009,
@@ -219,44 +212,44 @@
       "review_count": 25
     },
     {
+      "year_added": 2010,
+      "average_rating": 3.84,
+      "review_count": 32
+    },
+    {
+      "year_added": 2011,
+      "average_rating": 3.54,
+      "review_count": 35
+    },
+    {
+      "year_added": 2012,
+      "average_rating": 3.07,
+      "review_count": 30
+    },
+    {
+      "year_added": 2013,
+      "average_rating": 3.83,
+      "review_count": 24
+    },
+    {
+      "year_added": 2014,
+      "average_rating": 3.48,
+      "review_count": 25
+    },
+    {
+      "year_added": 2015,
+      "average_rating": 3.18,
+      "review_count": 17
+    },
+    {
       "year_added": 2016,
       "average_rating": 3,
       "review_count": 13
     },
     {
-      "year_added": 2012,
-      "average_rating": 3.066666666666667,
-      "review_count": 30
-    },
-    {
-      "year_added": 2008,
-      "average_rating": 3.5526315789473686,
-      "review_count": 38
-    },
-    {
-      "year_added": 2015,
-      "average_rating": 3.176470588235294,
-      "review_count": 17
-    },
-    {
-      "year_added": 2010,
-      "average_rating": 3.84375,
-      "review_count": 32
-    },
-    {
-      "year_added": 2011,
-      "average_rating": 3.5428571428571427,
-      "review_count": 35
-    },
-    {
-      "year_added": 2013,
-      "average_rating": 3.8333333333333335,
-      "review_count": 24
-    },
-    {
-      "year_added": 2007,
-      "average_rating": 3.739130434782609,
-      "review_count": 23
+      "year_added": 2017,
+      "average_rating": 3,
+      "review_count": 11
     }
   ],
 

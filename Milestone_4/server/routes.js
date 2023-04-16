@@ -18,9 +18,7 @@ connection.connect((err) => err && console.log(err));
 
 // Route 1: GET /genre/:genre_name
 const genre = async function(req, res) {
-  // TODO (TASK 1): replace the values of name and pennKey with your own
   const genre = req.param.genre_name;
-  console.log(genre);
   const pg = req.query.page;
   const pageSize = req.query.page_size ?? 80;
   const offset = (pg - 1)*pageSize;
@@ -164,7 +162,7 @@ const rating_history = async function(req, res) {
   // Return the average rating and rating count for each year
   // in which a book has been rated
   connection.query(`
-  SELECT r.year_added, AVG(r.rating) AS average_rating, COUNT(*) AS review_count
+  SELECT r.year_added, ROUND(AVG(r.rating), 2) AS average_rating, COUNT(*) AS review_count
   FROM Book b JOIN Reviews r ON r.book_id = b.book_id
   WHERE b.book_id = ${curr_id}
   GROUP BY r.year_added
@@ -322,33 +320,34 @@ const top_ten_books_month = async function(req, res) {
  // Route 10: GET /book_recs_rand_genre/:user_id
  const book_recs_rand_genre = async function(req, res) {
    // Find two random genres and the select the top 2 rated books within those genres and return these as recommended books for the the user
+   const user_id = req.params.user_id;
    connection.query(`
    SELECT g.genre, b.title, b.image_url
-   FROM Genre g
-       NATURAL JOIN Book_Genre bg
+   FROM Genres g
+       NATURAL JOIN Book_Genres bg
      JOIN
        (SELECT bg.genre_id AS genre_id
-         FROM User u
-         JOIN book_genres bg ON u.liked_books = bg.book_id
+         FROM Users_Liked u
+         JOIN Book_Genres bg ON u.book_id = bg.book_id
          WHERE user_id = '${user_id}'
          ORDER BY RAND()
          LIMIT 1) g_user ON bg.genre_id = g_user.genre_id
-       JOIN books b ON bg.book_id = b.book_id
+       JOIN Book b ON bg.book_id = b.book_id
    ORDER BY b.average_rating
    LIMIT 2
    UNION 
    SELECT g.genre, b.title,b.image_url
-   FROM Genre g
-       NATURAL JOIN Book_Genre bg
+   FROM Genres g
+       NATURAL JOIN Book_Genres bg
      JOIN
        (SELECT bg.genre_id AS genre_id
-         FROM User u
-         JOIN book_genres bg ON u.liked_books = bg.book_id
+         FROM Users_Liked u
+         JOIN Book_Genres bg ON u.book_id = bg.book_id
          WHERE user_id = '${user_id}'
          ORDER BY RAND()
          LIMIT 1) g_user
            ON bg.genre_id = g_user.genre_id
-       JOIN books b ON bg.book_id = b.book_id
+       JOIN Book b ON bg.book_id = b.book_id
    ORDER BY b.average_rating
    LIMIT 2
    `, (err, data) => {
@@ -370,6 +369,8 @@ const top_ten_books_month = async function(req, res) {
  // Route 11: GET /author_details/:author_id
  const author_details = async function(req, res) {
    // Return author details for the selected author
+   const author_id = req.params.author_id;
+
    connection.query(`
    SELECT * FROM Authors
    WHERE Authors.author_id = '${author_id}'
@@ -385,12 +386,12 @@ const top_ten_books_month = async function(req, res) {
  
  // Route 12: GET /user_liked/:user_id
  const user_liked = async function(req, res) {
-   // 
+   const user_id = req.params.user_id;
    connection.query(`
    SELECT b.title
-   FROM User u
-     JOIN books b ON u.liked_books = b.book_id
-   WHERE user_id = '${user_id}'
+   FROM Users_Liked u
+     JOIN Book b ON u.book_id = b.book_id
+   WHERE u.user_id = '${user_id}'
    `, (err, data) => {
      if (err || data.length === 0) {
        console.log(err);

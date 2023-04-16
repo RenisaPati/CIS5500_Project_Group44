@@ -281,16 +281,35 @@ const similar_books = async function(req, res) {
 const top_ten_books_month = async function(req, res) {
   // Return the title and URLs of the top 10 books of the month based on average ratings on books reviewed in the current month
    connection.query(`
-   SELECT b.title, b.image_url
-   FROM Reviews r
-   JOIN Book b ON b.book_id = r.book_id
-   WHERE b.book_id IN ( SELECT book_id
-                        FROM (  SELECT r.book_id, AVG(rating)
-                                FROM Reviews r
-                                WHERE r.month_added = MONTH(CURRENT_TIMESTAMP)
-                                GROUP BY r.book_id
-                                ORDER BY AVG(rating) DESC
-                                LIMIT 10 ) AVGRATING)'
+  WITH 
+  month_top_reviewed AS (
+
+    SELECT r.book_id , ROUND(COUNT(*) * AVG(rating), 2) AS wt_avg
+    FROM Reviews r
+    WHERE r.month_added = MONTH(CURRENT_TIMESTAMP)
+    GROUP BY r.book_id
+    ORDER BY wt_avg DESC
+    LIMIT 100
+
+  ), 
+  b_top_ten AS (
+
+    SELECT tt.book_id, b.title, b.image_url, tt.wt_avg
+    FROM month_top_reviewed tt
+    JOIN (SELECT title, book_id, image_url
+          FROM Book) b ON tt.book_id = b.book_id
+    ORDER BY RAND()
+    LIMIT 10
+
+  )
+  SELECT btt.*, 
+         GROUP_CONCAT(DISTINCT A.name ORDER BY A.name DESC SEPARATOR ', ')
+  FROM b_top_ten btt
+    JOIN Written_By wb ON btt.book_id = wb.book_id
+    JOIN (SELECT author_id, name FROM Authors) A ON A.author_id = wb.author_id
+  GROUP BY btt.book_id
+  ORDER BY btt.wt_avg DESC
+  
    `, (err, data) => {
      if (err || data.length === 0) {
        console.log(err);

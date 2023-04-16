@@ -20,6 +20,7 @@ connection.connect((err) => err && console.log(err));
 const genre = async function(req, res) {
   // TODO (TASK 1): replace the values of name and pennKey with your own
   const genre = req.param.genre_name;
+  console.log(genre);
   const pg = req.query.page;
   const pageSize = req.query.page_size ?? 80;
   const offset = (pg - 1)*pageSize;
@@ -84,7 +85,8 @@ const book = async function(req, res) {
 
   // Return the book information for the clicked book
   connection.query(`
-  SELECT *
+  SELECT book_id, title, isbn, language_code, is_ebook, average_rating,
+         description, format, publisher, num_pages, publication_year
   FROM Book  
   WHERE book_id = ${curr_id}
   `, (err, data) => {
@@ -93,6 +95,7 @@ const book = async function(req, res) {
       res.json({});
     } else {
       res.json({
+        book_id: data[0].book_id,
         book_title: data[0].title,
         book_isbn: data[0].isbn,
         book_language_code: data[0].language_code,

@@ -37,18 +37,7 @@ test('GET /book/19123314', async () => {
   await supertest(app).get('/book/19123314')
     .expect(200)
     .then((res) => {
-      expect(res.body).toStrictEqual({
-        book_title: expect.any(String),
-        book_isbn: expect.any(String),
-        book_language_code: expect.any(String),
-        is_ebook: expect.any(String),
-        average_rating: expect.any(String),
-        description: expect.any(String),
-        format: expect.any(String),
-        publisher: expect.any(String),
-        num_pages: expect.any(String),
-        publication_year: expect.any(String)
-      });
+      expect(res.body).toStrictEqual(results.book);
     });
 });
 
@@ -66,7 +55,7 @@ test('GET /reviews/13411546 page 2', async () => {
   await supertest(app).get('/reviews/13411546?page=2')
     .expect(200)
     .then((res) => {
-      expect(res.body.slice(0,2)).toStrictEqual(results.book_reviews_page2)
+      expect(res.body.slice(0,2)).toStrictEqual(results.book_sorted_reviews_page2)
     });
 });
 
@@ -75,7 +64,7 @@ test('GET /reviews/13411546 page 16 pg size 5', async () => {
   await supertest(app).get('/reviews/13411546?page=16?pagesize=5')
     .expect(200)
     .then((res) => {
-      expect(res.body).toStrictEqual(results.book_reviews_page16_pagesize5)
+      expect(res.body).toStrictEqual(results.book_sorted_reviews_page16_pagesize5)
     });
 });
 

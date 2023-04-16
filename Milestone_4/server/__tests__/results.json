@@ -83,6 +83,20 @@
     }
   ],
 
+  "book" : {
+    "book_id": 19123314,
+    "book_title": "The Lonely Hearts Vampire: The Bizarre and Horrifying True Account of Serial Killer Bela Kiss",
+    "book_isbn": "1484062221",
+    "book_language_code": null,
+    "is_ebook": 0,
+    "average_rating": 2.5,
+    "description": "In the early 1900s young women began disappearing near Budapest. Bela Kiss, a handsome young soldier, answered the call of war and left his home to fight in the first World War. His landlord, upon hearing of Kiss's alleged death, discovered several large barrels on his property, which he was told were filled with gasoline for rationing. When the barrels were opened, instead of gasoline, the authorities discovered something much more sinister. This short history describes the hunt for one of the world's most terrifying killers, a man who lured women to him home with promises of marriage, then proceeded to strangle them, drain their blood, and leave their pickled bodies preserved in barrels. The most horrifying fact about his crimes may be that he was never caught, and possibly picked up his murder spree in New York City. Read the chilling details in this book, and be careful next time you answer a romance ad!",
+    "format": "Paperback",
+    "publisher": "Createspace Independent Publishing Platform",
+    "num_pages": 76,
+    "publication_year": 2013
+  },
+
   "book_sorted_reviews" : [
     {
       "book_id": 13411546,

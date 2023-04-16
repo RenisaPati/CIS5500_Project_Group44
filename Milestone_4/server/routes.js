@@ -279,7 +279,8 @@ const similar_books = async function(req, res) {
 
 // Route 9: GET /top_ten_books_month
 const top_ten_books_month = async function(req, res) {
-  // Return the title and URLs of the top 10 books of the month based on average ratings on books reviewed in the current month
+  // Return the book ID, title, image URL, rating, and authors of 10 (random) out
+  // of the top 100 books of the month based on average rating (weighted by review count).
    connection.query(`
   WITH 
   month_top_reviewed AS (
@@ -303,7 +304,7 @@ const top_ten_books_month = async function(req, res) {
 
   )
   SELECT btt.*, 
-         GROUP_CONCAT(DISTINCT A.name ORDER BY A.name DESC SEPARATOR ', ')
+         GROUP_CONCAT(DISTINCT A.name ORDER BY A.name DESC SEPARATOR ', ') AS authors
   FROM b_top_ten btt
     JOIN Written_By wb ON btt.book_id = wb.book_id
     JOIN (SELECT author_id, name FROM Authors) A ON A.author_id = wb.author_id

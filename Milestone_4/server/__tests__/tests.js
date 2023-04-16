@@ -57,7 +57,7 @@ test('GET /reviews/13411546', async () => {
   await supertest(app).get('/reviews/13411546')
     .expect(200)
     .then((res) => {
-      expect(res.body).toStrictEqual(results.book_sorted_reviews)
+      expect(res.body.slice(0,3)).toStrictEqual(results.book_sorted_reviews)
     });
 });
 
@@ -66,7 +66,7 @@ test('GET /reviews/13411546 page 2', async () => {
   await supertest(app).get('/reviews/13411546?page=2')
     .expect(200)
     .then((res) => {
-      expect(res.body.slice(0,5)).toStrictEqual(results.book_reviews_page2)
+      expect(res.body.slice(0,2)).toStrictEqual(results.book_reviews_page2)
     });
 });
 

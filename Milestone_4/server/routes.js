@@ -20,7 +20,7 @@ connection.connect((err) => err && console.log(err));
 const genre = async function(req, res) {
   // TODO (TASK 1): replace the values of name and pennKey with your own
   const genre = req.param.genre_name;
-  const pg = req.query.page ;
+  const pg = req.query.page;
   const pageSize = req.query.page_size ?? 80;
   const offset = (pg - 1)*pageSize;
 
@@ -36,19 +36,13 @@ const genre = async function(req, res) {
       FROM Genres g
         INNER JOIN Book_Genres bg on g.genre_id = bg.genre_id
         INNER JOIN Book b ON bg.book_id = b.book_id
-      WHERE g.genre_name = ${genre}
+      WHERE g.genre_name = '${genre}'
       ORDER BY b.average_rating 
     `, (err, data) => {
       if (err || data.length === 0) {
-        // if there is an error for some reason, or if the query is empty (this should not be possible)
-        // print the error message and return an empty object instead
         console.log(err);
-        res.json({});
+        res.json([]);
       } else {
-        // Here, we return results of the query as an object, keeping only relevant data
-        // being song_id and title which you will add. In this case, there is only one song
-        // so we just directly access the first element of the query results array (data)
-        // TODO (TASK 3): also return the song title in the response
         res.json(data);
       }
     });
@@ -58,7 +52,7 @@ const genre = async function(req, res) {
       FROM Genres g
         INNER JOIN Book_Genres bg on g.genre_id = bg.genre_id
         INNER JOIN Book b ON bg.book_id = b.book_id
-      WHERE g.genre_name = ${genre}
+      WHERE g.genre_name = '${genre}'
       ORDER BY b.average_rating 
       LIMIT ${pageSize} OFFSET ${offset}
     `, (err, data) => {
@@ -127,7 +121,8 @@ const reviews = async function(req, res) {
 
   if (!pg) {
     connection.query(`
-    SELECT r.*
+    SELECT book_id, review_id, rating, review_text, 
+           year_added, month_added, day_added, num_votes
     FROM Reviews r 
     WHERE r.book_id = ${curr_id}
     ORDER BY r.num_votes DESC, r.rating DESC

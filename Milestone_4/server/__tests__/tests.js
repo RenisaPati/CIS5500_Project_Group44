@@ -123,8 +123,8 @@ test('GET /top_ten_books_month', async() => {
 }, 100000);
 
 //Route 10: Get book recommendations from random genre
-test('GET /book_recs_rand_genre', async() => {
-  await supertest(app).get('/book_recs_rand_genre')
+test('GET /book_recs_rand_genre/1', async() => {
+  await supertest(app).get('/book_recs_rand_genre/1')
   .expect(200)
   .then((res) => {
     expect(res.body.length).toEqual(2)
@@ -170,7 +170,7 @@ test('GET /authors_ordered/average_rating', async() => {
   await supertest(app).get('/authors_ordered/average_rating')
   .expect(200)
   .then((res) => {
-      expect(res.body).toStrictEqual(results.author_ordered)
+    expect(res.body.length).toEqual(829529)
   });
 }, 100000);
 

@@ -322,34 +322,34 @@ const top_ten_books_month = async function(req, res) {
    // Find two random genres and the select the top 2 rated books within those genres and return these as recommended books for the the user
    const user_id = req.params.user_id;
    connection.query(`
-   SELECT g.genre, b.title, b.image_url
-   FROM Genres g
-       NATURAL JOIN Book_Genres bg
-     JOIN
-       (SELECT bg.genre_id AS genre_id
-         FROM Users_Liked u
-         JOIN Book_Genres bg ON u.book_id = bg.book_id
-         WHERE user_id = '${user_id}'
-         ORDER BY RAND()
-         LIMIT 1) g_user ON bg.genre_id = g_user.genre_id
-       JOIN Book b ON bg.book_id = b.book_id
-   ORDER BY b.average_rating
-   LIMIT 2
-   UNION 
-   SELECT g.genre, b.title,b.image_url
-   FROM Genres g
-       NATURAL JOIN Book_Genres bg
-     JOIN
-       (SELECT bg.genre_id AS genre_id
-         FROM Users_Liked u
-         JOIN Book_Genres bg ON u.book_id = bg.book_id
-         WHERE user_id = '${user_id}'
-         ORDER BY RAND()
-         LIMIT 1) g_user
-           ON bg.genre_id = g_user.genre_id
-       JOIN Book b ON bg.book_id = b.book_id
-   ORDER BY b.average_rating
-   LIMIT 2
+   (SELECT g.genre_name, b.title, b.image_url
+    FROM Genres g
+        NATURAL JOIN Book_Genres bg
+      JOIN
+        (SELECT bg.genre_id AS genre_id
+          FROM Users_Liked u
+          JOIN Book_Genres bg ON u.book_id = bg.book_id
+          WHERE user_id = '${user_id}'
+          ORDER BY RAND()
+          LIMIT 1) g_user ON bg.genre_id = g_user.genre_id
+        JOIN Book b ON bg.book_id = b.book_id
+    ORDER BY b.average_rating
+    LIMIT 1)
+    UNION
+    (SELECT g.genre_name, b.title,b.image_url
+    FROM Genres g
+        NATURAL JOIN Book_Genres bg
+      JOIN
+        (SELECT bg.genre_id AS genre_id
+          FROM Users_Liked u
+          JOIN Book_Genres bg ON u.book_id = bg.book_id
+          WHERE user_id = '${user_id}'
+          ORDER BY RAND()
+          LIMIT 1) g_user
+            ON bg.genre_id = g_user.genre_id
+        JOIN Book b ON bg.book_id = b.book_id
+    ORDER BY b.average_rating
+    LIMIT 1);
    `, (err, data) => {
      if (err || data.length === 0) {
        console.log(err);

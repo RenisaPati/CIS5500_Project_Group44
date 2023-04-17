@@ -1938,6 +1938,19 @@
     }
   ],
 
+  "book_recs_rand_genre" : [
+    {
+      "genre_name": "history",
+      "title": "Mad, Bad & Dangerous to Know",
+      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png"
+    },
+    {
+      "genre_name": "mystery",
+      "title": "Scandal Above Stairs",
+      "image_url": "https://images.gr-assets.com/books/1510600278m/36439828.jpg"
+    }
+  ],
+
   "top_ten_books_month" : [
       {
         "book_id": 22557272,

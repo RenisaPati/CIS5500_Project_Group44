@@ -27,26 +27,25 @@ const genre = async function(req, res) {
   // const clicked_attr = re.query.attr
   // How do we persist the genre name to stay on the same page but reorder on a different attribute?
 
-
-  // checks the value of type the request parameters
   if (!pg) {
-      connection.query(`
-      SELECT g.genre_name, b.image_url, b.title, b.book_id, b.average_rating
-      FROM Genres g
-        INNER JOIN Book_Genres bg on g.genre_id = bg.genre_id
-        INNER JOIN Book b ON bg.book_id = b.book_id
-      WHERE g.genre_name = '${genre}'
-      ORDER BY b.average_rating 
-    `, (err, data) => {
+    connection.query( `   
+    SELECT g.genre_name, b.image_url, b.title, b.book_id, b.average_rating
+    FROM Genres g
+      INNER JOIN Book_Genres bg on g.genre_id = bg.genre_id
+      INNER JOIN Book b ON bg.book_id = b.book_id
+    WHERE g.genre_name = '${genre}'
+    ORDER BY b.average_rating 
+    `
+    , (err, data) => {
       if (err || data.length === 0) {
         console.log(err);
-        res.json([]);
+        res.json({});
       } else {
         res.json(data);
       }
     });
   } else {
-      connection.query(`
+    connection.query(`  
       SELECT g.genre_name, b.image_url, b.title, b.book_id, b.average_rating
       FROM Genres g
         INNER JOIN Book_Genres bg on g.genre_id = bg.genre_id
@@ -54,19 +53,13 @@ const genre = async function(req, res) {
       WHERE g.genre_name = '${genre}'
       ORDER BY b.average_rating 
       LIMIT ${pageSize} OFFSET ${offset}
-    `, (err, data) => {
-      if (err || data.length === 0) {
-        // if there is an error for some reason, or if the query is empty (this should not be possible)
-        // print the error message and return an empty object instead
-        console.log(err);
-        res.json({});
-      } else {
-        // Here, we return results of the query as an object, keeping only relevant data
-        // being song_id and title which you will add. In this case, there is only one song
-        // so we just directly access the first element of the query results array (data)
-        // TODO (TASK 3): also return the song title in the response
-        res.json(data);
-      }
+      `, (err, data) => {
+        if (err || data.length === 0) {
+          console.log(err);
+          res.json({});
+        } else {
+          res.json(data);
+        }
     });
   }
 

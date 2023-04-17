@@ -18,7 +18,7 @@ connection.connect((err) => err && console.log(err));
 
 // Route 1: GET /genre/:genre_name
 const genre = async function(req, res) {
-  const genre = req.param.genre_name;
+  const genre = req.params.genre_name;
   const pg = req.query.page;
   const pageSize = req.query.page_size ?? 80;
   const offset = (pg - 1)*pageSize;
@@ -39,7 +39,7 @@ const genre = async function(req, res) {
     , (err, data) => {
       if (err || data.length === 0) {
         console.log(err);
-        res.json({});
+        res.json([]);
       } else {
         res.json(data);
       }
@@ -56,7 +56,7 @@ const genre = async function(req, res) {
       `, (err, data) => {
         if (err || data.length === 0) {
           console.log(err);
-          res.json({});
+          res.json([]);
         } else {
           res.json(data);
         }

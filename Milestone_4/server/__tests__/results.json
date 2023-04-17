@@ -1922,6 +1922,12 @@
     }
   ],
 
+  "user_liked" : [
+    {
+      "title": "The Untouchables"
+    }
+  ],
+
   "author_details" : [
     {
       "author_id": 192,
@@ -1930,5 +1936,90 @@
       "text_reviews_count": 302,
       "ratings_count": 2743
     }
-  ]
+  ],
+
+  "top_ten_books_month" : [
+      {
+        "book_id": 22557272,
+        "title": "The Girl on the Train",
+        "image_url": "https://images.gr-assets.com/books/1490903702m/22557272.jpg",
+        "wt_avg": 3986,
+        "authors": "Paula Hawkins"
+      },
+      {
+        "book_id": 968,
+        "title": "The Da Vinci Code (Robert Langdon, #2)",
+        "image_url": "https://images.gr-assets.com/books/1303252999m/968.jpg",
+        "wt_avg": 1137,
+        "authors": "Dan Brown"
+      },
+      {
+        "book_id": 11367726,
+        "title": "Defending Jacob",
+        "image_url": "https://images.gr-assets.com/books/1329612158m/11367726.jpg",
+        "wt_avg": 705,
+        "authors": "William Landay"
+      },
+      {
+        "book_id": 26236956,
+        "title": "The Obsession",
+        "image_url": "https://images.gr-assets.com/books/1444838367m/26236956.jpg",
+        "wt_avg": 521,
+        "authors": "Nora Roberts"
+      },
+      {
+        "book_id": 18214414,
+        "title": "The Silkworm (Cormoran Strike, #2)",
+        "image_url": "https://images.gr-assets.com/books/1392577290m/18214414.jpg",
+        "wt_avg": 518,
+        "authors": "Robert Galbraith, J.K. Rowling"
+      },
+      {
+        "book_id": 15729539,
+        "title": "NOS4A2",
+        "image_url": "https://images.gr-assets.com/books/1369591617m/15729539.jpg",
+        "wt_avg": 506,
+        "authors": "Joe Hill"
+      },
+      {
+        "book_id": 6853,
+        "title": "One for the Money (Stephanie Plum, #1)",
+        "image_url": "https://images.gr-assets.com/books/1316730230m/6853.jpg",
+        "wt_avg": 503,
+        "authors": "Janet Evanovich"
+      },
+      {
+        "book_id": 7061,
+        "title": "The No. 1 Ladies' Detective Agency  (No. 1 Ladies' Detective Agency, #1)",
+        "image_url": "https://images.gr-assets.com/books/1459953654m/7061.jpg",
+        "wt_avg": 427,
+        "authors": "Alexander McCall Smith"
+      },
+      {
+        "book_id": 12873,
+        "title": "Rebecca",
+        "image_url": "https://images.gr-assets.com/books/1327871977m/12873.jpg",
+        "wt_avg": 356,
+        "authors": "Sally Beauman, Daphne du Maurier"
+      },
+      {
+        "book_id": 6574102,
+        "title": "Heist Society (Heist Society, #1)",
+        "image_url": "https://images.gr-assets.com/books/1359254479m/6574102.jpg",
+        "wt_avg": 336,
+        "authors": "Ally Carter"
+      }
+    ],
+
+    "surprise_me" : [
+      {
+        "book_id": 968,
+        "title": "The Da Vinci Code (Robert Langdon, #2)",
+        "description": "A fascinating and absorbing thriller -- perfect for history buffs, conspiracy nuts, puzzle lovers or anyone who appreciates a great, riveting story.\nWhile in Paris on business, Harvard symbologist Robert Langdon receives an urgent late-night phone call: the elderly curator of the Louvre has been murdered inside the museum. Near the body, police have found a baffling cipher. While working to solve the enigmatic riddle, Langdon is stunned to discover it leads to a trail of clues hidden in the works of Da Vinci -- clues visible for all to see -- yet ingeniously disguised by the painter.\nLangdon joins forces with a gifted French cryptologist, Sophie Neveu, and learns the late curator was involved in the Priory of Sion -- an actual secret society whose members included Sir Isaac Newton, Botticelli, Victor Hugo, and Da Vinci, among others.\nIn a breathless race through Paris, London, and beyond, Langdon and Neveu match wits with a faceless powerbroker who seems to anticipate their every move. Unless Langdon and Neveu can decipher the labyrinthine puzzle in time, the Priory's ancient secret -- and an explosive historical truth -- will be lost forever.\nThe Da Vinci Code heralds the arrival of a new breed of lightning-paced, intelligent thriller utterly unpredictable right up to its stunning conclusion.",
+        "average_rating": 3.79,
+        "publisher": "Anchor",
+        "image_url": "https://images.gr-assets.com/books/1303252999m/968.jpg",
+        "num_pages": 481
+      }
+    ]
 }

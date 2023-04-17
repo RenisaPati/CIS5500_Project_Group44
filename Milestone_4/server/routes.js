@@ -360,7 +360,38 @@ const top_ten_books_month = async function(req, res) {
    });
  }
 
- // 
+// Route 11: GET /surprise_me/:user_id
+const surprise_me = async function(req, res) {
+   // 
+   const user_id = req.params.user_id;
+   connection.query(`
+   SELECT b.book_id, b.title, b.description, b.average_rating, b.publisher,b. image_url, b.num_pages
+   FROM Book b
+   JOIN Book_Genres bg ON b.book_id = bg.book_id
+   JOIN Genres g ON bg.genre_id = g.genre_id
+   LEFT JOIN Users_Liked ul ON b.book_id = ul.book_id
+   WHERE COALESCE(ul.user_id, g.genre_id) =
+         COALESCE(${user_id}, (SELECT genre_id FROM Genres ORDER BY RAND() LIMIT 1))
+     AND b.text_reviews_count * b.average_rating = (
+         SELECT MAX(b2.text_reviews_count * b2.average_rating)
+         FROM Book b2
+         WHERE EXISTS (
+             SELECT 1
+             FROM Book_Genres bg2
+             WHERE bg2.book_id = b2.book_id
+               AND bg2.genre_id = g.genre_id
+         )
+     )
+   LIMIT 1  
+   `, (err, data) => {
+     if (err || data.length === 0) {
+       console.log(err);
+       res.json({});
+     } else { 
+       res.json(data);
+     }
+   });
+ }
  
  /*****************************
   * ROUTES BY PAGES -- Authors *
@@ -405,9 +436,10 @@ const top_ten_books_month = async function(req, res) {
  // Route 13: GET /authors_ordered/:attribute
  const authors_ordered = async function(req, res) {
    // Return author details for the selected author
+   const attribute = req.params.attribute;
    connection.query(`
    SELECT name FROM Authors
-   ORDER BY '${attribute}'
+   ORDER BY ${attribute}
    `, (err, data) => {
      if (err || data.length === 0) {
        console.log(err);
@@ -433,6 +465,7 @@ const top_ten_books_month = async function(req, res) {
    author_details,
    user_liked,
    authors_ordered,
+   surprise_me,
  }
  
  

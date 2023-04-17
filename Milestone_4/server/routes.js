@@ -334,7 +334,7 @@ const top_ten_books_month = async function(req, res) {
           LIMIT 1) g_user ON bg.genre_id = g_user.genre_id
         JOIN Book b ON bg.book_id = b.book_id
     ORDER BY b.average_rating
-    LIMIT 1)
+    LIMIT 2)
     UNION
     (SELECT g.genre_name, b.title,b.image_url
     FROM Genres g
@@ -349,7 +349,7 @@ const top_ten_books_month = async function(req, res) {
             ON bg.genre_id = g_user.genre_id
         JOIN Book b ON bg.book_id = b.book_id
     ORDER BY b.average_rating
-    LIMIT 1);
+    LIMIT 2);
    `, (err, data) => {
      if (err || data.length === 0) {
        console.log(err);

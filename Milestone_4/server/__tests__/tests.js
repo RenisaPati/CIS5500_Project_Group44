@@ -127,7 +127,13 @@ test('GET /book_recs_rand_genre/1', async() => {
   await supertest(app).get('/book_recs_rand_genre/1')
   .expect(200)
   .then((res) => {
-    expect(res.body.length).toEqual(2)
+    expect(res.body.length).toEqual(4)
+    expect(res.body[0]).toHaveProperty('genre_name')
+    expect(res.body[0]).toHaveProperty('title')
+    expect(res.body[0]).toHaveProperty('image_url')
+    expect(res.body[1]).toHaveProperty('genre_name')
+    expect(res.body[1]).toHaveProperty('title')
+    expect(res.body[1]).toHaveProperty('image_url')    
   });
 }, 100000);
 

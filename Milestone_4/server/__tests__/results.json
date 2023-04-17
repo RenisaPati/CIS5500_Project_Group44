@@ -1940,14 +1940,24 @@
 
   "book_recs_rand_genre" : [
     {
-      "genre_name": "history",
-      "title": "Mad, Bad & Dangerous to Know",
-      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png"
-    },
-    {
-      "genre_name": "mystery",
+      "genre_name": "crime",
       "title": "Scandal Above Stairs",
       "image_url": "https://images.gr-assets.com/books/1510600278m/36439828.jpg"
+    },
+    {
+      "genre_name": "crime",
+      "title": "The Girl in the Yellow Rain Slicker",
+      "image_url": "https://images.gr-assets.com/books/1500526455m/35709402.jpg"
+    },
+    {
+      "genre_name": "non-fiction",
+      "title": "Legends, Monsters, or Serial Murderers?: The Real Story Behind an Ancient Crime",
+      "image_url": "https://images.gr-assets.com/books/1367224823m/13701275.jpg"
+    },
+    {
+      "genre_name": "non-fiction",
+      "title": "David Parker Ray - Serial Killers Unauthorized & Uncensored",
+      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png"
     }
   ],
 

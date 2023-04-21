@@ -77,27 +77,17 @@ const book = async function(req, res) {
   // Return the book information for the clicked book
   connection.query(`
   SELECT book_id, title, isbn, language_code, is_ebook, average_rating,
-         description, format, publisher, num_pages, publication_year
-  FROM Book  
+         description, format, publisher, num_pages, publication_year, series_id, a.*
+  FROM Book b
+    INNER JOIN Written_By wb ON wb.book_id = b.book_id
+    INNER JOIN Authors a ON a.author_id = wb.author_id
   WHERE book_id = ${curr_id}
   `, (err, data) => {
     if (err || data.length === 0) {
       console.log(err);
       res.json({});
     } else {
-      res.json({
-        book_id: data[0].book_id,
-        book_title: data[0].title,
-        book_isbn: data[0].isbn,
-        book_language_code: data[0].language_code,
-        is_ebook: data[0].is_ebook,
-        average_rating: data[0].average_rating,
-        description: data[0].description,
-        format: data[0].format,
-        publisher: data[0].publisher,
-        num_pages: data[0].num_pages,
-        publication_year: data[0].publication_year
-      });
+      res.json(data);
     }
   });
 }

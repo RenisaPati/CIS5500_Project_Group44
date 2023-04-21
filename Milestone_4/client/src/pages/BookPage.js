@@ -54,8 +54,8 @@ export default function BookPage() {
           }}
         />
         <Stack>
-          <h1 style={{ fontSize: 64 }}>{albumData.title}</h1>
-          <h2>Released: {formatReleaseDate(albumData.release_date)}</h2>
+          <h1 style={{ fontSize: 64 }}>{bookData.title}</h1>
+          <h2 style={{fontSize: 40}}> {authorData.name} </h2>
         </Stack>
       </Stack>
       <TableContainer>

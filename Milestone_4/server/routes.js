@@ -155,26 +155,18 @@ const rating_history = async function(req, res) {
   // denoting if its average rating is higher or lower than 
   // other books in the same genre for each year in which it has been rated
   connection.query(`
-  WITH book_ids AS (
-    SELECT DISTINCT book_id
-    FROM Book_Genres
-    WHERE genre_id = (SELECT genre_id
-                FROM Book_Genres
-                WHERE book_id = ${curr_id}
-                LIMIT 1)
-  ),
-    yearly_average AS (
-        SELECT r.year_added, AVG(r.rating) AS yearly_average
-          FROM Reviews r
-          JOIN book_ids ON r.book_id = book_ids.book_id
-          GROUP BY r.year_added
+  WITH ya_filtered AS (SELECT *
+    FROM yearly_average ya
+    WHERE genre_id IN (SELECT genre_id
+                       FROM Book_Genres
+                       WHERE book_id = ${curr_id})
     )
-  SELECT r.year_added, ROUND(AVG(r.rating), 2) AS average_rating, COUNT(*) AS review_count,
-        ya.yearly_average, (AVG(r.rating) > yearly_average) AS gt_yearly_avg
-  FROM (SELECT * FROM Reviews WHERE book_id = ${curr_id}) r
-      JOIN yearly_average ya ON ya.year_added = r.year_added
-  GROUP BY r.year_added
-  ORDER BY year_added; 
+SELECT ya2.genre_id, r.year_added, ROUND(AVG(r.rating), 2) AS average_rating, COUNT(*) AS review_count,
+ya2.yearly_average, (AVG(r.rating) > yearly_average) AS gt_yearly_avg
+FROM (SELECT * FROM Reviews WHERE book_id = ${curr_id}) r
+JOIN ya_filtered ya2 ON ya2.year_added = r.year_added
+GROUP BY r.year_added, ya2.genre_id
+ORDER BY ya2.genre_id, year_added;
   `, (err, data) => {
     if (err || data.length === 0) {
       console.log(err);

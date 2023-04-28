@@ -193,59 +193,444 @@
 
   "rating_history" : [
     {
+      "genre_id": 4,
       "year_added": 2007,
       "average_rating": 3.74,
-      "review_count": 23
+      "review_count": 23,
+      "yearly_average": 3.4373887240356082,
+      "gt_yearly_avg": 1
     },
     {
+      "genre_id": 4,
       "year_added": 2008,
       "average_rating": 3.55,
-      "review_count": 38
+      "review_count": 38,
+      "yearly_average": 3.5157377630346156,
+      "gt_yearly_avg": 1
     },
     {
+      "genre_id": 4,
       "year_added": 2009,
       "average_rating": 3.64,
-      "review_count": 25
+      "review_count": 25,
+      "yearly_average": 3.478216336832864,
+      "gt_yearly_avg": 1
     },
     {
+      "genre_id": 4,
       "year_added": 2010,
       "average_rating": 3.84,
-      "review_count": 32
+      "review_count": 32,
+      "yearly_average": 3.5387892796901355,
+      "gt_yearly_avg": 1
     },
     {
+      "genre_id": 4,
       "year_added": 2011,
       "average_rating": 3.54,
-      "review_count": 35
+      "review_count": 35,
+      "yearly_average": 3.5488344300968464,
+      "gt_yearly_avg": 0
     },
     {
+      "genre_id": 4,
       "year_added": 2012,
       "average_rating": 3.07,
-      "review_count": 30
+      "review_count": 30,
+      "yearly_average": 3.6712050418948414,
+      "gt_yearly_avg": 0
     },
     {
+      "genre_id": 4,
       "year_added": 2013,
       "average_rating": 3.83,
-      "review_count": 24
+      "review_count": 24,
+      "yearly_average": 3.7037622718587335,
+      "gt_yearly_avg": 1
     },
     {
+      "genre_id": 4,
       "year_added": 2014,
       "average_rating": 3.48,
-      "review_count": 25
+      "review_count": 25,
+      "yearly_average": 3.7257832096920533,
+      "gt_yearly_avg": 0
     },
     {
+      "genre_id": 4,
       "year_added": 2015,
       "average_rating": 3.18,
-      "review_count": 17
+      "review_count": 17,
+      "yearly_average": 3.711622301906401,
+      "gt_yearly_avg": 0
     },
     {
+      "genre_id": 4,
       "year_added": 2016,
       "average_rating": 3,
-      "review_count": 13
+      "review_count": 13,
+      "yearly_average": 3.6998526710932613,
+      "gt_yearly_avg": 0
     },
     {
+      "genre_id": 4,
       "year_added": 2017,
       "average_rating": 3,
-      "review_count": 11
+      "review_count": 11,
+      "yearly_average": 3.7189935064935065,
+      "gt_yearly_avg": 0
+    },
+    {
+      "genre_id": 7,
+      "year_added": 2007,
+      "average_rating": 3.74,
+      "review_count": 23,
+      "yearly_average": 3.4335962944199174,
+      "gt_yearly_avg": 1
+    },
+    {
+      "genre_id": 7,
+      "year_added": 2008,
+      "average_rating": 3.55,
+      "review_count": 38,
+      "yearly_average": 3.511057964939964,
+      "gt_yearly_avg": 1
+    },
+    {
+      "genre_id": 7,
+      "year_added": 2009,
+      "average_rating": 3.64,
+      "review_count": 25,
+      "yearly_average": 3.4753665584531412,
+      "gt_yearly_avg": 1
+    },
+    {
+      "genre_id": 7,
+      "year_added": 2010,
+      "average_rating": 3.84,
+      "review_count": 32,
+      "yearly_average": 3.5374566488155783,
+      "gt_yearly_avg": 1
+    },
+    {
+      "genre_id": 7,
+      "year_added": 2011,
+      "average_rating": 3.54,
+      "review_count": 35,
+      "yearly_average": 3.5495951187424866,
+      "gt_yearly_avg": 0
+    },
+    {
+      "genre_id": 7,
+      "year_added": 2012,
+      "average_rating": 3.07,
+      "review_count": 30,
+      "yearly_average": 3.672409312398484,
+      "gt_yearly_avg": 0
+    },
+    {
+      "genre_id": 7,
+      "year_added": 2013,
+      "average_rating": 3.83,
+      "review_count": 24,
+      "yearly_average": 3.7066690932792707,
+      "gt_yearly_avg": 1
+    },
+    {
+      "genre_id": 7,
+      "year_added": 2014,
+      "average_rating": 3.48,
+      "review_count": 25,
+      "yearly_average": 3.732892473709425,
+      "gt_yearly_avg": 0
+    },
+    {
+      "genre_id": 7,
+      "year_added": 2015,
+      "average_rating": 3.18,
+      "review_count": 17,
+      "yearly_average": 3.728311621487253,
+      "gt_yearly_avg": 0
+    },
+    {
+      "genre_id": 7,
+      "year_added": 2016,
+      "average_rating": 3,
+      "review_count": 13,
+      "yearly_average": 3.7149108692222748,
+      "gt_yearly_avg": 0
+    },
+    {
+      "genre_id": 7,
+      "year_added": 2017,
+      "average_rating": 3,
+      "review_count": 11,
+      "yearly_average": 3.7404656337429034,
+      "gt_yearly_avg": 0
+    },
+    {
+      "genre_id": 8,
+      "year_added": 2007,
+      "average_rating": 3.74,
+      "review_count": 23,
+      "yearly_average": 3.432626188734455,
+      "gt_yearly_avg": 1
+    },
+    {
+      "genre_id": 8,
+      "year_added": 2008,
+      "average_rating": 3.55,
+      "review_count": 38,
+      "yearly_average": 3.508707242332893,
+      "gt_yearly_avg": 1
+    },
+    {
+      "genre_id": 8,
+      "year_added": 2009,
+      "average_rating": 3.64,
+      "review_count": 25,
+      "yearly_average": 3.4738406123367853,
+      "gt_yearly_avg": 1
+    },
+    {
+      "genre_id": 8,
+      "year_added": 2010,
+      "average_rating": 3.84,
+      "review_count": 32,
+      "yearly_average": 3.5367767365759333,
+      "gt_yearly_avg": 1
+    },
+    {
+      "genre_id": 8,
+      "year_added": 2011,
+      "average_rating": 3.54,
+      "review_count": 35,
+      "yearly_average": 3.5476163054077503,
+      "gt_yearly_avg": 0
+    },
+    {
+      "genre_id": 8,
+      "year_added": 2012,
+      "average_rating": 3.07,
+      "review_count": 30,
+      "yearly_average": 3.671201325600663,
+      "gt_yearly_avg": 0
+    },
+    {
+      "genre_id": 8,
+      "year_added": 2013,
+      "average_rating": 3.83,
+      "review_count": 24,
+      "yearly_average": 3.7040819412224657,
+      "gt_yearly_avg": 1
+    },
+    {
+      "genre_id": 8,
+      "year_added": 2014,
+      "average_rating": 3.48,
+      "review_count": 25,
+      "yearly_average": 3.73173867279462,
+      "gt_yearly_avg": 0
+    },
+    {
+      "genre_id": 8,
+      "year_added": 2015,
+      "average_rating": 3.18,
+      "review_count": 17,
+      "yearly_average": 3.7265618047917535,
+      "gt_yearly_avg": 0
+    },
+    {
+      "genre_id": 8,
+      "year_added": 2016,
+      "average_rating": 3,
+      "review_count": 13,
+      "yearly_average": 3.712640115708456,
+      "gt_yearly_avg": 0
+    },
+    {
+      "genre_id": 8,
+      "year_added": 2017,
+      "average_rating": 3,
+      "review_count": 11,
+      "yearly_average": 3.7382049484123008,
+      "gt_yearly_avg": 0
+    },
+    {
+      "genre_id": 9,
+      "year_added": 2007,
+      "average_rating": 3.74,
+      "review_count": 23,
+      "yearly_average": 3.446859042869018,
+      "gt_yearly_avg": 1
+    },
+    {
+      "genre_id": 9,
+      "year_added": 2008,
+      "average_rating": 3.55,
+      "review_count": 38,
+      "yearly_average": 3.5217023566952443,
+      "gt_yearly_avg": 1
+    },
+    {
+      "genre_id": 9,
+      "year_added": 2009,
+      "average_rating": 3.64,
+      "review_count": 25,
+      "yearly_average": 3.483887440535383,
+      "gt_yearly_avg": 1
+    },
+    {
+      "genre_id": 9,
+      "year_added": 2010,
+      "average_rating": 3.84,
+      "review_count": 32,
+      "yearly_average": 3.529621120819524,
+      "gt_yearly_avg": 1
+    },
+    {
+      "genre_id": 9,
+      "year_added": 2011,
+      "average_rating": 3.54,
+      "review_count": 35,
+      "yearly_average": 3.5547221729096394,
+      "gt_yearly_avg": 0
+    },
+    {
+      "genre_id": 9,
+      "year_added": 2012,
+      "average_rating": 3.07,
+      "review_count": 30,
+      "yearly_average": 3.6808331448801828,
+      "gt_yearly_avg": 0
+    },
+    {
+      "genre_id": 9,
+      "year_added": 2013,
+      "average_rating": 3.83,
+      "review_count": 24,
+      "yearly_average": 3.7168478771737425,
+      "gt_yearly_avg": 1
+    },
+    {
+      "genre_id": 9,
+      "year_added": 2014,
+      "average_rating": 3.48,
+      "review_count": 25,
+      "yearly_average": 3.7455884493348472,
+      "gt_yearly_avg": 0
+    },
+    {
+      "genre_id": 9,
+      "year_added": 2015,
+      "average_rating": 3.18,
+      "review_count": 17,
+      "yearly_average": 3.7474964018639856,
+      "gt_yearly_avg": 0
+    },
+    {
+      "genre_id": 9,
+      "year_added": 2016,
+      "average_rating": 3,
+      "review_count": 13,
+      "yearly_average": 3.7283087236162697,
+      "gt_yearly_avg": 0
+    },
+    {
+      "genre_id": 9,
+      "year_added": 2017,
+      "average_rating": 3,
+      "review_count": 11,
+      "yearly_average": 3.756014825051825,
+      "gt_yearly_avg": 0
+    },
+    {
+      "genre_id": 11,
+      "year_added": 2007,
+      "average_rating": 3.74,
+      "review_count": 23,
+      "yearly_average": 3.4487086652184407,
+      "gt_yearly_avg": 1
+    },
+    {
+      "genre_id": 11,
+      "year_added": 2008,
+      "average_rating": 3.55,
+      "review_count": 38,
+      "yearly_average": 3.5785915492957745,
+      "gt_yearly_avg": 0
+    },
+    {
+      "genre_id": 11,
+      "year_added": 2009,
+      "average_rating": 3.64,
+      "review_count": 25,
+      "yearly_average": 3.5313966613200263,
+      "gt_yearly_avg": 1
+    },
+    {
+      "genre_id": 11,
+      "year_added": 2010,
+      "average_rating": 3.84,
+      "review_count": 32,
+      "yearly_average": 3.5642769356820976,
+      "gt_yearly_avg": 1
+    },
+    {
+      "genre_id": 11,
+      "year_added": 2011,
+      "average_rating": 3.54,
+      "review_count": 35,
+      "yearly_average": 3.5967533889848866,
+      "gt_yearly_avg": 0
+    },
+    {
+      "genre_id": 11,
+      "year_added": 2012,
+      "average_rating": 3.07,
+      "review_count": 30,
+      "yearly_average": 3.7113125739061883,
+      "gt_yearly_avg": 0
+    },
+    {
+      "genre_id": 11,
+      "year_added": 2013,
+      "average_rating": 3.83,
+      "review_count": 24,
+      "yearly_average": 3.7597625380671524,
+      "gt_yearly_avg": 1
+    },
+    {
+      "genre_id": 11,
+      "year_added": 2014,
+      "average_rating": 3.48,
+      "review_count": 25,
+      "yearly_average": 3.7820890054154312,
+      "gt_yearly_avg": 0
+    },
+    {
+      "genre_id": 11,
+      "year_added": 2015,
+      "average_rating": 3.18,
+      "review_count": 17,
+      "yearly_average": 3.788963347626538,
+      "gt_yearly_avg": 0
+    },
+    {
+      "genre_id": 11,
+      "year_added": 2016,
+      "average_rating": 3,
+      "review_count": 13,
+      "yearly_average": 3.7809905439937954,
+      "gt_yearly_avg": 0
+    },
+    {
+      "genre_id": 11,
+      "year_added": 2017,
+      "average_rating": 3,
+      "review_count": 11,
+      "yearly_average": 3.8230112629196324,
+      "gt_yearly_avg": 0
     }
   ],
 
@@ -371,6 +756,7 @@
 
   "book_info" : [{
       "author": "Henning Mankell",
+      "rols": null,
       "series_title": "Kurt Wallander"
     }],
 

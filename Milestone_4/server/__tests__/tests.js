@@ -60,8 +60,8 @@ test('GET /reviews/13411546 page 2', async () => {
 }, 100000);
 
 // Route 3: Get page 16 of reviews, pg size = 5
-test('GET /reviews/13411546 page 16 pg size 5', async () => {
-  await supertest(app).get('/reviews/13411546?page=16&page_size=5')
+test('GET /reviews/13411546 page 4 pg size 5', async () => {
+  await supertest(app).get('/reviews/13411546?page=4&page_size=5')
     .expect(200)
     .then((res) => {
       expect(res.body).toStrictEqual(results.book_sorted_reviews_page16_pagesize5)
@@ -173,7 +173,7 @@ test('GET /user_liked/1', async() => {
 
 //Route 14: Get authors in desired order
 test('GET /authors_ordered/average_rating', async() => {
-  await supertest(app).get('/authors_ordered/average_rating')
+  await supertest(app).get('/authors_ordered?attr=average_rating')
   .expect(200)
   .then((res) => {
     expect(res.body.length).toEqual(829529)

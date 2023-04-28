@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Box, Button, ButtonGroup, Link, Modal } from '@mui/material';
+import { Box, Button, Container, Modal } from '@mui/material';
 //import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis } from 'recharts';
 import { NavLink } from 'react-router-dom';
 
@@ -8,7 +8,7 @@ const config = require('../config.json');
 
 export default function AuthorCard({ authorID, handleClose }) {
   const [authorData, setAuthorData] = useState({});
-  const [authorsBooksData, setAuthorsBooksData] = useState(null);
+  const [authorsBooksData, setAuthorsBooksData] = useState([{}]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -23,34 +23,30 @@ export default function AuthorCard({ authorID, handleClose }) {
     });
   }, [authorID]);
 
+  const flexFormat = { display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-evenly' };
+
+  if (loading) {
+    return (
+      <Modal open={true} onClose={handleClose} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <Box>
+          <h2>Loading info for {authorData.name}...</h2>
+        </Box>
+      </Modal>
+    );
+  }
+
   return (
-    <Modal
-      open={true}
-      onClose={handleClose}
-      style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
-    >
-      <Box >
-        <Container style={flexFormat}>
-        {albums.map((album) =>
-          <Box
-            key={album.album_id}
-            p={3}
-            m={2}
-            style={{ background: 'white', borderRadius: '16px', border: '2px solid #000' }}
-          >
-            
-            <img
-              src={album.thumbnail_url}
-              alt={`${album.title} album art`}
-            />
-          
-            <h4><NavLink to={`/albums/${album.album_id}`}>{album.title}</NavLink></h4>
+    <Modal open={true} onClose={handleClose}>
+      <Box style={flexFormat} sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        authorsBooksData.map((row, index) => (
+          <Box key={index} sx={{ p: 1 }}>
+            <img src={row.image_url} alt={`Image ${row.title}`} width="200" height="200" />
           </Box>
+        ))
         )}
-        </Container>
-          <Button onClick={handleClose} style={{ left: '50%', transform: 'translateX(-50%)' }}>
-            Close
-          </Button>
       </Box>
     </Modal>
   );

@@ -1,101 +1,97 @@
 {
   "genre_biography_501" : {
-    "genre_name": "biography",
-    "image_url": "https://images.gr-assets.com/books/1325969154m/9692843.jpg",
-    "title": "Alla ricerca di Sonya Dufrette",
-    "book_id": 9692843,
-    "average_rating": 3
+    "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+    "title": "A Classic Christmas Crime",
+    "book_id": 2342403,
+    "average_rating": 3.25
   },
 
   "genre_biography_page5" : [
     {
-      "genre_name": "biography",
-      "image_url": "https://images.gr-assets.com/books/1320558954m/10343272.jpg",
-      "title": "The Thousand",
-      "book_id": 10343272,
-      "average_rating": 2.93
+      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+      "title": "A Breach of Promise (William Monk, #9)",
+      "book_id": 10095246,
+      "average_rating": 4.04
     },
     {
-      "genre_name": "biography",
-      "image_url": "https://images.gr-assets.com/books/1328032968m/10355292.jpg",
-      "title": "Rain of Bullets",
-      "book_id": 10355292,
-      "average_rating": 2.93
+      "image_url": "https://images.gr-assets.com/books/1393784885m/9492124.jpg",
+      "title": "A Breach of Promise (William Monk, #9)",
+      "book_id": 9492124,
+      "average_rating": 4.04
     },
     {
-      "genre_name": "biography",
-      "image_url": "https://images.gr-assets.com/books/1320547553m/7891628.jpg",
-      "title": "The Thousand",
-      "book_id": 7891628,
-      "average_rating": 2.93
+      "image_url": "https://images.gr-assets.com/books/1343073472m/116576.jpg",
+      "title": "A Bride for Hampton House",
+      "book_id": 116576,
+      "average_rating": 4.09
     },
     {
-      "genre_name": "biography",
-      "image_url": "https://images.gr-assets.com/books/1346588788m/8719182.jpg",
-      "title": "Blotto, Twinks and the Ex-King's Daughter (Blotto and Twinks, #1)",
-      "book_id": 8719182,
-      "average_rating": 2.93
+      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+      "title": "A Bright and Guilty Place: Murder in L.a",
+      "book_id": 8842030,
+      "average_rating": 3.66
     },
     {
-      "genre_name": "biography",
-      "image_url": "https://images.gr-assets.com/books/1384632187m/8390471.jpg",
-      "title": "Les Fables de sang",
-      "book_id": 8390471,
-      "average_rating": 2.93
+      "image_url": "https://images.gr-assets.com/books/1320505272m/7877486.jpg",
+      "title": "A Bright and Guilty Place: Murder, Corruption, and L.A.'s Scandalous Coming of Age",
+      "book_id": 7877486,
+      "average_rating": 3.66
     }
   ],
 
   "genre_biography_page10_pagesize5" : [
     {
-      "genre_name": "biography",
-      "image_url": "https://images.gr-assets.com/books/1334909576m/13056576.jpg",
-      "title": "The Adventures of Augustus Fuller",
-      "book_id": 13056576,
-      "average_rating": 2.5
+      "image_url": "https://images.gr-assets.com/books/1368719164m/8579650.jpg",
+      "title": "120, rue de la Gare",
+      "book_id": 8579650,
+      "average_rating": 3.73
     },
     {
-      "genre_name": "biography",
-      "image_url": "https://images.gr-assets.com/books/1455435456m/19123314.jpg",
-      "title": "The Lonely Hearts Vampire: The Bizarre and Horrifying True Account of Serial Killer Bela Kiss",
-      "book_id": 19123314,
-      "average_rating": 2.5
+      "image_url": "https://images.gr-assets.com/books/1325772481m/13145882.jpg",
+      "title": "120, rue de la Gare. Un caso per Nestor Burma",
+      "book_id": 13145882,
+      "average_rating": 3.73
     },
     {
-      "genre_name": "biography",
-      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
-      "title": "The Balmoral Nude",
-      "book_id": 4835481,
-      "average_rating": 2.5
+      "image_url": "https://images.gr-assets.com/books/1352062821m/16128210.jpg",
+      "title": "1280 Almas",
+      "book_id": 16128210,
+      "average_rating": 4.07
     },
     {
-      "genre_name": "biography",
-      "image_url": "https://images.gr-assets.com/books/1432868221m/11001015.jpg",
-      "title": "The Wheelchair Corpse",
-      "book_id": 11001015,
-      "average_rating": 2.5
+      "image_url": "https://images.gr-assets.com/books/1364993011m/17728211.jpg",
+      "title": "1280 almas",
+      "book_id": 17728211,
+      "average_rating": 4.07
     },
     {
-      "genre_name": "biography",
-      "image_url": "https://images.gr-assets.com/books/1348362899m/16041102.jpg",
-      "title": "Murder on the Old Road (Marsh and Daughter, #7)",
-      "book_id": 16041102,
-      "average_rating": 2.52
+      "image_url": "https://images.gr-assets.com/books/1360202957m/595536.jpg",
+      "title": "1280 Almas",
+      "book_id": 595536,
+      "average_rating": 4.07
     }
   ],
 
-  "book" : {
-    "book_id": 19123314,
-    "book_title": "The Lonely Hearts Vampire: The Bizarre and Horrifying True Account of Serial Killer Bela Kiss",
-    "book_isbn": "1484062221",
-    "book_language_code": null,
-    "is_ebook": 0,
-    "average_rating": 2.5,
-    "description": "In the early 1900s young women began disappearing near Budapest. Bela Kiss, a handsome young soldier, answered the call of war and left his home to fight in the first World War. His landlord, upon hearing of Kiss's alleged death, discovered several large barrels on his property, which he was told were filled with gasoline for rationing. When the barrels were opened, instead of gasoline, the authorities discovered something much more sinister. This short history describes the hunt for one of the world's most terrifying killers, a man who lured women to him home with promises of marriage, then proceeded to strangle them, drain their blood, and leave their pickled bodies preserved in barrels. The most horrifying fact about his crimes may be that he was never caught, and possibly picked up his murder spree in New York City. Read the chilling details in this book, and be careful next time you answer a romance ad!",
-    "format": "Paperback",
-    "publisher": "Createspace Independent Publishing Platform",
-    "num_pages": 76,
-    "publication_year": 2013
-  },
+  "book" : [
+    {
+      "book_id": 19123314,
+      "title": "The Lonely Hearts Vampire: The Bizarre and Horrifying True Account of Serial Killer Bela Kiss",
+      "isbn": "1484062221",
+      "language_code": null,
+      "is_ebook": 0,
+      "average_rating": 3.95,
+      "description": "In the early 1900s young women began disappearing near Budapest. Bela Kiss, a handsome young soldier, answered the call of war and left his home to fight in the first World War. His landlord, upon hearing of Kiss's alleged death, discovered several large barrels on his property, which he was told were filled with gasoline for rationing. When the barrels were opened, instead of gasoline, the authorities discovered something much more sinister. This short history describes the hunt for one of the world's most terrifying killers, a man who lured women to him home with promises of marriage, then proceeded to strangle them, drain their blood, and leave their pickled bodies preserved in barrels. The most horrifying fact about his crimes may be that he was never caught, and possibly picked up his murder spree in New York City. Read the chilling details in this book, and be careful next time you answer a romance ad!",
+      "format": "Paperback",
+      "publisher": "Createspace Independent Publishing Platform",
+      "num_pages": 76,
+      "publication_year": 2013,
+      "series_id": null,
+      "author_id": 765,
+      "name": "Wallace Edwards",
+      "text_reviews_count": 230,
+      "ratings_count": 835
+    }
+  ],
 
   "book_sorted_reviews" : [
     {
@@ -142,56 +138,56 @@
         "num_votes": 1
       },
 
-  "book_sorted_reviews_page16_pagesize5" : [
+  "book_sorted_reviews_page2_pagesize5" : [
     {
       "book_id": 13411546,
-      "review_id": "8ef474f686204991c6ed2a13334c30ce",
+      "review_id": "3f03c8eaba3f43522465ab5ef33c0ec0",
       "rating": 5,
-      "review_text": "my sister won it in Goodreads Giveways. It's complete good. impossible to put down and always has a twisting plot!!! you keep guessing about who can be the killer and what would happen. Also it's a good story for teenagers and keep me wondering if it really there are school with so much power. \n Kara Taylor made the character so well and i can imaging being in a true murder case, and she totally bring you back to high school. I can't put this book down. I want already to read the next one :) \n I totally recommend this book.",
+      "review_text": "A fast, fun, engaging read. Anne Dowling is fabulous.",
       "year_added": 2013,
-      "month_added": 8,
-      "day_added": 11,
-      "num_votes": 0
+      "month_added": 1,
+      "day_added": 17,
+      "num_votes": 2
     },
     {
       "book_id": 13411546,
-      "review_id": "954f3d610ff0914fd7a2917da59ddab6",
-      "rating": 5,
-      "review_text": "I came into this not sure what i was going to think and betting that Anne was going to drive me crazy, but I fell in love with her and the entire world. the mystery gripped me tight and didn't let go. I was thrilled I was able to guess who was behind everything but there were still twists and turns that made me gasp. \n I didn't get anything accomplished because I was so absorbed in my book (I nearly missed my train stop several times while reading) and loved every second of it. \n A wonderful, witty, and fun mystery that will keep you guessing until the very end. Highly recommend!",
-      "year_added": 2014,
-      "month_added": 3,
-      "day_added": 12,
-      "num_votes": 0
+      "review_id": "c0baf085ed4ab342d7f3e2bda6ad1d17",
+      "rating": 4,
+      "review_text": "4.5 stars! \n Read the full review here. \n Prep School Confidential really impressed me! I have to say I wasn't expecting much. Books like this end up falling short almost as a rule. But this one was exciting, smart, and funny. And I think a huge part of that is thanks to the characters and the fresh plot. \n When I say fresh, I mean that it opts out of the petty jealous tripe it could have been and veers towards conspiracies and bigger-than-us scandals. Like Anne herself, the plot is daring and unafraid. I love how the plot doesn't happen. Anne makes it happen. She takes charge, snoops around, refuses to let go of her roommate's death. The pinnacle of this wonderful cast is occupied by our fabulous main character who might just be my newest role model. Anne is pretty, popular, and often a tad reckless. She knows all these things about herself. But she's defined by her Nancy Drew-esque curiosity and lawyer's-kid smarts. She isn't vapid, nor does she put other girls down. Basically, Anne Dowling is like the literary world's gift to me. \n I realise now that this review is rather rambly and makes little-to-no-sense, but I will end by saying \n READ THIS BOOK NOW \n , which is not at all rambly and makes a good deal of sense, I think.",
+      "year_added": 2015,
+      "month_added": 1,
+      "day_added": 31,
+      "num_votes": 2
     },
     {
       "book_id": 13411546,
-      "review_id": "9e4d50b3f8547b6253cb144826840cab",
-      "rating": 5,
-      "review_text": "This was such a fun read. The heroine is kick ass. Set aside whatever preconceived notions you have this is not a Gossip Girl/Pretty Little Liars hybrid.",
-      "year_added": 2014,
+      "review_id": "d96d31d0e91bbe893708d8f69955f6ba",
+      "rating": 4,
+      "review_text": "It could be easy to hate Anne Dowling, the protagonist of PREP SCHOOL CONFIDENTIAL. She's pretty, rich, confident, intelligent, and popular. I liked her instantly though, with her sardonic voice, kindness, and knack for getting in huge trouble while trying to cover up a little misdeed. She gets expelled from her current private school and shipped to boarding school in Boston. \n At first, her new home isn't that bad. Just as Anne begins to settle in, her roommate is found dead in the woods. Worse, it seems like no one is really investigating. The school is determined to keep the murder as quiet as possible and deflect any attention from the other students. After all, the school has a safety rating to maintain and these are the children of important people. (It's a bit of corruption that sadly rings true.) \n PREP SCHOOL CONFIDENTIAL reminded me of another YA debut that came out this year: ESCAPE THEORY by Margaux Froley. It's a good year for people who like mysteries set in boarding schools! This one is a lot funnier and less sad, because Anne has less of a personal connection to the victim. She only knew Isabelle for a week. However, her roommate was nice, and even if she wasn't, she deserves justice. Thus Anne begins investigating and finds out that too many people had a motive. There's a tangled web of blackmail, espionage, stalking, and teenaged hurt feelings. \n There are two love interests: Anthony, Isabelle's hot-tempered brother and Brent, the school's king bee. I liked both boys and that the romantic storyline didn't overwhelm the mystery. It's more a setup for romantic tension to last throughout the Anne Dowling mystery series. The second, WICKED LITTLE SECRETS, comes out March 4, 2014 and I'm looking forward to it. \n Mystery series live and die on the strength of their detective. Anne just might be my favorite girl sleuth since Jasmine Callahan of Michele Jaffe's Bad Kitty books. (Trust me, that's a massive compliment.) Her confidence is refreshing and her humor is spot on, which makes her narration a delight to read. At the same time, she has a tendency to rely too much on talking her way out of trouble and thus doesn't plan enough to keep from getting into trouble in the first place. \n PREP SCHOOL CONFIDENTIAL is the perfect summer read for mystery fans. It certainly won't make anyone unhappy that they aren't in school. I'm happy that there are more books coming because Anne is a great protagonist.",
+      "year_added": 2013,
       "month_added": 7,
-      "day_added": 20,
-      "num_votes": 0
+      "day_added": 30,
+      "num_votes": 2
     },
     {
       "book_id": 13411546,
-      "review_id": "9f81c8b734c84043b9ade3087c3fa1d2",
-      "rating": 5,
-      "review_text": "I enjoyed this book. A lot. It had everything: murder, suspense, tension, romance, lies, rich bitches, rebellious teens, hot guys, and a fresh, fast-paced plot. This book was impossible to put down. I'm definitely going to read the next Anne Dowling adventure!",
-      "year_added": 2013,
-      "month_added": 9,
-      "day_added": 5,
-      "num_votes": 0
+      "review_id": "7daf6307ce8d4fc69eb3536ed19d8378",
+      "rating": 4,
+      "review_text": "Fun with a more complex plot than expected! The sheer number of suspects was hilarious to try to narrow. Still I found it a little ridiculous that she managed to get tangled up in a federal investigation and still didn't trust the authorities to handle it. For once, I would like to read a mystery in which the main character cooperates with the authorities, and together they manage to solve it. That would be a real twist.",
+      "year_added": 2016,
+      "month_added": 7,
+      "day_added": 3,
+      "num_votes": 2
     },
     {
       "book_id": 13411546,
-      "review_id": "a59289b8ec13067d392da8d511187141",
-      "rating": 5,
-      "review_text": "Hilarious & smart. Terrific pacing. Very fun read.",
-      "year_added": 2013,
-      "month_added": 9,
-      "day_added": 15,
-      "num_votes": 0
+      "review_id": "24c9e1003ca2bf1de1fe0176e0f8be4a",
+      "rating": 4,
+      "review_text": "Prep School Confidential was a pretty good read. \n In YA books, the characters that deal with murder, can be pretty stupid. \n Violet from The Body Finder series, is the perfect example of that. She always puts herself in danger, and throughout the four books, she never learned her lesson. It also took her forever to find out who it was, even though she was physic! \n Anne did annoy me at first, and i thought she'd turn into one of those characters, but without the powers. \n However, she really grew on me, and actually ended up being pretty smart about how to handle the murder. \n I had a feeling on who the killer would be, throughout the book. \n I ended up being wrong, and the person who it turned out to be, was really surprising! \n Overall, a good murder mystery, with an surprising killer.",
+      "year_added": 2014,
+      "month_added": 1,
+      "day_added": 11,
+      "num_votes": 2
     }
   ],
 

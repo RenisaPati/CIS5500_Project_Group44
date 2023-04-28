@@ -37,7 +37,7 @@ const genre = async function(req, res) {
                             WHERE genre_name = '${genre}')) ids
     INNER JOIN (SELECT book_id, image_url, title, average_rating, ratings_count
                       FROM Book) b ON ids.book_id = b.book_id
-    ORDER BY average_rating * ratings_count;
+    ORDER BY b.title;
     `
     , (err, data) => {
       if (err || data.length === 0) {
@@ -57,7 +57,7 @@ const genre = async function(req, res) {
                               WHERE genre_name = '${genre}')) ids
       INNER JOIN (SELECT book_id, image_url, title, average_rating, ratings_count
                         FROM Book) b ON ids.book_id = b.book_id
-      ORDER BY average_rating * ratings_count
+      ORDER BY b.title
       LIMIT ${pageSize} OFFSET ${offset}
       `, (err, data) => {
         if (err || data.length === 0) {
@@ -160,7 +160,7 @@ const rating_history = async function(req, res) {
     FROM Book_Genres
     WHERE genre_id = (SELECT genre_id
                 FROM Book_Genres
-                WHERE book_id = 2048
+                WHERE book_id = ${curr_id}
                 LIMIT 1)
   ),
     yearly_average AS (
@@ -407,16 +407,15 @@ const surprise_me = async function(req, res) {
    // Return author details for the selected author
    const author_id = req.params.author_id;
    connection.query(`
-   SELECT * 
+   SELECT *
    FROM Authors
-   WHERE Authors.author_id = '${author_id}'
-   `, (err, data) => {
+   WHERE author_id = ${author_id}`,
+   (err, data) => {
      if (err || data.length === 0) {
        console.log(err);
        res.json({});
      } else {
        res.json(data);
-       console.log(data);
      }
    });
  }
@@ -425,11 +424,12 @@ const surprise_me = async function(req, res) {
 const books_by_author = async function(req, res) {
   const author_id = req.params.author_id;
   connection.query(`
-  SELECT B.book_id, B.title, B.image_url, B.average_rating, B.num_pages, B.ratings_count, B.publication_year
+  SELECT B.book_id, B.title, B.image_url, B.average_rating, 
+          B.num_pages, B.ratings_count, B.publication_year
   FROM Authors
       INNER JOIN Written_By wb ON Authors.author_id = wb.author_id
       INNER JOIN Book B on wb.book_id = B.book_id
-  WHERE Authors.author_id = '${author_id}'
+  WHERE Authors.author_id = ${author_id}
   `, (err, data) => {
     if (err || data.length === 0) {
       console.log(err);
@@ -462,10 +462,10 @@ const books_by_author = async function(req, res) {
  // Route 13: GET /authors_ordered
  const authors_ordered = async function(req, res) {
    // Return author details for the All authors page
-   const attribute = req.query.attribute ?? 'name';
+   const attribute = req.query.attr ?? 'name';
    connection.query(`
    SELECT * FROM Authors
-   ORDER BY '${attribute}'
+   ORDER BY ${attribute}
    `, (err, data) => {
      if (err || data.length === 0) {
        console.log(err);

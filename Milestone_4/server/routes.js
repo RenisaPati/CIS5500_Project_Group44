@@ -29,12 +29,15 @@ const genre = async function(req, res) {
 
   if (!pg) {
     connection.query( `   
-    SELECT g.genre_name, b.image_url, b.title, b.book_id, b.average_rating
-    FROM Genres g
-      INNER JOIN Book_Genres bg on g.genre_id = bg.genre_id
-      INNER JOIN Book b ON bg.book_id = b.book_id
-    WHERE g.genre_name = '${genre}'
-    ORDER BY b.average_rating 
+    SELECT b.image_url, b.title, b.book_id, b.average_rating
+    FROM (SELECT bg.book_id
+          FROM Book_Genres bg
+          WHERE genre_id = (SELECT genre_id
+                            FROM Genres
+                            WHERE genre_name = '${genre}')) ids
+    INNER JOIN (SELECT book_id, image_url, title, average_rating, ratings_count
+                      FROM Book) b ON ids.book_id = b.book_id
+    ORDER BY average_rating * ratings_count;
     `
     , (err, data) => {
       if (err || data.length === 0) {
@@ -46,12 +49,15 @@ const genre = async function(req, res) {
     });
   } else {
     connection.query(`  
-      SELECT g.genre_name, b.image_url, b.title, b.book_id, b.average_rating
-      FROM Genres g
-        INNER JOIN Book_Genres bg on g.genre_id = bg.genre_id
-        INNER JOIN Book b ON bg.book_id = b.book_id
-      WHERE g.genre_name = '${genre}'
-      ORDER BY b.average_rating 
+      SELECT b.image_url, b.title, b.book_id, b.average_rating
+      FROM (SELECT bg.book_id
+            FROM Book_Genres bg
+            WHERE genre_id = (SELECT genre_id
+                              FROM Genres
+                              WHERE genre_name = '${genre}')) ids
+      INNER JOIN (SELECT book_id, image_url, title, average_rating, ratings_count
+                        FROM Book) b ON ids.book_id = b.book_id
+      ORDER BY average_rating * ratings_count
       LIMIT ${pageSize} OFFSET ${offset}
       `, (err, data) => {
         if (err || data.length === 0) {
@@ -76,12 +82,14 @@ const book = async function(req, res) {
 
   // Return the book information for the clicked book
   connection.query(`
-  SELECT book_id, title, isbn, language_code, is_ebook, average_rating,
-         description, format, publisher, num_pages, publication_year, series_id, a.*
-  FROM Book b
-    INNER JOIN Written_By wb ON wb.book_id = b.book_id
-    INNER JOIN Authors a ON a.author_id = wb.author_id
-  WHERE book_id = ${curr_id}
+  SELECT b.book_id, title, isbn, language_code, is_ebook, b.average_rating,
+          description, format, publisher, num_pages, publication_year, series_id, a.*
+  FROM (SELECT book_id, title, isbn, language_code, is_ebook, average_rating,
+        description, format, publisher, num_pages, publication_year, series_id
+  FROM Book
+  WHERE book_id = ${curr_id}) b
+    INNER JOIN (SELECT * FROM Written_By WHERE book_id = ${curr_id}) wb ON wb.book_id = b.book_id
+    INNER JOIN Authors a ON a.author_id = wb.author_id;
   `, (err, data) => {
     if (err || data.length === 0) {
       console.log(err);
@@ -143,13 +151,30 @@ const rating_history = async function(req, res) {
   const curr_id = req.params.book_id
 
   // Return the average rating and rating count for each year
-  // in which a book has been rated
+  // in which a book has been rated as well as a boolean indicator 
+  // denoting if its average rating is higher or lower than 
+  // other books in the same genre for each year in which it has been rated
   connection.query(`
-  SELECT r.year_added, ROUND(AVG(r.rating), 2) AS average_rating, COUNT(*) AS review_count
-  FROM Book b JOIN Reviews r ON r.book_id = b.book_id
-  WHERE b.book_id = ${curr_id}
+  WITH book_ids AS (
+    SELECT DISTINCT book_id
+    FROM Book_Genres
+    WHERE genre_id = (SELECT genre_id
+                FROM Book_Genres
+                WHERE book_id = 2048
+                LIMIT 1)
+  ),
+    yearly_average AS (
+        SELECT r.year_added, AVG(r.rating) AS yearly_average
+          FROM Reviews r
+          JOIN book_ids ON r.book_id = book_ids.book_id
+          GROUP BY r.year_added
+    )
+  SELECT r.year_added, ROUND(AVG(r.rating), 2) AS average_rating, COUNT(*) AS review_count,
+        ya.yearly_average, (AVG(r.rating) > yearly_average) AS gt_yearly_avg
+  FROM (SELECT * FROM Reviews WHERE book_id = ${curr_id}) r
+      JOIN yearly_average ya ON ya.year_added = r.year_added
   GROUP BY r.year_added
-  ORDER BY year_added;  
+  ORDER BY year_added; 
   `, (err, data) => {
     if (err || data.length === 0) {
       console.log(err);
@@ -191,12 +216,11 @@ const book_author_series = async function(req, res) {
   // Return the author name, book series title
   // of the book in question.
   connection.query(`
-  SELECT a.name AS author, bs.title AS series_title
-  FROM Book b
+  SELECT a.name AS author, w.role, bs.title AS series_title
+  FROM (SELECT book_id, series_id FROM Book WHERE book_id = ${curr_id}) b
     INNER JOIN Written_By w ON w.book_id = b.book_id
     INNER JOIN Authors a ON w.author_id = a.author_id
-    INNER JOIN Book_Series bs ON b.series_id = bs.series_id
-  WHERE b.book_id = ${curr_id}
+    INNER JOIN Book_Series bs ON b.series_id = bs.series_id;
   `, (err, data) => {
     if (err || data.length === 0) {
       console.log(err);
@@ -216,10 +240,8 @@ const book_genres = async function(req, res) {
   // of the book in question.
   connection.query(`
   SELECT g.genre_name
-  FROM Book b
-    INNER JOIN Book_Genres bg ON bg.book_id = b.book_id
-    INNER JOIN Genres g ON g.genre_id = bg.genre_id
-  WHERE b.book_id = ${curr_id}
+    FROM (SELECT genre_id FROM Book_Genres WHERE book_id = ${curr_id}) bg
+    INNER JOIN Genres g ON g.genre_id = bg.genre_id;
   `, (err, data) => {
     if (err || data.length === 0) {
       console.log(err);
@@ -237,11 +259,11 @@ const similar_books = async function(req, res) {
 
   // Return the information of the similar books
   connection.query(`
-    SELECT s.similar_book_id, b2.title AS similar_title, b2.image_url AS similar_url
-    FROM Book b
-      INNER JOIN Similar_Books s ON s.book_id = b.book_id
-      INNER JOIN Book b2 ON s.similar_book_id = b2.book_id
-    WHERE b.book_id = ${curr_id}
+  SELECT s.similar_book_id, b2.title AS similar_title, b2.image_url AS similar_url
+  FROM Book b
+    INNER JOIN Similar_Books s ON s.book_id = b.book_id
+    INNER JOIN Book b2 ON s.similar_book_id = b2.book_id
+  WHERE b.book_id = ${curr_id};
   `, (err, data) => {
     if (err || data.length === 0) {
       console.log(err);
@@ -261,8 +283,7 @@ const top_ten_books_month = async function(req, res) {
   // Return the book ID, title, image URL, rating, and authors of 10 (random) out
   // of the top 100 books of the month based on average rating (weighted by review count).
    connection.query(`
-  WITH 
-  month_top_reviewed AS (
+   WITH month_top_reviewed AS (
 
     SELECT r.book_id , ROUND(COUNT(*) * AVG(rating), 2) AS wt_avg
     FROM Reviews r
@@ -271,24 +292,25 @@ const top_ten_books_month = async function(req, res) {
     ORDER BY wt_avg DESC
     LIMIT 100
 
-  ), 
+  ),
   b_top_ten AS (
 
     SELECT tt.book_id, b.title, b.image_url, tt.wt_avg
     FROM month_top_reviewed tt
-    JOIN (SELECT title, book_id, image_url
-          FROM Book) b ON tt.book_id = b.book_id
+    JOIN (SELECT book_id, title, image_url
+        FROM Book
+    ) b ON tt.book_id = b.book_id
     ORDER BY RAND()
     LIMIT 10
 
   )
-  SELECT btt.*, 
+  SELECT btt.*,
          GROUP_CONCAT(DISTINCT A.name ORDER BY A.name DESC SEPARATOR ', ') AS authors
   FROM b_top_ten btt
     JOIN Written_By wb ON btt.book_id = wb.book_id
     JOIN (SELECT author_id, name FROM Authors) A ON A.author_id = wb.author_id
   GROUP BY btt.book_id
-  ORDER BY btt.wt_avg DESC
+  ORDER BY btt.wt_avg DESC;
   
    `, (err, data) => {
      if (err || data.length === 0) {

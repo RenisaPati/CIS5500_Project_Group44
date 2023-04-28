@@ -24,6 +24,7 @@ app.get('/author_details/:author_id', routes.author_details);
 app.get('/user_liked/:user_id', routes.user_liked);
 app.get('/authors_ordered', routes.authors_ordered);
 app.get('/surprise_me/:user_id', routes.surprise_me);
+app.get('/books_by_author/:author_id', routes.books_by_author);
 
 //login authentication possible server side implementation
 app.post('/api/login', (req, res) => {

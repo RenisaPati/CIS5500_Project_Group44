@@ -52,7 +52,7 @@ export default function SongsPage() {
   // instead of loading only the data we need (which is necessary in order to be able to sort by column)
   const columns = [
     { field: 'title', headerName: 'Title', width: 300, renderCell: (params) => (
-        <Link onClick={() => setSelectedSongId(params.row.song_id)}>{params.value}</Link>
+        <Link onClick={() => setSelectedSongId(params.row.song_id)}>{params.row}</Link>
     ) },
     { field: 'duration', headerName: 'Duration' },
     { field: 'plays', headerName: 'Plays' },

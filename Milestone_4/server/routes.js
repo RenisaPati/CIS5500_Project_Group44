@@ -438,10 +438,10 @@ const surprise_me = async function(req, res) {
    });
  }
  
- // Route 13: GET /authors_ordered/:attribute
+ // Route 13: GET /authors_ordered
  const authors_ordered = async function(req, res) {
    // Return author details for the All authors page
-   const attribute = req.params.attribute ?? 'name';
+   const attribute = req.query.attribute ?? 'name';
    connection.query(`
    SELECT * FROM Authors
    ORDER BY '${attribute}'
@@ -451,7 +451,6 @@ const surprise_me = async function(req, res) {
        console.log(err);
        res.json({});
      } else {
-       console.log(data);
        res.json(data);
      }
    });

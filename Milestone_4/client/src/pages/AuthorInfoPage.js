@@ -26,16 +26,19 @@ export default function AuthorInfoPage() {
   useEffect(() => {
     fetch(`http://${config.server_host}:${config.server_port}/authors_ordered`)
       .then(res => res.json())
-      .then(resJson => setAuthorData(resJson));
-  }, [author_id]);
+      .then(resJson => {
+        const authorsWithID = resJson.map((author) => ({ id: author.author_id, ...author }));
+        setAuthorData(authorsWithID);
+      });
+  }, []);
 
   return (
     <Container>
       <DataGrid
+        getRowId={(row) => row?.author_id}
         rows={authorData}
         columns={columns}
         rowsPerPageOptions={[5, 10, 25]}
-
       />
     </Container>
   );

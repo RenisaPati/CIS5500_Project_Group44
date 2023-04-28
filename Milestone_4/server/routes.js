@@ -444,9 +444,10 @@ const surprise_me = async function(req, res) {
    const attribute = req.params.attribute ?? 'name';
    connection.query(`
    SELECT * FROM Authors
-   ORDER BY ${attribute}
+   ORDER BY '${attribute}'
    `, (err, data) => {
      if (err || data.length === 0) {
+       console.log('encountered an error');
        console.log(err);
        res.json({});
      } else {

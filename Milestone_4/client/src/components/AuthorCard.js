@@ -14,12 +14,16 @@ export default function AuthorCard({ authorID, handleClose }) {
   useEffect(() => {
     setLoading(true);
     Promise.all([
-      fetch(`http://${config.server_host}:${config.server_port}/author_details/${authorID}`).then(res => res.json()),
-      fetch(`http://${config.server_host}:${config.server_port}/books_by_author/${authorID}`).then(res => res.json()),
+      fetch(`http://${config.server_host}:${config.server_port}/author_details/${authorID}`)
+        .then(res => res.json()),
+      fetch(`http://${config.server_host}:${config.server_port}/books_by_author/${authorID}`)
+        .then(res => res.json()),
     ]).then(([authorData, booksData]) => {
       setAuthorData(authorData);
       setAuthorsBooksData(booksData);
       setLoading(false);
+      console.log(authorData);
+      console.log(authorsBooksData);
     });
   }, [authorID]);
 
@@ -37,17 +41,17 @@ export default function AuthorCard({ authorID, handleClose }) {
 
   return (
     <Modal open={true} onClose={handleClose}>
-      <Box style={flexFormat} sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        authorsBooksData.map((row, index) => (
-          <Box key={index} sx={{ p: 1 }}>
-            <img src={row.image_url} alt={`Image ${row.title}`} width="200" height="200" />
-          </Box>
-        ))
-        )}
-      </Box>
+      <Container style={flexFormat} > 
+        <Box
+        p={3}
+        style={{ background: 'white', borderRadius: '16px', border: '2px solid #000', width: 600 }}
+        >
+          <h1>{authorData.name}</h1>
+          <Button onClick={handleClose} style={{ left: '50%', transform: 'translateX(-50%)' }} >
+            Close
+          </Button>
+        </Box>
+      </Container>
     </Modal>
   );
 }

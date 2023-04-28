@@ -454,7 +454,7 @@ const books_by_author = async function(req, res) {
  // Route 13: GET /authors_ordered
  const authors_ordered = async function(req, res) {
    // Return author details for the All authors page
-   const attribute = req.query.attr ?? 'name';
+   const attribute = req.query.attr ?? 'average_rating';
    connection.query(`
    SELECT * FROM Authors
    ORDER BY ${attribute}

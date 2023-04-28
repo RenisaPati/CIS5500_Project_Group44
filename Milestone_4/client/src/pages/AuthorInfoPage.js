@@ -4,8 +4,6 @@ import { DataGrid } from '@mui/x-data-grid';
 import { Container, Link } from '@mui/material';
 import AuthorCard from '../components/AuthorCard';
 
-//import SongCard from '../components/SongCard';
-//import { formatDuration, formatReleaseDate } from '../helpers/formatter';
 const config = require('../config.json');
 
 export default function AuthorInfoPage() {
@@ -18,8 +16,7 @@ export default function AuthorInfoPage() {
 
   const columns = [
     { field: 'author_id', headerName: 'ID', flex: 1  },
-    { field: 'name', headerName: 'Name' , flex: 1 
-    ,renderCell: (params) => (
+    { field: 'name', headerName: 'Name' , flex: 1 ,renderCell: (params) => (
       <Link onClick={() => setSelectedAuthorID(params.row.author_id)}>
       {params.row.name} 
       </Link>
@@ -41,7 +38,7 @@ export default function AuthorInfoPage() {
 
   return (
     <Container>
-      {selectedAuthorID && <AuthorCard songId={selectedAuthorID} handleClose={() => 
+      {selectedAuthorID && <AuthorCard authorID={selectedAuthorID} handleClose={() => 
         setSelectedAuthorID(null)} />}
       <DataGrid
         getRowId={(row) => row?.author_id}

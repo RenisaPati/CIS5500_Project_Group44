@@ -37,7 +37,8 @@ export default function NavBar() {
       <Container maxWidth='xl'>
         <Toolbar disableGutters>
           <NavText href='/' text='SWIFTIFY' isMain />
-          <NavText href='/albums' text='ALBUMS' />
+          <NavText href='/authors_ordered' text='Authors' />
+          <NavText href='/songs' text='SONGS' />
           <NavText href='/songs' text='SONGS' />
         </Toolbar>
       </Container>

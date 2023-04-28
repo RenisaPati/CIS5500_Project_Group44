@@ -440,16 +440,17 @@ const surprise_me = async function(req, res) {
  
  // Route 13: GET /authors_ordered/:attribute
  const authors_ordered = async function(req, res) {
-   // Return author details for the selected author
-   const attribute = req.params.attribute;
+   // Return author details for the All authors page
+   const attribute = req.params.attribute ?? 'name';
    connection.query(`
-   SELECT name FROM Authors
+   SELECT * FROM Authors
    ORDER BY ${attribute}
    `, (err, data) => {
      if (err || data.length === 0) {
        console.log(err);
        res.json({});
      } else {
+       console.log(data);
        res.json(data);
      }
    });

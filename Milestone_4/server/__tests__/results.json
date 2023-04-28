@@ -126,70 +126,82 @@
     }
   ],
 
-  "book_sorted_reviews_page2" : 
+  "book_sorted_reviews_page2" : [
+  {
+    "book_id": 13411546,
+    "review_id": "3b3d077da33e2eccb9c26dbf8fb16077",
+    "rating": 5,
+    "review_text": "The thing I think I loved most about this book was the main character. Even as the book started, and she felt a little rich girl with a rebellious side, she was anything but typical. As the book went on, I admired her guts and tenacity and conviction more and more. Girl had some serious boldness going on! She was a very enjoyable character to spend this fabulous mystery with.",
+    "year_added": 2013,
+    "month_added": 5,
+    "day_added": 1,
+    "num_votes": 1
+  },
+  {
+    "book_id": 13411546,
+    "review_id": "2ddf5f09e598043fa55e48bee8fa1a8e",
+    "rating": 5,
+    "review_text": "I loved the intrigue and sass in this book. However, please note, there is swearing and mentions of hook ups in this book. Maybe more of a high school reading book and not like middle school? \n I honestly thought the entire time that Brent did it. Seriously, he was acting all mysterious. And that is the biggest flaw in the book. I seriously think she did an amazing job at keeping the truth from us and let us keep suspecting everyone else. \n I did think the layers of intrigue she added were very realistic. It is truly only by digging we get to the skeletons in everyone's closet, and there are always more than you think. Especially more so with people in prestigious and high ranking positions. Liked it. On to the next one.",
+    "year_added": 2016,
+    "month_added": 2,
+    "day_added": 15,
+    "num_votes": 1
+  },
+  {
+    "book_id": 13411546,
+    "review_id": "53ff84af288d60b132ffa8a2f974bf00",
+    "rating": 5,
+    "review_text": "Prep School Confidential was as fun and outrageous as I expected it to be. While there are dark turns with Isabella's murder and the question of who had the greatest motive to kill her, the story is upbeat for the most part. More than a murder mystery, this is a story about the political workings of a boarding school attended by children whose parents play large roles in the political world. And how the balance is upset with the entrance of a girl with little care for the school's system. \n Much of the humor can be credited to Anne's snarky personality. With a a girl like Anne narrating, you know you're in for a load of drama. After all, she's the girl who can't help but get involved with bad boys and whose story starts with her setting the school auditorium on fire--accidentally, of course. There are times when she lets her emotions get the better of her, and she isn't the type of girl to take something and not give it back (and I'm not talking about actual gift giving here). At times, I wanted to tell her to slow down and think a little; at the same time, her impulsivity and headstrong nature is what makes Anne who she is, and I wouldn't want her to change. There's something about her that's compelling. I can see why other students can't help flocking around her. \n At the same time, Anne is pretty much the only character driving the novel. The whole prep school scene is pretty cliched, and the other characters remain flat for the most part, though not uninteresting. While I still can't feel sympathy for Anne's nemesis at school, the giggly girls from the in crowd are actually distinguishable given time. I also rather like Brent. He's a nice guy, and I wish that Anne could find it in her to treat him better. I don't like Anthony much, and it's not just because he's the reason Anne has conflicted feelings towards Brent. Yeah, the romance is your typical love triangle between the nice guy and the bad boy. It's rare that I ever root for the bad boy, and I'm definitely not on Anthony's side. He reeks of trouble, the kind that got Anne expelled from her last school. Plus, Brent really is a sweet guy. \n Equally important to the story is the mystery, which isn't lacking. As soon as I figured one person was responsible for Isabella's murder, another equally likely suspect emerged. It wasn't until towards the end that I began to lean towards one particular suspect. On top of that, Anne learns that there is more to Isabella than she knew, and I regret that Isabella died before we got to know her better. \n Filled with wit, romance, and good writing Prep School Confidential is a murder mystery that I wouldn't hesitate to recommend for some light summer reading. \n -- \n For more of my reviews, visit my blog Imaginary Reads.",
+    "year_added": 2013,
+    "month_added": 7,
+    "day_added": 12,
+    "num_votes": 1
+  },
+  {
+    "book_id": 13411546,
+    "review_id": "99a533a1953b94d00c8c5ab242657a51",
+    "rating": 5,
+    "review_text": "This is my kind of YA mystery! I loved the narrative voice and characterization. Excellent pacing. Snappy, funny dialogue. Fantastic!!",
+    "year_added": 2014,
+    "month_added": 10,
+    "day_added": 24,
+    "num_votes": 1
+  }
+  ],
+  "book_sorted_reviews_page4_pagesize3" : 
+    [
       {
         "book_id": 13411546,
-        "review_id": "2ddf5f09e598043fa55e48bee8fa1a8e",
-        "rating": 5,
-        "review_text": "I loved the intrigue and sass in this book. However, please note, there is swearing and mentions of hook ups in this book. Maybe more of a high school reading book and not like middle school? \n I honestly thought the entire time that Brent did it. Seriously, he was acting all mysterious. And that is the biggest flaw in the book. I seriously think she did an amazing job at keeping the truth from us and let us keep suspecting everyone else. \n I did think the layers of intrigue she added were very realistic. It is truly only by digging we get to the skeletons in everyone's closet, and there are always more than you think. Especially more so with people in prestigious and high ranking positions. Liked it. On to the next one.",
+        "review_id": "a0013d11014b0cd3fe1ca88ffe152171",
+        "rating": 2,
+        "review_text": "Just because I have such a high expectation of it, and was really disappointed since I was really looking forward to so much more in this book. But overall, it wasn't bad, but it wasn't super good either. It was ok. If you are looking for a mystery that happens on school ground and has a student who is trying to solve it, I will say go try it out. Who knows, you might like it. After all, it does have some really fun factors in it.",
         "year_added": 2016,
-        "month_added": 2,
-        "day_added": 15,
-        "num_votes": 1
+        "month_added": 8,
+        "day_added": 13,
+        "num_votes": 4
       },
-
-  "book_sorted_reviews_page2_pagesize5" : [
-    {
-      "book_id": 13411546,
-      "review_id": "3f03c8eaba3f43522465ab5ef33c0ec0",
-      "rating": 5,
-      "review_text": "A fast, fun, engaging read. Anne Dowling is fabulous.",
-      "year_added": 2013,
-      "month_added": 1,
-      "day_added": 17,
-      "num_votes": 2
-    },
-    {
-      "book_id": 13411546,
-      "review_id": "c0baf085ed4ab342d7f3e2bda6ad1d17",
-      "rating": 4,
-      "review_text": "4.5 stars! \n Read the full review here. \n Prep School Confidential really impressed me! I have to say I wasn't expecting much. Books like this end up falling short almost as a rule. But this one was exciting, smart, and funny. And I think a huge part of that is thanks to the characters and the fresh plot. \n When I say fresh, I mean that it opts out of the petty jealous tripe it could have been and veers towards conspiracies and bigger-than-us scandals. Like Anne herself, the plot is daring and unafraid. I love how the plot doesn't happen. Anne makes it happen. She takes charge, snoops around, refuses to let go of her roommate's death. The pinnacle of this wonderful cast is occupied by our fabulous main character who might just be my newest role model. Anne is pretty, popular, and often a tad reckless. She knows all these things about herself. But she's defined by her Nancy Drew-esque curiosity and lawyer's-kid smarts. She isn't vapid, nor does she put other girls down. Basically, Anne Dowling is like the literary world's gift to me. \n I realise now that this review is rather rambly and makes little-to-no-sense, but I will end by saying \n READ THIS BOOK NOW \n , which is not at all rambly and makes a good deal of sense, I think.",
-      "year_added": 2015,
-      "month_added": 1,
-      "day_added": 31,
-      "num_votes": 2
-    },
-    {
-      "book_id": 13411546,
-      "review_id": "d96d31d0e91bbe893708d8f69955f6ba",
-      "rating": 4,
-      "review_text": "It could be easy to hate Anne Dowling, the protagonist of PREP SCHOOL CONFIDENTIAL. She's pretty, rich, confident, intelligent, and popular. I liked her instantly though, with her sardonic voice, kindness, and knack for getting in huge trouble while trying to cover up a little misdeed. She gets expelled from her current private school and shipped to boarding school in Boston. \n At first, her new home isn't that bad. Just as Anne begins to settle in, her roommate is found dead in the woods. Worse, it seems like no one is really investigating. The school is determined to keep the murder as quiet as possible and deflect any attention from the other students. After all, the school has a safety rating to maintain and these are the children of important people. (It's a bit of corruption that sadly rings true.) \n PREP SCHOOL CONFIDENTIAL reminded me of another YA debut that came out this year: ESCAPE THEORY by Margaux Froley. It's a good year for people who like mysteries set in boarding schools! This one is a lot funnier and less sad, because Anne has less of a personal connection to the victim. She only knew Isabelle for a week. However, her roommate was nice, and even if she wasn't, she deserves justice. Thus Anne begins investigating and finds out that too many people had a motive. There's a tangled web of blackmail, espionage, stalking, and teenaged hurt feelings. \n There are two love interests: Anthony, Isabelle's hot-tempered brother and Brent, the school's king bee. I liked both boys and that the romantic storyline didn't overwhelm the mystery. It's more a setup for romantic tension to last throughout the Anne Dowling mystery series. The second, WICKED LITTLE SECRETS, comes out March 4, 2014 and I'm looking forward to it. \n Mystery series live and die on the strength of their detective. Anne just might be my favorite girl sleuth since Jasmine Callahan of Michele Jaffe's Bad Kitty books. (Trust me, that's a massive compliment.) Her confidence is refreshing and her humor is spot on, which makes her narration a delight to read. At the same time, she has a tendency to rely too much on talking her way out of trouble and thus doesn't plan enough to keep from getting into trouble in the first place. \n PREP SCHOOL CONFIDENTIAL is the perfect summer read for mystery fans. It certainly won't make anyone unhappy that they aren't in school. I'm happy that there are more books coming because Anne is a great protagonist.",
-      "year_added": 2013,
-      "month_added": 7,
-      "day_added": 30,
-      "num_votes": 2
-    },
-    {
-      "book_id": 13411546,
-      "review_id": "7daf6307ce8d4fc69eb3536ed19d8378",
-      "rating": 4,
-      "review_text": "Fun with a more complex plot than expected! The sheer number of suspects was hilarious to try to narrow. Still I found it a little ridiculous that she managed to get tangled up in a federal investigation and still didn't trust the authorities to handle it. For once, I would like to read a mystery in which the main character cooperates with the authorities, and together they manage to solve it. That would be a real twist.",
-      "year_added": 2016,
-      "month_added": 7,
-      "day_added": 3,
-      "num_votes": 2
-    },
-    {
-      "book_id": 13411546,
-      "review_id": "24c9e1003ca2bf1de1fe0176e0f8be4a",
-      "rating": 4,
-      "review_text": "Prep School Confidential was a pretty good read. \n In YA books, the characters that deal with murder, can be pretty stupid. \n Violet from The Body Finder series, is the perfect example of that. She always puts herself in danger, and throughout the four books, she never learned her lesson. It also took her forever to find out who it was, even though she was physic! \n Anne did annoy me at first, and i thought she'd turn into one of those characters, but without the powers. \n However, she really grew on me, and actually ended up being pretty smart about how to handle the murder. \n I had a feeling on who the killer would be, throughout the book. \n I ended up being wrong, and the person who it turned out to be, was really surprising! \n Overall, a good murder mystery, with an surprising killer.",
-      "year_added": 2014,
-      "month_added": 1,
-      "day_added": 11,
-      "num_votes": 2
-    }
-  ],
+      {
+        "book_id": 13411546,
+        "review_id": "10c4baa611919ff81e75697d1afe47f9",
+        "rating": 5,
+        "review_text": "I received an ebook ARC from the publisher, through NetGalley, in exchange for an honest review. \n What didn't I love about PREP SCHOOL CONFIDENTIAL? That is the question still on my mind. Mystery, death, rebellion, shady characters, you get it all in this fantastic novel by Kara Taylor. You'll enjoy reading every second of it, I promise! \n I've had quite the hard time figuring out what exactly to say about PSC. After everything that happened in the story, I was stumped for words on how to convey how great of a novel it was. Still am, quite frankly. Taylor immediately throws you into the mist of an afternoon that is about to go terribly wrong for the popular, rebellious Anne. After burning down part of her private school--a bit of an over exaggeration Anne would say--she is shipped off to Boston to attend the Wheatley School. Filled with students from very powerful and wealthy families, it's pretty obvious how much of an outsider Anne is. She makes a jealous enemy almost immediately. A week after being there, her roommate mysteriously is murdered and the school is keeping everyone mum about it. Even though she only knew Isabella for a short amount of time, Anne is determined to get to the bottom of it, despite possibly ending up in the same situation herself. \n I wasn't too fond of Anne at the beginning. She seemed way too self-absorbed in the first chapter. After her reality check, I loved her as the main character! She's got a witty and snippy attitude, the perfect personification of someone who is being sent away from home against their will. Taylor created a great, spunky character who you're going to love exploring the Wheatley School with. I admired her determination, despite barely knowing Isabella. She makes some very choice decisions, making me quite nervous, but she wanted justice where clearly it wasn't coming. If I had been poor Isabella, I would've loved to have Anne as my roommate to figure out what had happened to me and why. \n I feel like I should mention that Taylor killed off one of my favorite characters, and quickly too! We really didn't get to know Isabella for very long but she sounded like an awesome person to be friends with. She loved movies (bonus point), wasn't afraid to sing along to songs in said movies (bonus point), shared her gummy worms (bonus point), and was compassionate towards her new roomie (bonus point). I was so sad to see her gone! During Anne's sleuthing around the school to figure who killed her and why, some of Isabella's skeletons in the closet were revealed. Even though she was no longer around, I loved that we got to continue learning more about Isabella and her past. \n Some of the other characters in the book were the perfect example of people who you never knew whether to fully trust or not. One moment you think they are the good guys, the next: not so much. I thoroughly enjoyed the detective work Anne, Isabella's brother, and Brent conducted and was never fully sure what to conclude about the whole murder mystery. Taylor throws in loop hole after loop hole, making you question everything until the very end. One of my favorite parts about the entire novel was that Taylor pieced each scene, discovery, revelation, and mystery so carefully that the reader was never bored and never knew where everything was going. Each secondary character had a distinct purpose in the story and had something to hide. Also, in the way that Taylor did write this story, it's perfectly set up for the next novel in the series. While the mystery of Isabella's death is finally solved, a mystery that was revealed during Anne's sleuthing is still completely wide open: a cold case. Anne discovers some critical information about it towards the end, letting the reader know that Anne is not done figuring out the mysteries surrounding the Wheatley School. \n I'd recommend PREP SCHOOL CONFIDENTIAL to anyone who loves a juicy murder mystery filled to the brim with questions, shady behavior, cover-ups, plot twists, and a group of characters you'll love finding more about. Not able to set this book down, Kara Taylor has created the definition of a page-turner, never letting the reader know everything that is going on until the very end. You'll be surprised at just how much people have to hide! I'm dying to know what Anne discovers next!",
+        "year_added": 2013,
+        "month_added": 6,
+        "day_added": 25,
+        "num_votes": 3
+      },
+      {
+        "book_id": 13411546,
+        "review_id": "432b7e165f46b0e2c21965ce77260486",
+        "rating": 4,
+        "review_text": "This was a good mystery with a strong YA setting and a really likeable heroine. Anne is a basically good person, but with the flaws you'd expect in a privileged teen without enough effective supervision. \n It took me a bit to warm to her, actually, but that's the author's fault for starting the book too early. The slow start and unnecessary detail of her foolishness with Martin set poor expectations for both Anne's eventual character and the story's direction. Once things pick up, though, we begin to see the core of what makes her work and understand why she couldn't simply leave well enough alone when she sees injustice and willful ignorance in the death of someone well on her way to becoming a friend. \n From there things keep a great pace and if some of the reveals are predictable, many are brilliantly conceived and one or two true surprises (fully earned) were outright brilliant. All without stinting on the characters who were vibrant enough to hold interest in their own right. Anne's interactions with her classmates were sometimes brusque and sometimes earnest, but never random or unrealistic. Anne has a long, tough journey as she deals with suspicion and privilege in her new school so it makes sense that her emotional state dictates her interactions as much as her reason does, at times. What I liked about it is how Taylor made it so that the reader can see Anne's motivations clearly even when Anne herself is a little unclear why she is sticking her neck out for someone who is already dead and had little call on her loyalty even when she was still around. \n Some of the tertiary characters and background were light enough to keep this in the 3.5 star range, but I enjoyed it so much that I feel compelled to round up, this time. And I'm definitely interested in the next...",
+        "year_added": 2014,
+        "month_added": 2,
+        "day_added": 4,
+        "num_votes": 3
+      }
+    ]
+  ,
 
   "rating_history" : [
     {

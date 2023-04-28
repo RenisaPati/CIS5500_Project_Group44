@@ -55,16 +55,16 @@ test('GET /reviews/13411546 page 2', async () => {
   await supertest(app).get('/reviews/13411546?page=2')
     .expect(200)
     .then((res) => {
-      expect(res.body[1]).toStrictEqual(results.book_sorted_reviews_page2)
+      expect(res.body.slice(0,4)).toStrictEqual(results.book_sorted_reviews_page2)
     });
 }, 100000);
 
 // Route 3: Get page 16 of reviews, pg size = 5
-test('GET /reviews/13411546 page 4 pg size 5', async () => {
-  await supertest(app).get('/reviews/13411546?page=4&page_size=5')
+test('GET /reviews/13411546 page 4 pg size 3', async () => {
+  await supertest(app).get('/reviews/13411546?page=4&page_size=3')
     .expect(200)
     .then((res) => {
-      expect(res.body).toStrictEqual(results.book_sorted_reviews_page16_pagesize5)
+      expect(res.body).toStrictEqual(results.book_sorted_reviews_page4_pagesize3)
     });
 }, 100000);
 

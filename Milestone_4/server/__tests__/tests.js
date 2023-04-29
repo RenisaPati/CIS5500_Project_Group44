@@ -173,7 +173,7 @@ test('GET /user_liked/1', async() => {
 
 //Route 14: Get authors in desired order
 test('GET /authors_ordered/average_rating', async() => {
-  await supertest(app).get('/authors_ordered?attr=average_rating')
+  await supertest(app).get('/authors_ordered')
   .expect(200)
   .then((res) => {
     expect(res.body.length).toEqual(829529)

@@ -455,17 +455,43 @@ const books_by_author = async function(req, res) {
  const authors_ordered = async function(req, res) {
    // Return author details for the All authors page
    const attribute = req.query.attr ?? 'average_rating';
-   connection.query(`
-   SELECT * FROM Authors
-   ORDER BY ${attribute}
-   `, (err, data) => {
-     if (err || data.length === 0) {
-       console.log(err);
-       res.json({});
-     } else {
-       res.json(data);
-     }
-   });
+   const pg = req.query.page;
+   // TODO (TASK 8): use the ternary (or nullish) operator to set the pageSize based on the query or default to 10
+   const pageSize = req.query.page_size ?? 25;
+   const offset = (pg - 1)*pageSize;
+   console.log(attribute);
+   console.log(pg);
+   console.log(pageSize);
+   console.log(offset);
+
+   if (!pg) {
+    connection.query(`
+    SELECT * FROM Authors
+    ORDER BY ${attribute} DESC
+    `, (err, data) => {
+      if (err || data.length === 0) {
+        console.log(err);
+        res.json({});
+      } else {
+       console.log('Successfully returned authors');
+        res.json(data);
+      }
+    });
+   } else {
+      connection.query(`
+      SELECT * FROM Authors
+      ORDER BY ${attribute} DESC
+      LIMIT ${pageSize} OFFSET ${offset}
+      `,
+      (err, data) => {
+        if (err || data.length === 0) {
+          console.log(err);
+          res.json([]);
+        } else {
+          res.json(data);
+        }
+      });
+   }
  }
  
  

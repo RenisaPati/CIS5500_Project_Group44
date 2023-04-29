@@ -69,7 +69,7 @@ export default function LazyTable({ route, columns, defaultPageSize, rowsPerPage
           )}
         </TableBody>
         <TablePagination
-          rowsPerPageOptions={rowsPerPageOptions ?? [5, 10, 25]}
+          rowsPerPageOptions={rowsPerPageOptions ?? [5, 10, 25, 100]}
           count={-1}
           rowsPerPage={pageSize}
           page={page - 1}

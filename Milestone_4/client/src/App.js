@@ -5,9 +5,8 @@ import { createTheme } from "@mui/material/styles";
 
 import NavBar from './components/NavBar';
 import HomePage from './pages/HomePage';
-//import AlbumsPage from './pages/AlbumsPage';
-import SongsPage from './pages/SongsPage';
 import AuthorInfoPage from './pages/AuthorInfoPage'
+import SingleGenre from "./pages/SingleGenrePage";
 
 // createTheme enables you to customize the look and feel of your app past the default
 // in this case, we only change the color scheme
@@ -31,7 +30,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/authors_ordered" element={<AuthorInfoPage />} />
-          <Route path="/songs" element={<SongsPage />} />
+          <Route path= "" element={<SingleGenre />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

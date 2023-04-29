@@ -407,7 +407,7 @@ const surprise_me = async function(req, res) {
        console.log(err);
        res.json({});
      } else {
-       res.json(data);
+       res.json(data[0]);
      }
    });
  }
@@ -415,18 +415,22 @@ const surprise_me = async function(req, res) {
  // Route 12: GET /books_by_author/:author_id
 const books_by_author = async function(req, res) {
   const author_id = req.params.author_id;
+  console.log(`Getting book information for author: ${author_id}`);
+
   connection.query(`
   SELECT B.book_id, B.title, B.image_url, B.average_rating, 
           B.num_pages, B.ratings_count, B.publication_year
-  FROM Authors
-      INNER JOIN Written_By wb ON Authors.author_id = wb.author_id
+  FROM (SELECT author_id, name FROM Authors WHERE Authors.author_id = ${author_id}) a
+      INNER JOIN Written_By wb ON a.author_id = wb.author_id
       INNER JOIN Book B on wb.book_id = B.book_id
-  WHERE Authors.author_id = ${author_id}
+  ORDER BY B.average_rating * B.ratings_count DESC
   `, (err, data) => {
     if (err || data.length === 0) {
       console.log(err);
       res.json({});
+      console.log('Failed to return books by author ')
     } else {
+      console.log('Successfully returned books by author info')
       res.json(data);
     }
   });
@@ -457,8 +461,8 @@ const books_by_author = async function(req, res) {
 
     connection.query(`
     SELECT * FROM Authors
-    ORDER BY average_rating * ratings_count DESC
-    LIMIT 1000
+    WHERE author_id IN (SELECT author_id FROM Written_By)
+    ORDER BY average_rating * ratings_count DESC;
     `, (err, data) => {
       if (err || data.length === 0) {
         console.log(err);

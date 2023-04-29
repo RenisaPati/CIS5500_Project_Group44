@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { Divider, Container, Link } from '@mui/material';
 import { DataGrid } from '@mui/x-data-grid';
 import AuthorCard from '../components/AuthorCard';
-import LazyTableData from '../components/LazyTableData';
 //import { Button } from "@mui/material";
 const config = require('../config.json');
 

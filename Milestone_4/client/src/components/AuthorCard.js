@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Box, Button, Container, Modal } from '@mui/material';
 //import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis } from 'recharts';
-import { NavLink } from 'react-router-dom';
+//import { NavLink } from 'react-router-dom';
 
 // import { formatDuration } from '../helpers/formatter';
 const config = require('../config.json');
@@ -22,18 +22,19 @@ export default function AuthorCard({ authorID, handleClose }) {
       setAuthorData(authorData);
       setAuthorsBooksData(booksData);
       setLoading(false);
+      console.log(`Current author ID: ${authorID}`);
       console.log(authorData);
       console.log(authorsBooksData);
     });
-  }, [authorID]);
+  }, []);
 
-  const flexFormat = { display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-evenly' };
+  const flexFormat = { display: 'flex', flexDirection: 'column', flexWrap: 'wrap', justifyContent: 'space-evenly' };
 
   if (loading) {
     return (
       <Modal open={true} onClose={handleClose} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <Box>
-          <h2>Loading info for {authorData.name}...</h2>
+        <h1>{authorData.name}</h1>
         </Box>
       </Modal>
     );

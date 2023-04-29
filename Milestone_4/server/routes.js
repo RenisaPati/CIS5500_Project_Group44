@@ -454,44 +454,21 @@ const books_by_author = async function(req, res) {
  // Route 13: GET /authors_ordered
  const authors_ordered = async function(req, res) {
    // Return author details for the All authors page
-   const attribute = req.query.attr ?? 'average_rating';
-   const pg = req.query.page;
-   // TODO (TASK 8): use the ternary (or nullish) operator to set the pageSize based on the query or default to 10
-   const pageSize = req.query.page_size ?? 25;
-   const offset = (pg - 1)*pageSize;
-   console.log(attribute);
-   console.log(pg);
-   console.log(pageSize);
-   console.log(offset);
 
-   if (!pg) {
     connection.query(`
     SELECT * FROM Authors
-    ORDER BY ${attribute} DESC
+    ORDER BY average_rating * ratings_count DESC
+    LIMIT 1000
     `, (err, data) => {
       if (err || data.length === 0) {
         console.log(err);
-        res.json({});
+        res.json([]);
+        console.log('Error retrieving authors');
       } else {
        console.log('Successfully returned authors');
         res.json(data);
       }
     });
-   } else {
-      connection.query(`
-      SELECT * FROM Authors
-      ORDER BY ${attribute} DESC
-      LIMIT ${pageSize} OFFSET ${offset}
-      `,
-      (err, data) => {
-        if (err || data.length === 0) {
-          console.log(err);
-          res.json([]);
-        } else {
-          res.json(data);
-        }
-      });
-   }
  }
  
  

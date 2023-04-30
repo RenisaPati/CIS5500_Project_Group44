@@ -30,7 +30,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/authors_ordered" element={<AuthorInfoPage />} />
-          <Route path= "" element={<SingleGenre />} />
+          <Route path= "/genre/:genre_name" element={<SingleGenre />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

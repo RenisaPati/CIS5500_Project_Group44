@@ -311,8 +311,10 @@ const top_ten_books_month = async function(req, res) {
      if (err || data.length === 0) {
        console.log(err);
        res.json({});
+       console.log('Failing to return top 10 books info');
      } else { 
        res.json(data);
+       console.log('Successfully return top 10 books info');
      }
    });
  }

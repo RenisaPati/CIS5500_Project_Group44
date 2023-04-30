@@ -51,12 +51,12 @@ const NavDropdown = ({ options, text, isMain }) => {
       >
         {options.map((option) => (
           <MenuItem
-            key={option.href}
+            key={option.genre}
             onClick={handleClose}
             style={{ backgroundColor: '#f5f5f5' }}
           >
             <NavLink
-              to={`${option.href}`}
+              to={`/genre/${option.genre}`}
               style={{
                 color: 'inherit',
                 textDecoration: 'none',
@@ -100,21 +100,21 @@ const NavText = ({ href, text, isMain, options }) => {
 
 export default function NavBar() {
   const dropdownOptions = [
-    { href: '/genre/history', text: 'History' },
-    { href: '/genre/historical_fiction', text: 'Historical Fiction' },
-    { href: '/genre/biography', text: 'Biography' },
-    { href: '/genre/fiction', text: 'Fiction' },
-    { href: '/genre/fantasy', text: 'Fantasy' },
-    { href: '/genre/paranormal', text: 'Paranormal' },
-    { href: '/genre/mystery', text: 'Mystery' },
-    { href: '/genre/thriller', text: 'Thriller' },
-    { href: '/genre/crime', text: 'Crime' },
-    { href: '/genre/poetry', text: 'Poetry' },
-    { href: '/genre/non-fiction', text: 'Non Fiction' },
-    { href: '/genre/children', text: 'Children' },
-    { href: '/genre/young-adult', text: 'Young Adult' },
-    { href: '/genre/comics', text: 'Comics' },
-    { href: '/genre/graphic', text: 'Graphic' }
+    { genre: 'history', text: 'History' },
+    { genre: 'historical fiction', text: 'Historical Fiction' },
+    { genre: 'biography', text: 'Biography' },
+    { genre: 'fiction', text: 'Fiction' },
+    { genre: 'fantasy', text: 'Fantasy' },
+    { genre: 'paranormal', text: 'Paranormal' },
+    { genre: 'mystery', text: 'Mystery' },
+    { genre: 'thriller', text: 'Thriller' },
+    { genre: 'crime', text: 'Crime' },
+    { genre: 'poetry', text: 'Poetry' },
+    { genre: 'non-fiction', text: 'Non Fiction' },
+    { genre: 'children', text: 'Children' },
+    { genre: 'young-adult', text: 'Young Adult' },
+    { genre: 'comics', text: 'Comics' },
+    { genre: 'graphic', text: 'Graphic' }
   ];
 
   return (

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow } from '@mui/material';
 
+
 // This component provides a paginated MUI table that fetches data only from the specified page.
 // This optimization is known as lazy loading. It is unnecessary for you to utilize this optimization
 // in your final project, but is a good example of many React features and presented as an exercise.
@@ -13,7 +14,7 @@ export default function LazyTable({ route, columns, defaultPageSize, rowsPerPage
   const [data, setData] = useState([]);
 
   const [page, setPage] = useState(1); // 1 indexed
-  const [pageSize, setPageSize] = useState(defaultPageSize ?? 10);
+  const [pageSize, setPageSize] = useState(defaultPageSize ?? 5);
 
   // Now notice the dependency array contains route, page, pageSize, since we
   // need to re-fetch the data if any of these values change
@@ -39,7 +40,7 @@ export default function LazyTable({ route, columns, defaultPageSize, rowsPerPage
 
     // TODO (TASK 18): set pageSize state variable and reset the current page to 1
     setPageSize(newPageSize);
-    setPage(1);   
+    setPage(1);
   }
 
   const defaultRenderCell = (col, row) => {
@@ -50,26 +51,28 @@ export default function LazyTable({ route, columns, defaultPageSize, rowsPerPage
     <TableContainer>
       <Table>
         <TableHead>
-          <TableRow>
+          <TableRow style={{ borderBottom: "2px solid #18998c" }}>
             {columns.map(col => <TableCell key={col.headerName}>{col.headerName}</TableCell>)}
           </TableRow>
         </TableHead>
         <TableBody>
           {data.map((row, idx) =>
-            <TableRow key={idx}>
+            <TableRow key={idx} style={{ borderBottom: "1.5px dotted #18998c" }}>
               {
                 // TODO (TASK 19): the next 3 lines of code render only the first column. Modify this with a map statement to render all columns.
                 // Hint: look at how we structured the map statement to render all the table headings within the <TableHead> element
                 columns.map(col =>
                 <TableCell key={col.headerName}>
-                  {col.renderCell ? col.renderCell(row) : defaultRenderCell(col,row)}
-                </TableCell>)}
-                {/* Note the following ternary statement renders the cell using a custom renderCell function if defined, or defaultRenderCell otherwise */}
+                  {/* Note the following ternary statement renders the cell using a custom renderCell function if defined, or defaultRenderCell otherwise */}
+                  {col.renderCell ? col.renderCell(row) : defaultRenderCell(col, row)}
+                </TableCell>
+                )
+              }
             </TableRow>
           )}
         </TableBody>
         <TablePagination
-          rowsPerPageOptions={rowsPerPageOptions ?? [5, 10, 25, 100]}
+          rowsPerPageOptions={rowsPerPageOptions ?? [5, 10, 25]}
           count={-1}
           rowsPerPage={pageSize}
           page={page - 1}

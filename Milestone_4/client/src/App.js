@@ -6,7 +6,8 @@ import { createTheme } from "@mui/material/styles";
 import NavBar from './components/NavBar';
 import HomePage from './pages/HomePage';
 import AuthorInfoPage from './pages/AuthorInfoPage'
-import SingleGenre from "./pages/SingleGenrePage";
+import SingleGenrePage from "./pages/SingleGenrePage";
+import BooksPage from "./pages/BooksPage";
 
 // createTheme enables you to customize the look and feel of your app past the default
 // in this case, we only change the color scheme
@@ -30,7 +31,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/authors_ordered" element={<AuthorInfoPage />} />
-          <Route path= "/genre/:genre_name" element={<SingleGenre />} />
+          <Route path= "/genre/:genre_name" element={<SingleGenrePage />} />
+          <Route exact path='/' component={<SingleGenrePage/>} />
+          <Route path= "/book/:book_id" element={<BooksPage /> } />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Box, Button, Container, Modal } from '@mui/material';
+import { Box, Button, Container, Grid, Modal, Typography } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 import '../helpers/styles.css'
 const config = require('../config.json');
@@ -36,25 +36,53 @@ export default function AuthorCard({ authorID, handleClose }) {
           p={3}
           style={{ background: 'white', borderRadius: '16px', border: '2px solid #000', width: 600 }}
         >
-          <Box style={{ display: 'flex', flexWrap: 'wrap' }}>
-                <h1>{authorData.name}; Average Rating: {authorData.average_rating}</h1>
-          </Box>
-          <h2>Books:</h2>
-          <Box style={{ display: 'flex', flexWrap: 'wrap' }}>
-            {authorsBooksData.map(bookData => (
-              <Box key={bookData.book_id} style={{ margin: 8 }}>
-              <img
-                src={bookData.image_url}
-                alt={bookData.title}
-                style={{ width: 150, height: 225 }}
-              />
-              <h5> 
-                <NavLink to={`/book/${bookData.book_id}`}>{bookData.title}
-                </NavLink>
-              </h5>
-            </Box>
-            ))}
-          </Box>
+          <Grid item xs={12} md={12} style={{ backgroundColor: "#fdb98a" }}>
+              <div style={{ 
+                background: '#333', 
+                color: '#fff', 
+                padding: '20px', 
+                border: '20px solid #000', 
+                borderRadius: '10px', 
+                textAlign: 'center', 
+                textTransform: 'uppercase', 
+                letterSpacing: '2px', 
+                marginBottom: '20px',
+                marginRight : '20px'
+              }}>
+                <Typography variant="h4" component="h2" style={{ margin: 0 }}>
+                  {authorData.name}
+                </Typography>
+                <Typography>
+                  <p>Average Rating: {authorData.average_rating}</p>
+                  <p>Books Published: {authorData.num_books}</p>
+                </Typography>
+              </div>
+              <Grid container spacing={3} style={{ justifyContent: 'space-between'}}>
+                {authorsBooksData.map((book) => (
+                  <Grid item key={book.book_id} style={{marginRight : "20px"}} >
+                    <Box
+                      p={3}
+                      style={{ background: '#fff', borderRadius: '10px', border: '2px solid #000' }}
+                    >
+                      <img
+                        src={book.image_url}
+                        alt={`${book.title} album art`}
+                        style={{ maxWidth: '100%', height: 'auto' }}
+                      />
+                      
+                    </Box>
+                    <div style={{ maxWidth: "150px", textAlign: "center"}}>
+                                <NavLink to={`/book/${book.book_id}`}>
+                                  {book.title}
+                                </NavLink>
+                              </div>
+                  </Grid>
+                ))}
+              </Grid>
+            </Grid>
+          <Button onClick={handleClose} style={{ left: '50%', transform: 'translateX(-50%)' }} >
+          Close
+         </Button>
         </Box>
       </Container>
     </Modal>

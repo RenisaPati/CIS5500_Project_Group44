@@ -18,7 +18,10 @@ connection.connect((err) => err && console.log(err));
 
 // Route 1: GET /genre/:genre_name
 const genre = async function(req, res) {
+  console.log("--------");
+  console.log(`${req.params.genre_name}`);
   const genre = req.params.genre_name;
+  
   console.log('The passed genre is:');
   console.log(genre);
   const pg = req.query.page;
@@ -31,15 +34,16 @@ const genre = async function(req, res) {
 
   if (!pg) {
     connection.query( `   
-    SELECT b.image_url, b.title, b.book_id, b.average_rating
+    SELECT b.image_url, b.title, b.book_id, b.average_rating, b.publication_year
     FROM (SELECT bg.book_id
           FROM Book_Genres bg
           WHERE genre_id = (SELECT genre_id
                             FROM Genres
                             WHERE genre_name = '${genre}')) ids
-    INNER JOIN (SELECT book_id, image_url, title, average_rating, ratings_count
+      INNER JOIN (SELECT book_id, image_url, title, average_rating, ratings_count, publication_year
                       FROM Book) b ON ids.book_id = b.book_id
-    ORDER BY b.title;
+    ORDER BY b.ratings_count * b.average_rating DESC
+    LIMIT 50
     `
     , (err, data) => {
       if (err || data.length === 0) {
@@ -48,20 +52,21 @@ const genre = async function(req, res) {
         console.log('Failed to retrieve genre');
       } else {
         res.json(data);
+        console.log('Successfully got books in genre');
       }
     });
   } else {
     connection.query(`  
-      SELECT b.image_url, b.title, b.book_id, b.average_rating
-      FROM (SELECT bg.book_id
-            FROM Book_Genres bg
-            WHERE genre_id = (SELECT genre_id
-                              FROM Genres
-                              WHERE genre_name = '${genre}')) ids
-      INNER JOIN (SELECT book_id, image_url, title, average_rating, ratings_count
-                        FROM Book) b ON ids.book_id = b.book_id
-      ORDER BY b.title
-      LIMIT ${pageSize} OFFSET ${offset}
+        SELECT b.image_url, b.title, b.book_id, b.average_rating, b.publication_year
+        FROM (SELECT bg.book_id
+              FROM Book_Genres bg
+              WHERE genre_id = (SELECT genre_id
+                                FROM Genres
+                                WHERE genre_name = '${genre}')) ids
+          INNER JOIN (SELECT book_id, image_url, title, average_rating, ratings_count, publication_year
+                          FROM Book) b ON ids.book_id = b.book_id
+        ORDER BY b.ratings_count * b.average_rating DESC
+        LIMIT ${pageSize} OFFSET ${offset}
       `, (err, data) => {
         if (err || data.length === 0) {
           console.log(err);
@@ -89,16 +94,17 @@ const book = async function(req, res) {
           description, format, publisher, num_pages, publication_year, series_id, a.*
   FROM (SELECT book_id, title, isbn, language_code, is_ebook, average_rating,
         description, format, publisher, num_pages, publication_year, series_id
-  FROM Book
-  WHERE book_id = ${curr_id}) b
+        FROM Book
+        WHERE book_id = ${curr_id}) b
     INNER JOIN (SELECT * FROM Written_By WHERE book_id = ${curr_id}) wb ON wb.book_id = b.book_id
-    INNER JOIN Authors a ON a.author_id = wb.author_id;
+    INNER JOIN Authors a ON a.author_id = wb.author_id
+  LIMIT 1;
   `, (err, data) => {
     if (err || data.length === 0) {
       console.log(err);
       res.json({});
     } else {
-      res.json(data);
+      res.json(data[0]);
     }
   });
 }
@@ -160,16 +166,20 @@ const rating_history = async function(req, res) {
   connection.query(`
   WITH ya_filtered AS (SELECT *
     FROM yearly_average ya
-    WHERE genre_id IN (SELECT genre_id
+    WHERE genre_id = (SELECT genre_id
                        FROM Book_Genres
-                       WHERE book_id = ${curr_id})
+                       WHERE book_id = ${curr_id}
+                       LIMIT 1)
     )
-SELECT ya2.genre_id, r.year_added, ROUND(AVG(r.rating), 2) AS average_rating, COUNT(*) AS review_count,
-ya2.yearly_average, (AVG(r.rating) > yearly_average) AS gt_yearly_avg
-FROM (SELECT * FROM Reviews WHERE book_id = ${curr_id}) r
-JOIN ya_filtered ya2 ON ya2.year_added = r.year_added
-GROUP BY r.year_added, ya2.genre_id
-ORDER BY ya2.genre_id, year_added;
+  SELECT ya2.genre_id, r.year_added, 
+          ROUND(AVG(r.rating), 2) AS average_rating, 
+          COUNT(*) AS review_count,
+          ya2.yearly_average, 
+          (AVG(r.rating) > yearly_average) AS gt_yearly_avg
+  FROM (SELECT * FROM Reviews WHERE book_id = ${curr_id}) r
+    JOIN ya_filtered ya2 ON ya2.year_added = r.year_added
+  GROUP BY r.year_added, ya2.genre_id
+  ORDER BY ya2.genre_id, year_added;
   `, (err, data) => {
     if (err || data.length === 0) {
       console.log(err);
@@ -193,6 +203,7 @@ const book_series = async function(req, res) {
     JOIN Book_Series bs ON b.series_id = bs.series_id
     JOIN Book bk ON bs.series_id = bk.series_id
   WHERE b.book_id = ${curr_id}
+  GROUP BY bk.title
   `, (err, data) => {
     if (err || data.length === 0) {
       console.log(err);
@@ -221,7 +232,7 @@ const book_author_series = async function(req, res) {
       console.log(err);
       res.json({});
     } else {
-      res.json(data);
+      res.json(data[0]);
     }
   });
 }
@@ -399,14 +410,16 @@ const surprise_me = async function(req, res) {
   * ROUTES BY PAGES -- Authors *
   *****************************/
  
- // Route 11: GET /author_details/:author_id
+ // Route 12: GET /author_details/:author_id
  const author_details = async function(req, res) {
    // Return author details for the selected author
    const author_id = req.params.author_id;
    connection.query(`
-   SELECT *
-   FROM Authors
-   WHERE author_id = ${author_id}`,
+   SELECT A.*, COUNT(*) AS num_books
+   FROM Authors A
+      JOIN Written_By WB on A.author_id = WB.author_id
+   WHERE A.author_id = ${author_id}
+   GROUP BY A.author_id`,
    (err, data) => {
      if (err || data.length === 0) {
        console.log(err);
@@ -417,10 +430,9 @@ const surprise_me = async function(req, res) {
    });
  }
  
- // Route 12: GET /books_by_author/:author_id
+ // Route 13: GET /books_by_author/:author_id
 const books_by_author = async function(req, res) {
   const author_id = req.params.author_id;
-  console.log(`Getting book information for author: ${author_id}`);
 
   connection.query(`
   SELECT B.book_id, B.title, B.image_url, B.average_rating, 
@@ -429,6 +441,7 @@ const books_by_author = async function(req, res) {
       INNER JOIN Written_By wb ON a.author_id = wb.author_id
       INNER JOIN Book B on wb.book_id = B.book_id
   ORDER BY B.average_rating * B.ratings_count DESC
+  LIMIT 20
   `, (err, data) => {
     if (err || data.length === 0) {
       console.log(err);
@@ -442,7 +455,7 @@ const books_by_author = async function(req, res) {
 }
 
 
- // Route 12: GET /user_liked/:user_id
+ // Route 14: GET /user_liked/:user_id
  const user_liked = async function(req, res) {
    const user_id = req.params.user_id;
    connection.query(`

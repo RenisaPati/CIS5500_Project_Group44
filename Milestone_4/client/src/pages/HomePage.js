@@ -1,19 +1,13 @@
 import { useEffect, useState } from 'react';
 import { Container, Divider, Box, Grid, Link } from '@mui/material';
 import { NavLink } from 'react-router-dom';
-// import { Grid, Paper, Image, Text, Typography, Chart } from '@material-ui/core';
-//import Carousel from 'react-material-ui-carousel'
-//import { Paper, Button } from '@mui/material'
 import * as React from 'react';
 import { useTheme } from '@mui/material/styles';
-import MobileStepper from '@mui/material/MobileStepper';
-import Paper from '@mui/material/Paper';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
-import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
-import SwipeableViews from 'react-swipeable-views';
-import { autoPlay } from 'react-swipeable-views-utils';
+
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import { Button, Card, CardMedia } from '@mui/material';
+
 
 //import LazyTable from '../components/LazyTable';
 //import BookCard from '../components/BookCard';
@@ -30,8 +24,6 @@ export default function HomePage() {
   const theme = useTheme();
 
   const [selectedBookId, setSelectedBookId] = useState(null);
-
-  const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = topBooksMonth.length;
@@ -62,43 +54,10 @@ export default function HomePage() {
         console.log(resJson);
       });       
 
-    // TODO (TASK 14): add a fetch call to get the app author (name not pennkey) and store it in the state variable
     fetch(`http://${config.server_host}:${config.server_port}/surprise_me/${user_id}`)
-      .then(res => res.text())
-      .then(resText => setSurpriseMe(resText));
+      .then(res => res.json())
+      .then(resJson => setSurpriseMe(resJson));
   }, []);
-
-  // TODO (TASK 15): define the columns for the top albums (schema is Album Title, Plays), where Album Title is a link to the album page
-  // Hint: this should be very similar to songColumns defined above, but has 2 columns instead of 3
-  // b.book_id, b.title, b.description, b.average_rating, b.publisher,b. image_url, b.num_pages
-  const bookColumns = [
-    {
-      field: 'title',
-      headerName: 'Book Title',
-      renderCell: (row) => <NavLink to={`/book`}>{row.title}</NavLink> // A NavLink component is used to create a link to the album page
-    },
-    {
-      field: 'description',
-      headerName: 'Description',
-      renderCell: (row) => <Link onClick={() => setSelectedBookId(row.book_id)}>{row.descripion}</Link> // A Link component is used just for formatting purposes
-    },
-    {
-      field: 'average_rating',
-      headerName: 'Average Rating'
-    },
-  ];
-
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  };
-
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
-
-  const handleStepChange = (step) => {
-    setActiveStep(step);
-  };
 
   const flexFormat = { 
    display: 'flex',
@@ -111,109 +70,174 @@ export default function HomePage() {
     <Container>
          {/* SongCard is a custom component that we made. selectedSongId && <SongCard .../> makes use of short-circuit logic to only render the SongCard if a non-null song is selected */}
          {/* {selectedSongId && <SongCard songId={surpriseMe} handleClose={() => setSurpriseMe(null)} />} */}
-         <h2>Surprise me!:&nbsp;
-         <Link onClick={() => setSurpriseMe(surpriseMe.user_id)}></Link>
-         </h2>
+         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+            {surpriseMe && (
+              <div style={{
+                position: 'relative',
+                height: '100%',
+                width: '100%',
+                top: '100px',
+                backgroundImage: `url(${surpriseMe.image_url})`,
+                backgroundSize: 'cover',
+              }}>
+                <div style={{ position: 'absolute', bottom: '20px', left: '50%', transform: 'translateX(-50%)' }}>
+                  <NavLink to={`/book/${surpriseMe.book_id}`}>
+                    <Button variant="contained" style={{ filter: 'none' }}>Surprise Me</Button>
+                  </NavLink>
+                </div>
+              </div>
+            )}
+         </div>
+
+
          <Divider />
          <h2>Recommended for you</h2>
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}>
+          {recommendedBooks.map(book => (
+            <NavLink key={book.book_id} to={`/book/${book.book_id}`} style={{ margin: 10 }}>
+              <img src={book.image_url} alt={book.title} style={{ width: 200, height: 'auto' }} />
+            </NavLink>
+          ))}
+          </div>
          
          <Divider />
          {/* TODO (TASK 16): add a h2 heading, LazyTable, and divider for top albums. 
          Set the LazyTable's props for defaultPageSize to 5 and rowsPerPageOptions to [5, 10] */}
          <Divider />
-            <Grid container spacing={2} style={flexFormat}>
-              <Grid item xs={12} sm={6}>
-                <h3>Books of the month</h3>
-                <Box sx={{ maxWidth: 400, flexGrow: 1 }}>
-                    <Paper
-                      square
-                      elevation={0}
-                      sx={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        height: 50,
-                        pl: 2,
-                        bgcolor: 'background.default',
-                      }}
-                    >
-                      
-                      <Typography>Test</Typography>
-                    </Paper>
-                    <AutoPlaySwipeableViews
-                      axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-                      index={activeStep}
-                      onChangeIndex={handleStepChange}
-                      enableMouseEvents
-                    >
-                      {topBooksMonth.map((step, index) => (
-                        <div key={step.book_id}>
-                          {Math.abs(activeStep - index) <= 2 ? (
-                            <Box
-                              component="img"
-                              sx={{
-                                height: 255,
-                                display: 'block',
-                                maxWidth: 400,
-                                overflow: 'hidden',
-                                width: '100%',
-                              }}
-                              src={step.image_url}
-                              alt={step.title}
-                            />
-                          ) : null}
-                        </div>
-                      ))}
-                    </AutoPlaySwipeableViews>
-                    <MobileStepper
-                      steps={maxSteps}
-                      position="static"
-                      activeStep={activeStep}
-                      nextButton={
-                        <Button
-                          size="small"
-                          onClick={handleNext}
-                          disabled={activeStep === maxSteps - 1}
-                        >
-                          Next
-                          {theme.direction === 'rtl' ? (
-                            <KeyboardArrowLeft />
-                          ) : (
-                            <KeyboardArrowRight />
-                          )}
-                        </Button>
-                      }
-                      backButton={
-                        <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-                          {theme.direction === 'rtl' ? (
-                            <KeyboardArrowRight />
-                          ) : (
-                            <KeyboardArrowLeft />
-                          )}
-                          Back
-                        </Button>
-                      }
-                    />
-                  </Box>
+            <Grid container spacing={2} style={{...flexFormat, width: '100%', height: '100%'}} >
+              <Grid item xs={12} sm={12} style={{height: 'auto'}} >
+                <h2>Books of the month</h2>
+                <Carousel
+                  additionalTransfrom={0}
+                  arrows
+                  autoPlaySpeed={3000}
+                  centerMode={false}
+                  autoHeight={true}
+                  className=""
+                  containerClass="container-padding-bottom"
+                  dotListClass=""
+                  draggable
+                  focusOnSelect={false}
+                  infinite
+                  itemClass=""
+                  keyBoardControl
+                  minimumTouchDrag={80}
+                  renderButtonGroupOutside={false}
+                  renderDotsOutside={false}
+                  responsive={{
+                    desktop: {
+                      breakpoint: { max: 3000, min: 1024 },
+                      items: 5,
+                      slidesToSlide: 5, // optional, default to 1.
+                    },
+                    tablet: {
+                      breakpoint: { max: 1024, min: 464 },
+                      items: 3,
+                      slidesToSlide: 3, // optional, default to 1.
+                    },
+                    mobile: {
+                      breakpoint: { max: 464, min: 0 },
+                      items: 1,
+                      slidesToSlide: 1, // optional, default to 1.
+                    },
+                  }}
+                  showDots={false}
+                  sliderClass=""
+                  slidesToSlide={1}
+                  swipeable
+                >
+                  {topBooksMonth.map((book) => (
+                    <div key={book.book_id}>
+                      <Box
+                        component="img"
+                        sx={{
+                          height: 150,
+                          display: 'block',
+                          maxWidth: 75,
+                          overflow: 'hidden',
+                          width: '100%',
+                        }}
+                      />
+                      <img src={book.image_url} alt={book.title} />                      
+                    </div>
+                  ))}
+                </Carousel>
+ 
               </Grid>
-              <Grid item xs={12} sm={6}>
-                {/* Content for the right half */}
+              <Grid item xs={12} sm={6} >
+                {/* <h3>This is some text</h3>           */}
               </Grid> 
             </Grid>
          <Divider />
-         {/* TODO (TASK 17): add a paragraph (<p>text</p>) that displays the value of your author state variable from TASK 13 */}
+
          <Divider />
-         <h2>Here's what you liked</h2>
+            <Grid container spacing={2} style={{...flexFormat, width: '100%', height: '100%'}} >
+              <Grid item xs={12} sm={12} style={{height: '100%'}} >
+                <h2>Here's what you liked</h2>
+                <Carousel
+                  additionalTransfrom={0}
+                  arrows
+                  autoPlaySpeed={3000}
+                  centerMode={false}
+                  autoHeight={true}
+                  className=""
+                  containerClass="container-padding-bottom"
+                  dotListClass=""
+                  draggable
+                  focusOnSelect={false}
+                  infinite
+                  itemClass=""
+                  keyBoardControl
+                  minimumTouchDrag={80}
+                  renderButtonGroupOutside={false}
+                  renderDotsOutside={false}
+                  responsive={{
+                    desktop: {
+                      breakpoint: { max: 3000, min: 1024 },
+                      items: 5,
+                      slidesToSlide: 5, // optional, default to 1.
+                    },
+                    tablet: {
+                      breakpoint: { max: 1024, min: 464 },
+                      items: 3,
+                      slidesToSlide: 3, // optional, default to 1.
+                    },
+                    mobile: {
+                      breakpoint: { max: 464, min: 0 },
+                      items: 1,
+                      slidesToSlide: 1, // optional, default to 1.
+                    },
+                  }}
+                  showDots={false}
+                  sliderClass=""
+                  slidesToSlide={1}
+                  swipeable
+                >
+                  {userLiked.map((book) => (
+                    <div key={book.book_id}>
+                      <Box
+                        component="img"
+                        sx={{
+                          height: 150,
+                          display: 'block',
+                          maxWidth: 75,
+                          overflow: 'hidden',
+                          width: '100%',
+                        }}
+                      />
+                      <img src={book.image_url} alt={book.title} />                      
+                    </div>
+                  ))}
+                </Carousel>
+ 
+              </Grid>
+              <Grid item xs={12} sm={6} >
+                {/* <h3>This is some text</h3>           */}
+              </Grid> 
+            </Grid>
+         <Divider />         
         
     </Container>
 
   );
 };
-
-// {albums.map((album) =>
-//   {topBooksMonth.map((book) =>())}
-//        <LazyTable route={`http://${config.server_host}:${config.server_port}/top_ten_books_month`} 
-//        columns={bookColumns} /> 
-{/* <Carousel>
-                  {topBooksMonth.map( (book, i) => <img key={i} src={book.image_url} /> )}
-                
-                </Carousel> */}

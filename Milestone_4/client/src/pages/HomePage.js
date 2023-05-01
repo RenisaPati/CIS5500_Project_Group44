@@ -20,7 +20,7 @@ export default function HomePage() {
   const [recommendedBooks, setRecommendedBooks] = useState([]);
   const [topBooksMonth, setTopBooksMonth] = useState([]);
   const [userLiked, setUserLiked] = useState([]);
-  const [surpriseMe, setSurpriseMe] = useState({});
+  const [surpriseMe, setSurpriseMe] = useState([]);
   const user_id = 1;
   const theme = useTheme();
 
@@ -50,14 +50,14 @@ export default function HomePage() {
 
     fetch(`http://${config.server_host}:${config.server_port}/top_ten_books_month`)
       .then(res => res.json())
-      .then(resJson => {
-        setTopBooksMonth(resJson);
-        console.log(resJson);
-      });       
+      .then(resJson => {setTopBooksMonth(resJson); console.log(resJson)});       
 
-    fetch(`http://${config.server_host}:${config.server_port}/surprise_me/${user_id}`)
+    fetch(`http://${config.server_host}:${config.server_port}/surprise_me/1`)
       .then(res => res.json())
-      .then(resJson => setSurpriseMe(resJson));
+      .then(resJson => {
+        console.log('Surprise me book ID is:'); 
+        console.log(resJson); 
+        setSurpriseMe(resJson)});
   }, []);
 
   const flexFormat = { 
@@ -72,45 +72,54 @@ export default function HomePage() {
 
     <Container top = {2} left = {0} right = {0} maxWidth = '2000px'>
 
-      <Grid container spacing={10} maxWidth='xl' style={{ 
-          backgroundImage: `url(${backGroundImage})`, 
-          width: '100%', 
-          height: '750px', 
-          marginTop: '-80px', 
-          marginLeft: '0px', 
-          position: 'relative',
+    <Grid container spacing={10} maxWidth='xl' style={{ 
+      backgroundImage: `url(${backGroundImage})`, 
+      width: '100%', 
+      height: '750px', 
+      marginTop: '-80px', 
+      marginLeft: '0px', 
+      position: 'relative',
+    }}>
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        background: 'linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5))'
+      }} />
+      <Grid item xs={12} sm={12} style={{ 
+        width: '100%', 
+        height: '100%', 
+        paddingTop: '5px', 
+        paddingBottom: '50px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center'
+      }}>
+        <div style={{
+          position: 'absolute',
+          top: '40%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          textAlign: 'center'
         }}>
-          <div style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            background: 'linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5))'
-          }} />
-          <Grid item xs={12} sm={12} style={{ 
-            width: '100%', 
-            height: '100%', 
-            paddingTop: '5px', 
-            paddingBottom: '50px',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center'
+          <h2 style={{ fontSize: '75px', color:  '#a2095f', marginTop: '10px', marginBottom: '10px', fontFamily: 'Georgia, serif'}}>Let's Get Reading !</h2>   
+          <p style={{ fontSize: '17px', color: '#542603' }}><b><i>Frederick Douglass said, “Once you learn to read, you will be forever free." Cheers to the beginning of what I am sure will be a wonderful journey across gazillions of worlds ...</i></b> </p>
+
+          <div style={{ 
+            marginTop: '50px'
           }}>
+            <NavLink to={`/book/${surpriseMe.book_id}`} style={{ textDecoration: 'none' }}>
+              <Button variant="contained" style={{ color: 'white', fontWeight: 'bold', border: '2px solid #036154', borderRadius: '5px'}} >
+                Surprise Me</Button>
+            </NavLink>
+          </div>
+        </div>
+      </Grid>
+    </Grid>
 
-            <h2 style={{ fontSize: '36px', color: '#001f1f' }}>Heading Text</h2>   
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum, nibh ut volutpat vulputate, turpis arcu sodales risus, nec hendrerit est quam ac quam. Mauris euismod metus eu enim iaculis efficitur. </p>
-
-            <div style={{ 
-              marginTop: '20px'
-            }}>
-              <NavLink to={`/book/${surpriseMe.book_id}`}>
-                <Button variant="contained" style={{ filter: 'none' }}>Surprise Me</Button>
-              </NavLink>
-            </div>
-          </Grid>
-        </Grid>
 
           {/* backgroundImage: `url(${backGroundImage})`, */}
             <Divider />
@@ -118,8 +127,15 @@ export default function HomePage() {
             <Divider />
             
             <Grid container spacing={10} maxWidth = 'xl' style={{ backgroundColor: teal[50], width: '100%', margin: 'auto'}}>
-              <Grid item xs={12} sm={12} style={{width: '100%', height: '100%', paddingTop : '5px',  paddingBottom : '75px'}} >
-                <h2>Recommended for you</h2>
+              <Grid item xs={12} sm={12} style={{width: '100%', height: '100%', paddingTop : '5px',  paddingBottom : '75px', paddingRight : '80px'}} >
+                <h2 style={{ 
+                  fontFamily: 'Georgia, serif',
+                  fontSize: '36px',
+                  fontWeight: 'bold',
+                  lineHeight: '1.2',
+                  color: '#a2095f',
+                  textAlign: 'center',
+                }}>Recommended for you</h2>
                 <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}>
                 {recommendedBooks.map((book) => (
                   <NavLink key={book.book_id} to={`/book/${book.book_id}`} style={{ margin: 10 }}>
@@ -133,8 +149,15 @@ export default function HomePage() {
 
             <Divider />
             <Grid container spacing={10} maxWidth = 'xl' style={{ backgroundColor: teal[50], width: '100%', margin: 'auto'}}>
-              <Grid item xs={12} sm={12} style={{width: '100%', height: '100%', paddingTop : '5px'}} >
-                <h2>Books of the month</h2>
+              <Grid item xs={12} sm={12} style={{width: '100%', height: '100%', paddingTop : '5px', paddingRight : '80px'}} >
+                <h2 style={{ 
+                  fontFamily: 'Georgia, serif',
+                  fontSize: '36px',
+                  fontWeight: 'bold',
+                  lineHeight: '1.2',
+                  color: '#a2095f',
+                  textAlign: 'center',
+                }}>Books of the month</h2>
                 <Carousel
                   additionalTransfrom={0}
                   arrows
@@ -187,7 +210,7 @@ export default function HomePage() {
                           width: '100%',
                         }}
                       />
-                      <img src={book.image_url} alt={book.title} />                      
+                      <img src={book.image_url} alt={book.title} to={`/book/${book.book_id}`}/>                      
                     </div>
                   ))}
                 </Carousel>
@@ -198,8 +221,15 @@ export default function HomePage() {
 
          <Divider />
          <Grid container spacing={10} maxWidth='xl' style={{ backgroundColor: teal[50], margin: 'auto'}}>
-              <Grid item xs={12} sm={12} style={{width: '100%', height: '100%', paddingTop : '5px'}} >
-                <h2>Here's what you liked</h2>
+              <Grid item xs={12} sm={12} style={{width: '100%', height: '100%', paddingTop : '5px', paddingRight : '80px'}} >
+                <h2 style={{ 
+                  fontFamily: 'Georgia, serif',
+                  fontSize: '36px',
+                  fontWeight: 'bold',
+                  lineHeight: '1.2',
+                  color: '#a2095f',
+                  textAlign: 'center',
+                }}>Here's what you liked</h2>
                 <Carousel
                   additionalTransfrom={0}
                   arrows

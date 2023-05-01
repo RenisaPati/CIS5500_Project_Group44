@@ -6,7 +6,7 @@ import { Link, useParams } from 'react-router-dom';
 import Rating from 'react-rating-stars-component';
 import {teal } from '@mui/material/colors';
 import LazyTable from '../components/LazyTable';
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip,Label,Legend } from 'recharts';
+import { AreaChart, Area, Bar, BarChart, XAxis, YAxis, CartesianGrid, Tooltip,Label,Legend, ResponsiveContainer } from 'recharts';
 import SeriesCard from '../components/SeriesCard';
 
 import { NavLink } from 'react-router-dom';
@@ -140,7 +140,7 @@ export default function BooksPage() {
             <h4>ISBN : {<span style={{ fontSize: '16px', fontWeight: 'lighter' }}>{bookInfo.isbn}</span>}</h4>
             <h4>Lannguage : {<span style={{ fontSize: '16px', fontWeight: 'lighter' }}>{bookInfo.language_code}</span>}</h4>
             <h4>E-book : {<span style={{ fontSize: '16px', fontWeight: 'lighter' }}>{bookInfo.is_ebook}</span>}</h4>
-            <h4>Format :{<span style={{ fontSize: '16px', fontWeight: 'lighter' }}>{bookInfo.format}</span>}</h4>
+            <h4>Format : {<span style={{ fontSize: '16px', fontWeight: 'lighter' }}>{bookInfo.format}</span>}</h4>
             <h4>Publisher : {<span style={{ fontSize: '16px', fontWeight: 'lighter' }}>{bookInfo.publisher}</span>}</h4>
             <h4>Number of pages : {<span style={{ fontSize: '16px', fontWeight: 'lighter' }}>{bookInfo.num_pages}</span>}</h4>
             <h4>Publication Year : {<span style={{ fontSize: '16px', fontWeight: 'lighter' }}>{bookInfo.publication_year}</span>}</h4>
@@ -164,79 +164,109 @@ export default function BooksPage() {
                 </Typography>
               </div>
               <Grid container spacing={3} style={{ justifyContent: 'space-between'}}>
-                {similarBooks.map((similarbook) => (
-                  <Grid item key={similarbook.similar_book_id} style={{marginRight : "20px"}} >
+                {similarBooks.length > 0 ? (
+                  similarBooks.map((similarbook) => (
+                    <Grid item key={similarbook.similar_book_id} style={{marginRight : "20px"}} >
+                      <Box
+                        p={3}
+                        style={{ background: '#fff', borderRadius: '10px', border: '2px solid #000' }}
+                      >
+                        <img
+                          src={similarbook.similar_url}
+                          alt={`${similarbook.similar_title} album art`}
+                          style={{ maxWidth: '100%', height: 'auto' }}
+                        />
+                      </Box>
+                      <div style={{ maxWidth: "150px", textAlign: "center"}}>
+                        <NavLink to={`/book/${similarbook.similar_book_id}#top`}>
+                          {similarbook.similar_title}
+                        </NavLink>
+                      </div>
+                    </Grid>
+                  ))
+                ) : (
+                  <Grid item xs={12} 
+                  style={{ marginTop: "10px", marginBottom: "10px", marginRight: "20px", textAlign: "center" }}>
                     <Box
                       p={3}
                       style={{ background: '#fff', borderRadius: '10px', border: '2px solid #000' }}
                     >
-                      <img
-                        src={similarbook.similar_url}
-                        alt={`${similarbook.similar_title} album art`}
-                        style={{ maxWidth: '100%', height: 'auto' }}
-                      />
-                      
+                      <div>No similar books found.</div>
                     </Box>
-                    <div style={{ maxWidth: "150px", textAlign: "center"}}>
-                                <NavLink to={`/book/${similarbook.similar_book_id}#top`}>
-                                  {similarbook.similar_title}
-                                </NavLink>
-                              </div>
                   </Grid>
-                ))}
+                )}
               </Grid>
+
             </Grid>
 
 
-            <Grid container justify="center" alignItems="center">
-              <Grid item xs={12} md={12}>
-                <div style={{textAlign: "left"}}>
-                <h2><i>Over the Years</i></h2>
-                </div>
-                <AreaChart
-                  width={730}
-                  height={250}
-                  data={chartData}
-                  margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
-                >
-                  <defs>
-                  <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#e53f71" stopOpacity={0.8} />
-                      <stop offset="95%" stopColor="#e53f71" stopOpacity={0} />
-                    </linearGradient>
-                    <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8} />
-                      <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
-                    </linearGradient>
-                  </defs>
-                  <XAxis dataKey="year_added">
-                    <Label value="year_added" position="bottom" />
-                  </XAxis>
-                  <YAxis />
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <Tooltip />
-                  <Area
-                    type="monotone"
-                    dataKey="average_rating"
-                    stroke="#8884d8"
-                    fillOpacity={1}
-                    fill="url(#colorUv)"
-                  />
-                  <Area
-                    type="monotone"
-                    dataKey="yearly_average"
-                    stroke="#e53f71"
-                    fillOpacity={1}
-                    fill="url(#colorPv)"
-                  />
-                  <Legend verticalAlign="top" align="right" />
-                </AreaChart>
-                <p><i>(Here the average_rating refers to average rating of the book while the yearly_avearge refers to average rating of the genre)</i></p>
-              </Grid>
+            <Grid xs={12} container justify="center" alignItems="center" >
+                {chartData.length > 1 ? (
+                  <div style={{ textAlign: 'left'}}>
+                    <h2>
+                      <i>Over the Years</i>
+                    </h2>
+                  
+                    <AreaChart
+                      width={730}
+                      height={250}
+                      data={chartData}
+                      margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
+                    >
+                    <defs>
+                    <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="5%" stopColor="#e53f71" stopOpacity={0.8} />
+                        <stop offset="95%" stopColor="#e53f71" stopOpacity={0} />
+                      </linearGradient>
+                      <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8} />
+                        <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
+                      </linearGradient>
+                    </defs>
+                    <XAxis dataKey="year_added">
+                      <Label value="year_added" position="bottom" />
+                    </XAxis>
+                    <YAxis />
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <Tooltip />
+                    <Area
+                      type="monotone"
+                      dataKey="average_rating"
+                      stroke="#8884d8"
+                      fillOpacity={1}
+                      fill="url(#colorUv)"
+                    />
+                    <Area
+                      type="monotone"
+                      dataKey="yearly_average"
+                      stroke="#e53f71"
+                      fillOpacity={1}
+                      fill="url(#colorPv)"
+                    />
+                    <Legend verticalAlign="top" align="right" />
+                    </AreaChart>
+
+                    
+                  </div>
+                ) : (
+                  <div style={{ textAlign: 'left'}}>
+                    <h2>
+                      <i>Over the Years</i>
+                    </h2>
+                    <Grid item xs={12} 
+                      style={{ marginTop: "10px", marginBottom: "10px", marginRight: "20px", textAlign: "center" }}>
+                      <Box
+                        p={3}
+                        style={{ background: '#fff', borderRadius: '10px', border: '2px solid #000' }}
+                      >
+                        <div>No rating history data available for {bookInfo.title}.</div>
+                      </Box>
+                    </Grid>
+                  </div>
+                )}
             </Grid>
 
-
-
+          
             <Grid item xs={12} md={12} >
               <Divider />
               <h2><i>What other people said ...</i></h2>
@@ -252,3 +282,21 @@ export default function BooksPage() {
   );
 
  }
+
+
+// : chartData.length === 1 ? (
+//   <div style={{ textAlign: 'left' }}>
+//     <h2>
+//       <i>This book has review data in only one year:</i>
+//     </h2>
+//     <BarChart width={730} height={250} data={chartData}>
+//       <CartesianGrid strokeDasharray="3 3" />
+//       <XAxis dataKey="year_added" />
+//       <YAxis />
+//       <Tooltip />
+//       <Legend />
+//       <Bar dataKey="average_rating" fill="#8884d8" />
+//       <Bar dataKey="yearly_average" fill="#e53f71" />                   
+//     </BarChart>
+//   </div>
+// )

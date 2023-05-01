@@ -9,26 +9,26 @@ test('GET /genre/biography', async () => {
   await supertest(app).get('/genre/biography')
     .expect(200)
     .then((res) => {
-      expect(res.body.length).toEqual(49844)
-      expect(res.body[500]).toStrictEqual(results.genre_biography_501);
+      expect(res.body.length).toEqual(50)
+      expect(res.body[5]).toStrictEqual(results.genre_biography_6);
     });
 }, 100000);
 
 // Route 1: Get Genre page 5 ('biography'); default size = 80
-test('GET /genre/biography page 5', async () => {
-  await supertest(app).get('/genre/biography?page=5')
+test('GET /genre/biography page 2', async () => {
+  await supertest(app).get('/genre/biography?page=2')
     .expect(200)
     .then((res) => {
-      expect(res.body.slice(0,5)).toStrictEqual(results.genre_biography_page5)
+      expect(res.body).toStrictEqual(results.genre_biography_page2)
     });
 }, 100000);
 
 // Route 1: Get Genre page 10 ('biography'); page size = 5
-test('GET /genre/biography pg 10 pgsize 5', async () => {
-  await supertest(app).get('/genre/biography?page=10&page_size=5')
+test('GET /genre/biography pg 2 pgsize 5', async () => {
+  await supertest(app).get('/genre/biography?page=2&page_size=5')
     .expect(200)
     .then((res) => {
-      expect(res.body).toStrictEqual(results.genre_biography_page10_pagesize5)
+      expect(res.body).toStrictEqual(results.genre_biography_page2_pagesize5)
     });
 }, 100000);
 

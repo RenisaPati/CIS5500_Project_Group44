@@ -1,74 +1,96 @@
 {
-  "genre_biography_501" : {
-    "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
-    "title": "A Classic Christmas Crime",
-    "book_id": 2342403,
-    "average_rating": 3.25
+  "genre_biography_6" : {
+    "genre_name": "biography",
+    "image_url": "https://images.gr-assets.com/books/1484090395m/17428586.jpg",
+    "title": "Cold Feet: A Stella Lavender Mystery",
+    "book_id": 17428586,
+    "average_rating": 3.64,
+    "publication_year": 2013
   },
 
-  "genre_biography_page5" : [
+  "genre_biography_page2" : [
     {
+      "genre_name": "biography",
       "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
-      "title": "A Breach of Promise (William Monk, #9)",
-      "book_id": 10095246,
-      "average_rating": 4.04
+      "title": "Mad, Bad & Dangerous to Know",
+      "book_id": 36453060,
+      "average_rating": 0,
+      "publication_year": 2019
     },
     {
-      "image_url": "https://images.gr-assets.com/books/1393784885m/9492124.jpg",
-      "title": "A Breach of Promise (William Monk, #9)",
-      "book_id": 9492124,
-      "average_rating": 4.04
+      "genre_name": "biography",
+      "image_url": "https://images.gr-assets.com/books/1328757562m/905639.jpg",
+      "title": "Hunter's Dance: A John McIntire Mystery",
+      "book_id": 905639,
+      "average_rating": 3.97,
+      "publication_year": 2006
     },
     {
-      "image_url": "https://images.gr-assets.com/books/1343073472m/116576.jpg",
-      "title": "A Bride for Hampton House",
-      "book_id": 116576,
-      "average_rating": 4.09
-    },
-    {
+      "genre_name": "biography",
       "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
-      "title": "A Bright and Guilty Place: Murder in L.a",
-      "book_id": 8842030,
-      "average_rating": 3.66
+      "title": "The Adventure of the Speckled Band",
+      "book_id": 956123,
+      "average_rating": 4.08,
+      "publication_year": null
     },
     {
-      "image_url": "https://images.gr-assets.com/books/1320505272m/7877486.jpg",
-      "title": "A Bright and Guilty Place: Murder, Corruption, and L.A.'s Scandalous Coming of Age",
-      "book_id": 7877486,
-      "average_rating": 3.66
+      "genre_name": "biography",
+      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+      "title": "Fool's Gold",
+      "book_id": 2858242,
+      "average_rating": 3.5,
+      "publication_year": 1999
+    },
+    {
+      "genre_name": "biography",
+      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+      "title": "Nothing That Meets the Eye: The Uncollected Stories",
+      "book_id": 3092484,
+      "average_rating": 4.15,
+      "publication_year": null
     }
   ],
 
-  "genre_biography_page10_pagesize5" : [
+  "genre_biography_page2_pagesize5" : [
     {
-      "image_url": "https://images.gr-assets.com/books/1368719164m/8579650.jpg",
-      "title": "120, rue de la Gare",
-      "book_id": 8579650,
-      "average_rating": 3.73
+      "genre_name": "biography",
+      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+      "title": "Mad, Bad & Dangerous to Know",
+      "book_id": 36453060,
+      "average_rating": 0,
+      "publication_year": 2019
     },
     {
-      "image_url": "https://images.gr-assets.com/books/1325772481m/13145882.jpg",
-      "title": "120, rue de la Gare. Un caso per Nestor Burma",
-      "book_id": 13145882,
-      "average_rating": 3.73
+      "genre_name": "biography",
+      "image_url": "https://images.gr-assets.com/books/1328757562m/905639.jpg",
+      "title": "Hunter's Dance: A John McIntire Mystery",
+      "book_id": 905639,
+      "average_rating": 3.97,
+      "publication_year": 2006
     },
     {
-      "image_url": "https://images.gr-assets.com/books/1352062821m/16128210.jpg",
-      "title": "1280 Almas",
-      "book_id": 16128210,
-      "average_rating": 4.07
+      "genre_name": "biography",
+      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+      "title": "The Adventure of the Speckled Band",
+      "book_id": 956123,
+      "average_rating": 4.08,
+      "publication_year": null
     },
     {
-      "image_url": "https://images.gr-assets.com/books/1364993011m/17728211.jpg",
-      "title": "1280 almas",
-      "book_id": 17728211,
-      "average_rating": 4.07
+      "genre_name": "biography",
+      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+      "title": "Fool's Gold",
+      "book_id": 2858242,
+      "average_rating": 3.5,
+      "publication_year": 1999
     },
     {
-      "image_url": "https://images.gr-assets.com/books/1360202957m/595536.jpg",
-      "title": "1280 Almas",
-      "book_id": 595536,
-      "average_rating": 4.07
+      "genre_name": "biography",
+      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+      "title": "Nothing That Meets the Eye: The Uncollected Stories",
+      "book_id": 3092484,
+      "average_rating": 4.15,
+      "publication_year": null
     }
   ],
 
@@ -76,6 +98,7 @@
     {
       "book_id": 19123314,
       "title": "The Lonely Hearts Vampire: The Bizarre and Horrifying True Account of Serial Killer Bela Kiss",
+      "image_url": "https://images.gr-assets.com/books/1455435456m/19123314.jpg",
       "isbn": "1484062221",
       "language_code": null,
       "is_ebook": 0,
@@ -94,36 +117,36 @@
   ],
 
   "book_sorted_reviews" : [
-    {
-      "book_id": 13411546,
-      "review_id": "deacf98f7e339600899b4b3e4088b5f6",
-      "rating": 4,
-      "review_text": "Guess what. This book should be made into a movie. \n Or a TV show. That would be great, too. \n It is impossible not to have fun with this book. Anne is spunky, and courageous, and rebellious. Plus let's not forget that the mystery/murder case she is trying to solve takes place at a boarding school she is newly attending, after having started a fire at her previous school. Oh yeah. \n I should say that it is hilarious how many suspects there are in the case of her roommate's murder. I mean, according to Anne, 1/3 of the school is a suspect. But, you know what? I didn't even blink at that. I just thoroughly enjoyed watching her speculating and trying to solve a puzzle of 100 000 pieces. What can I say; her motivation is one of her charms. \n Also great are all of her fellow classmates, newly made friends... and enemies. Surprisingly, even the teachers have their role to play. The author didn't just cast them aside or used them as props. They honestly are needed and add to the whole case... and to the story's atmosphere. Mostly by being secretive and severe, but o h w e l l that's how I liked them anyway. \n So the love triangle may piss you off, and I'd completely understand, because clearly 1) it doesn't help us in understanding Anne better, 2) one of the two guys we know she will never see at the end of the story and 3) it has a poor conclusion. I am not even sure it came to an end... that she actually made her choice. It's hazy, but maybe we will get further detail in the sequel. \n Before I admit to being disappointed by the revelation, you need to know that the entire process to solving the murder mystery is incredibly entertaining... but the truth will not take your breath away. At least, it certainly did not take mine, because let's just say I've seen, much, much, much, a thousand times better on How to Get Away with Murder and Scandal. \n Nonetheless, go have some fun. READ THIS.",
-      "year_added": 2015,
-      "month_added": 12,
-      "day_added": 17,
-      "num_votes": 140
-    },
-    {
-      "book_id": 13411546,
-      "review_id": "ac546be2f7973287d6f062dc4e629e36",
-      "rating": 5,
-      "review_text": "4.5 stars \n Take your preconceptions on Gossip Girl and Pretty Little Liars and check them at the door. Haters to the left. This book was an absolutely blast to read. I want to give this a solid 5, I seriously do. I have no complaints at all about this book, none. But I am still stupid, and my mind cannot wrap itself around the concept of giving such an exalted number for an YA book of this light nature. \n I'm not perfect by any means. I judge books: more often than not, my expectations are shot down into a bloody pulp as I am drawn in by an interesting blurb and attractive cover. Not this time. I came in as a skeptic, I was wrong, I loved the hell out of this book. \n Let's face it, we've all watched Gossip Girl or heard of it in some form or another, and at first glance, this book sounds like another clone. Bitchy, spoiled, poor-little-rich girls with nothing better to do than spend their daddy's credit cards and wail about the lack of availability of their trust funds as they weep into their fucking Hermes scarves tucked into their Louis Vuitton satchels, right? Wrong. \n When entering the category of YA high school fiction, there are bound to be tropes. There are few of that nature within this book, and the few cliched characters that exist are developed out so well in character that it didn't bother me at all. Besides the main characters, the rest of the large supporting casts are so wonderfully written as well. The characters are complex, their character develop as we get further along in the book, as we learn more about them. There is no black and white; these kids may be rich prep school kids, but they are also smart, ambitious, and so very human. These teens are realistic; they are not complete assholes, they are not perfectly good; they do not fit into the Gossip Girl teen cliches at all. Nobody is perfectly good or bad, not the victims, not the villains; they are such wonderfully written characters. \n I was set up by the premise to be contemptuous towards our main character, Anne. I assumed that she would be empty-headed and stupid based on her background, and because of what she did (arson, come on now)...but Anne is so much more than that. I adored her. Yes, she is a spoiled teenager, but she is smart, she is rational, she has common sense, she is a queen bee, but not in the sense that she will destroy people in the process. No. She has the ability to think for herself. \n Anne is not a Mary Sue. We get the impression that she is good-looking, and she has beautiful hair, but she never refers to her looks throughout the book. She is smart, she is charismatic; that is how Anne became the most popular girl at her previous school, and that's how she immediately gained that status upon arriving at her new school. Anne is not cruel, she may be popular, but she never uses her status to hurt anyone, she is an egalitarian, and that's why her new school bothers her so much. Wheatley is an extremely prestigious college-prep private school; the school body is small and mostly limited to the children of the extremely wealthy or powerful (read: politicians). It's a big difference from Anne's previous school, and despite her popularity, it really bothers her because of the reason why. \n \"At St. Bernadette's, it didn't matter where your money came from, since everyone's parents were attorneys or plastic surgeons or famous rock stars; you had to prove yourself to earn your status. The fact that Remy and Company won't even wait for me to prove myself makes me distrust them.\"Anne was set to hate her new school and her new dorky roommate, but to her surprise, both aren't bad, and she finds herself really liking Isabella, despite her status as a scholarship student, and at the bottom of the popularity ladder. Almost right after they start bonding, Isabella is murdered, and nobody at the school seems to care about it. Anne has a very ingrained sense of justice (her father is a lawyer, after all) and she is infuriated and frustrated by the fact that nobody seems to care. Anne sees the injustice in the matter, she sees the hypocrisy in the case, and she's determined to do something about it. \n \"I should be worried about myself and my future, but I can't stop thinking about Isabella, and how if she were the daughter of a politician or the attorney general, the police would probably have found her killer by now. \n It's not fair. And it's not fair for me to sit around and do nothing about it. Not when I got off with a slap on the wrist for almost burning my school down just because of my father. I'll be such a hypocrite if I don't at least try to get justice for Isabella.\"It's not only that people don't care about a lowly girl, what's worse is that people seem to be hiding clues to conceal the truth about her case. Anne is determined to uncover the truth, despite all the people who seem to stand in her way...and there are no shortages of suspects. There are a number of blocks in the way, there are powerful people in play, and people also question Anne's credibility. Let's be honest, would you trust a girl who's been kicked out of school for arson? Anne has a lot of obstacles to work through, and she handles them all with grace. \n \"I wait until I'm out of the administration building to give in to a few tears. Obviously I can't go to class now, and I don't want to go back to my room. I could go to the police, but what would I say? Hey, I have absolutely no evidence, and they didn't take anything, but someone was in my room. \n I wipe my eyes with my gloves and take a deep breath. Keep it together, Anne. You can't go home. You need to get through this.\"Anne is not TSTL. She investigates the case, but she never intentionally puts herself in so much danger that I find myself face-palming and cringing due to her stupidity; she is intelligent, and it shows through every step of the way. Her investigation progresses in a rational manner, and while some of her observations are a little...questionable (just because someone looks creepy doesn't automatically make them a suspect, my dear), I highly enjoyed reading about her sleuthing as she works the case. \n I can't believe I'm saying this, but I really enjoyed the way romance was handled in this book. There is attraction between Anne and a few characters in the book, but it never overshadows the big picture. Anne has her priorities and her head straight. There is attraction, there is no insta-love, as there should be. Romance is handled in a realistic way within the book; the characters take relationships not too seriously, as rational teenagers should do, and I liked them all the more for it. There is a love triangle, but it is done so well, that again, I have no complaints at all. I found the guys to be cliched, but they are so well-written and likeable that I don't dislike them at all. I actually prefer one over the other and was rooting for him throughout the book! \n The students are a diverse lot, there are a few students who are not white; I do wish there were more, but you can't have everything. I honestly cannot find much to criticize about this book, and you know I love to complain. \n Highly recommended, one of the best YA books I have read this year.",
-      "year_added": 2013,
-      "month_added": 8,
-      "day_added": 16,
-      "num_votes": 100
-    },
-    {
-      "book_id": 13411546,
-      "review_id": "dbe9d288612b26a64579210f74b02470",
-      "rating": 5,
-      "review_text": "5 Words: Mystery, school, plotting, murder, twists. \n I wasn't sure what I was expecting when I picked this up. In fact, four of those five words at the top wouldn't have applied. So this book was a surprise, a really pleasant surprise. \n It was such a fun read. \n The plot was engrossing and I got completely caught up in the investigation, the spying, the twists and turns of the mystery. And the school life. \n Take Gossip Girl, set it in a boarding school, and add lost of extra danger and intrigue and then you're maybe half way there to this book. It was excellent. \n For some reason I'm always surprised when I read a YA crime/mystery/thriller. Every time I read one my mind is blown.",
-      "year_added": 2013,
-      "month_added": 7,
-      "day_added": 21,
-      "num_votes": 18
-    }
+      {
+        "book_id": 13411546,
+        "review_id": "deacf98f7e339600899b4b3e4088b5f6",
+        "rating": 4,
+        "review_text": "Guess what. This book should be made into a movie. \n Or a TV show. That would be great, too. \n It is impossible not to have fun with this book. Anne is spunky, and courageous, and rebellious. Plus let's not forget that the mystery/murder case she is trying to solve takes place at a boarding school she is newly attending, after having started a fire at her previous school. Oh yeah. \n I should say that it is hilarious how many suspects there are in the case of her roommate's murder. I mean, according to Anne, 1/3 of the school is a suspect. But, you know what? I didn't even blink at that. I just thoroughly enjoyed watching her speculating and trying to solve a puzzle of 100 000 pieces. What can I say; her motivation is one of her charms. \n Also great are all of her fellow classmates, newly made friends... and enemies. Surprisingly, even the teachers have their role to play. The author didn't just cast them aside or used them as props. They honestly are needed and add to the whole case... and to the story's atmosphere. Mostly by being secretive and severe, but o h w e l l that's how I liked them anyway. \n So the love triangle may piss you off, and I'd completely understand, because clearly 1) it doesn't help us in understanding Anne better, 2) one of the two guys we know she will never see at the end of the story and 3) it has a poor conclusion. I am not even sure it came to an end... that she actually made her choice. It's hazy, but maybe we will get further detail in the sequel. \n Before I admit to being disappointed by the revelation, you need to know that the entire process to solving the murder mystery is incredibly entertaining... but the truth will not take your breath away. At least, it certainly did not take mine, because let's just say I've seen, much, much, much, a thousand times better on How to Get Away with Murder and Scandal. \n Nonetheless, go have some fun. READ THIS.",
+        "year_added": 2015,
+        "month_added": 12,
+        "day_added": 17,
+        "num_votes": 140
+      },
+      {
+        "book_id": 13411546,
+        "review_id": "ac546be2f7973287d6f062dc4e629e36",
+        "rating": 5,
+        "review_text": "4.5 stars \n Take your preconceptions on Gossip Girl and Pretty Little Liars and check them at the door. Haters to the left. This book was an absolutely blast to read. I want to give this a solid 5, I seriously do. I have no complaints at all about this book, none. But I am still stupid, and my mind cannot wrap itself around the concept of giving such an exalted number for an YA book of this light nature. \n I'm not perfect by any means. I judge books: more often than not, my expectations are shot down into a bloody pulp as I am drawn in by an interesting blurb and attractive cover. Not this time. I came in as a skeptic, I was wrong, I loved the hell out of this book. \n Let's face it, we've all watched Gossip Girl or heard of it in some form or another, and at first glance, this book sounds like another clone. Bitchy, spoiled, poor-little-rich girls with nothing better to do than spend their daddy's credit cards and wail about the lack of availability of their trust funds as they weep into their fucking Hermes scarves tucked into their Louis Vuitton satchels, right? Wrong. \n When entering the category of YA high school fiction, there are bound to be tropes. There are few of that nature within this book, and the few cliched characters that exist are developed out so well in character that it didn't bother me at all. Besides the main characters, the rest of the large supporting casts are so wonderfully written as well. The characters are complex, their character develop as we get further along in the book, as we learn more about them. There is no black and white; these kids may be rich prep school kids, but they are also smart, ambitious, and so very human. These teens are realistic; they are not complete assholes, they are not perfectly good; they do not fit into the Gossip Girl teen cliches at all. Nobody is perfectly good or bad, not the victims, not the villains; they are such wonderfully written characters. \n I was set up by the premise to be contemptuous towards our main character, Anne. I assumed that she would be empty-headed and stupid based on her background, and because of what she did (arson, come on now)...but Anne is so much more than that. I adored her. Yes, she is a spoiled teenager, but she is smart, she is rational, she has common sense, she is a queen bee, but not in the sense that she will destroy people in the process. No. She has the ability to think for herself. \n Anne is not a Mary Sue. We get the impression that she is good-looking, and she has beautiful hair, but she never refers to her looks throughout the book. She is smart, she is charismatic; that is how Anne became the most popular girl at her previous school, and that's how she immediately gained that status upon arriving at her new school. Anne is not cruel, she may be popular, but she never uses her status to hurt anyone, she is an egalitarian, and that's why her new school bothers her so much. Wheatley is an extremely prestigious college-prep private school; the school body is small and mostly limited to the children of the extremely wealthy or powerful (read: politicians). It's a big difference from Anne's previous school, and despite her popularity, it really bothers her because of the reason why. \n \"At St. Bernadette's, it didn't matter where your money came from, since everyone's parents were attorneys or plastic surgeons or famous rock stars; you had to prove yourself to earn your status. The fact that Remy and Company won't even wait for me to prove myself makes me distrust them.\"Anne was set to hate her new school and her new dorky roommate, but to her surprise, both aren't bad, and she finds herself really liking Isabella, despite her status as a scholarship student, and at the bottom of the popularity ladder. Almost right after they start bonding, Isabella is murdered, and nobody at the school seems to care about it. Anne has a very ingrained sense of justice (her father is a lawyer, after all) and she is infuriated and frustrated by the fact that nobody seems to care. Anne sees the injustice in the matter, she sees the hypocrisy in the case, and she's determined to do something about it. \n \"I should be worried about myself and my future, but I can't stop thinking about Isabella, and how if she were the daughter of a politician or the attorney general, the police would probably have found her killer by now. \n It's not fair. And it's not fair for me to sit around and do nothing about it. Not when I got off with a slap on the wrist for almost burning my school down just because of my father. I'll be such a hypocrite if I don't at least try to get justice for Isabella.\"It's not only that people don't care about a lowly girl, what's worse is that people seem to be hiding clues to conceal the truth about her case. Anne is determined to uncover the truth, despite all the people who seem to stand in her way...and there are no shortages of suspects. There are a number of blocks in the way, there are powerful people in play, and people also question Anne's credibility. Let's be honest, would you trust a girl who's been kicked out of school for arson? Anne has a lot of obstacles to work through, and she handles them all with grace. \n \"I wait until I'm out of the administration building to give in to a few tears. Obviously I can't go to class now, and I don't want to go back to my room. I could go to the police, but what would I say? Hey, I have absolutely no evidence, and they didn't take anything, but someone was in my room. \n I wipe my eyes with my gloves and take a deep breath. Keep it together, Anne. You can't go home. You need to get through this.\"Anne is not TSTL. She investigates the case, but she never intentionally puts herself in so much danger that I find myself face-palming and cringing due to her stupidity; she is intelligent, and it shows through every step of the way. Her investigation progresses in a rational manner, and while some of her observations are a little...questionable (just because someone looks creepy doesn't automatically make them a suspect, my dear), I highly enjoyed reading about her sleuthing as she works the case. \n I can't believe I'm saying this, but I really enjoyed the way romance was handled in this book. There is attraction between Anne and a few characters in the book, but it never overshadows the big picture. Anne has her priorities and her head straight. There is attraction, there is no insta-love, as there should be. Romance is handled in a realistic way within the book; the characters take relationships not too seriously, as rational teenagers should do, and I liked them all the more for it. There is a love triangle, but it is done so well, that again, I have no complaints at all. I found the guys to be cliched, but they are so well-written and likeable that I don't dislike them at all. I actually prefer one over the other and was rooting for him throughout the book! \n The students are a diverse lot, there are a few students who are not white; I do wish there were more, but you can't have everything. I honestly cannot find much to criticize about this book, and you know I love to complain. \n Highly recommended, one of the best YA books I have read this year.",
+        "year_added": 2013,
+        "month_added": 8,
+        "day_added": 16,
+        "num_votes": 100
+      },
+      {
+        "book_id": 13411546,
+        "review_id": "dbe9d288612b26a64579210f74b02470",
+        "rating": 5,
+        "review_text": "5 Words: Mystery, school, plotting, murder, twists. \n I wasn't sure what I was expecting when I picked this up. In fact, four of those five words at the top wouldn't have applied. So this book was a surprise, a really pleasant surprise. \n It was such a fun read. \n The plot was engrossing and I got completely caught up in the investigation, the spying, the twists and turns of the mystery. And the school life. \n Take Gossip Girl, set it in a boarding school, and add lost of extra danger and intrigue and then you're maybe half way there to this book. It was excellent. \n For some reason I'm always surprised when I read a YA crime/mystery/thriller. Every time I read one my mind is blown.",
+        "year_added": 2013,
+        "month_added": 7,
+        "day_added": 21,
+        "num_votes": 18
+      }
   ],
 
   "book_sorted_reviews_page2" : [

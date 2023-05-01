@@ -18,14 +18,12 @@ connection.connect((err) => err && console.log(err));
 
 // Route 1: GET /genre/:genre_name
 const genre = async function(req, res) {
-  console.log("--------");
-  console.log(`${req.params.genre_name}`);
   const genre = req.params.genre_name;
   
   console.log('The passed genre is:');
   console.log(genre);
   const pg = req.query.page;
-  const pageSize = req.query.page_size ?? 80;
+  const pageSize = req.query.page_size ?? 10;
   const offset = (pg - 1)*pageSize;
 
   // TODO: change ORDER BY to be a dynamic attribute
@@ -34,16 +32,14 @@ const genre = async function(req, res) {
 
   if (!pg) {
     connection.query( `   
-    SELECT b.image_url, b.title, b.book_id, b.average_rating, b.publication_year
-    FROM (SELECT bg.book_id
-          FROM Book_Genres bg
-          WHERE genre_id = (SELECT genre_id
-                            FROM Genres
-                            WHERE genre_name = '${genre}')) ids
+    SELECT g.genre_name, b.image_url, b.title, b.book_id, b.average_rating, b.publication_year
+    FROM Genres g
+      INNER JOIN Book_Genres bg on g.genre_id = bg.genre_id
       INNER JOIN (SELECT book_id, image_url, title, average_rating, ratings_count, publication_year
-                      FROM Book) b ON ids.book_id = b.book_id
-    ORDER BY b.ratings_count * b.average_rating DESC
-    LIMIT 50
+                      FROM Book) b ON bg.book_id = b.book_id
+    WHERE g.genre_name = '${genre}'
+    ORDER BY average_rating * ratings_count DESC
+    LIMIT 50;
     `
     , (err, data) => {
       if (err || data.length === 0) {
@@ -57,16 +53,14 @@ const genre = async function(req, res) {
     });
   } else {
     connection.query(`  
-        SELECT b.image_url, b.title, b.book_id, b.average_rating, b.publication_year
-        FROM (SELECT bg.book_id
-              FROM Book_Genres bg
-              WHERE genre_id = (SELECT genre_id
-                                FROM Genres
-                                WHERE genre_name = '${genre}')) ids
-          INNER JOIN (SELECT book_id, image_url, title, average_rating, ratings_count, publication_year
-                          FROM Book) b ON ids.book_id = b.book_id
-        ORDER BY b.ratings_count * b.average_rating DESC
-        LIMIT ${pageSize} OFFSET ${offset}
+    SELECT g.genre_name, b.image_url, b.title, b.book_id, b.average_rating, b.publication_year
+    FROM Genres g
+      INNER JOIN Book_Genres bg on g.genre_id = bg.genre_id
+      INNER JOIN (SELECT book_id, image_url, title, average_rating, ratings_count, publication_year
+                      FROM Book) b ON bg.book_id = b.book_id
+    WHERE g.genre_name = '${genre}'
+    ORDER BY average_rating * ratings_count DESC
+    LIMIT ${pageSize} OFFSET ${offset}
       `, (err, data) => {
         if (err || data.length === 0) {
           console.log(err);
@@ -349,7 +343,7 @@ const top_ten_books_month = async function(req, res) {
           ORDER BY RAND()
           LIMIT 1) g_user ON bg.genre_id = g_user.genre_id
         JOIN Book b ON bg.book_id = b.book_id
-    ORDER BY b.average_rating
+    ORDER BY RAND()
     LIMIT 2)
     UNION
     (SELECT g.genre_name, b.title,b.image_url, b.book_id
@@ -364,8 +358,8 @@ const top_ten_books_month = async function(req, res) {
           LIMIT 1) g_user
             ON bg.genre_id = g_user.genre_id
         JOIN Book b ON bg.book_id = b.book_id
-    ORDER BY b.average_rating
-    LIMIT 2);
+    ORDER BY RAND()
+    LIMIT 2)
    `, (err, data) => {
      if (err || data.length === 0) {
        console.log(err);
@@ -404,7 +398,7 @@ const surprise_me = async function(req, res) {
        console.log(err);
        res.json({});
      } else { 
-       res.json(data);
+       res.json(data[0]);
      }
    });
  }

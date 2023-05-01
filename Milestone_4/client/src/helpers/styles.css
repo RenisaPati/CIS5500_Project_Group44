@@ -1,6 +1,7 @@
-h4 {
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 1.2rem;
-    margin: 0;
-  }
+.MuiDataGrid-evenRow {
+  background-color: #217ddf;
+}
+
+.MuiDataGrid-oddRow {
+  background-color: #97c4e6;
+}

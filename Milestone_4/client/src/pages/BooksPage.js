@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import React from 'react';
 import { Container, Divider, Grid, Paper,Typography, Box } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { Link, useParams } from 'react-router-dom';
@@ -25,6 +26,8 @@ export default function BooksPage() {
 
   const [similarBooks, setSimilarBooks] = useState([]);
 
+  const [genre, setGenre] = useState([]);
+
   const [chartData, setChartData] = useState([]);
 
 
@@ -39,12 +42,17 @@ export default function BooksPage() {
 
     fetch(`http://${config.server_host}:${config.server_port}/book/${book_id}`)
       .then(res => res.json())
-      .then(resJson =>  setBookInfo(resJson)
+      .then(resJson => { console.log(resJson)
+       setBookInfo(resJson)}
       );
 
     fetch(`http://${config.server_host}:${config.server_port}/rating_history/${book_id}`)
       .then(res => res.json())
       .then(resJson => setChartData(resJson));
+
+    fetch(`http://${config.server_host}:${config.server_port}/book_genres/${book_id}`)
+      .then(res => res.json())
+      .then(resJson => setGenre(resJson));
 
   }, [book_id]);
 
@@ -110,10 +118,22 @@ export default function BooksPage() {
             <h1 style={{ fontSize: '50px', margin: '0' }}>{bookInfo.title}</h1>
             <h2 style={{ margin: '0' }}>{authorSeries.author}</h2>
             <h4 style={{ marginTop: '50px' }}>Description : {<span style={{ fontSize: '16px', fontWeight: 'lighter' }}>{bookInfo.description}</span>}</h4>
-            <h4>Genres : </h4>
+            <div>
+              <h4>
+                Genres:{' '}
+                {genre.map((item, index) => (
+                  <React.Fragment key={index}>
+                    <Link to={`/genre/${item.genre_name}`} style={{ color: teal[800] }}>
+                      {item.genre_name}
+                    </Link>
+                    {index !== genre.length - 1 && ', '}
+                  </React.Fragment>
+                ))}
+              </h4>
+            </div>
             {/* <h4>Series Name : {<span style={{ fontSize: '16px', fontWeight: 'lighter' }}>{authorSeries.series_title}</span>}</h4> */}
             <h4>Series Name : 
-             <Link component="button" onClick={() => setSelectedSeriesID(bookInfo.book_id)}>
+             <Link component="button" style={{ color: teal[800] }} onClick={() => setSelectedSeriesID(bookInfo.book_id)}>
               {authorSeries.series_title} 
               </Link>
             </h4>

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Container, Box, Grid, Typography } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
+import { blueGrey, teal } from '@mui/material/colors';
 
 const config = require('../config.json');
 
@@ -23,27 +24,17 @@ export default function SingleGenrePage() {
   const flexFormat = { display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-evenly' };
 
   return (
-    <Container >
-    <Grid item xs={12} md={12} style={{ backgroundColor: "#fdb98a" }}>
-              <div style={{ 
-                background: '#333', 
-                color: '#fff', 
-                padding: '20px', 
-                border: '2px solid #000', 
-                borderRadius: '10px', 
-                textAlign: 'center', 
-                textTransform: 'uppercase', 
-                letterSpacing: '2px', 
-                marginBottom: '20px',
-                marginRight : '20px'
-              }}>
-                <Typography variant="h4" component="h2" style={{ margin: 0 }}>
+    <Container style={{backgroundColor: teal[50] }}>
+    <Grid item xs={12} md={12} >
+              <div>
+                <Typography variant="h4" component="h2" 
+                  style={{ margin: '0', textAlign: 'center', fontWeight: 'bold'}}>
                   Top books in the {genre_name} genre
                 </Typography>
               </div>
               <Grid container spacing={3} style={{ justifyContent: 'space-between'}}>
                 {booksInGenre.map((book) => (
-                  <Grid item key={book.book_id} style={{marginRight : "20px"}} >
+                  <Grid item key={book.book_id} style={{marginRight : "20px", marginLeft: "20px", marginTop: "20px"}} >
                     <Box
                       p={3}
                       style={{ background: '#fff', borderRadius: '10px', border: '2px solid #000' }}

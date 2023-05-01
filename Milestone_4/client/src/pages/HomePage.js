@@ -3,10 +3,11 @@ import { Container, Divider, Box, Grid, Link } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 import * as React from 'react';
 import { useTheme } from '@mui/material/styles';
-
+import backGroundImage from '../helpers/images/pennlib.png'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { Button, Card, CardMedia } from '@mui/material';
+import { blueGrey, teal } from '@mui/material/colors';
 
 
 //import LazyTable from '../components/LazyTable';
@@ -67,45 +68,72 @@ export default function HomePage() {
 
   return (
     // <h1> test</h1>
-    <Container>
-         {/* SongCard is a custom component that we made. selectedSongId && <SongCard .../> makes use of short-circuit logic to only render the SongCard if a non-null song is selected */}
-         {/* {selectedSongId && <SongCard songId={surpriseMe} handleClose={() => setSurpriseMe(null)} />} */}
-         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
-            {surpriseMe && (
-              <div style={{
-                position: 'relative',
-                height: '100%',
-                width: '100%',
-                top: '100px',
-                backgroundImage: `url(${surpriseMe.image_url})`,
-                backgroundSize: 'cover',
-              }}>
-                <div style={{ position: 'absolute', bottom: '20px', left: '50%', transform: 'translateX(-50%)' }}>
-                  <NavLink to={`/book/${surpriseMe.book_id}`}>
-                    <Button variant="contained" style={{ filter: 'none' }}>Surprise Me</Button>
+    <Box mt={11} maxHeight = '100%' maxWidth = '100%' top = {2} left = {0} right = {0} style={{ backgroundColor: teal[50]}}>
+
+    <Container top = {2} left = {0} right = {0} maxWidth = '2000px'>
+
+      <Grid container spacing={10} maxWidth='xl' style={{ 
+          backgroundImage: `url(${backGroundImage})`, 
+          width: '100%', 
+          height: '750px', 
+          marginTop: '-80px', 
+          marginLeft: '0px', 
+          position: 'relative',
+        }}>
+          <div style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            background: 'linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5))'
+          }} />
+          <Grid item xs={12} sm={12} style={{ 
+            width: '100%', 
+            height: '100%', 
+            paddingTop: '5px', 
+            paddingBottom: '50px',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center'
+          }}>
+
+            <h2 style={{ fontSize: '36px', color: '#001f1f' }}>Heading Text</h2>   
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum, nibh ut volutpat vulputate, turpis arcu sodales risus, nec hendrerit est quam ac quam. Mauris euismod metus eu enim iaculis efficitur. </p>
+
+            <div style={{ 
+              marginTop: '20px'
+            }}>
+              <NavLink to={`/book/${surpriseMe.book_id}`}>
+                <Button variant="contained" style={{ filter: 'none' }}>Surprise Me</Button>
+              </NavLink>
+            </div>
+          </Grid>
+        </Grid>
+
+          {/* backgroundImage: `url(${backGroundImage})`, */}
+            <Divider />
+
+            <Divider />
+            
+            <Grid container spacing={10} maxWidth = 'xl' style={{ backgroundColor: teal[50], width: '100%', margin: 'auto'}}>
+              <Grid item xs={12} sm={12} style={{width: '100%', height: '100%', paddingTop : '5px',  paddingBottom : '75px'}} >
+                <h2>Recommended for you</h2>
+                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}>
+                {recommendedBooks.map((book) => (
+                  <NavLink key={book.book_id} to={`/book/${book.book_id}`} style={{ margin: 10 }}>
+                    <img src={book.image_url} alt={book.title} style={{ width: 200, height: 300 }} />
                   </NavLink>
+                ))}
                 </div>
-              </div>
-            )}
-         </div>
+             </Grid>
+            </Grid>
+            <Divider />
 
-
-         <Divider />
-         <h2>Recommended for you</h2>
-          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}>
-          {recommendedBooks.map(book => (
-            <NavLink key={book.book_id} to={`/book/${book.book_id}`} style={{ margin: 10 }}>
-              <img src={book.image_url} alt={book.title} style={{ width: 200, height: 'auto' }} />
-            </NavLink>
-          ))}
-          </div>
-         
-         <Divider />
-         {/* TODO (TASK 16): add a h2 heading, LazyTable, and divider for top albums. 
-         Set the LazyTable's props for defaultPageSize to 5 and rowsPerPageOptions to [5, 10] */}
-         <Divider />
-            <Grid container spacing={2} style={{...flexFormat, width: '100%', height: '100%'}} >
-              <Grid item xs={12} sm={12} style={{height: 'auto'}} >
+            <Divider />
+            <Grid container spacing={10} maxWidth = 'xl' style={{ backgroundColor: teal[50], width: '100%', margin: 'auto'}}>
+              <Grid item xs={12} sm={12} style={{width: '100%', height: '100%', paddingTop : '5px'}} >
                 <h2>Books of the month</h2>
                 <Carousel
                   additionalTransfrom={0}
@@ -151,9 +179,10 @@ export default function HomePage() {
                       <Box
                         component="img"
                         sx={{
-                          height: 150,
+                          height: 'auto',
                           display: 'block',
-                          maxWidth: 75,
+                          maxWidth: '100%',
+                          maxHeight: '100%',
                           overflow: 'hidden',
                           width: '100%',
                         }}
@@ -164,15 +193,12 @@ export default function HomePage() {
                 </Carousel>
  
               </Grid>
-              <Grid item xs={12} sm={6} >
-                {/* <h3>This is some text</h3>           */}
-              </Grid> 
             </Grid>
          <Divider />
 
          <Divider />
-            <Grid container spacing={2} style={{...flexFormat, width: '100%', height: '100%'}} >
-              <Grid item xs={12} sm={12} style={{height: '100%'}} >
+         <Grid container spacing={10} maxWidth='xl' style={{ backgroundColor: teal[50], margin: 'auto'}}>
+              <Grid item xs={12} sm={12} style={{width: '100%', height: '100%', paddingTop : '5px'}} >
                 <h2>Here's what you liked</h2>
                 <Carousel
                   additionalTransfrom={0}
@@ -218,9 +244,9 @@ export default function HomePage() {
                       <Box
                         component="img"
                         sx={{
-                          height: 150,
+                          height: 'auto',
                           display: 'block',
-                          maxWidth: 75,
+                          maxWidth: '100%',
                           overflow: 'hidden',
                           width: '100%',
                         }}
@@ -231,13 +257,11 @@ export default function HomePage() {
                 </Carousel>
  
               </Grid>
-              <Grid item xs={12} sm={6} >
-                {/* <h3>This is some text</h3>           */}
-              </Grid> 
             </Grid>
          <Divider />         
         
     </Container>
+    </Box>
 
   );
 };

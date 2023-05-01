@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Box, Button, Container, Grid, Modal, Typography } from '@mui/material';
 import { NavLink } from 'react-router-dom';
-import '../helpers/styles.css'
 const config = require('../config.json');
 
 export default function AuthorCard({ authorID, handleClose }) {
@@ -34,7 +33,7 @@ export default function AuthorCard({ authorID, handleClose }) {
       <Container style={{ ...flexFormat, maxHeight: '80vh', overflow: 'auto' }}>
         <Box
           p={3}
-          style={{ background: 'white', borderRadius: '16px', border: '2px solid #000', width: 600 }}
+          style={{ background: 'white', borderRadius: '5px', border: '2px solid #000', width: 800 }}
         >
           <Grid item xs={12} md={12} style={{ backgroundColor: "#fdb98a" }}>
               <div style={{ 
@@ -47,7 +46,7 @@ export default function AuthorCard({ authorID, handleClose }) {
                 textTransform: 'uppercase', 
                 letterSpacing: '2px', 
                 marginBottom: '20px',
-                marginRight : '20px'
+              
               }}>
                 <Typography variant="h4" component="h2" style={{ margin: 0 }}>
                   {authorData.name}
@@ -59,7 +58,7 @@ export default function AuthorCard({ authorID, handleClose }) {
               </div>
               <Grid container spacing={3} style={{ justifyContent: 'space-between'}}>
                 {authorsBooksData.map((book) => (
-                  <Grid item key={book.book_id} style={{marginRight : "20px"}} >
+                  <Grid item key={book.book_id} style={{marginRight : "20px", marginLeft: "20px"}} >
                     <Box
                       p={3}
                       style={{ background: '#fff', borderRadius: '10px', border: '2px solid #000' }}
@@ -75,7 +74,7 @@ export default function AuthorCard({ authorID, handleClose }) {
                                 <NavLink to={`/book/${book.book_id}`}>
                                   {book.title}
                                 </NavLink>
-                              </div>
+                    </div>
                   </Grid>
                 ))}
               </Grid>

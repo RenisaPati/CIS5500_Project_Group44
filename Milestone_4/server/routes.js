@@ -87,12 +87,15 @@ const genre = async function(req, res) {
 const book = async function(req, res) {
   // Get book information for the book that was clicked
   const curr_id = req.params.book_id
+  console.log('The book ID passed to /book/:book_id is:');
+  console.log(curr_id);
+  console.log('-------------');
 
   // Return the book information for the clicked book
   connection.query(`
-  SELECT b.book_id, title, isbn, language_code, is_ebook, b.average_rating,
+  SELECT b.book_id, title, image_url, isbn, language_code, is_ebook, b.average_rating,
           description, format, publisher, num_pages, publication_year, series_id, a.*
-  FROM (SELECT book_id, title, isbn, language_code, is_ebook, average_rating,
+  FROM (SELECT book_id, title, image_url, isbn, language_code, is_ebook, average_rating,
         description, format, publisher, num_pages, publication_year, series_id
         FROM Book
         WHERE book_id = ${curr_id}) b
@@ -174,7 +177,7 @@ const rating_history = async function(req, res) {
   SELECT ya2.genre_id, r.year_added, 
           ROUND(AVG(r.rating), 2) AS average_rating, 
           COUNT(*) AS review_count,
-          ya2.yearly_average, 
+          ROUND(ya2.yearly_average, 2) AS yearly_average, 
           (AVG(r.rating) > yearly_average) AS gt_yearly_avg
   FROM (SELECT * FROM Reviews WHERE book_id = ${curr_id}) r
     JOIN ya_filtered ya2 ON ya2.year_added = r.year_added
@@ -335,7 +338,7 @@ const top_ten_books_month = async function(req, res) {
    // Find two random genres and the select the top 2 rated books within those genres and return these as recommended books for the the user
    const user_id = req.params.user_id;
    connection.query(`
-   (SELECT g.genre_name, b.title, b.image_url
+   (SELECT g.genre_name, b.title, b.image_url, b.book_id
     FROM Genres g
         NATURAL JOIN Book_Genres bg
       JOIN
@@ -349,7 +352,7 @@ const top_ten_books_month = async function(req, res) {
     ORDER BY b.average_rating
     LIMIT 2)
     UNION
-    (SELECT g.genre_name, b.title,b.image_url
+    (SELECT g.genre_name, b.title,b.image_url, b.book_id
     FROM Genres g
         NATURAL JOIN Book_Genres bg
       JOIN
@@ -459,7 +462,7 @@ const books_by_author = async function(req, res) {
  const user_liked = async function(req, res) {
    const user_id = req.params.user_id;
    connection.query(`
-   SELECT b.title
+   SELECT *
    FROM Users_Liked u
      JOIN Book b ON u.book_id = b.book_id
    WHERE u.user_id = '${user_id}'
@@ -473,7 +476,7 @@ const books_by_author = async function(req, res) {
    });
  }
  
- // Route 13: GET /authors_ordered
+ // Route 15: GET /authors_ordered
  const authors_ordered = async function(req, res) {
    // Return author details for the All authors page
 

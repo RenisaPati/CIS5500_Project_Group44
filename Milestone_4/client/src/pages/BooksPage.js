@@ -6,7 +6,7 @@ import { Link, useParams } from 'react-router-dom';
 import Rating from 'react-rating-stars-component';
 import {teal } from '@mui/material/colors';
 import LazyTable from '../components/LazyTable';
-import { AreaChart, Area, Bar, BarChart, XAxis, YAxis, CartesianGrid, Tooltip,Label,Legend, ResponsiveContainer } from 'recharts';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip,Label,Legend } from 'recharts';
 import SeriesCard from '../components/SeriesCard';
 
 import { NavLink } from 'react-router-dom';

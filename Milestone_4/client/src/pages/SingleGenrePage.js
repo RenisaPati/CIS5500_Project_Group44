@@ -28,8 +28,8 @@ export default function SingleGenrePage() {
     <Grid item xs={12} md={12} >
               <div>
                 <Typography variant="h4" component="h2" 
-                  style={{ margin: '0', textAlign: 'center', fontWeight: 'bold'}}>
-                  Top books in the {genre_name} genre
+                  style={{ margin: '0', textAlign: 'center', fontWeight: 'bold', paddingBottom : '20px', paddingTop : '30px'}}>
+                  <i>Top books in the {genre_name} genre</i>
                 </Typography>
               </div>
               <Grid container spacing={3} style={{ justifyContent: 'space-between'}}>

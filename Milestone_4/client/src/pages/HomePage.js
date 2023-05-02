@@ -1,18 +1,15 @@
 import { useEffect, useState } from 'react';
-import { Container, Divider, Box, Grid, Link } from '@mui/material';
+import { Container, Divider, Box, Grid } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 import * as React from 'react';
 import { useTheme } from '@mui/material/styles';
 import backGroundImage from '../helpers/images/pennlib.png'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { Button, Card, CardMedia } from '@mui/material';
-import { blueGrey, teal } from '@mui/material/colors';
+import { Button } from '@mui/material';
+import { teal } from '@mui/material/colors';
 
 
-//import LazyTable from '../components/LazyTable';
-//import BookCard from '../components/BookCard';
-//import { DataGrid } from '@mui/x-data-grid';
 const config = require('../config.json');
 
 export default function HomePage() {
@@ -22,10 +19,9 @@ export default function HomePage() {
   const [userLiked, setUserLiked] = useState([]);
   const [surpriseMe, setSurpriseMe] = useState([]);
   const user_id = 1;
+
   const theme = useTheme();
-
   const [selectedBookId, setSelectedBookId] = useState(null);
-
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = topBooksMonth.length;
 
@@ -60,11 +56,11 @@ export default function HomePage() {
         setSurpriseMe(resJson)});
   }, []);
 
-  const flexFormat = { 
-   display: 'flex',
-   flexDirection: 'row', 
-   flexWrap: 'wrap', 
-   justifyContent: 'space-evenly' };
+  // const flexFormat = { 
+  //  display: 'flex',
+  //  flexDirection: 'row', 
+  //  flexWrap: 'wrap', 
+  //  justifyContent: 'space-evenly' };
 
   return (
     // <h1> test</h1>
@@ -148,8 +144,8 @@ export default function HomePage() {
             <Divider />
 
             <Divider />
-            <Grid container spacing={10} maxWidth = 'xl' style={{ backgroundColor: teal[50], width: '100%', margin: 'auto'}}>
-              <Grid item xs={12} sm={12} style={{width: '100%', height: '100%', paddingTop : '5px', paddingRight : '80px'}} >
+            <Grid container spacing={10} maxWidth = 'xl' style={{ backgroundColor: 'white', width: '100%', margin: 'auto'}}>
+              <Grid item xs={12} sm={12} style={{width: '100%', height: '100%', paddingTop : '5px', paddingRight : '80px',  paddingBottom : '75px'}} >
                 <h2 style={{ 
                   fontFamily: 'Georgia, serif',
                   fontSize: '36px',
@@ -157,7 +153,7 @@ export default function HomePage() {
                   lineHeight: '1.2',
                   color: '#a2095f',
                   textAlign: 'center',
-                }}>Books of the month</h2>
+                }}><i>Books of the Month</i></h2>
                 <Carousel
                   additionalTransfrom={0}
                   arrows
@@ -223,7 +219,7 @@ export default function HomePage() {
 
          <Divider />
          <Grid container spacing={10} maxWidth='xl' style={{ backgroundColor: teal[50], margin: 'auto'}}>
-              <Grid item xs={12} sm={12} style={{width: '100%', height: '100%', paddingTop : '5px', paddingRight : '80px'}} >
+              <Grid item xs={12} sm={12} style={{width: '100%', height: '100%', paddingTop : '5px',  paddingBottom : '75px', paddingRight : '80px'}} >
                 <h2 style={{ 
                   fontFamily: 'Georgia, serif',
                   fontSize: '36px',
@@ -231,6 +227,7 @@ export default function HomePage() {
                   lineHeight: '1.2',
                   color: '#a2095f',
                   textAlign: 'center',
+                  width : '1304px'
                 }}>Here's what you liked</h2>
                 <Carousel
                   additionalTransfrom={0}

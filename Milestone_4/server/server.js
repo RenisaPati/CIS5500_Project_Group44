@@ -25,24 +25,26 @@ app.get('/user_liked/:user_id', routes.user_liked);
 app.get('/authors_ordered', routes.authors_ordered);
 app.get('/surprise_me/:user_id', routes.surprise_me);
 app.get('/books_by_author/:author_id', routes.books_by_author);
+app.get('/get_user_credential_info', routes.user_info);
+app.post('/signup', routes.add_user);
 
 //login authentication possible server side implementation
-app.post('/api/login', (req, res) => {
-  const { username, password } = req.body;
+// app.post('/api/login', (req, res) => {
+//   const { username, password } = req.body;
 
-  // Query the user information database to retrieve the user's record by their username
-  const user = users.find(user => user.username === username);
+//   // Query the user information database to retrieve the user's record by their username
+//   const user = users.find(user => user.username === username);
 
-  // Compare the password hash stored in the user's record with the password entered by the user in the login form
-  if (user && bcrypt.compareSync(password, user.passwordHash)) {
-    // If the passwords match, authenticate the user by setting a session variable or JWT token
-    req.session.user = { username: user.username };
-    res.status(200).json({ success: true });
-  } else {
-    // If the passwords don't match, send an error response to the client
-    res.status(401).json({ success: false, message: 'Invalid username or password' });
-  }
-});
+//   // Compare the password hash stored in the user's record with the password entered by the user in the login form
+//   if (user && bcrypt.compareSync(password, user.passwordHash)) {
+//     // If the passwords match, authenticate the user by setting a session variable or JWT token
+//     req.session.user = { username: user.username };
+//     res.status(200).json({ success: true });
+//   } else {
+//     // If the passwords don't match, send an error response to the client
+//     res.status(401).json({ success: false, message: 'Invalid username or password' });
+//   }
+// });
 
 app.listen(config.server_port, () => {
   console.log(`Server running at http://${config.server_host}:${config.server_port}/`)

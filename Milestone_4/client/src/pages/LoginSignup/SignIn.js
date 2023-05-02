@@ -34,7 +34,6 @@ function SignIn() {
 
   return (
     <React.Fragment>
-      <AppAppBar />
       <AppForm>
         <React.Fragment>
           <Typography variant="h3" gutterBottom marked="center" align="center">
@@ -43,7 +42,7 @@ function SignIn() {
           <Typography variant="body2" align="center">
             {'Not a member yet? '}
             <Link
-              href="/premium-themes/onepirate/sign-up/"
+              href="/signup"
               align="center"
               underline="always"
             >
@@ -92,6 +91,7 @@ function SignIn() {
                 }
               </FormSpy>
               <FormButton
+                href = '/'
                 sx={{ mt: 3, mb: 2 }}
                 disabled={submitting || sent}
                 size="large"
@@ -103,13 +103,7 @@ function SignIn() {
             </Box>
           )}
         </Form>
-        <Typography align="center">
-          <Link underline="always" href="/premium-themes/onepirate/forgot-password/">
-            Forgot password?
-          </Link>
-        </Typography>
       </AppForm>
-      <AppFooter />
     </React.Fragment>
   );
 }

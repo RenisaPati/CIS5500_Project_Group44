@@ -17,7 +17,7 @@ function SignUp() {
   const [sent, setSent] = React.useState(false);
 
   const validate = (values) => {
-    const errors = required(['firstName', 'lastName', 'email', 'password'], values);
+    const errors = required(['firstName', 'lastName', 'username', 'password'], values);
 
     if (!errors.email) {
       const emailError = email(values.email);
@@ -35,14 +35,13 @@ function SignUp() {
 
   return (
     <React.Fragment>
-      <AppAppBar />
       <AppForm>
         <React.Fragment>
           <Typography variant="h3" gutterBottom marked="center" align="center">
             Sign Up
           </Typography>
           <Typography variant="body2" align="center">
-            <Link href="/premium-themes/onepirate/sign-in/" underline="always">
+            <Link href="/login" underline="always">
               Already have an account?
             </Link>
           </Typography>
@@ -110,6 +109,7 @@ function SignUp() {
                 }
               </FormSpy>
               <FormButton
+                href='/login'
                 sx={{ mt: 3, mb: 2 }}
                 disabled={submitting || sent}
                 color="secondary"

@@ -10,6 +10,9 @@ import SingleGenrePage from "./pages/SingleGenrePage";
 import BooksPage from "./pages/BooksPage";
 import { blueGrey, teal } from '@mui/material/colors';
 
+import SignIn from './pages/LoginSignup/SignIn';
+import SignUp from './pages/LoginSignup/SignUp';
+
 // createTheme enables you to customize the look and feel of your app past the default
 // in this case, we only change the color scheme
 export const theme = createTheme({
@@ -35,6 +38,8 @@ export default function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<SignIn />} />
           <Route path="/authors_ordered" element={<AuthorInfoPage />} />
           <Route path= "/genre/:genre_name" element={<SingleGenrePage />} />
           <Route exact path='/' component={<SingleGenrePage/>} />

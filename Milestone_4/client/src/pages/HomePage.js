@@ -101,7 +101,7 @@ export default function HomePage() {
           transform: 'translate(-50%, -50%)',
           textAlign: 'center'
         }}>
-          <h2 style={{ fontSize: '75px', color:  '#a2095f', marginTop: '10px', marginBottom: '10px', fontFamily: 'Georgia, serif'}}>Let's Get Reading !</h2>   
+          <h2 style={{ fontSize: '75px', color:  '#a2095f', marginTop: '10px', marginBottom: '10px', fontFamily: 'Georgia, serif'}}>Let's Get Reading!</h2>   
           <p style={{ fontSize: '17px', color: '#542603' }}><b><i>Frederick Douglass said, “Once you learn to read, you will be forever free." Cheers to the beginning of what I am sure will be a wonderful journey across gazillions of worlds ...</i></b> </p>
 
           <div style={{ 

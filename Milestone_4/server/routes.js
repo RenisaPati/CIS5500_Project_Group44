@@ -486,6 +486,40 @@ const books_by_author = async function(req, res) {
       }
     });
  }
+
+  // Route 14: POST /signup
+  const add_user = async function(req, res) {
+    const { username, password } = req.body; // assuming these are the fields you want to store in the user_info table
+    
+    try {
+      // Insert new row into user_info table
+      const insertQuery = 'INSERT INTO Users (username, password) VALUES (?, ?)';
+      await connection.query(insertQuery, [username, password]);
+  
+      res.status(200).send('User info updated successfully');
+    } catch (err) {
+      console.error(err);
+      res.status(500).send('Error updating user info');
+    }
+  }
+  
+  //Route 15: GET /user_info
+  const user_info = async function(req, res) {
+    // Return author details for the All authors page
+  
+     connection.query(`
+     SELECT * FROM Users;
+     `, (err, data) => {
+       if (err || data.length === 0) {
+         console.log(err);
+         res.json([]);
+         console.log('Error retrieving user credentials');
+       } else {
+        console.log('Successful');
+         res.json(data);
+       }
+     });
+  }
  
  
  module.exports = {
@@ -503,7 +537,9 @@ const books_by_author = async function(req, res) {
    user_liked,
    authors_ordered,
    surprise_me,
-   books_by_author
+   books_by_author,
+   add_user,
+   user_info,
  }
  
  

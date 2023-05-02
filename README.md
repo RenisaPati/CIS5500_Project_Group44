@@ -3,6 +3,41 @@
 ## Motivation for the idea
 A common question that everyone asks from time to time is 'what book should I read next?'. In building our application, we seek to help users discover new books as well as revisit those they’ve read previously. Additionally, new readers will be able to browse for new books using several ranking systems for books, series, and authors.
 
+## Setup
+**Required**
+The first step is to verify that Node.js is installed on your machine by running the following commands:
+npm -v
+node - v
+
+You will also need to use the (built-in) terminal for your operating system.
+
+**Recommended**
+We recommend that you use Visual Studio (VS) Code (as the code editor and its built-in terminal).
+
+You will also need a web browser, like Google Chrome, but most major browsers will support equivalent functionality.
+
+**To run the application:**
+1. Open a new terminal (on VS code) and cd into the server folder, then run npm install:
+    cd server
+    npm install
+2. Do the same for the client (you can run cd ../client instead of cd client if in the /server folder):
+    cd client
+    npm install
+
+This will download and save the required dependencies into the node_modules folder within the
+/client and /server directories.
+
+3. To connect to the database (MySQL), the db credentials have been stores into config.json in the /server folder
+
+4. First, you should start the server application by running the command **npm start** in a terminal window within the /server directory
+
+5. After starting the server application, which should run on port 8080, you should start the React application by running the command **npm start** within the /client directory in a terminal window. 
+
+This application, by default, runs on localhost - port 3000. Once you run the above command, your default browser should open up a window to localhost:3000.
+
+6. You can run the provided tests in the __test__ directory within the server folder by running:
+    npm test
+
 ## Features:
 * Login page: Displays textboxes for an existing user to enter their username and password to login. It also has a link to let new users register.
 * Home page: The home page will display the most popular books in the current month. If the user has logged in, they’ll be able to see their reading list and a short list of recommendations, otherwise they’ll be prompted to log in. Users can also navigate to the book and author pages to get more detailed information.

@@ -27,7 +27,7 @@ You will also need a web browser, like Google Chrome, but most major browsers wi
 This will download and save the required dependencies into the node_modules folder within the
 /client and /server directories.
 
-3. To connect to the database (MySQL), the db credentials have been stores into config.json in the /server folder
+3. To connect to the database (MySQL), the db credentials have been stored into config.json in the /server folder
 
 4. First, you should start the server application by running the command **npm start** in a terminal window within the /server directory
 

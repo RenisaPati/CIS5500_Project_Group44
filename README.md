@@ -35,7 +35,7 @@ This will download and save the required dependencies into the node_modules fold
 
 This application, by default, runs on localhost - port 3000. Once you run the above command, your default browser should open up a window to localhost:3000.
 
-6. You can run the provided tests in the __test__ directory within the server folder by running:
+6. You can run the provided tests in the \_\_test\_\_ directory within the server folder by running:
     npm test
 
 ## Features:

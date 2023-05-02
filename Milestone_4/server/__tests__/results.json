@@ -1,52 +1,36 @@
 {
   "genre_biography_6" : {
     "genre_name": "biography",
-    "image_url": "https://images.gr-assets.com/books/1484090395m/17428586.jpg",
-    "title": "Cold Feet: A Stella Lavender Mystery",
-    "book_id": 17428586,
-    "average_rating": 3.64,
-    "publication_year": 2013
+    "image_url": "https://images.gr-assets.com/books/1424931136m/168642.jpg",
+    "title": "In Cold Blood",
+    "book_id": 168642,
+    "average_rating": 4.05,
+    "publication_year": 1994
   },
 
   "genre_biography_page2" : [
     {
       "genre_name": "biography",
       "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
-      "title": "Mad, Bad & Dangerous to Know",
-      "book_id": 36453060,
-      "average_rating": 0,
-      "publication_year": 2019
+      "title": "A Study in Scarlet",
+      "book_id": 102868,
+      "average_rating": 4.15,
+      "publication_year": 2005
     },
     {
       "genre_name": "biography",
-      "image_url": "https://images.gr-assets.com/books/1328757562m/905639.jpg",
-      "title": "Hunter's Dance: A John McIntire Mystery",
-      "book_id": 905639,
-      "average_rating": 3.97,
-      "publication_year": 2006
-    },
-    {
-      "genre_name": "biography",
-      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
-      "title": "The Adventure of the Speckled Band",
-      "book_id": 956123,
-      "average_rating": 4.08,
+      "image_url": "https://images.gr-assets.com/books/1346267826m/40440.jpg",
+      "title": "The Thirteenth Tale",
+      "book_id": 40440,
+      "average_rating": 3.95,
       "publication_year": null
     },
     {
       "genre_name": "biography",
-      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
-      "title": "Fool's Gold",
-      "book_id": 2858242,
-      "average_rating": 3.5,
-      "publication_year": 1999
-    },
-    {
-      "genre_name": "biography",
-      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
-      "title": "Nothing That Meets the Eye: The Uncollected Stories",
-      "book_id": 3092484,
-      "average_rating": 4.15,
+      "image_url": "https://images.gr-assets.com/books/1415375471m/119073.jpg",
+      "title": "The Name of the Rose",
+      "book_id": 119073,
+      "average_rating": 4.11,
       "publication_year": null
     }
   ],
@@ -54,48 +38,47 @@
   "genre_biography_page2_pagesize5" : [
     {
       "genre_name": "biography",
-      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
-      "title": "Mad, Bad & Dangerous to Know",
-      "book_id": 36453060,
-      "average_rating": 0,
-      "publication_year": 2019
+      "image_url": "https://images.gr-assets.com/books/1424931136m/168642.jpg",
+      "title": "In Cold Blood",
+      "book_id": 168642,
+      "average_rating": 4.05,
+      "publication_year": 1994
     },
     {
       "genre_name": "biography",
-      "image_url": "https://images.gr-assets.com/books/1328757562m/905639.jpg",
-      "title": "Hunter's Dance: A John McIntire Mystery",
-      "book_id": 905639,
-      "average_rating": 3.97,
-      "publication_year": 2006
-    },
-    {
-      "genre_name": "biography",
-      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
-      "title": "The Adventure of the Speckled Band",
-      "book_id": 956123,
-      "average_rating": 4.08,
+      "image_url": "https://images.gr-assets.com/books/1358274396m/6411961.jpg",
+      "title": "The Lost Symbol (Robert Langdon, #3)",
+      "book_id": 6411961,
+      "average_rating": 3.66,
       "publication_year": null
     },
     {
       "genre_name": "biography",
-      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
-      "title": "Fool's Gold",
-      "book_id": 2858242,
-      "average_rating": 3.5,
+      "image_url": "https://images.gr-assets.com/books/1394988109m/22034.jpg",
+      "title": "The Godfather",
+      "book_id": 22034,
+      "average_rating": 4.36,
+      "publication_year": 2002
+    },
+    {
+      "genre_name": "biography",
+      "image_url": "https://images.gr-assets.com/books/1397093185m/17212231.jpg",
+      "title": "Inferno (Robert Langdon, #4)",
+      "book_id": 17212231,
+      "average_rating": 3.81,
+      "publication_year": 2013
+    },
+    {
+      "genre_name": "biography",
+      "image_url": "https://images.gr-assets.com/books/1281995542m/19691.jpg",
+      "title": "The Hunt for Red October (Jack Ryan Universe, #4)",
+      "book_id": 19691,
+      "average_rating": 4.02,
       "publication_year": 1999
-    },
-    {
-      "genre_name": "biography",
-      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
-      "title": "Nothing That Meets the Eye: The Uncollected Stories",
-      "book_id": 3092484,
-      "average_rating": 4.15,
-      "publication_year": null
     }
   ],
 
-  "book" : [
-    {
+  "book" : {
       "book_id": 19123314,
       "title": "The Lonely Hearts Vampire: The Bizarre and Horrifying True Account of Serial Killer Bela Kiss",
       "image_url": "https://images.gr-assets.com/books/1455435456m/19123314.jpg",
@@ -113,40 +96,39 @@
       "name": "Wallace Edwards",
       "text_reviews_count": 230,
       "ratings_count": 835
-    }
-  ],
+  },
 
   "book_sorted_reviews" : [
-      {
-        "book_id": 13411546,
-        "review_id": "deacf98f7e339600899b4b3e4088b5f6",
-        "rating": 4,
-        "review_text": "Guess what. This book should be made into a movie. \n Or a TV show. That would be great, too. \n It is impossible not to have fun with this book. Anne is spunky, and courageous, and rebellious. Plus let's not forget that the mystery/murder case she is trying to solve takes place at a boarding school she is newly attending, after having started a fire at her previous school. Oh yeah. \n I should say that it is hilarious how many suspects there are in the case of her roommate's murder. I mean, according to Anne, 1/3 of the school is a suspect. But, you know what? I didn't even blink at that. I just thoroughly enjoyed watching her speculating and trying to solve a puzzle of 100 000 pieces. What can I say; her motivation is one of her charms. \n Also great are all of her fellow classmates, newly made friends... and enemies. Surprisingly, even the teachers have their role to play. The author didn't just cast them aside or used them as props. They honestly are needed and add to the whole case... and to the story's atmosphere. Mostly by being secretive and severe, but o h w e l l that's how I liked them anyway. \n So the love triangle may piss you off, and I'd completely understand, because clearly 1) it doesn't help us in understanding Anne better, 2) one of the two guys we know she will never see at the end of the story and 3) it has a poor conclusion. I am not even sure it came to an end... that she actually made her choice. It's hazy, but maybe we will get further detail in the sequel. \n Before I admit to being disappointed by the revelation, you need to know that the entire process to solving the murder mystery is incredibly entertaining... but the truth will not take your breath away. At least, it certainly did not take mine, because let's just say I've seen, much, much, much, a thousand times better on How to Get Away with Murder and Scandal. \n Nonetheless, go have some fun. READ THIS.",
-        "year_added": 2015,
-        "month_added": 12,
-        "day_added": 17,
-        "num_votes": 140
-      },
-      {
-        "book_id": 13411546,
-        "review_id": "ac546be2f7973287d6f062dc4e629e36",
-        "rating": 5,
-        "review_text": "4.5 stars \n Take your preconceptions on Gossip Girl and Pretty Little Liars and check them at the door. Haters to the left. This book was an absolutely blast to read. I want to give this a solid 5, I seriously do. I have no complaints at all about this book, none. But I am still stupid, and my mind cannot wrap itself around the concept of giving such an exalted number for an YA book of this light nature. \n I'm not perfect by any means. I judge books: more often than not, my expectations are shot down into a bloody pulp as I am drawn in by an interesting blurb and attractive cover. Not this time. I came in as a skeptic, I was wrong, I loved the hell out of this book. \n Let's face it, we've all watched Gossip Girl or heard of it in some form or another, and at first glance, this book sounds like another clone. Bitchy, spoiled, poor-little-rich girls with nothing better to do than spend their daddy's credit cards and wail about the lack of availability of their trust funds as they weep into their fucking Hermes scarves tucked into their Louis Vuitton satchels, right? Wrong. \n When entering the category of YA high school fiction, there are bound to be tropes. There are few of that nature within this book, and the few cliched characters that exist are developed out so well in character that it didn't bother me at all. Besides the main characters, the rest of the large supporting casts are so wonderfully written as well. The characters are complex, their character develop as we get further along in the book, as we learn more about them. There is no black and white; these kids may be rich prep school kids, but they are also smart, ambitious, and so very human. These teens are realistic; they are not complete assholes, they are not perfectly good; they do not fit into the Gossip Girl teen cliches at all. Nobody is perfectly good or bad, not the victims, not the villains; they are such wonderfully written characters. \n I was set up by the premise to be contemptuous towards our main character, Anne. I assumed that she would be empty-headed and stupid based on her background, and because of what she did (arson, come on now)...but Anne is so much more than that. I adored her. Yes, she is a spoiled teenager, but she is smart, she is rational, she has common sense, she is a queen bee, but not in the sense that she will destroy people in the process. No. She has the ability to think for herself. \n Anne is not a Mary Sue. We get the impression that she is good-looking, and she has beautiful hair, but she never refers to her looks throughout the book. She is smart, she is charismatic; that is how Anne became the most popular girl at her previous school, and that's how she immediately gained that status upon arriving at her new school. Anne is not cruel, she may be popular, but she never uses her status to hurt anyone, she is an egalitarian, and that's why her new school bothers her so much. Wheatley is an extremely prestigious college-prep private school; the school body is small and mostly limited to the children of the extremely wealthy or powerful (read: politicians). It's a big difference from Anne's previous school, and despite her popularity, it really bothers her because of the reason why. \n \"At St. Bernadette's, it didn't matter where your money came from, since everyone's parents were attorneys or plastic surgeons or famous rock stars; you had to prove yourself to earn your status. The fact that Remy and Company won't even wait for me to prove myself makes me distrust them.\"Anne was set to hate her new school and her new dorky roommate, but to her surprise, both aren't bad, and she finds herself really liking Isabella, despite her status as a scholarship student, and at the bottom of the popularity ladder. Almost right after they start bonding, Isabella is murdered, and nobody at the school seems to care about it. Anne has a very ingrained sense of justice (her father is a lawyer, after all) and she is infuriated and frustrated by the fact that nobody seems to care. Anne sees the injustice in the matter, she sees the hypocrisy in the case, and she's determined to do something about it. \n \"I should be worried about myself and my future, but I can't stop thinking about Isabella, and how if she were the daughter of a politician or the attorney general, the police would probably have found her killer by now. \n It's not fair. And it's not fair for me to sit around and do nothing about it. Not when I got off with a slap on the wrist for almost burning my school down just because of my father. I'll be such a hypocrite if I don't at least try to get justice for Isabella.\"It's not only that people don't care about a lowly girl, what's worse is that people seem to be hiding clues to conceal the truth about her case. Anne is determined to uncover the truth, despite all the people who seem to stand in her way...and there are no shortages of suspects. There are a number of blocks in the way, there are powerful people in play, and people also question Anne's credibility. Let's be honest, would you trust a girl who's been kicked out of school for arson? Anne has a lot of obstacles to work through, and she handles them all with grace. \n \"I wait until I'm out of the administration building to give in to a few tears. Obviously I can't go to class now, and I don't want to go back to my room. I could go to the police, but what would I say? Hey, I have absolutely no evidence, and they didn't take anything, but someone was in my room. \n I wipe my eyes with my gloves and take a deep breath. Keep it together, Anne. You can't go home. You need to get through this.\"Anne is not TSTL. She investigates the case, but she never intentionally puts herself in so much danger that I find myself face-palming and cringing due to her stupidity; she is intelligent, and it shows through every step of the way. Her investigation progresses in a rational manner, and while some of her observations are a little...questionable (just because someone looks creepy doesn't automatically make them a suspect, my dear), I highly enjoyed reading about her sleuthing as she works the case. \n I can't believe I'm saying this, but I really enjoyed the way romance was handled in this book. There is attraction between Anne and a few characters in the book, but it never overshadows the big picture. Anne has her priorities and her head straight. There is attraction, there is no insta-love, as there should be. Romance is handled in a realistic way within the book; the characters take relationships not too seriously, as rational teenagers should do, and I liked them all the more for it. There is a love triangle, but it is done so well, that again, I have no complaints at all. I found the guys to be cliched, but they are so well-written and likeable that I don't dislike them at all. I actually prefer one over the other and was rooting for him throughout the book! \n The students are a diverse lot, there are a few students who are not white; I do wish there were more, but you can't have everything. I honestly cannot find much to criticize about this book, and you know I love to complain. \n Highly recommended, one of the best YA books I have read this year.",
-        "year_added": 2013,
-        "month_added": 8,
-        "day_added": 16,
-        "num_votes": 100
-      },
-      {
-        "book_id": 13411546,
-        "review_id": "dbe9d288612b26a64579210f74b02470",
-        "rating": 5,
-        "review_text": "5 Words: Mystery, school, plotting, murder, twists. \n I wasn't sure what I was expecting when I picked this up. In fact, four of those five words at the top wouldn't have applied. So this book was a surprise, a really pleasant surprise. \n It was such a fun read. \n The plot was engrossing and I got completely caught up in the investigation, the spying, the twists and turns of the mystery. And the school life. \n Take Gossip Girl, set it in a boarding school, and add lost of extra danger and intrigue and then you're maybe half way there to this book. It was excellent. \n For some reason I'm always surprised when I read a YA crime/mystery/thriller. Every time I read one my mind is blown.",
-        "year_added": 2013,
-        "month_added": 7,
-        "day_added": 21,
-        "num_votes": 18
-      }
+    {
+      "book_id": 13411546,
+      "review_id": "deacf98f7e339600899b4b3e4088b5f6",
+      "rating": 4,
+      "review_text": "Guess what. This book should be made into a movie. \n Or a TV show. That would be great, too. \n It is impossible not to have fun with this book. Anne is spunky, and courageous, and rebellious. Plus let's not forget that the mystery/murder case she is trying to solve takes place at a boarding school she is newly attending, after having started a fire at her previous school. Oh yeah. \n I should say that it is hilarious how many suspects there are in the case of her roommate's murder. I mean, according to Anne, 1/3 of the school is a suspect. But, you know what? I didn't even blink at that. I just thoroughly enjoyed watching her speculating and trying to solve a puzzle of 100 000 pieces. What can I say; her motivation is one of her charms. \n Also great are all of her fellow classmates, newly made friends... and enemies. Surprisingly, even the teachers have their role to play. The author didn't just cast them aside or used them as props. They honestly are needed and add to the whole case... and to the story's atmosphere. Mostly by being secretive and severe, but o h w e l l that's how I liked them anyway. \n So the love triangle may piss you off, and I'd completely understand, because clearly 1) it doesn't help us in understanding Anne better, 2) one of the two guys we know she will never see at the end of the story and 3) it has a poor conclusion. I am not even sure it came to an end... that she actually made her choice. It's hazy, but maybe we will get further detail in the sequel. \n Before I admit to being disappointed by the revelation, you need to know that the entire process to solving the murder mystery is incredibly entertaining... but the truth will not take your breath away. At least, it certainly did not take mine, because let's just say I've seen, much, much, much, a thousand times better on How to Get Away with Murder and Scandal. \n Nonetheless, go have some fun. READ THIS.",
+      "year_added": 2015,
+      "month_added": 12,
+      "day_added": 17,
+      "num_votes": 140
+    },
+    {
+      "book_id": 13411546,
+      "review_id": "ac546be2f7973287d6f062dc4e629e36",
+      "rating": 5,
+      "review_text": "4.5 stars \n Take your preconceptions on Gossip Girl and Pretty Little Liars and check them at the door. Haters to the left. This book was an absolutely blast to read. I want to give this a solid 5, I seriously do. I have no complaints at all about this book, none. But I am still stupid, and my mind cannot wrap itself around the concept of giving such an exalted number for an YA book of this light nature. \n I'm not perfect by any means. I judge books: more often than not, my expectations are shot down into a bloody pulp as I am drawn in by an interesting blurb and attractive cover. Not this time. I came in as a skeptic, I was wrong, I loved the hell out of this book. \n Let's face it, we've all watched Gossip Girl or heard of it in some form or another, and at first glance, this book sounds like another clone. Bitchy, spoiled, poor-little-rich girls with nothing better to do than spend their daddy's credit cards and wail about the lack of availability of their trust funds as they weep into their fucking Hermes scarves tucked into their Louis Vuitton satchels, right? Wrong. \n When entering the category of YA high school fiction, there are bound to be tropes. There are few of that nature within this book, and the few cliched characters that exist are developed out so well in character that it didn't bother me at all. Besides the main characters, the rest of the large supporting casts are so wonderfully written as well. The characters are complex, their character develop as we get further along in the book, as we learn more about them. There is no black and white; these kids may be rich prep school kids, but they are also smart, ambitious, and so very human. These teens are realistic; they are not complete assholes, they are not perfectly good; they do not fit into the Gossip Girl teen cliches at all. Nobody is perfectly good or bad, not the victims, not the villains; they are such wonderfully written characters. \n I was set up by the premise to be contemptuous towards our main character, Anne. I assumed that she would be empty-headed and stupid based on her background, and because of what she did (arson, come on now)...but Anne is so much more than that. I adored her. Yes, she is a spoiled teenager, but she is smart, she is rational, she has common sense, she is a queen bee, but not in the sense that she will destroy people in the process. No. She has the ability to think for herself. \n Anne is not a Mary Sue. We get the impression that she is good-looking, and she has beautiful hair, but she never refers to her looks throughout the book. She is smart, she is charismatic; that is how Anne became the most popular girl at her previous school, and that's how she immediately gained that status upon arriving at her new school. Anne is not cruel, she may be popular, but she never uses her status to hurt anyone, she is an egalitarian, and that's why her new school bothers her so much. Wheatley is an extremely prestigious college-prep private school; the school body is small and mostly limited to the children of the extremely wealthy or powerful (read: politicians). It's a big difference from Anne's previous school, and despite her popularity, it really bothers her because of the reason why. \n \"At St. Bernadette's, it didn't matter where your money came from, since everyone's parents were attorneys or plastic surgeons or famous rock stars; you had to prove yourself to earn your status. The fact that Remy and Company won't even wait for me to prove myself makes me distrust them.\"Anne was set to hate her new school and her new dorky roommate, but to her surprise, both aren't bad, and she finds herself really liking Isabella, despite her status as a scholarship student, and at the bottom of the popularity ladder. Almost right after they start bonding, Isabella is murdered, and nobody at the school seems to care about it. Anne has a very ingrained sense of justice (her father is a lawyer, after all) and she is infuriated and frustrated by the fact that nobody seems to care. Anne sees the injustice in the matter, she sees the hypocrisy in the case, and she's determined to do something about it. \n \"I should be worried about myself and my future, but I can't stop thinking about Isabella, and how if she were the daughter of a politician or the attorney general, the police would probably have found her killer by now. \n It's not fair. And it's not fair for me to sit around and do nothing about it. Not when I got off with a slap on the wrist for almost burning my school down just because of my father. I'll be such a hypocrite if I don't at least try to get justice for Isabella.\"It's not only that people don't care about a lowly girl, what's worse is that people seem to be hiding clues to conceal the truth about her case. Anne is determined to uncover the truth, despite all the people who seem to stand in her way...and there are no shortages of suspects. There are a number of blocks in the way, there are powerful people in play, and people also question Anne's credibility. Let's be honest, would you trust a girl who's been kicked out of school for arson? Anne has a lot of obstacles to work through, and she handles them all with grace. \n \"I wait until I'm out of the administration building to give in to a few tears. Obviously I can't go to class now, and I don't want to go back to my room. I could go to the police, but what would I say? Hey, I have absolutely no evidence, and they didn't take anything, but someone was in my room. \n I wipe my eyes with my gloves and take a deep breath. Keep it together, Anne. You can't go home. You need to get through this.\"Anne is not TSTL. She investigates the case, but she never intentionally puts herself in so much danger that I find myself face-palming and cringing due to her stupidity; she is intelligent, and it shows through every step of the way. Her investigation progresses in a rational manner, and while some of her observations are a little...questionable (just because someone looks creepy doesn't automatically make them a suspect, my dear), I highly enjoyed reading about her sleuthing as she works the case. \n I can't believe I'm saying this, but I really enjoyed the way romance was handled in this book. There is attraction between Anne and a few characters in the book, but it never overshadows the big picture. Anne has her priorities and her head straight. There is attraction, there is no insta-love, as there should be. Romance is handled in a realistic way within the book; the characters take relationships not too seriously, as rational teenagers should do, and I liked them all the more for it. There is a love triangle, but it is done so well, that again, I have no complaints at all. I found the guys to be cliched, but they are so well-written and likeable that I don't dislike them at all. I actually prefer one over the other and was rooting for him throughout the book! \n The students are a diverse lot, there are a few students who are not white; I do wish there were more, but you can't have everything. I honestly cannot find much to criticize about this book, and you know I love to complain. \n Highly recommended, one of the best YA books I have read this year.",
+      "year_added": 2013,
+      "month_added": 8,
+      "day_added": 16,
+      "num_votes": 100
+    },
+    {
+      "book_id": 13411546,
+      "review_id": "dbe9d288612b26a64579210f74b02470",
+      "rating": 5,
+      "review_text": "5 Words: Mystery, school, plotting, murder, twists. \n I wasn't sure what I was expecting when I picked this up. In fact, four of those five words at the top wouldn't have applied. So this book was a surprise, a really pleasant surprise. \n It was such a fun read. \n The plot was engrossing and I got completely caught up in the investigation, the spying, the twists and turns of the mystery. And the school life. \n Take Gossip Girl, set it in a boarding school, and add lost of extra danger and intrigue and then you're maybe half way there to this book. It was excellent. \n For some reason I'm always surprised when I read a YA crime/mystery/thriller. Every time I read one my mind is blown.",
+      "year_added": 2013,
+      "month_added": 7,
+      "day_added": 21,
+      "num_votes": 18
+    }
   ],
 
   "book_sorted_reviews_page2" : [
@@ -192,38 +174,38 @@
   }
   ],
   "book_sorted_reviews_page4_pagesize3" : 
-    [
-      {
-        "book_id": 13411546,
-        "review_id": "a0013d11014b0cd3fe1ca88ffe152171",
-        "rating": 2,
-        "review_text": "Just because I have such a high expectation of it, and was really disappointed since I was really looking forward to so much more in this book. But overall, it wasn't bad, but it wasn't super good either. It was ok. If you are looking for a mystery that happens on school ground and has a student who is trying to solve it, I will say go try it out. Who knows, you might like it. After all, it does have some really fun factors in it.",
-        "year_added": 2016,
-        "month_added": 8,
-        "day_added": 13,
-        "num_votes": 4
-      },
-      {
-        "book_id": 13411546,
-        "review_id": "10c4baa611919ff81e75697d1afe47f9",
-        "rating": 5,
-        "review_text": "I received an ebook ARC from the publisher, through NetGalley, in exchange for an honest review. \n What didn't I love about PREP SCHOOL CONFIDENTIAL? That is the question still on my mind. Mystery, death, rebellion, shady characters, you get it all in this fantastic novel by Kara Taylor. You'll enjoy reading every second of it, I promise! \n I've had quite the hard time figuring out what exactly to say about PSC. After everything that happened in the story, I was stumped for words on how to convey how great of a novel it was. Still am, quite frankly. Taylor immediately throws you into the mist of an afternoon that is about to go terribly wrong for the popular, rebellious Anne. After burning down part of her private school--a bit of an over exaggeration Anne would say--she is shipped off to Boston to attend the Wheatley School. Filled with students from very powerful and wealthy families, it's pretty obvious how much of an outsider Anne is. She makes a jealous enemy almost immediately. A week after being there, her roommate mysteriously is murdered and the school is keeping everyone mum about it. Even though she only knew Isabella for a short amount of time, Anne is determined to get to the bottom of it, despite possibly ending up in the same situation herself. \n I wasn't too fond of Anne at the beginning. She seemed way too self-absorbed in the first chapter. After her reality check, I loved her as the main character! She's got a witty and snippy attitude, the perfect personification of someone who is being sent away from home against their will. Taylor created a great, spunky character who you're going to love exploring the Wheatley School with. I admired her determination, despite barely knowing Isabella. She makes some very choice decisions, making me quite nervous, but she wanted justice where clearly it wasn't coming. If I had been poor Isabella, I would've loved to have Anne as my roommate to figure out what had happened to me and why. \n I feel like I should mention that Taylor killed off one of my favorite characters, and quickly too! We really didn't get to know Isabella for very long but she sounded like an awesome person to be friends with. She loved movies (bonus point), wasn't afraid to sing along to songs in said movies (bonus point), shared her gummy worms (bonus point), and was compassionate towards her new roomie (bonus point). I was so sad to see her gone! During Anne's sleuthing around the school to figure who killed her and why, some of Isabella's skeletons in the closet were revealed. Even though she was no longer around, I loved that we got to continue learning more about Isabella and her past. \n Some of the other characters in the book were the perfect example of people who you never knew whether to fully trust or not. One moment you think they are the good guys, the next: not so much. I thoroughly enjoyed the detective work Anne, Isabella's brother, and Brent conducted and was never fully sure what to conclude about the whole murder mystery. Taylor throws in loop hole after loop hole, making you question everything until the very end. One of my favorite parts about the entire novel was that Taylor pieced each scene, discovery, revelation, and mystery so carefully that the reader was never bored and never knew where everything was going. Each secondary character had a distinct purpose in the story and had something to hide. Also, in the way that Taylor did write this story, it's perfectly set up for the next novel in the series. While the mystery of Isabella's death is finally solved, a mystery that was revealed during Anne's sleuthing is still completely wide open: a cold case. Anne discovers some critical information about it towards the end, letting the reader know that Anne is not done figuring out the mysteries surrounding the Wheatley School. \n I'd recommend PREP SCHOOL CONFIDENTIAL to anyone who loves a juicy murder mystery filled to the brim with questions, shady behavior, cover-ups, plot twists, and a group of characters you'll love finding more about. Not able to set this book down, Kara Taylor has created the definition of a page-turner, never letting the reader know everything that is going on until the very end. You'll be surprised at just how much people have to hide! I'm dying to know what Anne discovers next!",
-        "year_added": 2013,
-        "month_added": 6,
-        "day_added": 25,
-        "num_votes": 3
-      },
-      {
-        "book_id": 13411546,
-        "review_id": "432b7e165f46b0e2c21965ce77260486",
-        "rating": 4,
-        "review_text": "This was a good mystery with a strong YA setting and a really likeable heroine. Anne is a basically good person, but with the flaws you'd expect in a privileged teen without enough effective supervision. \n It took me a bit to warm to her, actually, but that's the author's fault for starting the book too early. The slow start and unnecessary detail of her foolishness with Martin set poor expectations for both Anne's eventual character and the story's direction. Once things pick up, though, we begin to see the core of what makes her work and understand why she couldn't simply leave well enough alone when she sees injustice and willful ignorance in the death of someone well on her way to becoming a friend. \n From there things keep a great pace and if some of the reveals are predictable, many are brilliantly conceived and one or two true surprises (fully earned) were outright brilliant. All without stinting on the characters who were vibrant enough to hold interest in their own right. Anne's interactions with her classmates were sometimes brusque and sometimes earnest, but never random or unrealistic. Anne has a long, tough journey as she deals with suspicion and privilege in her new school so it makes sense that her emotional state dictates her interactions as much as her reason does, at times. What I liked about it is how Taylor made it so that the reader can see Anne's motivations clearly even when Anne herself is a little unclear why she is sticking her neck out for someone who is already dead and had little call on her loyalty even when she was still around. \n Some of the tertiary characters and background were light enough to keep this in the 3.5 star range, but I enjoyed it so much that I feel compelled to round up, this time. And I'm definitely interested in the next...",
-        "year_added": 2014,
-        "month_added": 2,
-        "day_added": 4,
-        "num_votes": 3
-      }
-    ]
+  [
+    {
+      "book_id": 13411546,
+      "review_id": "10c4baa611919ff81e75697d1afe47f9",
+      "rating": 5,
+      "review_text": "I received an ebook ARC from the publisher, through NetGalley, in exchange for an honest review. \n What didn't I love about PREP SCHOOL CONFIDENTIAL? That is the question still on my mind. Mystery, death, rebellion, shady characters, you get it all in this fantastic novel by Kara Taylor. You'll enjoy reading every second of it, I promise! \n I've had quite the hard time figuring out what exactly to say about PSC. After everything that happened in the story, I was stumped for words on how to convey how great of a novel it was. Still am, quite frankly. Taylor immediately throws you into the mist of an afternoon that is about to go terribly wrong for the popular, rebellious Anne. After burning down part of her private school--a bit of an over exaggeration Anne would say--she is shipped off to Boston to attend the Wheatley School. Filled with students from very powerful and wealthy families, it's pretty obvious how much of an outsider Anne is. She makes a jealous enemy almost immediately. A week after being there, her roommate mysteriously is murdered and the school is keeping everyone mum about it. Even though she only knew Isabella for a short amount of time, Anne is determined to get to the bottom of it, despite possibly ending up in the same situation herself. \n I wasn't too fond of Anne at the beginning. She seemed way too self-absorbed in the first chapter. After her reality check, I loved her as the main character! She's got a witty and snippy attitude, the perfect personification of someone who is being sent away from home against their will. Taylor created a great, spunky character who you're going to love exploring the Wheatley School with. I admired her determination, despite barely knowing Isabella. She makes some very choice decisions, making me quite nervous, but she wanted justice where clearly it wasn't coming. If I had been poor Isabella, I would've loved to have Anne as my roommate to figure out what had happened to me and why. \n I feel like I should mention that Taylor killed off one of my favorite characters, and quickly too! We really didn't get to know Isabella for very long but she sounded like an awesome person to be friends with. She loved movies (bonus point), wasn't afraid to sing along to songs in said movies (bonus point), shared her gummy worms (bonus point), and was compassionate towards her new roomie (bonus point). I was so sad to see her gone! During Anne's sleuthing around the school to figure who killed her and why, some of Isabella's skeletons in the closet were revealed. Even though she was no longer around, I loved that we got to continue learning more about Isabella and her past. \n Some of the other characters in the book were the perfect example of people who you never knew whether to fully trust or not. One moment you think they are the good guys, the next: not so much. I thoroughly enjoyed the detective work Anne, Isabella's brother, and Brent conducted and was never fully sure what to conclude about the whole murder mystery. Taylor throws in loop hole after loop hole, making you question everything until the very end. One of my favorite parts about the entire novel was that Taylor pieced each scene, discovery, revelation, and mystery so carefully that the reader was never bored and never knew where everything was going. Each secondary character had a distinct purpose in the story and had something to hide. Also, in the way that Taylor did write this story, it's perfectly set up for the next novel in the series. While the mystery of Isabella's death is finally solved, a mystery that was revealed during Anne's sleuthing is still completely wide open: a cold case. Anne discovers some critical information about it towards the end, letting the reader know that Anne is not done figuring out the mysteries surrounding the Wheatley School. \n I'd recommend PREP SCHOOL CONFIDENTIAL to anyone who loves a juicy murder mystery filled to the brim with questions, shady behavior, cover-ups, plot twists, and a group of characters you'll love finding more about. Not able to set this book down, Kara Taylor has created the definition of a page-turner, never letting the reader know everything that is going on until the very end. You'll be surprised at just how much people have to hide! I'm dying to know what Anne discovers next!",
+      "year_added": 2013,
+      "month_added": 6,
+      "day_added": 25,
+      "num_votes": 3
+    },
+    {
+      "book_id": 13411546,
+      "review_id": "432b7e165f46b0e2c21965ce77260486",
+      "rating": 4,
+      "review_text": "This was a good mystery with a strong YA setting and a really likeable heroine. Anne is a basically good person, but with the flaws you'd expect in a privileged teen without enough effective supervision. \n It took me a bit to warm to her, actually, but that's the author's fault for starting the book too early. The slow start and unnecessary detail of her foolishness with Martin set poor expectations for both Anne's eventual character and the story's direction. Once things pick up, though, we begin to see the core of what makes her work and understand why she couldn't simply leave well enough alone when she sees injustice and willful ignorance in the death of someone well on her way to becoming a friend. \n From there things keep a great pace and if some of the reveals are predictable, many are brilliantly conceived and one or two true surprises (fully earned) were outright brilliant. All without stinting on the characters who were vibrant enough to hold interest in their own right. Anne's interactions with her classmates were sometimes brusque and sometimes earnest, but never random or unrealistic. Anne has a long, tough journey as she deals with suspicion and privilege in her new school so it makes sense that her emotional state dictates her interactions as much as her reason does, at times. What I liked about it is how Taylor made it so that the reader can see Anne's motivations clearly even when Anne herself is a little unclear why she is sticking her neck out for someone who is already dead and had little call on her loyalty even when she was still around. \n Some of the tertiary characters and background were light enough to keep this in the 3.5 star range, but I enjoyed it so much that I feel compelled to round up, this time. And I'm definitely interested in the next...",
+      "year_added": 2014,
+      "month_added": 2,
+      "day_added": 4,
+      "num_votes": 3
+    },
+    {
+      "book_id": 13411546,
+      "review_id": "fb553c8c8b578246f4065d20eb12d55b",
+      "rating": 4,
+      "review_text": "After finishing Private and not liking it, I was worried about starting another book featuring a boarding school, but I really had a strong desire to start Prep School Confidential. I'm glad I did! It was absolutely fabulous. The mystery was so exciting. I had no clue who killed Isabella until it was figured out by the main character (Anne.) Also, I loved the characters. They were well written and Brent was dreamy. Who doesn't like a hot guy that attends a boarding school?? \n I'm so excited to pick up the next book and follow Anne through another riveting mystery!!",
+      "year_added": 2015,
+      "month_added": 5,
+      "day_added": 4,
+      "num_votes": 3
+    }
+  ]
   ,
 
   "rating_history" : [
@@ -232,7 +214,7 @@
       "year_added": 2007,
       "average_rating": 3.74,
       "review_count": 23,
-      "yearly_average": 3.4373887240356082,
+      "yearly_average": 3.44,
       "gt_yearly_avg": 1
     },
     {
@@ -240,7 +222,7 @@
       "year_added": 2008,
       "average_rating": 3.55,
       "review_count": 38,
-      "yearly_average": 3.5157377630346156,
+      "yearly_average": 3.52,
       "gt_yearly_avg": 1
     },
     {
@@ -248,7 +230,7 @@
       "year_added": 2009,
       "average_rating": 3.64,
       "review_count": 25,
-      "yearly_average": 3.478216336832864,
+      "yearly_average": 3.48,
       "gt_yearly_avg": 1
     },
     {
@@ -256,7 +238,7 @@
       "year_added": 2010,
       "average_rating": 3.84,
       "review_count": 32,
-      "yearly_average": 3.5387892796901355,
+      "yearly_average": 3.54,
       "gt_yearly_avg": 1
     },
     {
@@ -264,7 +246,7 @@
       "year_added": 2011,
       "average_rating": 3.54,
       "review_count": 35,
-      "yearly_average": 3.5488344300968464,
+      "yearly_average": 3.55,
       "gt_yearly_avg": 0
     },
     {
@@ -272,7 +254,7 @@
       "year_added": 2012,
       "average_rating": 3.07,
       "review_count": 30,
-      "yearly_average": 3.6712050418948414,
+      "yearly_average": 3.67,
       "gt_yearly_avg": 0
     },
     {
@@ -280,7 +262,7 @@
       "year_added": 2013,
       "average_rating": 3.83,
       "review_count": 24,
-      "yearly_average": 3.7037622718587335,
+      "yearly_average": 3.7,
       "gt_yearly_avg": 1
     },
     {
@@ -288,7 +270,7 @@
       "year_added": 2014,
       "average_rating": 3.48,
       "review_count": 25,
-      "yearly_average": 3.7257832096920533,
+      "yearly_average": 3.73,
       "gt_yearly_avg": 0
     },
     {
@@ -296,7 +278,7 @@
       "year_added": 2015,
       "average_rating": 3.18,
       "review_count": 17,
-      "yearly_average": 3.711622301906401,
+      "yearly_average": 3.71,
       "gt_yearly_avg": 0
     },
     {
@@ -304,7 +286,7 @@
       "year_added": 2016,
       "average_rating": 3,
       "review_count": 13,
-      "yearly_average": 3.6998526710932613,
+      "yearly_average": 3.7,
       "gt_yearly_avg": 0
     },
     {
@@ -312,359 +294,7 @@
       "year_added": 2017,
       "average_rating": 3,
       "review_count": 11,
-      "yearly_average": 3.7189935064935065,
-      "gt_yearly_avg": 0
-    },
-    {
-      "genre_id": 7,
-      "year_added": 2007,
-      "average_rating": 3.74,
-      "review_count": 23,
-      "yearly_average": 3.4335962944199174,
-      "gt_yearly_avg": 1
-    },
-    {
-      "genre_id": 7,
-      "year_added": 2008,
-      "average_rating": 3.55,
-      "review_count": 38,
-      "yearly_average": 3.511057964939964,
-      "gt_yearly_avg": 1
-    },
-    {
-      "genre_id": 7,
-      "year_added": 2009,
-      "average_rating": 3.64,
-      "review_count": 25,
-      "yearly_average": 3.4753665584531412,
-      "gt_yearly_avg": 1
-    },
-    {
-      "genre_id": 7,
-      "year_added": 2010,
-      "average_rating": 3.84,
-      "review_count": 32,
-      "yearly_average": 3.5374566488155783,
-      "gt_yearly_avg": 1
-    },
-    {
-      "genre_id": 7,
-      "year_added": 2011,
-      "average_rating": 3.54,
-      "review_count": 35,
-      "yearly_average": 3.5495951187424866,
-      "gt_yearly_avg": 0
-    },
-    {
-      "genre_id": 7,
-      "year_added": 2012,
-      "average_rating": 3.07,
-      "review_count": 30,
-      "yearly_average": 3.672409312398484,
-      "gt_yearly_avg": 0
-    },
-    {
-      "genre_id": 7,
-      "year_added": 2013,
-      "average_rating": 3.83,
-      "review_count": 24,
-      "yearly_average": 3.7066690932792707,
-      "gt_yearly_avg": 1
-    },
-    {
-      "genre_id": 7,
-      "year_added": 2014,
-      "average_rating": 3.48,
-      "review_count": 25,
-      "yearly_average": 3.732892473709425,
-      "gt_yearly_avg": 0
-    },
-    {
-      "genre_id": 7,
-      "year_added": 2015,
-      "average_rating": 3.18,
-      "review_count": 17,
-      "yearly_average": 3.728311621487253,
-      "gt_yearly_avg": 0
-    },
-    {
-      "genre_id": 7,
-      "year_added": 2016,
-      "average_rating": 3,
-      "review_count": 13,
-      "yearly_average": 3.7149108692222748,
-      "gt_yearly_avg": 0
-    },
-    {
-      "genre_id": 7,
-      "year_added": 2017,
-      "average_rating": 3,
-      "review_count": 11,
-      "yearly_average": 3.7404656337429034,
-      "gt_yearly_avg": 0
-    },
-    {
-      "genre_id": 8,
-      "year_added": 2007,
-      "average_rating": 3.74,
-      "review_count": 23,
-      "yearly_average": 3.432626188734455,
-      "gt_yearly_avg": 1
-    },
-    {
-      "genre_id": 8,
-      "year_added": 2008,
-      "average_rating": 3.55,
-      "review_count": 38,
-      "yearly_average": 3.508707242332893,
-      "gt_yearly_avg": 1
-    },
-    {
-      "genre_id": 8,
-      "year_added": 2009,
-      "average_rating": 3.64,
-      "review_count": 25,
-      "yearly_average": 3.4738406123367853,
-      "gt_yearly_avg": 1
-    },
-    {
-      "genre_id": 8,
-      "year_added": 2010,
-      "average_rating": 3.84,
-      "review_count": 32,
-      "yearly_average": 3.5367767365759333,
-      "gt_yearly_avg": 1
-    },
-    {
-      "genre_id": 8,
-      "year_added": 2011,
-      "average_rating": 3.54,
-      "review_count": 35,
-      "yearly_average": 3.5476163054077503,
-      "gt_yearly_avg": 0
-    },
-    {
-      "genre_id": 8,
-      "year_added": 2012,
-      "average_rating": 3.07,
-      "review_count": 30,
-      "yearly_average": 3.671201325600663,
-      "gt_yearly_avg": 0
-    },
-    {
-      "genre_id": 8,
-      "year_added": 2013,
-      "average_rating": 3.83,
-      "review_count": 24,
-      "yearly_average": 3.7040819412224657,
-      "gt_yearly_avg": 1
-    },
-    {
-      "genre_id": 8,
-      "year_added": 2014,
-      "average_rating": 3.48,
-      "review_count": 25,
-      "yearly_average": 3.73173867279462,
-      "gt_yearly_avg": 0
-    },
-    {
-      "genre_id": 8,
-      "year_added": 2015,
-      "average_rating": 3.18,
-      "review_count": 17,
-      "yearly_average": 3.7265618047917535,
-      "gt_yearly_avg": 0
-    },
-    {
-      "genre_id": 8,
-      "year_added": 2016,
-      "average_rating": 3,
-      "review_count": 13,
-      "yearly_average": 3.712640115708456,
-      "gt_yearly_avg": 0
-    },
-    {
-      "genre_id": 8,
-      "year_added": 2017,
-      "average_rating": 3,
-      "review_count": 11,
-      "yearly_average": 3.7382049484123008,
-      "gt_yearly_avg": 0
-    },
-    {
-      "genre_id": 9,
-      "year_added": 2007,
-      "average_rating": 3.74,
-      "review_count": 23,
-      "yearly_average": 3.446859042869018,
-      "gt_yearly_avg": 1
-    },
-    {
-      "genre_id": 9,
-      "year_added": 2008,
-      "average_rating": 3.55,
-      "review_count": 38,
-      "yearly_average": 3.5217023566952443,
-      "gt_yearly_avg": 1
-    },
-    {
-      "genre_id": 9,
-      "year_added": 2009,
-      "average_rating": 3.64,
-      "review_count": 25,
-      "yearly_average": 3.483887440535383,
-      "gt_yearly_avg": 1
-    },
-    {
-      "genre_id": 9,
-      "year_added": 2010,
-      "average_rating": 3.84,
-      "review_count": 32,
-      "yearly_average": 3.529621120819524,
-      "gt_yearly_avg": 1
-    },
-    {
-      "genre_id": 9,
-      "year_added": 2011,
-      "average_rating": 3.54,
-      "review_count": 35,
-      "yearly_average": 3.5547221729096394,
-      "gt_yearly_avg": 0
-    },
-    {
-      "genre_id": 9,
-      "year_added": 2012,
-      "average_rating": 3.07,
-      "review_count": 30,
-      "yearly_average": 3.6808331448801828,
-      "gt_yearly_avg": 0
-    },
-    {
-      "genre_id": 9,
-      "year_added": 2013,
-      "average_rating": 3.83,
-      "review_count": 24,
-      "yearly_average": 3.7168478771737425,
-      "gt_yearly_avg": 1
-    },
-    {
-      "genre_id": 9,
-      "year_added": 2014,
-      "average_rating": 3.48,
-      "review_count": 25,
-      "yearly_average": 3.7455884493348472,
-      "gt_yearly_avg": 0
-    },
-    {
-      "genre_id": 9,
-      "year_added": 2015,
-      "average_rating": 3.18,
-      "review_count": 17,
-      "yearly_average": 3.7474964018639856,
-      "gt_yearly_avg": 0
-    },
-    {
-      "genre_id": 9,
-      "year_added": 2016,
-      "average_rating": 3,
-      "review_count": 13,
-      "yearly_average": 3.7283087236162697,
-      "gt_yearly_avg": 0
-    },
-    {
-      "genre_id": 9,
-      "year_added": 2017,
-      "average_rating": 3,
-      "review_count": 11,
-      "yearly_average": 3.756014825051825,
-      "gt_yearly_avg": 0
-    },
-    {
-      "genre_id": 11,
-      "year_added": 2007,
-      "average_rating": 3.74,
-      "review_count": 23,
-      "yearly_average": 3.4487086652184407,
-      "gt_yearly_avg": 1
-    },
-    {
-      "genre_id": 11,
-      "year_added": 2008,
-      "average_rating": 3.55,
-      "review_count": 38,
-      "yearly_average": 3.5785915492957745,
-      "gt_yearly_avg": 0
-    },
-    {
-      "genre_id": 11,
-      "year_added": 2009,
-      "average_rating": 3.64,
-      "review_count": 25,
-      "yearly_average": 3.5313966613200263,
-      "gt_yearly_avg": 1
-    },
-    {
-      "genre_id": 11,
-      "year_added": 2010,
-      "average_rating": 3.84,
-      "review_count": 32,
-      "yearly_average": 3.5642769356820976,
-      "gt_yearly_avg": 1
-    },
-    {
-      "genre_id": 11,
-      "year_added": 2011,
-      "average_rating": 3.54,
-      "review_count": 35,
-      "yearly_average": 3.5967533889848866,
-      "gt_yearly_avg": 0
-    },
-    {
-      "genre_id": 11,
-      "year_added": 2012,
-      "average_rating": 3.07,
-      "review_count": 30,
-      "yearly_average": 3.7113125739061883,
-      "gt_yearly_avg": 0
-    },
-    {
-      "genre_id": 11,
-      "year_added": 2013,
-      "average_rating": 3.83,
-      "review_count": 24,
-      "yearly_average": 3.7597625380671524,
-      "gt_yearly_avg": 1
-    },
-    {
-      "genre_id": 11,
-      "year_added": 2014,
-      "average_rating": 3.48,
-      "review_count": 25,
-      "yearly_average": 3.7820890054154312,
-      "gt_yearly_avg": 0
-    },
-    {
-      "genre_id": 11,
-      "year_added": 2015,
-      "average_rating": 3.18,
-      "review_count": 17,
-      "yearly_average": 3.788963347626538,
-      "gt_yearly_avg": 0
-    },
-    {
-      "genre_id": 11,
-      "year_added": 2016,
-      "average_rating": 3,
-      "review_count": 13,
-      "yearly_average": 3.7809905439937954,
-      "gt_yearly_avg": 0
-    },
-    {
-      "genre_id": 11,
-      "year_added": 2017,
-      "average_rating": 3,
-      "review_count": 11,
-      "yearly_average": 3.8230112629196324,
+      "yearly_average": 3.72,
       "gt_yearly_avg": 0
     }
   ],
@@ -696,107 +326,17 @@
       "title": "John Rain",
       "series_id": 157727,
       "primary_work_count": 9
-    },
-    {
-      "book_id": 7364352,
-      "book_title": "Hard Rain (John Rain, #2)",
-      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
-      "description": "John Rain (also Junichi Fujiwara) is a Japanese-American international assassin.",
-      "title": "John Rain",
-      "series_id": 157727,
-      "primary_work_count": 9
-    },
-    {
-      "book_id": 8612161,
-      "book_title": "Hard Rain (John Rain, #2)",
-      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
-      "description": "John Rain (also Junichi Fujiwara) is a Japanese-American international assassin.",
-      "title": "John Rain",
-      "series_id": 157727,
-      "primary_work_count": 9
-    },
-    {
-      "book_id": 9805498,
-      "book_title": "Alba nera su Tokyo (John Rain, #2)",
-      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
-      "description": "John Rain (also Junichi Fujiwara) is a Japanese-American international assassin.",
-      "title": "John Rain",
-      "series_id": 157727,
-      "primary_work_count": 9
-    },
-    {
-      "book_id": 10085823,
-      "book_title": "Hard Rain (John Rain, #2)",
-      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
-      "description": "John Rain (also Junichi Fujiwara) is a Japanese-American international assassin.",
-      "title": "John Rain",
-      "series_id": 157727,
-      "primary_work_count": 9
-    },
-    {
-      "book_id": 10479250,
-      "book_title": "O Quinto Mandamento",
-      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
-      "description": "John Rain (also Junichi Fujiwara) is a Japanese-American international assassin.",
-      "title": "John Rain",
-      "series_id": 157727,
-      "primary_work_count": 9
-    },
-    {
-      "book_id": 17381834,
-      "book_title": "Hard Rain",
-      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
-      "description": "John Rain (also Junichi Fujiwara) is a Japanese-American international assassin.",
-      "title": "John Rain",
-      "series_id": 157727,
-      "primary_work_count": 9
-    },
-    {
-      "book_id": 18568472,
-      "book_title": "A Lonely Resurrection",
-      "image_url": "https://images.gr-assets.com/books/1407773744m/18568472.jpg",
-      "description": "John Rain (also Junichi Fujiwara) is a Japanese-American international assassin.",
-      "title": "John Rain",
-      "series_id": 157727,
-      "primary_work_count": 9
-    },
-    {
-      "book_id": 23007510,
-      "book_title": "A Lonely Resurrection (John Rain #2)",
-      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
-      "description": "John Rain (also Junichi Fujiwara) is a Japanese-American international assassin.",
-      "title": "John Rain",
-      "series_id": 157727,
-      "primary_work_count": 9
-    },
-    {
-      "book_id": 25535477,
-      "book_title": "Живеещия в сенките",
-      "image_url": "https://images.gr-assets.com/books/1433521468m/25535477.jpg",
-      "description": "John Rain (also Junichi Fujiwara) is a Japanese-American international assassin.",
-      "title": "John Rain",
-      "series_id": 157727,
-      "primary_work_count": 9
-    },
-    {
-      "book_id": 32204358,
-      "book_title": "Hard Rain",
-      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
-      "description": "John Rain (also Junichi Fujiwara) is a Japanese-American international assassin.",
-      "title": "John Rain",
-      "series_id": 157727,
-      "primary_work_count": 9
     }
   ],
 
-  "book_info" : [{
+  "book_info" : {
       "author": "Henning Mankell",
-      "rols": null,
+      "role": null,
       "series_title": "Kurt Wallander"
-    }],
+  },
 
 
-  "book_info_2" : [
+  "book_genres" : [
     {
       "genre_name": "history"
     },
@@ -836,1522 +376,73 @@
     }
   ],
 
-  "author_ordered" : [
+  "authors_ordered" : [
     {
-      "name": "Bosevo Bosevo"
+      "author_id": 1077326,
+      "name": "J.K. Rowling",
+      "average_rating": 4.44,
+      "text_reviews_count": 448570,
+      "ratings_count": 18532721
     },
     {
-      "name": "Sharmistha Dash"
+      "author_id": 3389,
+      "name": "Stephen King",
+      "average_rating": 4.01,
+      "text_reviews_count": 367487,
+      "ratings_count": 10666719
     },
     {
-      "name": "David H. Goldberg"
+      "author_id": 941441,
+      "name": "Stephenie Meyer",
+      "average_rating": 3.64,
+      "text_reviews_count": 300041,
+      "ratings_count": 8965876
     },
     {
-      "name": "N. Petkov"
-    },
-    {
-      "name": "Lloyd A Fallers"
-    },
-    {
-      "name": "Hallam Hawksworth"
-    },
-    {
-      "name": "Graham Hawley"
-    },
-    {
-      "name": "M. Lynn Weiss"
-    },
-    {
-      "name": "Patricia Ohlenroth"
-    },
-    {
-      "name": "M. Konevich"
-    },
-    {
-      "name": "Jacques Espagnon"
-    },
-    {
-      "name": "Nadia Margolis"
-    },
-    {
-      "name": "Soheila Amirsoleimani"
-    },
-    {
-      "name": "Mary R. Dearing"
-    },
-    {
-      "name": "Merlene Hutto Byars"
-    },
-    {
-      "name": "Tom Halvorson"
-    },
-    {
-      "name": "T.E. McNeill"
-    },
-    {
-      "name": "khdmy kwlyy"
-    },
-    {
-      "name": "jm`bndy w chkydh mbHth knfrns bynlmll bHrn dr `lw"
-    },
-    {
-      "name": "T.T.N. Bucher"
-    },
-    {
-      "name": "Adolphe Erich Meyer"
-    },
-    {
-      "name": "Paul Ferdinand Willert"
-    },
-    {
-      "name": "Nathalie Mouries"
-    },
-    {
-      "name": "Wolfgang Neumann"
-    },
-    {
-      "name": "Pat Tung"
-    },
-    {
-      "name": "Ho Mian Lian"
-    },
-    {
-      "name": "LeGrand James Wilson"
-    },
-    {
-      "name": "Nicola S. Schutte"
-    },
-    {
-      "name": "Jetty Kahn"
-    },
-    {
-      "name": "Frank E. Redmond III"
-    },
-    {
-      "name": "Mary Gibbon"
-    },
-    {
-      "name": "Donald McKayle"
-    },
-    {
-      "name": "George P. Kahari"
-    },
-    {
-      "name": "Tom Winkworth"
-    },
-    {
-      "name": "Mujiburrahman"
-    },
-    {
-      "name": "Ahsan Kabir"
-    },
-    {
-      "name": "Lee G. Caldwell"
-    },
-    {
-      "name": "Carol Treadwell"
-    },
-    {
-      "name": "A. Ollongren"
-    },
-    {
-      "name": "Jean Rivero"
-    },
-    {
-      "name": "Daniel S. Traber"
-    },
-    {
-      "name": "Axel Clark"
-    },
-    {
-      "name": "Harry Borstein"
-    },
-    {
-      "name": "Dan D. Gapen"
-    },
-    {
-      "name": "Robert H. Sorensen"
-    },
-    {
-      "name": "Jayant Patel"
-    },
-    {
-      "name": "Greg Votolato"
-    },
-    {
-      "name": "Gina Block"
-    },
-    {
-      "name": "Hellmut Lorenz"
-    },
-    {
-      "name": "Samsuridjal Djauzi"
-    },
-    {
-      "name": "Alvin Easter"
-    },
-    {
-      "name": "Annette Meikle"
-    },
-    {
-      "name": "Gert Schubring"
-    },
-    {
-      "name": "Pierre-Yves Petillon"
-    },
-    {
-      "name": "Norbert Ropers"
-    },
-    {
-      "name": "Bronwen Jones"
-    },
-    {
-      "name": "Peggy Napear"
-    },
-    {
-      "name": "Sara Guyer"
-    },
-    {
-      "name": "A. Brian Scott"
-    },
-    {
-      "name": "Carrie Hauman"
-    },
-    {
-      "name": "Ibu Jetra Ningrat Sipahutar"
-    },
-    {
-      "name": "Judith E. Sulik"
-    },
-    {
-      "name": "Maria Buckley"
-    },
-    {
-      "name": "J.N. Catanach"
-    },
-    {
-      "name": "Roger Levac"
-    },
-    {
-      "name": "Rush N. Limburgher"
-    },
-    {
-      "name": "William Grierson"
-    },
-    {
-      "name": "Kenneth Steuer"
-    },
-    {
-      "name": "Arthur C. McWatt"
-    },
-    {
-      "name": "Marguerite A. Jones"
-    },
-    {
-      "name": "Rick Keeling"
-    },
-    {
-      "name": "James Grahame"
-    },
-    {
-      "name": "Anthony William Boehm"
-    },
-    {
-      "name": "Paul Joseph Draus"
-    },
-    {
-      "name": "Loretta Scott"
-    },
-    {
-      "name": "William E. Slesnick"
-    },
-    {
-      "name": "Dirk Baker"
-    },
-    {
-      "name": "Jerry Melisaratos"
-    },
-    {
-      "name": "Owe Kennerberg"
-    },
-    {
-      "name": "Donald H. Van Ess"
-    },
-    {
-      "name": "Sudhir Amembal"
-    },
-    {
-      "name": "Rene Menil"
-    },
-    {
-      "name": "Madeline Henrey"
-    },
-    {
-      "name": "STANLEY W. BOWLER"
-    },
-    {
-      "name": "Angela K. Durden"
-    },
-    {
-      "name": "Sharon Lynne Garvin"
-    },
-    {
-      "name": "Candace Lewis"
-    },
-    {
-      "name": "G. D. Campbell"
-    },
-    {
-      "name": "Lee Freese"
-    },
-    {
-      "name": "Heidi Spiegel"
-    },
-    {
-      "name": "Sylvia Ziskind"
-    },
-    {
-      "name": "Marcia Leveson"
-    },
-    {
-      "name": "John R. Neal"
-    },
-    {
-      "name": "Toru Miura"
-    },
-    {
-      "name": "Graham Ogilvy"
-    },
-    {
-      "name": "Herbert Freeden"
-    },
-    {
-      "name": "Elizabeth Benns"
-    },
-    {
-      "name": "Cherie A. Clodfelter"
-    },
-    {
-      "name": "Leonard Getz"
-    },
-    {
-      "name": "Sharo Macdonald"
-    },
-    {
-      "name": "Rifka Friedman"
-    },
-    {
-      "name": "Gerardo Cunico"
-    },
-    {
-      "name": "Denis Trom"
-    },
-    {
-      "name": "Graham Dodgshun"
-    },
-    {
-      "name": "Elisa Calabrese"
-    },
-    {
-      "name": "Owen Ken Earl"
-    },
-    {
-      "name": "K. Nagamine"
-    },
-    {
-      "name": "Ferruccio Lombardi"
-    },
-    {
-      "name": "Tony Amca"
-    },
-    {
-      "name": "hshm yzd pnh"
-    },
-    {
-      "name": "N. Herald Review"
-    },
-    {
-      "name": "Joe Gonzalez"
-    },
-    {
-      "name": "Ahmet Tacemen"
-    },
-    {
-      "name": "Eliades Acosta-matos"
-    },
-    {
-      "name": "David M. Yates"
-    },
-    {
-      "name": "Paul Balta (comp.)"
-    },
-    {
-      "name": "Bluetilful Blue"
-    },
-    {
-      "name": "Peter Mnich"
-    },
-    {
-      "name": "MERTA ADA"
-    },
-    {
-      "name": "Gary L. Bowen"
-    },
-    {
-      "name": "Maynard Shelly"
-    },
-    {
-      "name": "Spike Hampson"
-    },
-    {
-      "name": "Will Ansel"
-    },
-    {
-      "name": "Kevin Pilot"
-    },
-    {
-      "name": "Lynn A. Curtis"
-    },
-    {
-      "name": "Erika Erdmann"
-    },
-    {
-      "name": "Paul Van Brunt Jones"
-    },
-    {
-      "name": "Franz Wasner"
-    },
-    {
-      "name": "Mary Morse"
-    },
-    {
-      "name": "Thomas I. McKnew Jr."
-    },
-    {
-      "name": "Susan C. Hunnicut"
-    },
-    {
-      "name": "H. Edward Roberts"
-    },
-    {
-      "name": "Pier Giorgio Pacifica"
-    },
-    {
-      "name": "Philip Kelley"
-    },
-    {
-      "name": "Fetjaine"
-    },
-    {
-      "name": "Patrick J.T. Curran"
-    },
-    {
-      "name": "Jaki Brien"
-    },
-    {
-      "name": "Wes Parker"
-    },
-    {
-      "name": "Catherine, Eva Schandl"
-    },
-    {
-      "name": "Ellen C. Leichtman"
-    },
-    {
-      "name": "`bd lrHmn `T llh lmHmdy"
-    },
-    {
-      "name": "William A. O'Connor"
-    },
-    {
-      "name": "Frank M. Munson"
-    },
-    {
-      "name": "Trish Kerns"
-    },
-    {
-      "name": "Jim Hawes"
-    },
-    {
-      "name": "Stuart Shapiro"
-    },
-    {
-      "name": "Denise V. Murphy"
-    },
-    {
-      "name": "Dale Vinyard"
-    },
-    {
-      "name": "Gloria Videla de Rivero"
-    },
-    {
-      "name": "Antonella Pastorelli"
-    },
-    {
-      "name": "David C. Hodge"
-    },
-    {
-      "name": "Charles W. Thompson"
-    },
-    {
-      "name": "Anatoly N. Dremin"
-    },
-    {
-      "name": "Justin Chafe"
-    },
-    {
-      "name": "Jianren Wu"
-    },
-    {
-      "name": "Edwin Mickleburgh"
-    },
-    {
-      "name": "Marlin Ellis"
-    },
-    {
-      "name": "Silvia Finder Gam"
-    },
-    {
-      "name": "Jurg P. Seiler"
-    },
-    {
-      "name": "John B. Jovich"
-    },
-    {
-      "name": "Lance A. Liotta"
-    },
-    {
-      "name": "Hilario Casado Alonso"
-    },
-    {
-      "name": "J. D. Byars"
-    },
-    {
-      "name": "Paul J Hill"
-    },
-    {
-      "name": "Peter K. Ayers"
-    },
-    {
-      "name": "Christopher Plamondon"
-    },
-    {
-      "name": "J. Jose Alviar"
-    },
-    {
-      "name": "Wilson G. Bailey"
-    },
-    {
-      "name": "Kurt Fiedler"
-    },
-    {
-      "name": "Patricia Caplan"
-    },
-    {
-      "name": "Carl Yoder Connor"
-    },
-    {
-      "name": "Felice Orsini"
-    },
-    {
-      "name": "Caroline Barr"
-    },
-    {
-      "name": "Eugene W. Jackson"
-    },
-    {
-      "name": "Eric M. Mackey"
-    },
-    {
-      "name": "A. Rogers"
-    },
-    {
-      "name": "Samsuridjal Djazi"
-    },
-    {
-      "name": "Beth Tolman"
-    },
-    {
-      "name": "Geraldine J. Steensma"
-    },
-    {
-      "name": "Roger Bernard"
-    },
-    {
-      "name": "M. H. Segal"
-    },
-    {
-      "name": "Delia"
-    },
-    {
-      "name": "Richard C. Murphy"
-    },
-    {
-      "name": "Helen W. Drutt English"
-    },
-    {
-      "name": "Shirley M. Eoff"
-    },
-    {
-      "name": "Enrique Parada"
-    },
-    {
-      "name": "Ann Simmons"
-    },
-    {
-      "name": "Richard H. Hoffmann"
-    },
-    {
-      "name": "Jean E. Rubin"
-    },
-    {
-      "name": "Doeke Eisma"
-    },
-    {
-      "name": "Honore Sharrer"
-    },
-    {
-      "name": "William Alba"
-    },
-    {
-      "name": "Agathe Trapp"
-    },
-    {
-      "name": "Alfred Winslow Jones"
-    },
-    {
-      "name": "Frantz Andre Burguet"
-    },
-    {
-      "name": "Blakiston"
-    },
-    {
-      "name": "Mahendra Solanki"
-    },
-    {
-      "name": "Stewart Marshall Gulley"
-    },
-    {
-      "name": "J.W. Hackett"
-    },
-    {
-      "name": "Emilio Sanchez-Ortiz"
-    },
-    {
-      "name": "A.B. Christie"
-    },
-    {
-      "name": "Alexandra Arcouette"
-    },
-    {
-      "name": "Adolfo Cacheiro"
-    },
-    {
-      "name": "CITY|SPACE"
-    },
-    {
-      "name": "Charles B. Anderson"
-    },
-    {
-      "name": "Kelly Hammett"
-    },
-    {
-      "name": "megu kiyabotsuto"
-    },
-    {
-      "name": "Danielle Rosenblatt"
-    },
-    {
-      "name": "Sybyl Smith"
-    },
-    {
-      "name": "Don Peek"
-    },
-    {
-      "name": "Marisa Venturini Zilli"
-    },
-    {
-      "name": "Markus Hecht"
-    },
-    {
-      "name": "Domer L Howard"
-    },
-    {
-      "name": "Dennis Bailey"
-    },
-    {
-      "name": "Allan Stitt"
-    },
-    {
-      "name": "Gale Archival Editions"
-    },
-    {
-      "name": "Betty J. R. Chavez"
-    },
-    {
-      "name": "W. William Hodes"
-    },
-    {
-      "name": "Ebenezer Fletcher"
-    },
-    {
-      "name": "Gretchen F. Murphy"
-    },
-    {
-      "name": "Sarah F. Wood"
-    },
-    {
-      "name": "Joseph P. O'Grady"
-    },
-    {
-      "name": "Joan Ainaud De Lasarte"
-    },
-    {
-      "name": "Josep Diaz"
-    },
-    {
-      "name": "Claude Maignien"
-    },
-    {
-      "name": "Simon Levene"
-    },
-    {
-      "name": "Charles Gilbert Weston"
-    },
-    {
-      "name": "Erich E.H. Loewy"
-    },
-    {
-      "name": "Stephen F. Austin"
-    },
-    {
-      "name": "K. Kavanagh"
-    },
-    {
-      "name": "J. Max Bond"
-    },
-    {
-      "name": "Kiane Simeon"
-    },
-    {
-      "name": "dktr ftkhr zdh"
-    },
-    {
-      "name": "albrtw mwrwy"
-    },
-    {
-      "name": "Maria Cristina Pons"
-    },
-    {
-      "name": "M. Fido"
-    },
-    {
-      "name": "Les Harrison"
-    },
-    {
-      "name": "Louise Andrasevic"
-    },
-    {
-      "name": "Vincenzo Gioberti"
-    },
-    {
-      "name": "Daniel E. Ritchie"
-    },
-    {
-      "name": "William M. Yen"
-    },
-    {
-      "name": "Michael Lindberg"
-    },
-    {
-      "name": "Louis Lowy"
-    },
-    {
-      "name": "Neal Portnoy"
-    },
-    {
-      "name": "Richard Holst"
-    },
-    {
-      "name": "Brygida Rudzka"
-    },
-    {
-      "name": "Johanna Pomeroy-Crockett"
-    },
-    {
-      "name": "Hugh Hayes"
-    },
-    {
-      "name": "Hera Peka"
-    },
-    {
-      "name": "Pier Paolo Ottonello"
-    },
-    {
-      "name": "Robert Ritter"
-    },
-    {
-      "name": "Chiaramonte Larry"
-    },
-    {
-      "name": "Herbert H. Reynolds"
-    },
-    {
-      "name": "Madeleine Pelletier"
-    },
-    {
-      "name": "Barb Gonzalez"
-    },
-    {
-      "name": "Michele Menard"
-    },
-    {
-      "name": "Wendy Kikugawa"
-    },
-    {
-      "name": "Jean-Jacques Sirkis"
-    },
-    {
-      "name": "Marvin J. Heller"
-    },
-    {
-      "name": "Federico Bernal"
-    },
-    {
-      "name": "Charles Hamilton Teeling"
-    },
-    {
-      "name": "Kate Nonesuch"
-    },
-    {
-      "name": "L.Robert Stevens"
-    },
-    {
-      "name": "Gabriella Gutierrez"
-    },
-    {
-      "name": "Lynn Eggleston"
-    },
-    {
-      "name": "David Houk"
-    },
-    {
-      "name": "Amy Bailey"
-    },
-    {
-      "name": "Rochelle Simeon"
-    },
-    {
-      "name": "Anna Redlich"
-    },
-    {
-      "name": "Mark B. Yarnell"
-    },
-    {
-      "name": "Cynthia Hurst"
-    },
-    {
-      "name": "Pierre Louis Moreau de Maupertuis"
-    },
-    {
-      "name": "Petronella Vaarzon-Morel"
-    },
-    {
-      "name": "Ji Ben  Shen Si (Yuan Zuo )"
-    },
-    {
-      "name": "Cameron R. Lorenc"
-    },
-    {
-      "name": "Abraham I. Friedman"
-    },
-    {
-      "name": "Steve Konicki"
-    },
-    {
-      "name": "Hans Radder"
-    },
-    {
-      "name": "Sherri Quinones"
-    },
-    {
-      "name": "Nadejda Marques"
-    },
-    {
-      "name": "J.M Winchester"
-    },
-    {
-      "name": "Willis Peterson"
-    },
-    {
-      "name": "Alexis Pajak"
-    },
-    {
-      "name": "Maire Cross"
-    },
-    {
-      "name": "Paul Robert Mullen"
-    },
-    {
-      "name": "David N. Farnsworth"
-    },
-    {
-      "name": "Gary Schulte"
-    },
-    {
-      "name": "Steven Kelley"
-    },
-    {
-      "name": "Mary Kearney"
-    },
-    {
-      "name": "Ellyn Gamberg"
-    },
-    {
-      "name": "Patty Long"
-    },
-    {
-      "name": "John Wren-Lewis"
-    },
-    {
-      "name": "Marthe Fonteneau"
-    },
-    {
-      "name": "Anne Nagro"
-    },
-    {
-      "name": "Janet Matarasso"
-    },
-    {
-      "name": "Freema Gottlieb"
-    },
-    {
-      "name": "Georges Tugene"
-    },
-    {
-      "name": "Roberta Springer Loewy"
-    },
-    {
-      "name": "Victor J. Ross"
-    },
-    {
-      "name": "Jose Szapocznik"
-    },
-    {
-      "name": "Jack Hayforad"
-    },
-    {
-      "name": "Yang Hee Lee"
-    },
-    {
-      "name": "Pat Falk"
-    },
-    {
-      "name": "Leonard David Goodisman"
-    },
-    {
-      "name": "Dana Ferguson"
-    },
-    {
-      "name": "Virginia Parkinson"
-    },
-    {
-      "name": "Joseph M. Cuoq"
-    },
-    {
-      "name": "Joseph F. Rutherford"
-    },
-    {
-      "name": "Jane Parish Yang"
-    },
-    {
-      "name": "Patrick Riordan"
-    },
-    {
-      "name": "Bernice B. Green"
-    },
-    {
-      "name": "Stephen J. Cutler"
-    },
-    {
-      "name": "Preston MacAdam"
-    },
-    {
-      "name": "Sabreen, Wolf"
-    },
-    {
-      "name": "Rex Meyer Peter Stanbury"
-    },
-    {
-      "name": "Ardian Syam"
-    },
-    {
-      "name": "Carla Doni"
-    },
-    {
-      "name": "Younes Parsa Benab"
-    },
-    {
-      "name": "Djamal Marsudi"
-    },
-    {
-      "name": "Suzanne Hunter Brown"
-    },
-    {
-      "name": "Willie J. Ford"
-    },
-    {
-      "name": "Phichet Wathanavesakorn"
-    },
-    {
-      "name": "Elsie Benjamin"
-    },
-    {
-      "name": "Curtis L. Janssen"
-    },
-    {
-      "name": "Tim Potier"
-    },
-    {
-      "name": "Elizabeth B. Payne"
-    },
-    {
-      "name": "Bernadette Pard"
-    },
-    {
-      "name": "John Handfield"
-    },
-    {
-      "name": "Emil M. Buhrer"
-    },
-    {
-      "name": "Lee Leonard"
-    },
-    {
-      "name": "Bolette Bonfils"
-    },
-    {
-      "name": "William A. Gardner"
-    },
-    {
-      "name": "Debra Woodard"
-    },
-    {
-      "name": "Tina Stolberg"
-    },
-    {
-      "name": "Office International des Epizooties"
-    },
-    {
-      "name": "Matilda Gabrielpillai"
-    },
-    {
-      "name": "Sarah Smith Jones"
-    },
-    {
-      "name": "Jean-Marc Vittori"
-    },
-    {
-      "name": "September Radecki"
-    },
-    {
-      "name": "Pierre Colle"
-    },
-    {
-      "name": "A. Walsh"
-    },
-    {
-      "name": "E.V. Noechel"
-    },
-    {
-      "name": "Vincent Davis"
-    },
-    {
-      "name": "frhd fyrwzbkhsh"
-    },
-    {
-      "name": "Veta Griggs"
-    },
-    {
-      "name": "Gioachino Greco"
-    },
-    {
-      "name": "Barnes and Noble Art Series"
-    },
-    {
-      "name": "Susana Lage"
-    },
-    {
-      "name": "Ilmari Soisalon-Soininen"
-    },
-    {
-      "name": "John M. Knapp"
-    },
-    {
-      "name": "Juan Antonio Tribulo"
-    },
-    {
-      "name": "Sladja Blazan"
-    },
-    {
-      "name": "Antonio Ereditato"
-    },
-    {
-      "name": "Robert Willan"
-    },
-    {
-      "name": "Di Vito, Robert A."
-    },
-    {
-      "name": "Gene R. Hawes"
-    },
-    {
-      "name": "Shann Carr"
-    },
-    {
-      "name": "Joseph E. Schwartzberg"
-    },
-    {
-      "name": "M Elitzur"
-    },
-    {
-      "name": "Islamic Revolutionary Prosecutor, Tehran, Public Relations Department"
-    },
-    {
-      "name": "Katherine O'Shea"
-    },
-    {
-      "name": "Joelle Busuttil"
-    },
-    {
-      "name": "Roger E. Harrington"
-    },
-    {
-      "name": "John H. Holm"
-    },
-    {
-      "name": "Gerhard Sedding"
-    },
-    {
-      "name": "Michiyo Morioka"
-    },
-    {
-      "name": "Museum of the Macedonian Struggle Foundation"
-    },
-    {
-      "name": "S. R. Parchment"
-    },
-    {
-      "name": "SB. Wahyudi"
-    },
-    {
-      "name": "K. Skinner"
-    },
-    {
-      "name": "Joyce A. Braga"
-    },
-    {
-      "name": "Sarah Tiffin"
-    },
-    {
-      "name": "John Charles Bucknill"
-    },
-    {
-      "name": "Diane Jurkowski"
-    },
-    {
-      "name": "Chiara Montini"
-    },
-    {
-      "name": "Karen J. Meech"
-    },
-    {
-      "name": "Rowland George Allanson-Winn Headley"
-    },
-    {
-      "name": "Eliyahu Shulman"
-    },
-    {
-      "name": "Katherine Sorley Walker"
-    },
-    {
-      "name": "Ly-Miles"
-    },
-    {
-      "name": "Judy Cuppaidge"
-    },
-    {
-      "name": "Mayor TNI (Purn) J.S. Matulesy"
-    },
-    {
-      "name": "Shepard D. Gellert"
-    },
-    {
-      "name": "Ralph Baldwin"
-    },
-    {
-      "name": "Susan Hochstetler"
-    },
-    {
-      "name": "J.N.  Johnson"
-    },
-    {
-      "name": "Paulus Ebner"
-    },
-    {
-      "name": "Jong-Il You"
-    },
-    {
-      "name": "Carol Grove"
-    },
-    {
-      "name": "Hermann Grassmann"
-    },
-    {
-      "name": "Lynnette Schuepbach"
-    },
-    {
-      "name": "Walt Babson"
-    },
-    {
-      "name": "Warren A. Reeder"
-    },
-    {
-      "name": "W.C. Stuart"
-    },
-    {
-      "name": "Sneezana Stanimirovic"
-    },
-    {
-      "name": "Sophia Rouge"
-    },
-    {
-      "name": "Ronald K. Noble"
-    },
-    {
-      "name": "John Talbot Platt"
-    },
-    {
-      "name": "Steven A. Rosell"
-    },
-    {
-      "name": "Frederick Erastus Pierce"
-    },
-    {
-      "name": "Alicia Felberbaum"
-    },
-    {
-      "name": "S.C. Schmidt"
-    },
-    {
-      "name": "Yosaburo Takekoshi"
-    },
-    {
-      "name": "wHyd pkh Tynt"
-    },
-    {
-      "name": "Great Atlantic and Pacific School Conspiracy (Group)"
-    },
-    {
-      "name": "B.A. Abednego"
-    },
-    {
-      "name": "Pauline I. Jacobson"
-    },
-    {
-      "name": "L. Lynn Hogue"
-    },
-    {
-      "name": "Gregory Gutin"
-    },
-    {
-      "name": "Joaquim Gabarro"
-    },
-    {
-      "name": "Thea Foltz"
-    },
-    {
-      "name": "Choon-Leon Seow"
-    },
-    {
-      "name": "Jacques Tits"
-    },
-    {
-      "name": "Cesar Augusto Melero"
-    },
-    {
-      "name": "Molli Oliver Mertel"
-    },
-    {
-      "name": "Alaistair Matheson"
-    },
-    {
-      "name": "William T. Davis"
-    },
-    {
-      "name": "Helen Whitty"
-    },
-    {
-      "name": "Christian Schmitt"
-    },
-    {
-      "name": "Dieter Rollfinke"
-    },
-    {
-      "name": "Agnes Adachi"
-    },
-    {
-      "name": "J. Kim Munholland"
-    },
-    {
-      "name": "Chrysa Damianaki"
-    },
-    {
-      "name": "Samatha Gross"
-    },
-    {
-      "name": "Manon Eames"
-    },
-    {
-      "name": "Richard C. Barnett"
-    },
-    {
-      "name": "Donna J. Fox"
-    },
-    {
-      "name": "Peter Aldin"
-    },
-    {
-      "name": "Hda Inc."
-    },
-    {
-      "name": "Jean Luc Caradeau"
-    },
-    {
-      "name": "Mattias Martinson"
-    },
-    {
-      "name": "Susanne Starck"
-    },
-    {
-      "name": "Ferruccio Civra"
-    },
-    {
-      "name": "Ernie Barta"
-    },
-    {
-      "name": "Paola Ravaglia"
-    },
-    {
-      "name": "Donald Shaskan"
-    },
-    {
-      "name": "Haris Ichwan"
-    },
-    {
-      "name": "Marybelle S Bigelow"
-    },
-    {
-      "name": "Herve P Zwirn"
-    },
-    {
-      "name": "Gertrude Williams"
-    },
-    {
-      "name": "Brad Shimmin"
-    },
-    {
-      "name": "Aldo Vianello"
-    },
-    {
-      "name": "Florence T. Polatnick"
-    },
-    {
-      "name": "Smymy rdstny , mhdy"
-    },
-    {
-      "name": "Michael S. Quinton"
-    },
-    {
-      "name": "Isabelle Dinter"
-    },
-    {
-      "name": "Barbara Hancock Cole"
-    },
-    {
-      "name": "Harro W. VanBrummelen"
-    },
-    {
-      "name": "Richard C. Wilkins"
-    },
-    {
-      "name": "Frances Mason"
-    },
-    {
-      "name": "Mary Tibbals Ventre"
-    },
-    {
-      "name": "Harvey F. Mace"
-    },
-    {
-      "name": "Anjum Siddiqui"
-    },
-    {
-      "name": "Jean Candlish Kelchner"
-    },
-    {
-      "name": "Nathaniel Bacon"
-    },
-    {
-      "name": "Morris Milgram"
-    },
-    {
-      "name": "Regina A. Bradford Tardy"
-    },
-    {
-      "name": "V. Jordan Dunican"
-    },
-    {
-      "name": "Sean Cannon"
-    },
-    {
-      "name": "Felice Rappazzo"
-    },
-    {
-      "name": "Andrea Herman"
-    },
-    {
-      "name": "Sontoku Ninomiya"
-    },
-    {
-      "name": "M. Regan"
-    },
-    {
-      "name": "Carol Zemel"
-    },
-    {
-      "name": "Amleto Spicciani"
-    },
-    {
-      "name": "J. Bertolet"
-    },
-    {
-      "name": "Steven H. Farber"
-    },
-    {
-      "name": "Mark U. Sturges"
-    },
-    {
-      "name": "Ron Lister"
-    },
-    {
-      "name": "Aleks Garo Pamir"
-    },
-    {
-      "name": "Pilpay"
-    },
-    {
-      "name": "Beatson Wallace"
-    },
-    {
-      "name": "Cas De Villiers"
-    },
-    {
-      "name": "Eric D. Olmanson"
-    },
-    {
-      "name": "Keith S. Krause"
-    },
-    {
-      "name": "Anne  Brooke"
-    },
-    {
-      "name": "Paul T. Sharpe"
-    },
-    {
-      "name": "Hans L. Eicholz"
-    },
-    {
-      "name": "Abraham Kuenen"
-    },
-    {
-      "name": "Austin Rosser"
-    },
-    {
-      "name": "Neal R. Voron"
-    },
-    {
-      "name": "John Pagano"
-    },
-    {
-      "name": "American College"
-    },
-    {
-      "name": "Linda D Wattley"
-    },
-    {
-      "name": "Jo A. Tanner"
-    },
-    {
-      "name": "George Albert Coe"
-    },
-    {
-      "name": "`mr smy shwly"
-    },
-    {
-      "name": "Paul, M. Donovan Jr."
-    },
-    {
-      "name": "Robert G. Mitchell"
-    },
-    {
-      "name": "Therese Kenyon"
-    },
-    {
-      "name": "Jacqueline M. Jones"
-    },
-    {
-      "name": "Alice Dale Hardy"
-    },
-    {
-      "name": "Tully Stroud"
-    },
-    {
-      "name": "John Lofton"
-    },
-    {
-      "name": "Robyn Earl-Peacock"
-    },
-    {
-      "name": "Paul J. Foley"
-    },
-    {
-      "name": "Martin I. Wayne"
-    },
-    {
-      "name": "May Lamberton Becker, transl."
-    },
-    {
-      "name": "W. Rodger Elliot"
-    },
-    {
-      "name": "Mary F Rogers"
+      "author_id": 15872,
+      "name": "Rick Riordan",
+      "average_rating": 4.32,
+      "text_reviews_count": 251601,
+      "ratings_count": 6191552
     }
   ],
 
-  "user_liked" : [
-    {
-      "title": "The Untouchables"
-    }
-  ],
+  "author_details" : {
+      "author_id": 1077326,
+      "name": "J.K. Rowling",
+      "average_rating": 4.44,
+      "text_reviews_count": 448570,
+      "ratings_count": 18532721,
+      "num_books": 57
+  },
 
-  "author_details" : [
+  "books_by_author" : [
     {
-      "author_id": 192,
-      "name": "Debbie Raleigh",
-      "average_rating": 3.56,
-      "text_reviews_count": 302,
-      "ratings_count": 2743
+      "book_id": 16160797,
+      "title": "The Cuckoo's Calling (Cormoran Strike, #1)",
+      "image_url": "https://images.gr-assets.com/books/1358716559m/16160797.jpg",
+      "average_rating": 3.84,
+      "num_pages": 455,
+      "ratings_count": 308551,
+      "publication_year": 2013
+    },
+    {
+      "book_id": 18214414,
+      "title": "The Silkworm (Cormoran Strike, #2)",
+      "image_url": "https://images.gr-assets.com/books/1392577290m/18214414.jpg",
+      "average_rating": 4.04,
+      "num_pages": 455,
+      "ratings_count": 124817,
+      "publication_year": 2014
+    },
+    {
+      "book_id": 25735012,
+      "title": "Career of Evil (Cormoran Strike, #3)",
+      "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+      "average_rating": 4.21,
+      "num_pages": 492,
+      "ratings_count": 71098,
+      "publication_year": 2015
     }
   ],
 
@@ -2376,90 +467,6 @@
       "title": "David Parker Ray - Serial Killers Unauthorized & Uncensored",
       "image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png"
     }
-  ],
+  ]
 
-  "top_ten_books_month" : [
-      {
-        "book_id": 22557272,
-        "title": "The Girl on the Train",
-        "image_url": "https://images.gr-assets.com/books/1490903702m/22557272.jpg",
-        "wt_avg": 3986,
-        "authors": "Paula Hawkins"
-      },
-      {
-        "book_id": 968,
-        "title": "The Da Vinci Code (Robert Langdon, #2)",
-        "image_url": "https://images.gr-assets.com/books/1303252999m/968.jpg",
-        "wt_avg": 1137,
-        "authors": "Dan Brown"
-      },
-      {
-        "book_id": 11367726,
-        "title": "Defending Jacob",
-        "image_url": "https://images.gr-assets.com/books/1329612158m/11367726.jpg",
-        "wt_avg": 705,
-        "authors": "William Landay"
-      },
-      {
-        "book_id": 26236956,
-        "title": "The Obsession",
-        "image_url": "https://images.gr-assets.com/books/1444838367m/26236956.jpg",
-        "wt_avg": 521,
-        "authors": "Nora Roberts"
-      },
-      {
-        "book_id": 18214414,
-        "title": "The Silkworm (Cormoran Strike, #2)",
-        "image_url": "https://images.gr-assets.com/books/1392577290m/18214414.jpg",
-        "wt_avg": 518,
-        "authors": "Robert Galbraith, J.K. Rowling"
-      },
-      {
-        "book_id": 15729539,
-        "title": "NOS4A2",
-        "image_url": "https://images.gr-assets.com/books/1369591617m/15729539.jpg",
-        "wt_avg": 506,
-        "authors": "Joe Hill"
-      },
-      {
-        "book_id": 6853,
-        "title": "One for the Money (Stephanie Plum, #1)",
-        "image_url": "https://images.gr-assets.com/books/1316730230m/6853.jpg",
-        "wt_avg": 503,
-        "authors": "Janet Evanovich"
-      },
-      {
-        "book_id": 7061,
-        "title": "The No. 1 Ladies' Detective Agency  (No. 1 Ladies' Detective Agency, #1)",
-        "image_url": "https://images.gr-assets.com/books/1459953654m/7061.jpg",
-        "wt_avg": 427,
-        "authors": "Alexander McCall Smith"
-      },
-      {
-        "book_id": 12873,
-        "title": "Rebecca",
-        "image_url": "https://images.gr-assets.com/books/1327871977m/12873.jpg",
-        "wt_avg": 356,
-        "authors": "Sally Beauman, Daphne du Maurier"
-      },
-      {
-        "book_id": 6574102,
-        "title": "Heist Society (Heist Society, #1)",
-        "image_url": "https://images.gr-assets.com/books/1359254479m/6574102.jpg",
-        "wt_avg": 336,
-        "authors": "Ally Carter"
-      }
-    ],
-
-    "surprise_me" : [
-      {
-        "book_id": 968,
-        "title": "The Da Vinci Code (Robert Langdon, #2)",
-        "description": "A fascinating and absorbing thriller -- perfect for history buffs, conspiracy nuts, puzzle lovers or anyone who appreciates a great, riveting story.\nWhile in Paris on business, Harvard symbologist Robert Langdon receives an urgent late-night phone call: the elderly curator of the Louvre has been murdered inside the museum. Near the body, police have found a baffling cipher. While working to solve the enigmatic riddle, Langdon is stunned to discover it leads to a trail of clues hidden in the works of Da Vinci -- clues visible for all to see -- yet ingeniously disguised by the painter.\nLangdon joins forces with a gifted French cryptologist, Sophie Neveu, and learns the late curator was involved in the Priory of Sion -- an actual secret society whose members included Sir Isaac Newton, Botticelli, Victor Hugo, and Da Vinci, among others.\nIn a breathless race through Paris, London, and beyond, Langdon and Neveu match wits with a faceless powerbroker who seems to anticipate their every move. Unless Langdon and Neveu can decipher the labyrinthine puzzle in time, the Priory's ancient secret -- and an explosive historical truth -- will be lost forever.\nThe Da Vinci Code heralds the arrival of a new breed of lightning-paced, intelligent thriller utterly unpredictable right up to its stunning conclusion.",
-        "average_rating": 3.79,
-        "publisher": "Anchor",
-        "image_url": "https://images.gr-assets.com/books/1303252999m/968.jpg",
-        "num_pages": 481
-      }
-    ]
 }

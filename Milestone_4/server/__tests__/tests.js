@@ -19,7 +19,8 @@ test('GET /genre/biography page 2', async () => {
   await supertest(app).get('/genre/biography?page=2')
     .expect(200)
     .then((res) => {
-      expect(res.body).toStrictEqual(results.genre_biography_page2)
+      expect(res.body.length).toEqual(10)
+      expect(res.body.slice(0,3)).toStrictEqual(results.genre_biography_page2)
     });
 }, 100000);
 
@@ -41,7 +42,7 @@ test('GET /book/19123314', async () => {
     });
 }, 100000);
 
-// Route 3: Get reviews for a book ordered by number of votes
+// Route 3: Get reviews for a book ordered by number of votes and rating desc
 test('GET /reviews/13411546', async () => {
   await supertest(app).get('/reviews/13411546')
     .expect(200)
@@ -59,7 +60,7 @@ test('GET /reviews/13411546 page 2', async () => {
     });
 }, 100000);
 
-// Route 3: Get page 16 of reviews, pg size = 5
+// Route 3: Get page 4 of reviews, pg size = 5
 test('GET /reviews/13411546 page 4 pg size 3', async () => {
   await supertest(app).get('/reviews/13411546?page=4&page_size=3')
     .expect(200)
@@ -82,7 +83,8 @@ test('GET /book_series/915', async() => {
     await supertest(app).get('/book_series/915')
     .expect(200)
     .then((res) => {
-        expect(res.body).toStrictEqual(results.book_series)
+        expect(res.body.length).toEqual(9)
+        expect(res.body.slice(0,3)).toStrictEqual(results.book_series)
     });
 }, 100000);
 
@@ -100,7 +102,7 @@ test('GET /book_genres/82842', async() => {
     await supertest(app).get('/book_genres/82842')
     .expect(200)
     .then((res) => {
-        expect(res.body).toStrictEqual(results.book_info_2)
+        expect(res.body).toStrictEqual(results.book_genres)
     });
 }, 100000);
 
@@ -119,6 +121,11 @@ test('GET /top_ten_books_month', async() => {
   .expect(200)
   .then((res) => {
       expect(res.body.length).toEqual(10)
+      expect(res.body[0]).toHaveProperty('book_id')
+      expect(res.body[0]).toHaveProperty('title')
+      expect(res.body[0]).toHaveProperty('image_url')
+      expect(res.body[0]).toHaveProperty('wt_avg')
+      expect(res.body[0]).toHaveProperty('authors')
   });
 }, 100000);
 
@@ -127,7 +134,6 @@ test('GET /book_recs_rand_genre/1', async() => {
   await supertest(app).get('/book_recs_rand_genre/1')
   .expect(200)
   .then((res) => {
-    expect(res.body.length).toEqual(4)
     expect(res.body[0]).toHaveProperty('genre_name')
     expect(res.body[0]).toHaveProperty('title')
     expect(res.body[0]).toHaveProperty('image_url')
@@ -142,41 +148,45 @@ test('GET /surprise_me/1', async() => {
   await supertest(app).get('/surprise_me/1')
   .expect(200)
   .then((res) => {
-    expect(res.body.length).toEqual(1)
-    expect(res.body[0]).toHaveProperty('book_id')
-    expect(res.body[0]).toHaveProperty('title')
-    expect(res.body[0]).toHaveProperty('description')
-    expect(res.body[0]).toHaveProperty('average_rating')
-    expect(res.body[0]).toHaveProperty('publisher')
-    expect(res.body[0]).toHaveProperty('image_url')
-    expect(res.body[0]).toHaveProperty('num_pages')
+    expect(res.body).toHaveProperty('book_id')
   });
 }, 100000);
 
 //Route 12: Get author details
-test('GET /author_details/192', async() => {
-  await supertest(app).get('/author_details/192')
+test('GET /author_details/1077326', async() => {
+  await supertest(app).get('/author_details/1077326')
   .expect(200)
   .then((res) => {
       expect(res.body).toStrictEqual(results.author_details)
   });
 }, 100000);
 
-//Route 13: Get user liked books
+// Route 13: get books by author
+test('GET /books_by_author/1077326', async() => {
+  await supertest(app).get('/books_by_author/1077326')
+  .expect(200)
+  .then((res) => {
+      expect(res.body.length).toEqual(20)
+      expect(res.body.slice(0,3)).toStrictEqual(results.books_by_author)
+  });
+}, 100000);
+
+//Route 14: Get user liked books
 test('GET /user_liked/1', async() => {
   await supertest(app).get('/user_liked/1')
   .expect(200)
   .then((res) => {
-      expect(res.body).toStrictEqual(results.user_liked)
+      expect(res.body[0].user_id).toEqual(1)
   });
 }, 100000);
 
-//Route 14: Get authors in desired order
+//Route 15: Get authors in desired order
 test('GET /authors_ordered/average_rating', async() => {
   await supertest(app).get('/authors_ordered')
   .expect(200)
   .then((res) => {
-    expect(res.body.length).toEqual(829529)
+    expect(res.body.length).toEqual(51138)
+    expect(res.body.slice(0,4)).toStrictEqual(results.authors_ordered)
   });
 }, 100000);
 

@@ -52,7 +52,7 @@ export default function HomePage() {
       .then(res => res.json())
       .then(resJson => {setTopBooksMonth(resJson); console.log(resJson)});       
 
-    fetch(`http://${config.server_host}:${config.server_port}/surprise_me/1`)
+    fetch(`http://${config.server_host}:${config.server_port}/surprise_me/${user_id}`)
       .then(res => res.json())
       .then(resJson => {
         console.log('Surprise me book ID is:'); 
@@ -210,7 +210,9 @@ export default function HomePage() {
                           width: '100%',
                         }}
                       />
-                      <img src={book.image_url} alt={book.title} to={`/book/${book.book_id}`}/>                      
+                      <NavLink key={book.book_id} to={`/book/${book.book_id}`} style={{ margin: 10 }}>
+                      <img src={book.image_url} alt={book.title} />                      
+                      </NavLink>
                     </div>
                   ))}
                 </Carousel>
@@ -281,7 +283,9 @@ export default function HomePage() {
                           width: '100%',
                         }}
                       />
-                      <img src={book.image_url} alt={book.title} />                      
+                      <NavLink key={book.book_id} to={`/book/${book.book_id}`} style={{ margin: 10 }}>
+                      <img src={book.image_url} alt={book.title} /> 
+                      </NavLink>                     
                     </div>
                   ))}
                 </Carousel>

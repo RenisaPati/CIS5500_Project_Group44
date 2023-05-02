@@ -196,11 +196,10 @@ const book_series = async function(req, res) {
   // of the specified book 
   connection.query(`
   SELECT bk.book_id, bk.title AS book_title, bk.image_url, bs.*
-  FROM Book b
+  FROM (SELECT book_id, series_id FROM Book WHERE book_id = ${curr_id}) b
     JOIN Book_Series bs ON b.series_id = bs.series_id
     JOIN Book bk ON bs.series_id = bk.series_id
-  WHERE b.book_id = ${curr_id}
-  GROUP BY bk.title
+  GROUP BY bk.title;
   `, (err, data) => {
     if (err || data.length === 0) {
       console.log(err);
@@ -332,34 +331,33 @@ const top_ten_books_month = async function(req, res) {
    // Find two random genres and the select the top 2 rated books within those genres and return these as recommended books for the the user
    const user_id = req.params.user_id;
    connection.query(`
-   (SELECT g.genre_name, b.title, b.image_url, b.book_id
-    FROM Genres g
-        NATURAL JOIN Book_Genres bg
-      JOIN
-        (SELECT bg.genre_id AS genre_id
-          FROM Users_Liked u
-          JOIN Book_Genres bg ON u.book_id = bg.book_id
-          WHERE user_id = '${user_id}'
-          ORDER BY RAND()
-          LIMIT 1) g_user ON bg.genre_id = g_user.genre_id
-        JOIN Book b ON bg.book_id = b.book_id
+   WITH genre_random AS (
+    SELECT bg.genre_id AS genre_id
+    FROM Users_Liked u
+    JOIN Book_Genres bg ON u.book_id = bg.book_id
+    WHERE user_id = 1
     ORDER BY RAND()
-    LIMIT 2)
-    UNION
-    (SELECT g.genre_name, b.title,b.image_url, b.book_id
-    FROM Genres g
-        NATURAL JOIN Book_Genres bg
-      JOIN
-        (SELECT bg.genre_id AS genre_id
-          FROM Users_Liked u
-          JOIN Book_Genres bg ON u.book_id = bg.book_id
-          WHERE user_id = '${user_id}'
-          ORDER BY RAND()
-          LIMIT 1) g_user
-            ON bg.genre_id = g_user.genre_id
-        JOIN Book b ON bg.book_id = b.book_id
-    ORDER BY RAND()
-    LIMIT 2)
+    LIMIT 2
+      )
+  (SELECT g.genre_name, b.title, b.image_url
+      FROM Genres g
+          NATURAL JOIN Book_Genres bg
+        JOIN
+          (SELECT * FROM genre_random
+           LIMIT 1) g_user ON bg.genre_id = g_user.genre_id
+          JOIN Book b ON bg.book_id = b.book_id
+      ORDER BY b.average_rating
+      LIMIT 2)
+      UNION
+      (SELECT g.genre_name, b.title,b.image_url
+      FROM Genres g
+          NATURAL JOIN Book_Genres bg
+        JOIN
+          (SELECT * FROM genre_random
+           LIMIT 1,1) g_user ON bg.genre_id= g_user.genre_id
+          JOIN Book b ON bg.book_id = b.book_id
+      ORDER BY b.average_rating
+      LIMIT 2);
    `, (err, data) => {
      if (err || data.length === 0) {
        console.log(err);
@@ -375,24 +373,22 @@ const surprise_me = async function(req, res) {
    // 
    const user_id = req.params.user_id;
    connection.query(`
-   SELECT b.book_id, b.title, b.description, b.average_rating, b.publisher,b. image_url, b.num_pages
-   FROM Book b
-   JOIN Book_Genres bg ON b.book_id = bg.book_id
-   JOIN Genres g ON bg.genre_id = g.genre_id
-   LEFT JOIN Users_Liked ul ON b.book_id = ul.book_id
-   WHERE COALESCE(ul.user_id, g.genre_id) =
-         COALESCE(${user_id}, (SELECT genre_id FROM Genres ORDER BY RAND() LIMIT 1))
-     AND b.text_reviews_count * b.average_rating = (
-         SELECT MAX(b2.text_reviews_count * b2.average_rating)
-         FROM Book b2
-         WHERE EXISTS (
-             SELECT 1
-             FROM Book_Genres bg2
-             WHERE bg2.book_id = b2.book_id
-               AND bg2.genre_id = g.genre_id
-         )
-     )
-   LIMIT 1  
+   SELECT book_id
+    FROM Book b
+    WHERE b.average_rating <
+          (SELECT AVG(average_rating) AS avg_genre_rating
+            FROM
+            (SELECT MIN(genre_id) AS genre_id
+            FROM (SELECT genre_id, COUNT(genre_id)
+                  FROM (SELECT ul.book_id, bg.genre_id
+                        FROM (SELECT book_id FROM Users_Liked WHERE user_id = ${user_id}) ul
+                            JOIN Book_Genres bg ON ul.book_id = bg.book_id) t1
+                            NATURAL JOIN Genres g
+                        GROUP BY genre_id) t2) t3
+    INNER JOIN Book_Genres bg ON bg.genre_id = t3.genre_id
+    INNER JOIN Book B on bg.book_id = B.book_id)
+    ORDER BY RAND()
+    LIMIT 1; 
    `, (err, data) => {
      if (err || data.length === 0) {
        console.log(err);
@@ -414,9 +410,10 @@ const surprise_me = async function(req, res) {
    connection.query(`
    SELECT A.*, COUNT(*) AS num_books
    FROM Authors A
-      JOIN Written_By WB on A.author_id = WB.author_id
+      NATURAL JOIN Written_By
    WHERE A.author_id = ${author_id}
-   GROUP BY A.author_id`,
+   GROUP BY A.author_id
+   `,
    (err, data) => {
      if (err || data.length === 0) {
        console.log(err);

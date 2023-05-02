@@ -132,7 +132,7 @@ export default function BooksPage() {
               </h4>
             </div>
             {/* <h4>Series Name : {<span style={{ fontSize: '16px', fontWeight: 'lighter' }}>{authorSeries.series_title}</span>}</h4> */}
-            <h4>Series Name : 
+            <h4>Series Name :  
              <Link component="button" style={{ color: teal[800] }} onClick={() => setSelectedSeriesID(bookInfo.book_id)}>
               {authorSeries.series_title} 
               </Link>

@@ -4,14 +4,14 @@
 A common question that everyone asks from time to time is 'what book should I read next?'. In building our application, we seek to help users discover new books as well as revisit those they’ve read previously. Additionally, new readers will be able to browse for new books using several ranking systems for books, series, and authors.
 
 ## Setup
-**Required**
-The first step is to verify that Node.js is installed on your machine by running the following commands:
-npm -v
-node - v
+**Required** <br>
+The first step is to verify that Node.js is installed on your machine by running the following commands: <br>
+npm -v <br>
+node - v <br>
 
 You will also need to use the (built-in) terminal for your operating system.
 
-**Recommended**
+**Recommended** <br>
 We recommend that you use Visual Studio (VS) Code (as the code editor and its built-in terminal).
 
 You will also need a web browser, like Google Chrome, but most major browsers will support equivalent functionality.
@@ -45,7 +45,10 @@ This application, by default, runs on localhost - port 3000. Once you run the ab
     npm test
 
 ## Features:
-* **Login/Signup Page:** Users will be able to login to an existing account or set up a new account.
+* **Signup:** We prepended a regular user authentication facility to our application where a new user can sign up and their details shall get inserted into the database containing User Information. If they are an already existing user, they can click on the message that redirects them to the SignIn page.
+
+* **SignIn:** For existing users, we have a SignIn page where they can enter their credentials, get it validated against their existing information. Once validated, they are redirected to the homepage. The SignIn page also provides a clickable message where it lets new users navigate through the Signup page first before Signing in to the application.
+
 * **Homepage:** Upon entering the website, users will be greeted with a banner welcoming them to AMAZINGREADS. The page helps users find books using several mechanisms, including a Surprise Me button, which takes them to a random book page, a Recommended Books section, which holds books similar to those they have liked in the past, the top 10 books of the month, and the user’s personal reading list. Upon clicking any of these, the user will be sent to that book’s page for more information. Should they wish to explore genres or authors, the navigation bar will allow them to do so. 
 	
 * **Book page:** The book page displays all the important information that a user might want to learn about a new book. Basic meta information is displayed including the genres and series to which the book belongs. The genre attributes are clickable and will redirect users to that genre’s page while the series title will pop out a modal showing the user the other books in that series. Similar books to the current one are shown as well as a chart displaying the rating history of the book compared to that of the genre that the book is in. Finally, the reviews that have been written about the book are displayed below. 

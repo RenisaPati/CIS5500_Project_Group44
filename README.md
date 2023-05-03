@@ -45,37 +45,11 @@ This application, by default, runs on localhost - port 3000. Once you run the ab
     npm test
 
 ## Features:
-* Login page: Displays textboxes for an existing user to enter their username and password to login. It also has a link to let new users register.
-* Home page: The home page will display the most popular books in the current month. If the user has logged in, they’ll be able to see their reading list and a short list of recommendations, otherwise they’ll be prompted to log in. Users can also navigate to the book and author pages to get more detailed information.
-* Book page: The book page will display information about a particular book such as title, author (clickable), pages, genres (clickable), image. Clicking on a genre or an author will allow the user to navigate to their pages to get more information. A list of similar books will be displayed to the user.
-* All authors page: It will display a list of author names, number of titles written, average rating. The list will be sortable by each attribute. Clicking on an author name will direct user to that author’s page
-* Single Author page: It will display the author’s information and books written by that author. Clicking on a book will direct user to that book’s page
-* Single Genre page: It will display the different books in a particular genre. Clicking on a book in a genre will take the user to that book’s page.
+* **Login/Signup Page:** Users will be able to login to an existing account or set up a new account.
+* **Homepage:** Upon entering the website, users will be greeted with a banner welcoming them to AMAZINGREADS. The page helps users find books using several mechanisms, including a Surprise Me button, which takes them to a random book page, a Recommended Books section, which holds books similar to those they have liked in the past, the top 10 books of the month, and the user’s personal reading list. Upon clicking any of these, the user will be sent to that book’s page for more information. Should they wish to explore genres or authors, the navigation bar will allow them to do so. 
+	
+* **Book page:** The book page displays all the important information that a user might want to learn about a new book. Basic meta information is displayed including the genres and series to which the book belongs. The genre attributes are clickable and will redirect users to that genre’s page while the series title will pop out a modal showing the user the other books in that series. Similar books to the current one are shown as well as a chart displaying the rating history of the book compared to that of the genre that the book is in. Finally, the reviews that have been written about the book are displayed below. 
 
-## Implementation of the features:
-* Users will be able to login to an existing account or set up a new account.
-* Homepage:<br>
-  i. Most popular books in a month will be visualized in a carousel fashion. <br>
-  ii. Button to take you to a random book page; “Surprise Me!”<br>
-  iii. For existing and new users, a short list (5) of recommended books will be displayed. <br>
-  iv. Users who have “liked” a book will see these in their “Reading List” (top 5 shown). <br>
-  v. If a user has not logged in, they will see the same homepage, but “reading list” will display a message prompting them to log in. Clicking there will redirect to the login page. <br>
-  vi. Nav bar with “Home page”, “Books”, “Authors” buttons to redirect to ranked pages. <br>
-  vii. Footer banner with team name, creators, and possibly links <br>
-* Book page:
-  i. Book information such as title, author (clickable), pages, genres (clickable), image etc will be displayed. <br>
-  ii. We’ll display the list of similar books, which if clicked, will direct to that book’s page. <br>
-  iii. Clicking on a genre will take you to the genres page and navigate down to the correct genre section. <br>
-  iv. Reviews for the book will be displayed below the book information. These will be sortable by number of “likes” the review got and the date. <br>
-  v. Clicking on the author will take you to the author’s page <br>
-  vi. Plot of the number of reviews the book has gotten in each year <br>
-  vii. If a book is part of a series, then clicking the series title will pop out a model containing the other books in the series, each of which is clickable and navigates to that book’s page. <br>
+* **Authors page:** The authors page displays a paginated table of all authors who have written a book stored in the database. They’re ranked by a weighted average of the average author rating, so many of the user’s favorite authors may appear towards the top or on the first few pages of the table. Here the user can compare some metrics about each author such as average rating and number of reviews. Clicking on an author’s name will pop out a modal which displays more information about the author as well as all of the books that they have written. If clicked, these books redirect the user to that book’s page.
 
-* All Authors page:
-  i. Authors list will be sortable by each attribute of the table <br>
-  ii. Clicking on an author name will direct user to that author’s page <br>
-* Single Author’s page:
-  i. Display author information and books written by that author <br>
-  ii. Clicking on a book will direct user to that book’s page <br>
-* Single Genre page:
-  i. Clicking on a book in a genre will take the user to that book’s page <br>
+* **Genres page:** This page displays the top books that are part of the selected genre. The page is reachable either from the navigation bar dropdown menu or from a book page, where the user can click on a genre name. Each book in the genre that is displayed will take the user to that book’s page. 

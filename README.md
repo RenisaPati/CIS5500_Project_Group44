@@ -28,9 +28,9 @@ This will download and save the required dependencies into the node_modules fold
 /client and /server directories.
 
 3. Additional modules to download manually: 
-       - npm install react-rating-stars-component
-       - npm install react-multi-carousel
-       - npm install react-final-form
+* npm install react-rating-stars-component
+* npm install react-multi-carousel
+* npm install react-final-form
 ( add --force at the end of the command if you face a version discrepancy )
 
 4. To connect to the database (MySQL), the db credentials have been stored into config.json in the /server folder

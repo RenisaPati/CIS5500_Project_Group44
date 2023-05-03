@@ -27,15 +27,21 @@ You will also need a web browser, like Google Chrome, but most major browsers wi
 This will download and save the required dependencies into the node_modules folder within the
 /client and /server directories.
 
-3. To connect to the database (MySQL), the db credentials have been stored into config.json in the /server folder
+3. Additional modules to download manually: 
+       - npm install react-rating-stars-component
+       - npm install react-multi-carousel
+       - npm install react-final-form
+( add --force at the end of the command if you face a version discrepancy )
 
-4. First, you should start the server application by running the command **npm start** in a terminal window within the /server directory
+4. To connect to the database (MySQL), the db credentials have been stored into config.json in the /server folder
 
-5. After starting the server application, which should run on port 8080, you should start the React application by running the command **npm start** within the /client directory in a terminal window. 
+5. First, you should start the server application by running the command **npm start** in a terminal window within the /server directory
+
+6. After starting the server application, which should run on port 8080, you should start the React application by running the command **npm start** within the /client directory in a terminal window. 
 
 This application, by default, runs on localhost - port 3000. Once you run the above command, your default browser should open up a window to localhost:3000.
 
-6. You can run the provided tests in the \_\_test\_\_ directory within the server folder by running:
+7. You can run the provided tests in the \_\_test\_\_ directory within the server folder by running:
     npm test
 
 ## Features:
